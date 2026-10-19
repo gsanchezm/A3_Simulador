@@ -5,8 +5,9 @@ const { Pool } = require('pg');
 const { hashPassword, cleanEmail, validEmail, validPassword } = require('./security');
 
 function createPool() {
-  if (!process.env.DATABASE_URL) throw new Error('Falta DATABASE_URL');
-  return new Pool({ connectionString: process.env.DATABASE_URL, max: 5, idleTimeoutMillis: 30000 });
+  const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+  if (!connectionString) throw new Error('Falta DATABASE_URL o POSTGRES_URL');
+  return new Pool({ connectionString, max: 2, idleTimeoutMillis: 10000, connectionTimeoutMillis: 10000 });
 }
 
 async function initializeDatabase(db, adminEmail, adminPassword) {
@@ -18,7 +19,7 @@ async function initializeDatabase(db, adminEmail, adminPassword) {
   }
   const exists = await db.query("SELECT id FROM users WHERE role='admin' LIMIT 1");
   if (!exists.rows.length) {
-    await db.query('INSERT INTO users (id, name, email, password_hash, role, approved) VALUES ($1,$2,$3,$4,$5,true)',
+    await db.query('INSERT INTO users (id, name, email, password_hash, role, approved) VALUES ($1,$2,$3,$4,$5,true) ON CONFLICT (email) DO NOTHING',
       [randomUUID(), 'Administrador', email, await hashPassword(adminPassword), 'admin']);
   }
 }

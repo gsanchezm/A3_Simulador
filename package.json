@@ -4,8 +4,9 @@
   "private": true,
   "engines": { "node": ">=20" },
   "description": "Simulador CISSP con grupos, roles y reportes",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
+    "build": "node tools/build-public.cjs",
     "start": "node server/index.js",
     "dev": "node --env-file=.env server/index.js",
     "test": "node --test tests/*.test.cjs",
