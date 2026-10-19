@@ -1,0 +1,533 @@
+{
+ "id": 2,
+ "title_en": "Access Control",
+ "title_es": "Control de Acceso",
+ "block": 1,
+ "questions": [
+  {
+   "n": 1,
+   "q": "Which of the following does not correctly describe a directory service?",
+   "options": [
+    "It manages objects within a directory by using namespaces.",
+    "It enforces security policy by carrying out access control and identity management functions.",
+    "It assigns namespaces to each object in databases that are based on the X.509 standard and are accessed by LDAP.",
+    "It allows an administrator to configure and manage how identification takes place within the network."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Most enterprises have some type of directory that contains information pertaining to the company’s network resources and users. Most directories follow a hierarchical database format, based on the X.500 standard (not X.509), and a type of protocol, as in Lightweight Directory Access Protocol (LDAP), that allows subjects and applications to interact with the directory. Applications can request information about a particular user by making an LDAP request to the directory, and users can request information about a specific resource by using a similar request. A directory service assigns distinguished names (DNs) to each object in databases based on the X.500 standard that are accessed by LDAP. Each distinguished name represents a collection of attributes about a specific object and is stored in the directory as an entry.",
+    "A is incorrect because objects within hierarchical databases are managed by a directory service. The directory service allows an administrator to configure and manage how identification, authentication, authorization, and access control take place within the network. The objects within the directory are labeled and identified with namespaces, which is how the directory service keeps the objects organized.",
+    "B is incorrect because directory services do enforce the configured security policy by carrying out access control and identity management functions. For example, when a user logs into a domain controller in a Windows environment, the directory service (Active Directory) determines what network resources she can and cannot access.",
+    "D is incorrect because directory services do allow an administrator to configure and manage how identification takes place within the network. It also allows for the configuration and management of authentication, authorization, and access control."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Hannah has been assigned the task of installing web access management (WAM) software. What is the best description for what WAM is commonly used for?",
+   "options": [
+    "Control external entities requesting access through X.500 databases",
+    "Control external entities requesting access to internal objects",
+    "Control internal entities requesting access through X.500 databases",
+    "Control internal entities requesting access to external objects"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Web access management (WAM) software controls what users can access when using a web browser to interact with web-based enterprise assets. This type of technology is continually becoming more robust and experiencing increased deployment. This is because of the increased use of e-commerce, online banking, content providing, web services, and more. The basic components and activities in a web access control management process are as follows: 1. User sends in credentials to web server. 2. Web server validates user’s credentials. 3. User requests to access a resource (object). 4. Web server verifies with the security policy to determine if the user is allowed to carry out this operation. 5. Web server allows/denies access to the requested resource.",
+    "A is incorrect because a directory service should be carrying out access control in the directory of an X.500 database—not web access management software. The directory service manages the entries and data, and enforces the configured security policy by carrying out access control and identity management functions. Examples of directory services include Active Directory and Novell NetWare Directory Service (NDS). While web-based access requests may be to objects held within a database, WAM mainly controls communication between web browsers and servers. The web servers should communicate to a backend database, commonly through a directory service.",
+    "C is incorrect because a directory service should be carrying out access control for internal entities requesting access to a X.500 databases using the LDAP. This type of database provides a hierarchical structure for the organization of objects (subjects and resources). The directory service develops unique distinguished names for each object and appends the corresponding attribute to each object as needed. The directory service enforces a security policy (configured by the administrator) to control how subjects and objects interact. While web-based access requests may be to objects held within a database, WAM mainly controls communication between web browsers and servers. WAM was developed mainly for external to internal communication, although it can be used for internal-to-internal communication also. Answer B is the best answer out of the four provided.",
+    "D is incorrect because WAM software is most commonly used to control external entities requesting access to internal objects; not the other way around, as stated by the answer option. For example, WAM may be used by a bank to control its customers’ access to backend account data."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "There are several types of password management approaches used by identity management systems. Which of the following reduces help-desk call volume, but is also criticized for the ease with which a hacker could gain access to multiple resources if a password is compromised?",
+   "options": [
+    "Management password reset",
+    "Self-service password reset",
+    "Password synchronization",
+    "Assisted password reset"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Password synchronization is designed to reduce the complexity of keeping up with different passwords for different systems. Password synchronization technology can allow users to maintain a single password across multiple systems by transparently synchronizing the password to other systems and applications. This reduces help-desk call volume. One criticism of this approach is that since only one password is used to access different resources, now the hacker only has to figure out one credential set to gain unauthorized access to all resources.",
+    "A is incorrect because there is no such thing as a management password reset. This answer is a distracter. The most common password management approaches are password synchronization, self-service password reset, and assisted password reset.",
+    "B is incorrect because self-service password reset does not necessarily deal with multiple passwords. However, it does help reduce the overall volume of password-related help desk calls. In the case of self-service password reset, users are allowed to reset their own passwords. For example, when a user forgets his password, he may be prompted to answer questions that he identified during the registration process. If the answer he gives matches the information he provided during registration, then he is granted the ability to change his password.",
+    "D is incorrect because assisted password reset does not necessarily deal with multiple passwords. It reduces the resolution process for password issues by allowing the help desk to authenticate a user before resetting her password. The caller must be identified and authenticated through the password management tool before the password can be changed. Once the password is updated, the system that the user is authenticating to should require the user to change her password again. This would ensure that only she (and not she and the help-desk person) knows her password. The goal of an assisted password reset product is to reduce the cost of support calls and ensure that all calls are processed in a uniform, consistent, and secure fashion."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "A number of attacks can be performed against smart cards. Side-channel is a class of attacks that doesn’t try to compromise a flaw or weakness. Which of the following is not a side-channel attack?",
+   "options": [
+    "Differential power analysis",
+    "Microprobing analysis",
+    "Timing analysis",
+    "Electromagnetic analysis"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A noninvasive attack is one in which the attacker watches how something works and how it reacts in different situations instead of trying to “invade” it with more intrusive measures. Examples of side-channel attacks are fault generation, differential power analysis, electromagnetic analysis, timing, and software attacks. These types of attacks are used to uncover sensitive information about how a component works without trying to compromise any type of flaw or weakness. A more intrusive smart card attack is microprobing. Microprobing uses needles and ultrasonic vibration to remove the outer protective material on the card’s circuits. Once this is complete, data can be accessed and manipulated by directly tapping into the card’s ROM chips.",
+    "A is incorrect because differential power analysis (DPA) is a noninvasive attack. DPA involves examining the power emissions released during processing. By statistically analyzing data from multiple cryptographic operations, for example, an attacker can determine the intermediate values within cryptographic computations. This can be done without any knowledge of how the target device is designed. Thus, an attacker can extract cryptographic keys or other sensitive information from the card.",
+    "C is incorrect because a timing analysis is a noninvasive attack. It involves calculating the time a specific function takes to complete its task. They are attacks based on measuring how much time various computations take to perform. For example, by observing how long it takes a smart card to transfer key information, it is sometimes possible to determine how long the key is in this instance.",
+    "D is incorrect because electromagnetic analysis is a noninvasive attack that involves examining the frequencies emitted. All electric currents emit electromagnetic emanations. In smart cards, the power consumption—and, therefore, the electromagnetic emanation field—varies as data is processed. An electromagnetic analysis attempts to make correlations between the data and the electromagnetic emanations in an effort to uncover cryptographic keys or other sensitive information on the smart card."
+   ]
+  },
+  {
+   "n": 5,
+   "q": "Which of the following does not describe privacy-aware role-based access control?",
+   "options": [
+    "It is an example of a discretionary access control model.",
+    "Detailed access controls indicate the type of data that users can access based on the data’s level of privacy sensitivity.",
+    "It is an extension of role-based access control.",
+    "It should be used to integrate privacy policies and access control policies."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A system that uses discretionary access control (DAC) enables the owner of the resource to specify which subjects can access specific resources. This model is called discretionary because the control of access is based on the discretion of the owner. Many times department managers, or business unit managers, are the owners of the data within their specific department. Being the owner, they can specify who should have access and who should not. Privacy-aware role-based access control is an extension of role-based access control (RBAC). There are three main access control models: DAC, mandatory access control (MAC), and RBAC. Privacy-aware role-based access control is a type of RBAC, not DAC.",
+    "B is incorrect because privacy-aware role-based access control is based on detailed access controls that indicate the type of data that users can access based on the data’s level of privacy sensitivity. Other access control models, such as MAC, DAC, and RBAC, do not lend themselves to protect the level of privacy of data, but the functions that users can carry out. For example, managers may be able to access a privacy folder, but there needs to be more detailed access control that indicates, for example, that they can access customers’ home addresses but not Social Security numbers. The industry has advanced to needing much more detail-oriented access control when it comes to sensitive privacy information as in Social Security numbers and credit card data, which is why privacy-aware role-based access control was developed.",
+    "C is incorrect because privacy-aware role-based access control is an extension of role-based access control. Access rights are determined based on the user’s role and responsibilities within the company, and the level of privacy of the data they need access to.",
+    "D is incorrect because the languages used for privacy policies and access control policies should be either the same or integrated when using privacy-aware role-based access control. The goal of the use of privacy-aware role-based access control is to make access control much more detailed and focused on privacy-related data, thus it should be using the same type of terms and language as the organization’s original access control policy and standards."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "Security Assertion Markup Language (SAML) is an XML-based standard for exchanging authentication and authorization data between systems on different security domains. SAML allows for the sharing of authentication information, such as how authentication took place, entity attributes, and what the entity is authorized to access. SAML is most commonly used in web-based environments that require single sign-on (SSO) capability. Which of the following has a correct definition associated with the corresponding SAML component?",
+   "options": [
+    "Two SAML assertions are used (authentication, authorization) that indicate that an SAML authority validated a specific subject.",
+    "SAML assertions are most commonly used to allow for identity federation and distributed authorization.",
+    "SAML binding specification describes how to embed SAML messages within the TCP and UDP protocols.",
+    "SAML profiles define how SAML messages, assertions, and protocols are to be implemented in SSL and TLS."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. SAML provides a model to allow two parties to share authentication information about one entity. The two parties are considered the relying party and the asserting party. The asserting party asserts information about the subject, such as whether or not the subject has been authenticated or has a particular attribute. The relying party uses the information supplied by the asserting party to make access decisions, including but not limited to, whether or not to trust the asserting party’s assertion. By trusting the asserting party’s information, the relying party can provide services without requiring the subject to authenticate again. This framework allows for federated identification and distributed authentication across domains.",
+    "A is incorrect because there are three kinds of SAML assertions (authentication, attribute, authorization) that indicate an SAML authority validated a specific subject. Authentication assertion validates that the subject was authenticated by a SAML authority through a specific manner. For example, an assertion might indicate that Sam Long was authenticated on a specific date, at a specific time, through the use of a digital certificate and authentication is valid for 30 minutes. The asserting party sends this authentication data to the relying party so that the subject can be authenticated on the relying party’s system and the subject does not need to log in again.",
+    "C is incorrect because the SAML binding specification describes how to embed SAML messages within communications or messaging protocols to allow for SAML request-response message exchange. SAML bindings define how these message exchanges take place in application layer protocols (e.g., SOAP, HTTP), not transport layer protocols such as TCP and UDP. The SAML specification defines the SAML protocol, which is an XML-based request and response protocol for processing SAML assertions. This means that this specification pertains to a packet’s payload data, which works at the application layer of the OSI model. Transport layers are at a lower part of the network stack and have no direct interaction with this XML specification.",
+    "D is incorrect because SAML profiles define how SAML messages, assertions, and protocols are to be implemented in use cases. This specification does not deal with session and transport layer protocols as in SSL and TLS. Each profile within the SAML specification outlines how SAML messages, assertions, and protocols are to be used in specific scenarios. For example, one SAML profile outlines how SAML is to be used to support a single sign-on environment across multiple web applications. This profile defines how a SAML-aware client (i.e., web browser) is to be supported and how identification data is to be managed among multiple service providers."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "Brian has been asked to work on the virtual directory of his company’s new identity management system. Which of the following best describes a virtual directory?",
+   "options": [
+    "Meta-directory",
+    "User attribute information stored in an HR database",
+    "Virtual container for data from multiple sources",
+    "A service that allows an administrator to configure and manage how identification takes place"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. A network directory is a container for users and network resources. One directory does not contain (or know about) all of the users and resources within the enterprise, so a collection of directories must be used. A virtual directory gathers the necessary information used from sources scattered throughout the network and stores them in a central virtual directory (virtual container). This provides a unified view of all users’ digital identity information throughout the enterprise. The virtual directory periodically synchronizes itself with all of the identity stores (individual network directories) to ensure the most up-to-date information is being used by all applications and identity management components within the enterprise.",
+    "A is incorrect because whereas a virtual directory is similar to a meta-directory, the meta-directory works with one directory while a virtual directory works with multiple data sources. When an identity management component makes a call to a virtual directory, it has the capability to scan different directories throughout the enterprise, whereas a meta-directory only has the capability to scan the one directory it is associated with.",
+    "B is incorrect because it best describes an identity store. A lot of information stored in an identity management directory is scattered throughout the enterprise. User attribute information (employee status, job description, department, and so on) is usually stored in the HR database; authentication information could be in a Kerberos server; role and group identification information might be in a SQL database; and resource-oriented authentication information can be stored in Active Directory on a domain controller. These are commonly referred to as identity stores and are located in different places on the network. Many identity management products use virtual directories to call upon the data in these identity stores.",
+    "D is incorrect because it describes the directory service. The directory service allows an administrator to configure and manage how identification, authentication, authorization, and access control occur within the network. It manages the objects within a directory by using namespaces and enforces the configured security policy by carrying out access control and identity management functions."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "Emily is listening to network traffic and capturing passwords as they are sent to the authentication server. She plans to use the passwords as part of a future attack. What type of attack is this?",
+   "options": [
+    "Brute-force attack",
+    "Dictionary attack",
+    "Social engineering attack",
+    "Replay attack"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. A replay attack occurs when an intruder obtains and stores information, and later uses it to gain unauthorized access. In this case, Emily is using a technique called electronic monitoring (sniffing) to obtain passwords being sent over the wire to an authentication server. She can later use the passwords to gain access to network resources. Even if the passwords are encrypted, the retransmission of valid credentials can be sufficient to obtain access.",
+    "A is incorrect because a brute-force attack is performed with tools that cycle through many possible character, number, and symbol combinations to uncover a password. One way to prevent a successful brute-force attack is to restrict the number of login attempts that can be performed on a system. An administrator can set operating parameters that allow a certain number of failed logon attempts to be accepted before a user is locked out; this is a type of clipping level.",
+    "B is incorrect because a dictionary attack involves the automated comparison of the user’s password to files of thousands of words until a match is found. Dictionary attacks are successful because users tend to choose passwords that are short, are single words, or are predictable variations of dictionary words.",
+    "C is incorrect because in a social engineering attack the attacker falsely convinces an individual that she has the necessary authorization to access specific resources. Social engineering is carried out against people directly and is not considered a technical attack necessarily. The best defense against social engineering is user education. Password requirements, protection, and generation should be addressed in security-awareness programs so that users understand why they should protect their passwords, and how passwords can be stolen."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "Which of the following correctly describes a federated identity and its role within identity management processes?",
+   "options": [
+    "A nonportable identity that can be used across business boundaries",
+    "A portable identity that can be used across business boundaries",
+    "An identity that can be used within intranet virtual directories and identity stores",
+    "An identity specified by domain names that can be used across business boundaries"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A federated identity is a portable identity, and its associated entitlements, that can be used across business boundaries. It allows a user to be authenticated across multiple IT systems and enterprises. Identity federation is based upon linking a user’s otherwise distinct identities at two or more locations without the need to synchronize or consolidate directory information. Federated identity offers businesses and consumers a more convenient way of accessing distributed resources and is a key component of e-commerce.",
+    "A is incorrect because a federated identity is portable. It could not be used across business boundaries if it was not portable—and that’s the whole point of a federated identity. The world continually gets smaller as technology brings people and companies closer together. Many times, when we are interacting with just one web site, we are actually interacting with several different companies— we just don’t know it. The reason we don’t know it is because these companies are sharing our identity and authentication information behind the scenes. This is done to improve ease of use for the user.",
+    "C is incorrect because a federated identity is meant to be used across business boundaries—not within the organization. In other words, its use extends beyond the organization that owns the user data. Using federated identities, organizations with different technologies for directory services, security, and authentication can share applications, thereby allowing users to sign in to multiple applications with the same user ID, password, etc.",
+    "D is incorrect because a federated identity is not specified by a domain name. A federated identity is a portable identity and its associated entitlements. It includes the username, password and other personal identification information used to sign in to an application."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "Phishing and pharming are similar. Which of the following correctly describes the difference between phishing and pharming?",
+   "options": [
+    "Personal information is collected from victims through legitimate-looking web sites in phishing attacks, while personal information is collected from victims via e-mail in pharming attacks.",
+    "Phishing attacks point e-mail recipients to a form where victims input personal information, while pharming attacks use pop-up forms at legitimate web sites to collect personal information from victims.",
+    "Victims are pointed to a fake web site with a domain name that looks similar to a legitimate site’s in a phishing attack, while victims are directed to a fake web site as a result of a legitimate domain name being incorrectly translated by the DNS server in a pharming attack.",
+    "Phishing is a technical attack, while pharming is a type of social engineering."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. In both phishing and pharming, attackers can create web sites that look very similar to legitimate sites in an effort to collect personal information from victims. In a phishing attack, attackers can provide URLs with domain names that look very similar to the legitimate site’s address. For example, www.amazon.com might become www.amzaon.com. Or use a specially placed @ symbol. For example, www.msn.com@notmsn.com would actually take the victim to the web site notmsn.com and provide the username of www.msn.com to this web site. The username www.msn.com would not be a valid username for notmsn.com, so the victim would just be shown the home page of notmsn.com. Now, notmsn.com is a nefarious site created to look and feel just like www.msn.com. The victim feels he is at the legitimate site and logs in with his credentials. In a pharming attack, the victim is given a legitimate domain name, but that domain name is redirected to the attacker’s web site as a result of DNS poisoning. When the DNS server is poisoned to carry out a pharming attack, the records have been changed so that instead of sending the correct IP address for www.logicalsecurity.com, it sends the IP address of a legitimate looking, but fake web site created by the attacker.",
+    "A is incorrect because a pharming attack does not commonly involve the collection of information via e-mail. In fact, the benefit of a pharming attack to the attacker is that it can affect a large amount of victims without the need to send out e-mails. Like a phishing attack, a pharming attack involves a seemingly legitimate, yet fake, web site. Victims are directed to the fake web site because the host name is incorrectly resolved as a result of DNS poisoning.",
+    "B is incorrect because both descriptions are true of phishing attacks. Pharming attacks do not use pop-up forms. However, some phishing attacks use pop-up forms when a victim is at a legitimate site. So if you were at your bank’s actual web site and a pop-up window appeared asking you for some sensitive information, this probably wouldn’t worry you, since you were communicating with your actual bank’s web site. You may believe the window came from your bank’s web server, so you fill it out as instructed. Unfortunately, this pop-up window could be from another source entirely, and your data could be placed right in the attacker’s hands, not your bank’s.",
+    "D is incorrect because both attacks are technical ways of carrying out social engineering. Phishing is a type of social engineering with the goal of obtaining personal information, credentials, credit card numbers, or financial data. The attackers lure, or fish, for sensitive data through various different methods, such as e-mail and pop-up forms. Pharming involves DNS poisoning. The attacker modifies the records in a DNS server so that it resolves a host name into an incorrect IP address. The victim’s system sends a request to a poisoned DNS server, which points the victim to a different web site. This different web site looks and feels just like the requested web site, so the user enters his username and password and may even be presented with web pages that look legitimate."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "Security countermeasures should be transparent to users and attackers. Which of the following does not describe transparency?",
+   "options": [
+    "User activities are monitored and tracked without negatively affecting system performance.",
+    "User activities are monitored and tracked without the user knowing about the mechanism that is carrying this out.",
+    "Users are allowed access in a manner that does not negatively affect business processes.",
+    "Unauthorized access attempts are denied and logged without the intruder knowing about the mechanism that is carrying this out."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Unfortunately, security components usually affect system performance in one fashion or another, although many times it is unnoticeable to the user. There is a possibility that if a system’s performance is noticeably slow, this could be an indication that security countermeasures are in place. The reason that controls should be transparent is so that users and intruders do not know enough to be able to disable or bypass them. The controls should also not stand in the way of the company being able to carry out its necessary functions.",
+    "B is incorrect because transparency is about activities being monitored and tracked without the user’s knowledge of the mechanism that is doing the monitoring and the tracking. While it is a best practice to tell users if their computer use is being monitored, it is not necessary to tell them how they are being monitored. If users are aware of the mechanisms that monitor their activities, then they may attempt to disable or bypass them.",
+    "C is incorrect because there must be a balance between security and usability. This means that users should be allowed access— where appropriate—without affecting business processes. They should have the means to get their job done.",
+    "D is incorrect because you do not want intruders to know about the mechanisms in place to deny and log unauthorized access attempts. An intruder could use this knowledge to disable or bypass the mechanism and successfully gain unauthorized access to network resources."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "What markup language allows for the sharing of application security policies to ensure that all applications are following the same security rules?",
+   "options": [
+    "XML",
+    "SPML",
+    "XACML",
+    "GML"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Two or more companies can have a trust model set up to share identity, authorization, and authentication methods. This means that if Bill authenticates to his company’s software, this software can pass the authentication parameters to its partner’s software. This allows Bill to interact with the partner’s software without having to authenticate twice. This can happen through eXtensible Access Control Markup Language (XACML), which allows two or more organizations to share application security policies based upon their trust model. XACML is a markup language and processing model that is implemented in XML. It declares access control policies and describes how to interpret them.",
+    "A is incorrect because XML (Extensible Markup Language) is a method for electronically coding documents and representing data structures such as those in web services. XML is not used to share security information. XML is an open standard that is more robust than its predecessor, HTML. In addition to serving as a markup language in and of itself, XML serves as the foundation for other more industry-specific XML standards. XML allows companies to use a markup language that meets their different needs while still being able to communicate with each other.",
+    "B is incorrect because Service Provisioning Markup Language (SPML) is used by companies to exchange user, resource, and service provisioning information, not application security information. SPML is an XML-based framework developed by OASIS with the goal of allowing enterprise platforms (such as web portals and application servers) to generate provisioning requests across multiple companies for the purpose of the secure and quick setup of web services and applications.",
+    "D is incorrect because Generalized Markup Language (GML) is a method created by IBM for formatting documents. It describes a document in terms of its parts (chapters, paragraphs, lists, etc.) and their relationship (heading levels). GML was a predecessor to Standard Generalized Markup Language (SGML) and Hypertext Markup Language (HTML)."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "The importance of protecting audit logs generated by computers and network devices is highlighted by the fact that it is required by many of today’s regulations. Which of the following does not explain why audit logs should be protected?",
+   "options": [
+    "If not properly protected, these logs may not be admissible during a prosecution.",
+    "Audit logs contain sensitive data and should only be accessible to a certain subset of people.",
+    "Intruders may attempt to scrub the logs to hide their activities.",
+    "The format of the logs should be unknown and unavailable to the intruder."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Auditing tools are technical controls that track activity within a network, on a network device, or on a specific computer. Even though auditing is not an activity that will deny an entity access to a network or computer, it will track activities so that a security administrator can understand the types of access that took place, identify a security breach, or warn the administrator of suspicious activity. This information can be used to point out weaknesses of other technical controls and help the administrator understand where changes must be made to preserve the necessary security level within the environment. Intruders can also use this information to exploit those weaknesses, so audit logs should be protected through permissions, rights, and integrity controls, as in hashing algorithms. However, the format of systems logs is commonly standardized with all like systems. Hiding log formats is not a usual countermeasure and is not a reason to protect audit log files.",
+    "A is incorrect because due care must be taken to protect audit logs in order for them to be admissible in court. Audit trails can be used to provide alerts about any suspicious activities that can be investigated at a later time. In addition, they can be valuable in determining exactly how far an attack has gone and the extent of the damage that may have been caused. It is important to make sure a proper chain of custody is maintained to ensure any data collected can be properly and accurately represented in case it needs to be used for later events such as criminal proceedings or investigations.",
+    "B is incorrect because only the administrator and security personnel should be able to view, modify, and delete audit trail information. No other individuals should be able to view this data, much less modify or delete it. The integrity of the data can be ensured with the use of digital signatures, message digest tools, and strong access controls. Its confidentiality can be protected with encryption and access controls, if necessary, and it can be stored on write-once media to prevent loss or modification of the data. Unauthorized access attempts to audit logs should be captured and reported.",
+    "C is incorrect because the statement is true. If an intruder breaks into your house, he will do his best to cover his tracks by not leaving fingerprints or any other clues that can be used to tie him to the criminal activity. The same is true in computer fraud and illegal activity. The intruder will work to cover his tracks. Attackers often delete audit logs that hold this discriminating information. (Deleting specific incriminating data within audit logs is called scrubbing.) Deleting this information can cause the administrator to not be alerted or aware of the security breach, and can destroy valuable data. Therefore, audit logs should be protected by strict access control."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "Countries around the world are focusing on cyber warfare and how it can affect their utility and power grid infrastructures. Securing water, power, oil, gas, transportation, and manufacturing systems is an increasing priority for governments. These critical infrastructures are made up of different types of industrial control systems (ICSs) that provide this type of functionality. Which of the following answers is not considered a common ICS?",
+   "options": [
+    "Central control systems",
+    "Programmable logic controllers",
+    "Supervisory control and data acquisition",
+    "Distributed control systems"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The most common types of industrial control systems (ICSs) are distributed control systems (DCS), programmable logical controllers (PLC), and supervisory control and data acquisition (SCADA) systems. While these systems provide a type of central control functionality, this is not considered a common type of ICS because these systems are distributed in nature. DCSs are used to control product systems for industries such as water, electrical, and oil refineries. The DCS uses a centralized supervisory control loop to connect controllers that are distributed throughout a geographic location. The supervisor controllers on this centralized loop request status data from field controllers and feed this information back to a central interface for monitoring. The status data captured from sensors can be used in failover situations. The DCS can provide redundancy protection through a modular approach. This reduces the impact of a single fault, meaning that if one portion of the system went down, the whole system would not be down.",
+    "B is incorrect because programmable logic controllers (PLCs) are common industrial control systems (ICSs) and are used to connect sensors throughout the utility network and convert this sensor signal data into digital data that can be processed by monitoring and managing software. PLCs were originally created to carry out simplistic logic functions within basic hardware, but have evolved into powerful controllers used in both SCADA and DCS systems. In SCADA systems, the PLCs are most commonly used to communicate with remote field devices, and in DCS systems, they are used as local controllers in a supervisory control scheme. The PLC provides an application programming interface to allow for communication to an engineering control software application.",
+    "C is incorrect because a supervisory control and data acquisition (SCADA) is a computerized system that is used to gather and process data and apply operational controls to the components that make up a utility-based environment. It is a common type of industrial control system (ICS). The SCADA control center allows for centralized monitoring and control for field sites (i.e., power grids, water systems). The field sites have remote station control devices (field devices), which provide data to the central control center. Based upon the data that is sent from the field device, an automated process or an operator can send out commands to control the remote devices to fix problems or change configurations for operational needs. This is a challenging environment to work within because the hardware and software are usually proprietary to the specific industry; are privately owned and operated; and communication can take place over telecommunication links, satellites, and microwave-based systems.",
+    "D is incorrect because the distributed control system (DCS) is a common type of ICS. In a DCS, the control elements are not centralized. The control elements are distributed throughout the system and are managed by one or more computers. SCADA systems, DCSs, and PLCs are used in industrial sectors such as water, oil and gas, electric, transportation, etc. These systems are considered “critical infrastructure” and are highly interconnected and dependent systems. In the past, these critical infrastructure environments did not use the same type of technology and protocols as the Internet, and thus were isolated and very hard to attack. Over time, these proprietary environments have been turned into IP-based environments using networking devices and connected IP-based workstations. This shift allows for better centralized controlling and management, but opens them up to the same type of cyber attacks that the computer industry has always been vulnerable to."
+   ]
+  },
+  {
+   "n": 15,
+   "q": "There are several types of intrusion detection systems (IDSs). What type of IDS builds a profile of an environment’s normal activities and assigns an anomaly score to packets based on the profile?",
+   "options": [
+    "State-based",
+    "Statistical anomaly–based",
+    "Misuse-detection system",
+    "Protocol signature–based"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A statistical anomaly–based IDS is a behavioral-based system. Behavioral-based IDS products do not use predefined signatures but rather are put in a learning mode to build a profile of an environment’s “normal” activities. This profile is built by continually sampling the environment’s activities. The longer the IDS is put in a learning mode, in most instances, the more accurate a profile it will build and the better protection it will provide. After this profile is built, all future traffic and activities are compared to it. With the use of complex statistical algorithms, the IDS looks for anomalies in the network traffic or user activity. Each packet is given an anomaly score, which indicates its degree of irregularity. If the score is higher than the established threshold of “normal” behavior, then the preconfigured action will take place.",
+    "A is incorrect because a state-based IDS has rules that outline which state transition sequences should sound an alarm. The initial state is the state prior to the execution of an attack, and the compromised state is the state after successful penetration. The activity that takes place between the initial and compromised state is what the state-based IDS looks for, and it sends an alert if any of the state-transition sequences match its preconfigured rules.",
+    "C is incorrect because a misuse-detection system is simply another name for a signature-based IDS, which compares network or system activity to signatures or models of how attacks are carried out. Any action that is not recognized as an attack is considered acceptable. Signature-based IDS are the most popular IDS products today, and their effectiveness depends upon regularly updating the software with new signatures, as with antivirus software. This type of IDS is weak against new types of attacks because it can only recognize those that have been previously identified and have had signatures written for them.",
+    "D is incorrect because a protocol signature–based IDS is not a formal IDS. This is a distracter answer."
+   ]
+  },
+  {
+   "n": 16,
+   "q": "A rule-based IDS takes a different approach than a signature-based or anomaly-based system. Which of the following is characteristic of a rule-based IDS?",
+   "options": [
+    "Uses IF/THEN programming within expert systems",
+    "Identifies protocols used outside of their common bounds",
+    "Compares patterns to several activities at once",
+    "Can detect new attacks"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Rule-based intrusion detection is commonly associated with the use of an expert system. An expert system is made up of a knowledge base, an inference engine, and rule-based programming. Knowledge is represented as rules, and the data to be analyzed is referred to as facts. The knowledge of the system is written in rule-based programming (IF situation THEN action). These rules are applied to the facts, the data that comes in from a sensor, or a system that is being monitored. For example, an IDS pulls data from a system’s audit log and stores it temporarily in its fact database. Then, the preconfigured rules are applied to this data to indicate whether anything suspicious is taking place. In our scenario, the rule states “IF a root user creates File1 AND creates File2 SUCH THAT they are in the same directory THEN there is a call to Administrative Tool TRIGGER send alert.” This rule has been defined such that if a root user creates two files in the same directory and then makes a call to a specific administrative tool, an alert should be sent.",
+    "B is incorrect because a protocol anomaly–based IDS identifies protocols used outside of their common bounds. The IDS has specific knowledge of each protocol that it will monitor. A protocol anomaly pertains to the format and behavior of a protocol. If a protocol is formatted differently or is demonstrating abnormal behavior, then the IDS triggers an alarm.",
+    "C is incorrect because a stateful matching IDS compares patterns to several activities at once. It is a type of signature-based IDS, meaning that it does pattern matching, similar to antivirus software. State is a snapshot of an operating system’s values in volatile, semipermanent, and permanent memory locations. In a state-based IDS, the initial state is the state prior to the execution of an attack, and the compromised state is the state after successful penetration. The IDS has rules that outline which state transition sequences should sound an alarm.",
+    "D is incorrect because a rule-based IDS cannot detect new attacks. An anomaly-based IDS can detect new attacks because it doesn’t rely on predetermined rules or signatures, which are only available after security researchers have had time to study an attack. Instead, an anomaly-based IDS learns the “normal” activities of an environment and triggers an alarm when it detects activity that differs from the norm. The three types of anomaly-based IDS are statistical, protocol, and traffic. They are also called behavior- or heuristic-based."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "Sam plans to establish mobile phone service using the personal information he has stolen from his former boss. What type of identity theft is this?",
+   "options": [
+    "Phishing",
+    "True name",
+    "Pharming",
+    "Account takeover"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Identity theft refers to a situation where someone obtains key pieces of personal information such as a driver’s license number, bank account number, credentials, or Social Security number, and then uses that information to impersonate someone else. Typically, identity thieves will use the personal information to obtain credit, merchandise, or services in the name of the victim. This can result in such things as ruining the victim’s credit rating, generating false criminal records, and issuing arrest warrants for the wrong individuals. Identity theft is categorized in two ways: true name and account takeover. True name identity theft means the thief uses personal information to open new accounts. The thief might open a new credit card account, establish mobile phone service like Sam, or open a new checking account in order to obtain blank checks.",
+    "A is incorrect because phishing is a type of social engineering attack with the goal of obtaining personal information, credentials, credit card number, or financial data. The attackers lure, or fish, for sensitive data through various methods. While the goal of phishing is to dupe a victim into handing over his personal information, the goal of identity theft is to use that personal information for personal or financial gain. An attacker can employ a phishing attack as a means to carry out identity theft.",
+    "C is incorrect because pharming is a technical attack that is carried out to trick victims into sending their personal information to an attacker via an illegitimate web site. The victim types in a web address, such as www.nicebank.com, into his browser. The victim’s system sends a request to a poisoned DNS server, which points the victim to a web site that is under the attacker’s control. Because the site looks and feels like the requested web site, the user enters his personal information, which the attacker can then use to commit identity theft.",
+    "D is incorrect because account takeover identity theft means the imposter uses personal information to gain access to the person’s existing accounts, rather than opening a new account. Typically, the thief will change the mailing address on an account and run up a huge bill before the person, whose identity has been stolen, realizes there is a problem. The Internet has made it easier for an identity thief to use the information they’ve stolen because transactions can be made without any personal interaction."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "Of the following, what is the primary item that a capability listing is based upon?",
+   "options": [
+    "A subject",
+    "An object",
+    "A product",
+    "An application"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A capability table specifies the access rights a certain subject possesses pertaining to specific objects. A capability list (also referred to as a capability table) is different from an access control list (ACL) because the subject is bound to the capability table, whereas the object is bound to the ACL. A capability can be in the form of a token, ticket, or key. When a subject presents a capability component, the operating system (or application) will review the access rights and operations outlined in the capability component and allow the subject to carry out just those functions. A capability component is a data structure that contains a unique object identifier and the access rights the subject has to that object. The object may be a file, array, memory segment, or port.",
+    "B is incorrect because an object is bound to an access control list (ACL), not a capability component. ACLs are used in several operating systems, applications, and router configurations. They are lists of subjects that are authorized to access a specific object, and they define what level of authorization is granted. Authorization can be specified to an individual or group. ACLs map values from the access control matrix to the object. Whereas a capability corresponds to a row in the access control matrix, the ACL corresponds to a column of the matrix.",
+    "C is incorrect because a product can be an object or subject. If a user attempts to access a product (such as a program), the user is the subject and the product is the object. If a product attempts to access a database, the product is the subject and the database is the object. While a product could be a subject in a capability list for example, the best answer is A. A capability list indicates what objects a subject can access and the operations that can be carried out on those objects.",
+    "D is incorrect because this is similar to answer C. If a user attempts to access an application, the user is the subject and the application is the object. If an application attempts to access a database, the application is the subject and the database is the object. While an application could be a subject in a capability list for example, the best answer is A. A capability list indicates what objects a subject can access and the operations that can be carried out on those objects."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "Alex works for a chemical distributor that assigns employees tasks that separate their duties and routinely rotates job assignments. Which of the following best describes the differences between these countermeasures?",
+   "options": [
+    "They are the same thing with different titles.",
+    "They are administrative controls that enforce access control and protect the company’s resources.",
+    "Separation of duties ensures that one person cannot perform a high-risk task alone, and job rotation can uncover fraud because more than one person knows the tasks of a position.",
+    "Job rotation ensures that one person cannot perform a high-risk task alone, and separation of duties can uncover fraud because more than one person knows the tasks of a position."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Separation of duties and job rotation are two security controls commonly used within companies to prevent and detect fraud. Separation of duties is put into place to ensure that one entity cannot carry out a task that could be damaging or risky to the company. It requires two or more people to come together to do their individual tasks to accomplish the overall task. Rotation of duties helps ensure that one person does not stay in one position for a long period of time because he may end up having too much control over a segment of the business. Such total control could result in fraud, data modification, and misuse of resources.",
+    "A is incorrect because separation of duties and job rotation are two different concepts. They are, however, both put into place to reduce the possibilities of fraud, sabotage, misuse of information, theft, and other security compromises. Separation of duties makes sure that one individual cannot complete a critical task by herself. When a submarine captain needs to launch a nuclear torpedo, the launch usually requires three codes to be entered into the launching mechanism by three different senior crewmembers. This is an example of separation of duties. Job rotation ensures that no single person ends up having too much control over a segment of the business as a result of staying in one position for a long period of time.",
+    "B is incorrect because answer C is a more detailed and definitive answer. Answer C describes both of these controls properly and their differences. Both of these controls are administrative in nature and are put into place to control access to company assets, but the CISSP exam requires the best answer out of four.",
+    "D is incorrect because the description is backward. Separation of duties, not job rotation, ensures that one person cannot perform a high-risk task alone. Job rotation moves individuals in and out of an specific role to ensure that fraudulent activities are not taking place."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "Which markup language allows a company to send service requests and the receiving company to provision access to these services?",
+   "options": [
+    "XML",
+    "SPML",
+    "SGML",
+    "HTML"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Service Provisioning Markup Language (SPML) is a markup language built on the XML framework that exchanges information on which users should get access to what resources and services. So let’s say that an automobile company and tire company only allow Inventory Managers within the automobile company to order tires. If Bob logs in to the automobile company’s inventory software and orders 40 tires, how does the tire company know that this request is coming from an authorized vendor and user with the Inventory Managers group? The automobile company’s software can pass user and group identity information to the tire company’s software. The tire company uses this identity information to make an authorization decision that then allows Bob’s request for 40 tires to be filled. Since both the sending and receiving companies are following one standard (XML), this type of interoperability can take place.",
+    "A is incorrect because it is not the best answer to the question. Service Provisioning Markup Language (SPML)—which is based on XML—allows company interfaces to pass service requests and the receiving company to provision access to these services. This interoperability is made possible because the companies are both using Extensible Markup Language (XML). XML is a set of rules for electronically encoding documents and web-based communication. It is also used to encode arbitrary data structures as in web services. It allows groups or companies to create information formats, like SPML, that enable a consistent means of sharing data.",
+    "C is incorrect because Standard Generalized Markup Language (SGML) was one of the first markup languages developed. It does not provide user access or provisioning functionality. SGML was a standard that defines generalized markup tags for documents. It is a successor to Generalized Markup Language and came long before XML or SPML.",
+    "D is incorrect because Hypertext Markup Language (HTML) was developed to annotate web pages. HTML is a precursor to XML and SGML. HTML provides a means of denoting structural semantics for text and other elements found on a web page. It can be used to embed images and objects, and create interactive forms. However, it cannot allow company interfaces to pass service requests and the receiving company to provision access to these services."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "There are several different types of centralized access control protocols. Which of the following is illustrated in the graphic that follows?",
+   "options": [
+    "Diameter",
+    "Watchdog",
+    "RADIUS",
+    "TACACS+"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Diameter is an authentication, authorization, and auditing (AAA) protocol that provides the same type of functionality as RADIUS and TACACS+ but also provides more flexibility and capabilities to meet the new demands of today’s complex and diverse networks. At one time, all remote communication took place over PPP and SLIP connections and users authenticated themselves through PAP or CHAP. Technology has become much more complicated and there are more devices and protocols to choose from than ever before. The Diameter protocol allows wireless devices, smart phones, and other devices to be able to authenticate themselves to networks using roaming protocols, Mobile IP, Ethernet over PPP, Voice over IP (VoIP), and others.",
+    "B is incorrect because Watchdog timers are commonly used to detect software faults, such as a process ending abnormally or hanging. The Watchdog functionality sends out a type of “heartbeat” packet to determine whether a service is responding. If it is not, the process can be terminated or reset. These packets help prevent against software deadlocks, infinite loops, and process prioritization problems. This functionality can be used in AAA protocols to determine whether packets need to be re-sent and whether connections experiencing problems should be closed and reopened, but it is not an access control protocol itself.",
+    "C is incorrect because Remote Authentication Dial-In User Service (RADIUS) is a network protocol and provides client/server authentication, authorization, and audit for remote users. A network may have access servers, DSL, ISDN, or a T1 line dedicated for remote users to communicate through. The access server requests the remote user’s logon credentials and passes them back to a RADIUS server, which houses the usernames and password values. The remote user is a client to the access server, and the access server is a client to the RADIUS server.",
+    "D is incorrect because TACACS+ provides basically the same functionality as RADIUS. The RADIUS protocol combines the authentication and authorization functionality. TACACS+ uses a true authentication, authorization, accounting, and audit (AAA) architecture, which separates each function out. This gives a network administrator more flexibility in how remote users are authenticated. Neither TACACS+ or RADIUS can carry out these services for devices that need to communicate over VoIP, mobile IP, or other similar types of protocols."
+   ],
+   "images": [
+    "data/img/cap02_q21_0.jpeg"
+   ]
+  },
+  {
+   "n": 22,
+   "q": "An access control matrix is used in many operating systems and applications to control access between subjects and objects. What is the column in this type of matrix referred to as?",
+   "options": [
+    "Capability table",
+    "Constrained interface",
+    "Role-based value",
+    "ACL"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Access control lists (ACLs) map values from the access control matrix to the object. Whereas a capability corresponds to a row in the access control matrix, the ACL corresponds to a column of the matrix. ACLs are used in several operating systems, applications, and router configurations. They are lists of subjects that are authorized to access specific objects, and they define what level of authorization is granted. Authorization can be specified to an individual or group. So the ACL is bound to an object and indicates what subjects can access it and a capability table is bound to a subject and indicates what objects that subject can access.",
+    "A is incorrect because a capability can be in the form of a token, ticket, or key and is a row within an access control matrix. When a subject presents a capability component, the operating system (or application) will review the access rights and operations outlined in the capability component and allow the subject to carry out just those functions. A capability component is a data structure that contains a unique object identifier and the access rights the subject has to that object. The object may be a file, array, memory segment, or port. Each user, process, and application in a capability system has a list of capabilities it can carry out.",
+    "B is incorrect because constrained user interfaces restrict users’ access abilities by not allowing them to request certain functions or information, or to have access to specific system resources. Three major types of restricted interfaces exist: menus and shells, database views, and physically constrained interfaces. When menu and shell restrictions are used, the options users are given are the commands they can execute. For example, if an administrator wants users to be able to execute only one program, that program would be the only choice available on the menu. If restricted shells were used, the shell would contain only the commands the administrator wants the users to be able to execute.",
+    "C is incorrect because a role-based access control (RBAC) model, also called nondiscretionary access control, uses a centrally administered set of controls to determine how subjects and objects interact. This type of model lets access to resources be based on the role the user holds within the company. It is referred to as nondiscretionary because assigning a user to a role is unavoidably imposed. This means that if you are assigned only to the Contractor role in a company, there is nothing you can do about it. You don’t have the discretion to determine what role you will be assigned."
+   ],
+   "images": [
+    "data/img/cap02_q22_0.jpeg"
+   ]
+  },
+  {
+   "n": 23,
+   "q": "What technology within identity management is illustrated in the graphic that follows?",
+   "options": [
+    "User provisioning",
+    "Federated identity",
+    "Directories",
+    "Web access management"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A federated identity is a portable identity, and its associated entitlements, that can be used across business boundaries. It allows a user to be authenticated across multiple IT systems and enterprises. Identity federation is based upon linking a user’s otherwise distinct identities at two or more locations without the need to synchronize or consolidate directory information. Federated identity offers businesses and consumers a more convenient way of accessing distributed resources and is a key component of e-commerce.",
+    "A is incorrect because user provisioning refers to the creation, maintenance, and deactivation of user objects and attributes as they exist in one or more systems, directories, or applications, in response to business processes. User provisioning software may include one or more of the following components: change propagation, self-service workflow, consolidated user administration, delegated user administration, and federated change control. User objects may represent employees, contractors, vendors, partners, customers, or other recipients of a service. Services may include electronic mail, access to a database, access to a file server or mainframe, and so on. User provisioning can be a function with federation identification, but this is not what the graphic illustrates.",
+    "C is incorrect because while most enterprises have some type of directory that contains information pertaining to the company’s network resources and users, they do not commonly spread across different businesses. Most directories follow a hierarchical database format, based on the X.500 standard, and a type of protocol, as in Lightweight Directory Access Protocol (LDAP), that allows subjects and applications to interact with the directory. Applications can request information about a particular user by making an LDAP request to the directory, and users can request information about a specific resource by using a similar request. While directories can work within a federated framework, this is not what the graphic shows.",
+    "D is incorrect because web access management (WAM) software controls what users can access when using a web browser to interact with web-based enterprise assets. This type of technology is continually becoming more robust and experiencing increased deployment. This is because of the increased use of e-commerce, online banking, content providing, web services, and more. More complexity comes in with all the different ways a user can authenticate (password, digital certificate, token, and others), the resources and services that may be available to the user (transfer funds, purchase product, update profile, and so forth), and the necessary infrastructure components. The infrastructure is usually made up of a web server farm (many servers), a directory that contains the users’ accounts and attributes, a database, a couple of firewalls, and some routers, all laid out in a tiered architecture."
+   ],
+   "images": [
+    "data/img/cap02_q23_0.jpeg"
+   ]
+  },
+  {
+   "n": 24,
+   "q": "There are several different types of single sign-on protocols and technologies in use today. What type of technology is illustrated in the graphic that follows?",
+   "options": [
+    "Kerberos",
+    "Discretionary access control",
+    "SESAME",
+    "Mandatory access control"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The Secure European System for Applications in a Multivendor Environment (SESAME) project has been a single sign-on technology developed to extend Kerberos functionality and improve upon its weaknesses. SESAME uses symmetric and asymmetric cryptographic techniques to authenticate subjects to network resources. Kerberos uses tickets to authenticate subjects to objects, whereas SESAME uses Privileged Attribute Certificates (PACs), which contain the subject’s identity, access capabilities for the object, access time period, and lifetime of the PAC. The PAC is digitally signed so that the object can validate it came from the trusted authentication server, which is referred to as the Privileged Attribute Server (PAS). The PAS holds a similar role to that of the Key Distribution Center (KDC) within Kerberos. After a user successfully authenticates to the authentication service (AS), he is presented with a token to give to the PAS. The PAS then creates a PAC for the user to present to the resource he is trying to access.",
+    "A is incorrect because Kerberos is an authentication protocol and is based on symmetric key cryptography. Kerberos is an example of a single sign-on system for distributed environments (as is SESAME) but is the de facto standard for heterogeneous networks today. Kerberos incorporates a wide range of security capabilities, which gives companies much more flexibility and scalability when they need to provide an encompassing security architecture. It has four elements necessary for enterprise access control: scalability, transparency, reliability, and security. The differences between these technologies are described more in the previous answer. While SESAME and Kerberos are close in the functionality they present, SESAME is the technology shown in the graphic.",
+    "B is incorrect because discretionary access control (DAC) is an access control model that is built right into an operating system or application, not something that works as a single sign-on technology. A system that uses DAC enables the owner of the resource to specify which subjects can access specific resources. This model is called discretionary because the control of access is based on the discretion of the owner. Many times department managers, or business unit managers, are the owners of the data within their specific department. Being the owner, they can specify who should have access and who should not. In a DAC model, access is restricted based on the authorization granted to the users. This means users are allowed to specify what type of access can occur to the objects they own. The most common implementation of DAC is through ACLs, which are dictated and set by the owners and enforced by the operating system. This can make a user’s ability to access information dynamic versus the more static role of mandatory access control (MAC).",
+    "D is incorrect because mandatory access control (MAC) is an access control model that is built right into an operating system or application, not something that works as a single sign-on technology. In a MAC model, users and data owners do not have as much freedom to determine who can access files. The operating system makes the final decision and can override the users’ wishes. This model is much more structured and strict and is based on a security label system. Users are given a security clearance (secret, top secret, confidential, and so on), and data is classified in the same way. The clearance and classification data are stored in the security labels, which are bound to the specific subjects and objects. When the system makes a decision about fulfilling a request to access an object, it is based on the clearance of the subject, the classification of the object, and the security policy of the system. The rules for how subjects access objects are made by the security officer, configured by the administrator, enforced by the operating system, and supported by security technologies."
+   ],
+   "images": [
+    "data/img/cap02_q24_0.jpeg"
+   ]
+  },
+  {
+   "n": 25,
+   "q": "There are different ways that specific technologies can create one-time passwords for authentication purposes. What type of technology is illustrated in the graphic that follows?",
+   "options": [
+    "Counter synchronous token",
+    "Asynchronous token",
+    "Mandatory token",
+    "Synchronous token"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. A synchronous token device synchronizes with the authentication service by using time or a counter as the core piece of the authentication process. If the synchronization is time-based, as shown in this graphic, the token device and the authentication service must hold the same time within their internal clocks. The time value on the token device and a secret key are used to create the one-time password, which is displayed to the user. The user enters this value and a user ID into the computer, which then passes them to the server running the authentication service. The authentication service decrypts this value and compares it to the value it expected. If the two match, the user is authenticated and allowed to use the computer and resources.",
+    "A is incorrect because if the token device and authentication service use counter-synchronization, it is not based on time as shown in the graphic. When using a counter-synchronization token device, the user will need to initiate the creation of the one-time password by pushing a button on the token device. This causes the token device and the authentication service to advance to the next authentication value. This value and a base secret are hashed and displayed to the user. The user enters this resulting value along with a user ID to be authenticated. In either time-or counter-based synchronization, the token device and authentication service must share the same secret base key used for encryption and decryption.",
+    "B is incorrect because a token device using an asynchronous token–generating method employs a challenge/response scheme to authenticate the user. This technology does not use synchronization but instead uses discrete steps in its authentication process. In this situation, the authentication server sends the user a challenge, a random value also called a nonce. The user enters this random value into the token device, which encrypts it and returns a value the user uses as a one-time password. The user sends this value, along with a username, to the authentication server. If the authentication server can decrypt the value and it is the same challenge value sent earlier, the user is authenticated.",
+    "C is incorrect because there is no such thing as a mandatory token. This is a distracter answer."
+   ],
+   "images": [
+    "data/img/cap02_q25_0.jpeg"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "Sally is carrying out a software analysis on her company’s proprietary application. She has found out that it is possible for an attacker to force an authorization step to take place before the authentication step is completed successfully. What type of issue would allow for this type of compromise to take place?",
+   "options": [
+    "Backdoor",
+    "Maintenance hook",
+    "Race condition",
+    "Data validation error"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. A race condition is when processes carry out their tasks on a shared resource and there is a potential that the sequence is carried out in the wrong order. A race condition is possible when two or more processes use a shared resource, as in data within a variable. It is important that the processes carry out their functionality in the correct sequence. If process 2 carried out its task on the data before process 1, the result will be much different than if process 1 carried out its tasks on the data before process 2. If authentication and authorization steps are split into two functions, there is a possibility an attacker could use a race condition to force the authorization step to be completed before the authentication step.",
+    "A is incorrect because a backdoor is a service that is available and “listening” on a specific port. Backdoors are implemented by attackers so that they can gain easy access to compromised systems without having to authenticate as a regular system user.",
+    "B is incorrect because a maintenance hook is specific software code that allows easy and unauthorized access to sensitive components of a software product. Software programmers commonly use maintenance hooks to allow them to get quick access to a product’s code so that fixes can be carried out, but this is dangerous. If an attacker uncovered this type of access, compromises could take place that would most likely not require authentication and would probably not be logged.",
+    "D is incorrect because data validation errors do not commonly allow an attacker to manipulate process execution sequences. An attacker would enter invalid data through a specific interface, with the goals of having their code execute on the victim machine or carry out a buffer overflow."
+   ]
+  },
+  {
+   "n": 27,
+   "q": "Which of the following best describes how SAML, SOAP, and HTTP commonly work together in an environment that provides web services?",
+   "options": [
+    "Security attributes are put into SAML format. Web service request and authentication data are encrypted in a SOAP message. Message is transmitted in an HTTP connection.",
+    "Security attributes are put into SAML format. Web service request and authentication data are encapsulated in a SOAP message. Message is transmitted in an HTTP connection over TLS.",
+    "Authentication data are put into SAML format. Web service request and authentication data are encapsulated in a SOAP message. Message is transmitted in an HTTP connection.",
+    "Authentication data are put into SAML format. HTTP request and authentication data are encapsulated in a SOAP message. Message is transmitted in an HTTP connection."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. As an example, when you log in to your company’s portal and double-click a link (e.g., Salesforce), your company’s portal will take this request and your authentication data and package them up in an SAML format and encapsulate that data into a SOAP message. This message would be transmitted over an HTTP connection to the Salesforce vendor site, and once you are authenticated you can interact with the vendor software. SAML packages up authentication data, SOAP packages up web service requests and SAML data, and the request is transmitted over an HTTP connection.",
+    "A is incorrect because Security Assertion Markup Language (SAML) is an XML-based open standard for exchanging authentication and authorization data between security domains, that is, between an identity provider (a producer of assertions) and a service provider (a consumer of assertions). So authentication data are used with SAML, not security attributes. Also, SOAP encapsulates messages, it does not encrypt them.",
+    "B is incorrect because authentication data are used with SAML and the transmission does not take place over a TLS connection by default. The transmission can take place over SSL or TLS, but this was not what was outlined in the question.",
+    "D is incorrect because SOAP encapsulates web service requests and data, not HTTP. After SOAP encapsulates web service data, they are then encapsulated with HTTP for transmission purposes."
+   ]
+  },
+  {
+   "n": 28,
+   "q": "Tom works at a large retail company that recently deployed radio-frequency identification (RFID) to better manage its inventory processes. Employees use scanners to gather product-related information instead of manually looking up product data. Tom has found out that malicious customers have carried out attacks on the RFID technology to reduce the amount they pay on store items. Which of the following is the most likely reason for the existence of this type of vulnerability?",
+   "options": [
+    "The company’s security team does not understand how to secure this type of technology.",
+    "The cost of integrating security within RFID is cost prohibitive.",
+    "The technology has low processing capabilities and encryption is very processor-intensive.",
+    "RFID is a new and emerging technology, and the industry does not currently have ways to secure it."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. A common security issue with RFID is that the data can be captured as it moves from the tag to the reader and modified. While encryption can be integrated as a countermeasure, it is not common because RFID is a technology that has low processing capabilities and encryption is very processor-intensive.",
+    "A is incorrect because it is not necessarily the best answer here. The company in the question may understand RFID and its common security issues, but security usually has to be integrated within the RFID technology. This means the vendor of the RFID product would have to integrate security into the product, and the available security solutions are commonly limited because RFID tags and readers do not usually have the necessary processing power to carry out the necessary cryptographic functions.",
+    "B is incorrect because the cost of integrating security into RFID products may or may not be a factor. It usually comes down to the limitation of the technology itself, not necessarily the costs involved.",
+    "D is incorrect because it is not the best answer here. RFID has been around for many years and many in the industry understand how it works and its security issues. Integrating security into a technology with so many limitations demands real needs and motivation. In most situations the data that are being transferred through RFID are not overly sensitive, so there has not been a true perceived need to integrate security into it. As RFID evolves it will most likely be more equipped to handle security countermeasures, but the industry has not fully gotten to this place yet."
+   ]
+  },
+  {
+   "n": 29,
+   "q": "Tanya is the security administrator for a large distributed retail company. The company’s network has many different network devices and software appliances that generate logs and audit data. Tanya and her staff have become overwhelmed with trying to review all of the log files when attempting to identify if anything suspicious is taking place within the network. Which of the following is the best solution for this company to implement?",
+   "options": [
+    "Security information and event management",
+    "Event correlation tools",
+    "Intrusion detection systems",
+    "Security event correlation management tools"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Today, many organizations are implementing security event management (SEM) systems, also called security information and event management (SIEM) systems. These products gather logs from various devices (servers, firewalls, routers, etc.) and attempt to correlate the log data and provide analysis capabilities. Companies also have different types of solutions on a network (IDS, IPS, antimalware, proxies, etc.) collecting logs in various proprietary formats, which require centralization, standardization, and normalization. Log formats are different per product type and vendor; thus, SIEM puts them into a standardized format for useful reporting.",
+    "B is incorrect because answer A provides a more accurate portrayal of the needed solution. Security event management and security information and event management tools zero in on malicious events and provide a centralized management capability. The logs are commonly aggregated onto one system, and the SIEM software “translates” the logs into a standardized format. The standardization allows for the log data to be analyzed and reports generated.",
+    "C is incorrect because an intrusion detection system is a product that identifies malicious activities and carries out notification activities. While these types of products may aggregate logs for analysis, they do not have the capability of standardizing log formats from different product types.",
+    "D is incorrect because it is not the best answer here. An argument can be made that security event correlation management tools is what the correct answer “Security information and event management” is carrying out, but on the exam you will be required to pick the best answer. Security information and event management (SIEM) is the actual term the industry uses for products that provide this type of functionality."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "Sarah and her security team have carried out many vulnerability tests over the years to locate the weaknesses and vulnerabilities within the systems on the network. The CISO has asked her to oversee the development of a threat model for the network. Which of the following best describes what this model is and what it would be used for?",
+   "options": [
+    "A threat model can help to assess the probability, the potential harm, and the priority of attacks, and thus help to minimize or eradicate the threats.",
+    "A threat model combines the output of the various vulnerability tests and the penetration tests carried out to understand the security posture of the network as a whole.",
+    "A threat model is a risk-based model that is used to calculate the probabilities of the various risks identified during the vulnerability tests.",
+    "A threat model is used in software development practices to uncover programming errors."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Threat modeling is a structured approach to identifying potential threats that could exploit vulnerabilities. A threat modeling approach looks at who would most likely want to attack an organization and how could they successfully do this. A threat model can help to assess the probability, the potential harm, and the priority of attacks, and thus help to minimize or eradicate the threats. Threat modeling is a process of identifying the threats that could negatively affect an asset and the attack vectors they would use to achieve their goals.",
+    "B is incorrect because a threat model is very different from vulnerability and penetration tests. These types of tests are carried out to look for and at specific items in a very focused manner. A threat model is a conceptual construct that is developed to understand a system or network at an abstraction level. A threat model is used as a tool to think through all possible attack vectors, while these tests are carried out to detect if specific vulnerabilities exist to allow certain attacks to take place.",
+    "C is incorrect because a threat model is not used for calculations. Quantitative risk analysis procedures are commonly carried out to calculate the probability of identified vulnerabilities turning into true risks. These procedures can be carried out after a threat model is developed, but they are not one and the same.",
+    "D is incorrect because while a threat model can be used in software development, it is not restricted to just this portion of the industry. It is important to be able to understand all types of threats —software, physical, personnel, etc. A threat model is a high-level construct that can be used to understand different types of threats for different assets. A threat model would not necessarily be used to identify programming errors. The model is used to understand potential threats against an asset."
+   ]
+  }
+ ]
+}

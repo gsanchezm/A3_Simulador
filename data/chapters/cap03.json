@@ -1,0 +1,574 @@
+{
+ "id": 3,
+ "title_en": "Security Architecture and Design",
+ "title_es": "Arquitectura de Seguridad y Diseño",
+ "block": 1,
+ "questions": [
+  {
+   "n": 1,
+   "q": "Lacy’s manager has tasked her with researching an intrusion detection system for a new dispatching center. Lacy identifies the top five products and compares their ratings. Which of the following are the evaluation criteria most in use today for these types of purposes?",
+   "options": [
+    "ITSEC",
+    "Common Criteria",
+    "Red Book",
+    "Orange Book"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Common Criteria were created in the early 1990s as a way of combining the strengths of both the Trusted Computer System Evaluation Criteria (TCSEC) and Information Technology Security Evaluation Criteria (ITSEC) while eliminating their weaknesses. These evaluation criteria are more flexible than TCSEC and more straightforward than ITSEC. Because it is recognized globally, the Common Criteria help consumers by reducing the complexity of the ratings and eliminating the need to understand the definition and meaning of different ratings within various evaluation schemes. This also helps manufacturers because now they can build to one specific set of requirements if they want to sell their products internationally, instead of having to meet several different ratings with varying rules and requirements.",
+    "A is incorrect because ITSEC, or the Information Technology Security Evaluation Criteria, is not the most widely used. ITSEC was the first attempt at establishing a single standard for evaluating security attributes of computer systems and products by many European countries. Furthermore, ITSEC separates functionality and assurance in its evaluation, giving each a separate rating. It was developed to provide more flexibility than TCSEC, and addresses integrity, availability, and confidentiality in networked systems. While the goal of the ITSEC was to become the worldwide criteria for product evaluation, it did not meet that goal and has been replaced with the Common Criteria.",
+    "C is incorrect because the Red Book is a U.S. government publication that addresses security evaluation topics for networks and network components. Officially titled the Trusted Network Interpretation, the book provides a framework for securing different types of networks. Subjects accessing objects on the network need to be controlled, monitored, and audited.",
+    "D is incorrect because the Orange Book is a U.S. government publication that primarily addresses government and military requirements and expectations for operating systems. The Orange Book is used to evaluate whether a product contains the security properties the vendor claims it does and whether the product is appropriate for a specific application or function. The Orange Book is used to review the functionality, effectiveness, and assurance of a product during its evaluation, and it uses classes that were devised to address typical patterns of security requirements. It provides a broad framework for building and evaluating trusted systems with great emphasis on controlling which users can access a system. The other name for the Orange Book is the Trusted Computer System Evaluation Criteria (TCSEC)."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Certain types of attacks have been made more potent by which of the following advances to microprocessor technology?",
+   "options": [
+    "Increased circuits, cache memory, and multiprogramming",
+    "Dual mode computation",
+    "Direct memory access I/O",
+    "Increases in processing power"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Due to the increase of personal computer and server processing power, it is now possible to be more successful in brute-force and cracking attacks against security mechanisms that would not have been possible a few years ago. Today’s processors can execute an amazing number of instructions per second. These instructions can be used to attempt to crack passwords or encryption keys or instructions to send nefarious packets to victim systems.",
+    "A is incorrect because increased circuits, cache memory, and multiprogramming do not make certain types of attacks more potent. Multiprogramming means that more than one program or process can be loaded into memory at the same time. This is what allows you to run your antivirus software, word processor, firewall, and e-mail client simultaneously. Cache memory is a type of memory used for high-speed writing and reading activities. When the system assumes (through its programmatic logic) that it will need to access specific information many times throughout its processing activities, it will store the information in cache memory so that it is easily and quickly accessible.",
+    "B is incorrect because the answer is a distracter. There is no real dual-mode computation when examining the advances in microprocessors.",
+    "C is incorrect because direct memory access (DMA) is a way of transferring instructions and data between I/O (input/output) devices and the system’s memory without using the CPU. This speeds up data transfer rates significantly. DMA basically offloads work from the CPU by ensuring that more simple instructions are interpreted and executed through other processing capabilities within the computer system. This is not an advancement to microprocessor technology."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "CPUs and operating systems can work in two main types of multitasking modes. What controls access and the use of system resources in preemptive multitasking mode?",
+   "options": [
+    "The user and application",
+    "The program that is loaded into memory",
+    "The operating system",
+    "The CPU and user"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Operating systems started out as cooperative and then evolved into preemptive multitasking. With preemptive multitasking, used in Windows 9x, NT, 2000, and XP, as well as in Unix systems, the operating system controls how long a process can use a resource. The system can suspend a process that is using the CPU (or other system resources) and allow another process access to it through the use of time sharing. Thus, operating systems that use preemptive multitasking run the show, and one application does not negatively affect another application if it behaves badly. In operating systems that used cooperative multitasking, the processes had too much control over resource release, and when an application hung, it usually affected all the other applications and sometimes the operating system itself. Operating systems that use preemptive multitasking run the show, and one application does not negatively affect another application as easily.",
+    "A is incorrect because the user and application do not control access and the use of system resources in preemptive multitasking mode. The application, however, has more control over the use of system resources in cooperative multitasking mode. The operating system itself works in either preemptive or cooperative multitasking modes, not the applications or users.",
+    "B is incorrect because as described in answer A, a program does not run in a specific multitasking mode—the operating system does. Cooperative multitasking, used in Windows 3.1 and early Macintosh systems, required the processes to voluntarily release resources that they were using. This was not necessarily a stable environment because if a programmer did not write his code properly to release a resource when his application was done using it, the resource would be committed indefinitely to his application and thus unavailable to other processes.",
+    "D is incorrect because the user and CPU do not control access and the use of system resources. Instead, the operating system controls the processor time slices that different processes can be allocated. Multitasking is the way that the operating system uses access to the CPU, which can be either cooperative or preemptive."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "Virtual storage combines RAM and secondary storage for system memory. Which of the following is a security concern pertaining to virtual storage?",
+   "options": [
+    "More than one process uses the same resource.",
+    "It allows cookies to remain persistent in memory.",
+    "It allows for side-channel attacks to take place.",
+    "Two processes can carry out a denial-of-service."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. When RAM and secondary storage are combined, the result is virtual memory. The system uses hard drive space—called swap space—that is reserved for the purpose of extending its RAM memory space. When a system fills up its volatile memory space, it writes data from memory onto the hard drive. When a program requests access to this data, it is brought from the hard drive back into memory in specific units, called page frames. Accessing data that is kept in pages on the hard drive takes more time than accessing data kept in memory because physical disk read/write access has to take place. There are internal control blocks, maintained by the operating system, to keep track of what page frames are residing in RAM, and what is available “offline,” ready to be called into RAM for execution or processing, if needed. The payoff is that it seems as though the system can hold an incredible amount of information and program instructions in memory. A security issue with using virtual swap space is that two or more processes use the same resource and the data could be corrupted or compromised.",
+    "B is incorrect because virtual storage is not related to cookies. Virtual storage uses hard drive space to extend its RAM memory space. Cookies are small text files used mainly by web browsers. The cookies can contain credentials for web sites, site preference settings, or shopping histories. Cookies are also commonly used to maintain web server-based sessions.",
+    "C is incorrect because a side-channel attack is a nonintrusive attack. In this type of attack, the attacker gathers information about how a mechanism (such as a smart card or encryption processor) works from the radiation that is given off, time taken to carry out processing, power consumed to carry out tasks, etc. This information is used to reverse-engineer the mechanism to uncover how it carries out its security tasks. This is not related to virtual storage.",
+    "D is incorrect because the biggest threat within a system that has shared resources between processes, as operating systems have to share memory between all resources, is that one process will negatively interfere with the other process’s resource. This is especially true with memory, since all data and instructions are stored there, whether they are sensitive or not. While it is possible for two processes to work together to carry out a denial-of-service attack, this is only one type of attack that can be carried out with or without the use of virtual storage."
+   ]
+  },
+  {
+   "n": 5,
+   "q": "Which of the following is a common association of the Clark- Wilson access model?",
+   "options": [
+    "Chinese Wall",
+    "Access tuple",
+    "Read up and write down rule",
+    "Subject and application binding"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. In the Clark-Wilson model, a subject cannot access an object without going through some type of application or program that controls how this access can take place. The subject (usually a user) is bound to the application and then is allowed access to the necessary objects based on the access rules within the application software. For example, when Kathy needs to update information held within her company’s database, she will not be allowed to do so without a piece of software controlling these activities. First, Kathy must authenticate to the software, which is acting as a front end for the database, and then the program will control what Kathy can and cannot do to the information in the database. This is referred to as access triple: subject (user), program, and object. This is triple, not tuple. Tuple is a row within a database.",
+    "A is incorrect because the Chinese Wall model is another name for the Brewer and Nash model, which was created to provide access controls that can change dynamically, depending upon a user’s previous actions, in an effort to protect against conflicts of interest by users’ access attempts. No information can flow between subjects and objects in a way that would result in a conflict of interest. The model states that a subject can write to an object if, and only if, the subject cannot read another object that is in a different dataset.",
+    "B is incorrect because the Clark-Wilson model uses access triple, not access tuple. The access triple is subject-program-object. It ensures that subjects can only access objects through authorized programs.",
+    "C is incorrect because the Clark-Wilson model does not have read up and write down rules. These rules are associated with the Bell-LaPadula and Biba models. The Bell-LaPadula model includes the simple security rule, which is no read up, and the star property rule, which is no write down. The Biba model includes the simple integrity axiom, which is no read down, and the star-integrity axiom, which is no write up."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "Which of the following correctly describes the relationship between the reference monitor and the security kernel?",
+   "options": [
+    "The security kernel implements and enforces the reference monitor.",
+    "The reference monitor is the core of the trusted computing base, which is made up of the security kernel.",
+    "The reference monitor implements and enforces the security kernel.",
+    "The security kernel, aka abstract machine, implements the reference monitor concept."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The trusted computing base (TCB) is the total combination of a system’s protection mechanisms. These are in the form of hardware, software, and firmware. These same components also comprise the security kernel. The reference monitor is an access control concept that is implemented and enforced by the security kernel via the hardware, software, and firmware. In doing so, the security kernel ensures that subjects have the appropriate authorization to access the objects they are requesting. The subject, be it a program, user, or process, should not be able to access a file, program, or resource it is requesting until it has proven that it has the appropriate access rights.",
+    "B is incorrect because the reference monitor is not the core of the trusted computing base (TCB). The core of the TCB is the security kernel, and the security kernel carries out the reference monitor concept. The reference monitor is a concept pertaining to access control. Since it is not a physical component, it is often referred to as an “abstract machine.” The reference monitor mediates access between subjects and objects in an effort to ensure that subjects have the necessary rights to access objects and to protect objects from unauthorized access and destructive changes.",
+    "C is incorrect because the reference monitor does not implement and enforce the security kernel. Rather, the security kernel implements and enforces the reference monitor. The reference monitor is an abstract concept, while the security kernel is a combination of hardware, software, and firmware within the trusted computing base. The security kernel has three requirements, which are also the requirements of the reference monitor. The security kernel must tamperproof and isolate the processes executing the reference monitor concept. Likewise, the security kernel must be implemented so that it is invoked for every access attempt and cannot be circumvented. Finally, the security kernel must be small enough to enable its comprehensive testing and verification.",
+    "D is incorrect because abstract machine is not another name for the security kernel. Abstract machine is another name for the reference monitor, which can also be referred to as the reference monitor concept. The concept states that an abstract machine serves as the mediator between subjects and objects to ensure that the subjects have the necessary rights to access the objects they are requesting and to protect the objects from unauthorized access and modification. The security kernel is responsible for carrying out these activities."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "The trusted computing base (TCB) ensures security within a system when a process in one domain must access another domain in order to retrieve sensitive information. What function does the TCB initiate to ensure that this is done in a secure manner?",
+   "options": [
+    "I/O operational execution",
+    "Process deactivation",
+    "Execution domain switching",
+    "Virtual memory to real memory mapping"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Execution domain switching takes place when a CPU needs to move between executing instructions for a highly trusted process to a less trusted process or vice versa. The trusted computing base (TCB) allows processes to switch domains in a secure manner in order to access different levels of information based on their sensitivity. Execution domain switching takes place when a process needs to call upon a process in a higher protection ring. The CPU goes from executing instructions in user mode to privileged mode and back.",
+    "A is incorrect because input/output (I/O) operations are not initiated to ensure security when a process in one domain must access another domain in order to retrieve sensitive information. I/O operations include control of all input/output devices. I/O operations are functions within an operating system that allow input devices (such as a mouse or keyboard) and output devices (such as a monitor or printer) to interact with applications and with itself.",
+    "B is incorrect because process deactivation takes place when a process’s instructions are completely executed by the CPU or when another process with a higher priority calls upon the CPU. When a process is deactivated, the CPU’s registers must be filled with new information about the new requesting process. The data that is getting switched in and out of the registers may be sensitive, so the TCB components must make sure this takes place securely.",
+    "D is incorrect because memory mapping takes place when a process needs its instructions and data processed by the CPU. The memory manager maps the logical address to the physical address so that the CPU knows where the data is located. This is the responsibility of the operating system’s memory manager."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "The Zachman Architecture Framework is often used to set up an enterprise security architecture. Which of the following does not correctly describe the Zachman Framework?",
+   "options": [
+    "A two-dimensional model that uses communication interrogatives intersecting with different levels",
+    "A security-oriented model that gives instructions in a modular fashion",
+    "Used to build a robust enterprise architecture versus a technical security architecture",
+    "Uses six perspectives to describe a holistic information infrastructure"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Zachman Framework is not security oriented, but it is a good template to work with to build an enterprise security architecture because it gives direction on how to understand the enterprise in a modular fashion. This framework is structured and formal and is used as a tool to understand any type of enterprise from many different angles. The Zachman Framework was developed in the 1980s by John Zachman and is based on the principles of classical architecture that contains rules that govern an ordered set of relationships.",
+    "A is incorrect because the Zachman Framework is a two-dimensional model that addresses the what, how, where, who, when, and why from six different perspectives: the planner or visionary, the owner, the architect, the designer, the builder, and the working system. Together, this information gives a holistic view of the enterprise.",
+    "C is incorrect because the Zachman Framework is used to create a robust enterprise architecture, not a security architecture, technical or not. The framework is not security specific. Almost all robust enterprise security architectures work with the structure provided by the Zachman Framework in one way or another. When we talk about a robust security architecture, we are talking about one that deals with many components throughout the organization —not just a network and the systems within that network.",
+    "D is incorrect because the Zachman Framework uses six perspectives to build a holistic view of the enterprise. Those perspectives are the planner or visionary, owner, architect, designer, builder, and the working system. Those using the framework address what, how, where, who, when, and why as they relate to each of these perspectives. This is to ensure that regardless of the order in which they are put in place, components of the enterprise are organized and relationships are clearly defined so that they create a complete system. The framework does not just specify an information infrastructure."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "John has been told to report to the board of directors with a vendor-neutral enterprise architecture framework that will help the company reduce fragmentation that results from the misalignment of IT and business processes. Which of the following frameworks should he suggest?",
+   "options": [
+    "DoDAF",
+    "CMMI",
+    "ISO/IEC 42010",
+    "TOGAF"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The Open Group Architecture Framework (TOGAF) is a vendor-neutral platform for developing and implementing enterprise architectures. It focuses on effectively managing corporate data through the use of metamodels and service-oriented architecture (SOA). A proficient implementation of TOGAF is meant to reduce fragmentation that occurs due to misalignment of traditional IT systems and actual business processes. It also adjusts to new innovations and capabilities to ensure new changes can easily be integrated into the enterprise platform.",
+    "A is incorrect because the Department of Defense Architecture Framework (DoDAF) provides guidelines for the organization of enterprise architecture for the U.S. Department of Defense systems. All DoD weapons and IT systems are required to design and document enterprise architecture according to these guidelines. They are also suitable for large and complex integrated systems in military, private, or public sectors.",
+    "B is incorrect because Capability Maturity Model Integration (CMMI) is used during software development to design and further enhance software. The CMMI provides a standard for software development process where the level of maturity of the development process can be measured. It was developed by the Carnegie Mellon Software Engineering Institute and is an upgraded version of Capability Maturity Model (CMM).",
+    "C is incorrect because the ISO/IEC 42010 consists of a set of recommended practices intended to simplify the design and conception of software-intensive system architectures. This standard provides a type of language (terminology) to describe the different components of a software architecture and how to integrate it into the life cycle of development. Many times the overall vision of the architecture of a piece of software is lost as the developers get caught up in the actual development procedures. This standard provides a conceptual framework to follow for architecture development and implementation."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "Protection profiles used in the Common Criteria evaluation process contain five elements. Which of the following establishes the type and intensity of the evaluation?",
+   "options": [
+    "Descriptive elements",
+    "Evaluation assurance requirements",
+    "Evaluation assurance level",
+    "Security target"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Common Criteria use protection profiles in their evaluation process. This is a mechanism that is used to describe a real-world need of a product that is not currently on the market. The protection profile contains the set of security requirements, their meaning and reasoning, and the corresponding evaluation assurance level (EAL) rating that the intended product will require. The protection profile describes the environmental assumptions, the objectives, and the functional and assurance level expectations. Each relevant threat is listed along with how it is to be controlled by specific objectives. The protection profile also justifies the assurance level and requirements for the strength of each protection mechanism. Evaluation assurance requirements establish the type and intensity of the evaluation. The other four sections in a protection profile are descriptive elements, rationale, functional requirements, and development assurance requirements.",
+    "A is incorrect because the descriptive elements section of a protection profile provides the name of the profile and a description of the security problem that is to be solved. The protection profile provides a means for a consumer, or others, to identify specific security needs; this is the security problem that is to be conquered. If someone identifies a security need that is not currently being addressed by any current product, that person can write a protection profile describing the product that would be a solution for this real-world problem. The protection profile goes on to provide the necessary goals and protection mechanisms to achieve the necessary level of security and a list of the things that can go wrong during this type of system development. This list is used by the engineers who develop the system, and then by the evaluators to make sure the engineers dotted every i and crossed every t.",
+    "C is incorrect because the evaluation assurance level (EAL) is not one of the five parts of a protection profile. An EAL is assigned to a product after it has been evaluated under the Common Criteria. The thorough and stringent testing increases in detailed-oriented tasks as the assurance levels increase. The Common Criteria have seven assurance levels: EAL 1, functionally tested; EAL 2, structurally tested; EAL 3, methodically tested and checked; EAL 4, methodically designed, tested, and reviewed; EAL 5, semiformally designed and tested; EAL 6, semiformally verified design and tested; and EAL 7, formally verified design and tested.",
+    "D is incorrect because security target is the vendor’s written explanation of the security functionality and assurance mechanisms that meet the needed security solution; in other words, “This is what our product does and how it does it.” Like other evaluation criteria before it, the Common Criteria work to answer two basic questions about products being evaluated: what does its security mechanisms do (functionality), and how sure are you of that (assurance)? This system sets up a framework that enables consumers to clearly specify their security issues and problems; developers to specify their security solution to those problems; and evaluators to unequivocally determine what the product actually accomplishes."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "Which of the following best defines a virtual machine?",
+   "options": [
+    "A virtual instance of an operating system",
+    "A piece of hardware that runs multiple operating system environments simultaneously",
+    "A physical environment for multiple guests",
+    "An environment that can be fully utilized while running legacy applications"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A virtual machine is a virtual instance of an operating system. A virtual machine can also be called a guest, which runs in a host environment. The host environment—usually an operating system—can run multiple guests simultaneously. The virtual machines pool resources such as RAM, processors, and storage from the host environment. This offers many benefits, including enhanced processing power utilization. Other benefits include the ability to run legacy applications. For example, an organization may choose to run its legacy applications on an instance (virtual machine) of Windows XP long after it has rolled out Windows 7.",
+    "B is incorrect because a virtual machine is not a piece of hardware. A virtual machine is an instance of an operating system that runs on hardware. The host can run multiple virtual machines. So, basically, you can have one computer running different operating systems at the same time. One benefit of this is consolidation. Using virtual machines, you can consolidate the workloads of several under-utilized servers on to one host, thereby saving money on hardware and administrative management tasks.",
+    "C is incorrect because virtual machines provide and work within software emulation. The host provides the resources, such as memory, processor, buses, RAM, and storage for the virtual machines. The virtual machines share these resources but do not access them directly. The host environment, which is responsible for managing the system resources, acts as an intermediary between the resources and the virtual machines.",
+    "D is incorrect because many legacy applications are not compatible with specific hardware and newer operating systems. Because of this, the application commonly under-utilizes the server software and components. The virtual machines emulate an environment that allows legacy, and other, applications to fully use the resources available to them. This is a reason to use a virtual machine, but the answer does not provide its definition."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "Bethany is working on a mandatory access control (MAC) system. She has been working on a file that was classified as Secret. She can no longer access this file because it has been reclassified as Top Secret. She deduces that the project she was working on has just increased in confidentiality and she now knows more about this project than her clearance and need-to-know allows. Which of the following refers to a concept that attempts to prevent this type of scenario from occurring?",
+   "options": [
+    "Covert storage channel",
+    "Inference attack",
+    "Noninterference",
+    "Aggregation"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Multilevel security properties can be expressed in many ways, one being noninterference. This concept is implemented to ensure that any actions that take place at a higher security level do not affect, or interfere with, actions that take place at a lower level. So if an entity at a higher security level performs an action, it cannot change the state for the entity at the lower level. If a lower-level entity were aware of a certain activity that took place by an entity at a higher level and the state of the system changed for this lower-level entity, the entity might be able to deduce too much information about the activities of the higher state, which in turn is a way of leaking information.",
+    "A is incorrect because a covert channel allows for the ability to share information between processes that weren’t intended to communicate. Noninterference is a model intended to prevent covert channels along with other malicious ways of communication to take place. The model looks at the shared resources that the different users of a system will use and tries to identify how information can be passed from a process working at a higher security clearance to a process working at a lower security clearance. If two users are working on the same system at the same time, they will most likely have to share some type of resources. So the model is made up of rules to ensure that User A cannot carry out any activities that can allow User B to infer information she does not have the clearance to know.",
+    "B is incorrect because an inference attack refers to Bethany’s ability to infer that the project that she was working on was now Top Secret and has now increased in importance and secrecy. The question is asking for the concept that helps to prevent an inference attack. An inference attack occurs when someone has access to some type of information and can infer (or guess) something that she does not have the clearance level or authority to know. For example, let’s say that Tom is working on a file that contains information about supplies that are being sent to Russia. He closes out of that file and one hour later attempts to open the same file. During this time, the file’s classification has been elevated to Top Secret, so when Tom attempts to access it, he is denied. Tom can infer that some type of Top Secret mission is getting ready to take place with Russia. He does not have clearance to know this; thus, it would be an inference attack or “leaking information.”",
+    "D is incorrect because aggregation is the act of combining information from separate sources. The combination of the data forms new information, which the subject does not have the necessary rights to access. The combined information can have a sensitivity that is greater than that of the individual parts. Aggregation happens when a user does not have the clearance or permission to access specific information but does have the permission to access components of this information. She can then figure out the rest and obtain restricted information."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "Virtualization offers many benefits. Which of the following incorrectly describes virtualization?",
+   "options": [
+    "Virtualization simplifies operating system patching.",
+    "Virtualization can be used to build a secure computing platform.",
+    "Virtualization can provide fault and error containment.",
+    "Virtual machines offer powerful debugging capabilities."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Virtualization does not simplify operating system patching. In fact, it makes it more complex because it adds at least an operating system. Each operating system commonly varies in version and configurations—increasing the complexity of patching. The operating systems for the servers themselves run as guests within the host environment. Not only do you have to patch and maintain the traditional server operating systems, but now you also have to patch and maintain the virtualization software itself.",
+    "B is incorrect because virtualization can be used to build a secure computing platform. Untrusted applications can be run in secure, isolated sandboxes within a virtual machine. The virtualization software “compartmentalizes” the individual guest operating systems and ensures that the processes for each guest do not interact with the other guest processes in an unauthorized manner.",
+    "C is incorrect because virtual machines can provide fault and error containment by isolating what is run within the specific guest operating systems. Developers and security researchers can proactively inject faults into software to study its behavior without impacting other virtual machines. For this reason, virtual machines are useful tools for research and academic experiments.",
+    "D is incorrect because virtual machines enable powerful debugging, as well as performance monitoring, by allowing you to put debugging and performance monitoring tools in the virtual machine monitor. There’s no need to set up complex debugging scenarios and the operating systems can be debugged without impacting productivity."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "Which security architecture model defines how to securely develop access rights between subjects and objects?",
+   "options": [
+    "Brewer-Nash",
+    "Clark-Wilson",
+    "Graham-Denning",
+    "Bell-LaPadula"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The Graham-Denning model addresses how access rights between subjects and objects are defined, developed, and integrated. It defines a set of basic rights in terms of commands that a specific subject can execute on an object. This model has eight primitive protection rights, or rules, on how these types of functionalities should take place securely. They are: how to securely create an object; how to securely create a subject; how to securely delete an object; how to securely delete a subject; how to securely provide the read access right; how to securely provide the grant access right; how to securely provide the delete access right; and how to securely provide transfer access rights. These things may sound insignificant, but when we are talking about building a secure system, they are very critical.",
+    "A is incorrect because the Brewer-Nash model is intended to provide access controls that can change dynamically depending upon a user’s previous actions. The main goal is to protect against conflicts of interest by users’ access attempts. For example, if a large marketing company provides marketing promotions and materials for two banks, an employee working on a project for Bank A should not be able to look at the information the marketing company has on its other bank customer, Bank B. Such action could create a conflict of interest because the banks are competitors. If the marketing company’s project manager for the Bank A project could view information on Bank B’s new marketing campaign, he may try to trump its promotion to please his more direct customer. The marketing company would get a bad reputation if it allowed its internal employees to behave so irresponsibly.",
+    "B is incorrect because the Clark-Wilson model is implemented to protect the integrity of data and to ensure that properly formatted transactions take place within applications. It works on the following premises: subjects can access objects only through authorized programs; separation of duties is enforced; auditing is required. The Clark-Wilson model addresses all three integrity goals: prevent unauthorized users from making modifications, prevent authorized users from making improper modifications, and maintain internal and external consistency.",
+    "D is incorrect because the Bell-LaPadula model was developed to address the U.S. military’s concern with the security of its systems and the leakage of classified information. The model’s main goal is to prevent sensitive information from being accessed in an unauthorized manner. It is a state machine model that enforces the confidentiality aspects of access control. A matrix and security levels are used to determine if subjects can access different objects. The subject’s clearance is compared to the object’s classification and then specific rules are applied to control how subject-to-object interactions take place."
+   ]
+  },
+  {
+   "n": 15,
+   "q": "Operating systems can be programmed to carry out different methods for process isolation. Which of the following refers to a method in which an interface defines how communication can take place between two processes and no process can interact with the other’s internal programming code?",
+   "options": [
+    "Virtual mapping",
+    "Encapsulation of objects",
+    "Time multiplexing",
+    "Naming distinctions"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. When a process is properly encapsulated, no other process understands or interacts with its internal programming code. When process A needs to communicate with process B, process A just needs to know how to communicate with process B’s interface. An interface defines how communication must take place between two processes. As an analogy, think back to how you had to communicate with your third-grade teacher. You had to call her Mrs. SoandSo, say please and thank you, and speak respectfully to get whatever it was you needed. The same thing is true for software components that need to communicate with each other. They have to know how to communicate properly with each other’s interfaces. The interfaces dictate the type of requests that a process will accept and the type of output that will be provided. So, two processes can communicate with each other, even if they are written in different programming languages, as long as they know how to communicate with each other’s interface. Encapsulation provides data hiding, which means that outside software components will not know how a process works and will not be able to manipulate the process’s internal code. This is an integrity mechanism and enforces modularity in programming code.",
+    "A is incorrect because virtual mapping refers to how virtual to physical memory mapping takes place within an operating system. When an application needs memory to work with, it tells the operating system’s memory manager how much memory it needs. The operating system carves out that amount of memory and assigns it to the requesting application. The application uses its own address scheme, which usually starts at 0, but in reality, the application does not work in the physical address space that it thinks it is working in. Rather, it works in the address space that the memory manager assigns to it. The physical memory is the RAM chips in the system. The operating system chops up this memory and assigns portions of it to the requesting processes. Once the process is assigned its own memory space, then it can address this portion however it needs to, which is called virtual address mapping. Virtual address mapping allows the different processes to have their own memory space; the memory manager ensures that no processes improperly interact with another process’s memory. This provides integrity and confidentiality.",
+    "C is incorrect because time multiplexing is a technology that allows processes to use the same resources through an interleaved method. A CPU has to be shared among many processes. Although it seems as though all applications are executing their instructions simultaneously, the operating system is splitting up time shares between each process. Multiplexing means that there are several data sources and the individual data pieces are piped into one communication channel. In this instance, the operating system is coordinating the different requests from the different processes and piping them through the one shared CPU. An operating system has to provide proper time multiplexing (resource sharing) to ensure that a stable working environment exists for software and users.",
+    "D is incorrect because naming distinctions just means that the different processes have their own name or identification value. Processes are usually assigned process identification (PID) values, which the operating system and other processes use to call upon them. If each process is isolated, that means that each process has its own unique PID value."
+   ]
+  },
+  {
+   "n": 16,
+   "q": "Which of the following is not a responsibility of the memory manager?",
+   "options": [
+    "Use complex controls to ensure integrity and confidentiality when processes need to use the same shared memory segments.",
+    "Limit processes to interact only with the memory segments assigned to them.",
+    "Swap contents from RAM to the hard drive as needed.",
+    "Run an algorithm to identify unused committed memory and inform the operating system that the memory is available."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. This answer describes the function of a garbage collector. A garbage collector is a countermeasure against memory leaks. It is software that runs an algorithm to identify unused committed memory and then tells the operating system to mark that memory as “available.” Different types of garbage collectors work with different operating systems, programming languages, and algorithms. The portion of the operating system that keeps track of how different types of memory are used is called the memory manager. Its jobs are to allocate and deallocate different memory segments, enforce access control to ensure that processes are interacting only with their own memory segments, and swap memory contents from RAM to the hard drive. The memory manager has five basic responsibilities: relocation, protection, sharing, local organization, and physical organization.",
+    "A is incorrect because as part of its sharing responsibilities, the memory manager uses complex controls to ensure integrity and confidentiality when processes need to use the same shared memory segments. This is critical to protecting memory and the data in it, since two or more processes can share access to the same segment with potentially different access rights. The memory manager is also responsible for allowing many users with different levels of access to interact with the same application running in one memory segment.",
+    "B is incorrect because the memory manager is responsible for limiting process interactions to only those memory segments assigned to them. This responsibility falls under protection and helps prevent processes from gaining access to unpermitted segments. Another protection responsibility of the memory manager is to provide access control to memory segments.",
+    "C is incorrect because swapping contents from RAM to the hard drive as needed is a responsibility of the memory manager that falls under relocation. When RAM and secondary storage are combined, the result is virtual memory. The system uses hard drive space to extend its RAM memory space. Another relocation responsibility is to provide pointers for applications if their instructions and memory segment have been moved to a different location in main memory."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "A lattice is a mathematical construct that is built upon the notion of a group. The most common definition of the access control lattice model is “a structure consisting of a finite partially ordered set together with least upper and greatest lower bound operators on the set.” So a lattice model provides an upper bound and a lower bound of authorized access for subjects. Which of the following best describes what an ordered set is and how it relates to the boundary operators?",
+   "options": [
+    "A partially ordered set is the ring structure enforced by a CPU. The least upper bound and the greatest lower bound operators are the protection layers each ring enforces when two processes attempt to communicate.",
+    "A partially ordered set is a subject and an object. The least upper bound and the greatest lower bound operators are the most restrictive access rights being applied when a subject attempts to access an object.",
+    "A partially ordered set is the set of access rights applied to a process and a thread. The least upper bound and the greatest lower bound operators are the access rights being applied when a thread’s instructions are being executed by a CPU.",
+    "A partially ordered set is a CPU and its instruction set. The least upper bound and the greatest lower bound operators are the most restrictive access rights being applied when a CPU executes its instruction set and the called-upon user data."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A lattice is a partially ordered set in which every two elements have a least upper bound (join) and a greatest lower bound (meet). A partially ordered set is a bounded lattice if and only if every finite set of elements has a join and a meet. The lattice-based access control model is based on the interaction between any combination of objects and subjects, where the access controls associated with a subject and object join and meet are considered the upper and lower bounds of access. Suppose you had a system in which users can write to a higher security level than they possess (e.g., an “average” uncleared person could uncover and report a secret terrorist plot), but could only read information less than or equal to their own clearance (e.g., that “average” person would not be able to read classified papers). The lattice model describes how two or more such subjects could exchange information. The uncleared user could send but not receive classified information. In this example of an interaction between a cleared and an uncleared user, the least upper bound prevents the flow of information from a higher level to a lower one, while the greatest lower bound permits the flow of information from a lower to a higher level. The first forms the basis for protecting state secrets, while the latter forms the basis for acquiring human intelligence (HUMINT) from the world.",
+    "A is incorrect. A CPU may or may not be implementing a lattice-based access control model. This answer does not describe the essence of the lattice-based model, but instead focuses on things that might enforce access rules. The lattice-based access control model is a theoretical mathematical model to control the flow of information between subjects and objects and is usually implemented within software applications, not hardware. This answer deals with the mode (supervisor, user) a CPU works within when executing software instructions. If an instruction is from a trusted source (i.e., operating system kernel), then the CPU will execute these instructions in supervisor mode to allow for more privileged functionality. If the instruction comes from a nontrusted source (i.e., application), the CPU will execute these instructions in a more restrictive mode called user mode.",
+    "C is incorrect. An operating system may or may not be using a lattice-based access model to control process-to-process interaction. The model is based upon mathematics and is theoretical in nature. The model is used to build a construct of access control rules to control the flow of sensitive information when a subject attempts to access an object. An example of a subject is a user who is trying to access a file, which is the object. The access control rules that govern how subjects and objects interact in the lattice model are usually implemented in software and not hardware.",
+    "D is incorrect. The lattice model is high level and is used to build an access control construct that will control subject-to-object communication and interaction. When a subject attempts to access an object within an operating system, these two entities must have access control rights that join and meet. This model deals with conceptual rules of access and not specific hardware (CPU). This answer does not identify a subject accessing an object, but addresses how a CPU uses an instruction set to execute an application’s programming code and the associated user data."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "Frank is responsible for the security of his company’s online applications, web servers, and web-based activities. The web applications have the capability of being dynamically “locked” so that multiple users cannot edit a web page at the same time and overwrite each other’s work. An audit uncovered that while this software-locking capability was properly configured, multiple users were still able to modify the same web page at the same time. Which of the following best describes what is taking place in this situation?",
+   "options": [
+    "Buffer overflow",
+    "Blind SQL injection",
+    "Cross-site request forgery",
+    "Time of check/time of use vulnerability"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Specific attacks can take advantage of the way a system processes requests and performs tasks. A time-of-check/time-of-use (TOC/TOU) attack deals with the sequence of steps a system uses to complete a task. This type of attack takes advantage of the dependency on the timing of events that take place in a multitasking operating system. TOC/TOU is a class of software vulnerability that allows the checking of a condition (i.e., verifying a credential) and the use of the result from that condition-checking function. In the scenario of this question, the fact that the web application was most likely properly configured indicates that the programming code of this application has this type of vulnerability embedded in the code itself.",
+    "A is incorrect because a buffer overflow takes place when too much data is accepted as input to a specific process. A buffer is an allocated segment of memory. A buffer can be overflowed arbitrarily with too much data, but for it to be of any use to an attacker, the code inserted into the buffer must be of a specific length, followed up by commands the attacker wants executed. These types of attacks commonly result in exceptions, segmentation of faults, or sensitive data being provided to the attacker. This type of attack is not being described in this question.",
+    "B is incorrect because a blind SQL injection attack is a type of SQL injection attack that sends a true-or-false question to a database. In a basic SQL injection, an attacker sends specific instructions in the SQL format to interrogate the associated database. In a blind SQL attack, the attacker is limited to only sending a series of true-or-false questions to the database with the hope of gleaning sensitive information from analyzing the database’s responses. This type of attack is not described in this question.",
+    "C is incorrect because cross-site request forgery (CSRF) is an attack type that attempts to trick the victim into loading a web page that contains a malicious request or operation. The operation is carried out within the context of the victim’s access rights. The request inherits the identity of the victim and performs an undesired function on the behalf of the victim. In this type of attack, the attacker can make the victim’s system carry out an unintended activity, such as changing account information, retrieving account data, or logging out. While this type of attack could be involved with the scenario described in the question, the question is focusing on how a user is able to bypass the lock mechanism built into a web application. The lock function is being bypassed because the logic of the programming code was developed incorrectly and does not follow a strict series of check and use sequences properly."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "The Information Technology Infrastructure Library (ITIL) consists of five sets of instructional books. Which of the following is considered the core set and focuses on the overall planning of the intended IT services?",
+   "options": [
+    "Service Operation",
+    "Service Design",
+    "Service Transition",
+    "Service Strategy"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The fundamental approach of ITIL lies in the creation of Service Strategy, which focuses on the overall planning of the intended IT services. Once the initial planning has been concluded, the Service Design provides guidelines on designing valid IT services and overall implementation policies. The Service Transition stage is then initiated, where guidelines regarding evaluation, testing, and validation of the IT services are provided. This allows the transition from business environments into technology services. The Service Operation makes sure that all the decided services have met their objectives. Finally, the Continual Service Improvement points out the areas of improvements in the entire service life cycle. The Service Strategy is considered to be the core of ITIL. It consists of a set of guidelines that include best practices regarding strategy and value planning, design, and alignment between the IT and business approaches, market analysis, service assets, setting targets toward providing quality service to the clients, and implementation of service strategies.",
+    "A is incorrect because Service Operation refers to an important component of the life cycle in which the services are actually delivered. This part of the life cycle defines a set of guidelines that makes sure that the agreed levels of services are delivered to the customers. The various genres incorporated by Service Operation include Event Management, Problem Management, Access Management, Incident Management, Application Management, Technical Management, and Operations Management. Service Operation also balances between the conflicting goals, such as technology vs. business requirements, stability vs. response, cost vs. quality of service, and reactive vs. proactive activities.",
+    "B is incorrect because the Service Design comprises a set of optimal practices for the designing of IT services, including their processes, architectures, policies, and documentation in order to fulfill the current and future business requirements. The target of the Service Design is to design services according to their agreed business objectives, design such processes that can support life cycle, identification and management of risks, and involvement in the improvement of IT service quality as a whole.",
+    "C is incorrect because Service Transition focuses on delivering services proposed by business strategy into operational use. It also contains guidelines that enable the smooth transition of business model into technology services. If the requirements of a service have changed after its design, the Service Transition ensures that those requirements are delivered according to its modified design. The areas focused on by these guidelines include Transition Planning and Support, Change Management, Knowledge Management, Release and Deployment Management, Service Validation and Testing, Evaluation, along with the responsibilities of personnel involved with the Service Transition."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "Widgets Inc.’s software development processes are documented and the organization is capable of producing its own standard of software processes. Which of the following Capability Maturity Model Integration levels best describes Widgets Inc.?",
+   "options": [
+    "Initial",
+    "Repeatable",
+    "Defined",
+    "Managed"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Capability Maturity Model Integration (CMMI) is a process improvement concept that consists of a collection of techniques used in the process of software development of an organization to design and further enhance software. The CMMI provides a standard for software development process where the level of maturity of the development process can be measured. The CMMI is classified into five levels which are Initial, Repeatable, Defined, Managed, and Optimized. The categorization of these levels depends upon the maturity of the software development and its quality assurance. The basis of Defined level (CMMI Level 3) is that the organizations are capable of producing their own standard of software processes. These processes are improved with the passage of time.",
+    "A is incorrect because the processes in the Initial level (CMM Level 1) are not organized or documented and are hence chaotic. The organizations having CMMI Level 1 are expected to thrive only due to the extraordinary performance of individuals. This makes the environment of the processes more unstable. This level has a very limited scope and is used for unique projects. Success is not likely to be repeated at this level.",
+    "B is incorrect because at the Repeatable level (CMMI Level 2), the processes are documented in a better manner and so the success is repetitive; however, the organization is not yet capable of producing its own standard of software processes. This level ensures that the processes are maintained during the downtime, ensuring that the project is implemented according to the plan.",
+    "D is incorrect because at the Managed level (CMMI Level 4), organizations are able to monitor and control their own processes involved in the software development. It allows management to point out ways to adjust the processes of a particular project in such a way that there is no considerable loss on its quality or diversion from the main specifications. At the final level, Optimized (CMMI Level 5), processes are managed for improvement."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "There are several different important pieces to the Common Criteria. Which of the following best describes the first of the missing components?",
+   "options": [
+    "Target of evaluation",
+    "Protection profile",
+    "Security target",
+    "EALs"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Common Criteria uses protection profiles in its evaluation process. This is a mechanism used to describe a real-world need of a product that is not currently on the market. The protection profile contains the set of security requirements, their meaning and reasoning, and the corresponding EAL rating that the intended product will require. The protection profile describes the environmental assumptions, the objectives, and the functional and assurance-level expectations. Each relevant threat is listed, along with how it is to be controlled by specific objectives. The protection profile also justifies the assurance level and requirements for the strength of each protection mechanism that is expected to be in the new product. The protection profile basically says, “This is what we need out of a new product.”",
+    "A is incorrect because the target of evaluation (ToE), the second of the three missing pieces in the graphic, is the actual product that is being evaluated against the Common Criteria. Where the protection profile states, “This is what we need out of a new product,” the ToE is the product that a vendor creates to meet the requirements outlined in the protection profile. When there is a need in the industry for a new product that provides specific functionality and security, someone develops the protection profile to outline this need. A vendor fulfills the need by creating a new product, referred to as the ToE.",
+    "C is incorrect because the security target, the third piece missing in the graphic, is the vendor’s written explanation of the security functionality and assurance mechanisms that meet the needed solution outlined in the protection profile and fulfilled by the target of evaluation (ToE). Where the protection profile outlines, “This is what we need,” the ToE is the product that fulfills this need, and the security target is the explanation on how this ToE is mapped to the protection profile. The evaluators compare the ToE with these three constructs, along with the actual requirements of the Common Criteria before assigning it an evaluation assurance level.",
+    "D is incorrect because evaluation assurance levels (EALs) outline the assurance ratings used in the Common Criteria. It is basically the grading system used in these criteria to describe the assurance and security required by a specific product. When an evaluator evaluates a product, after all of her tests she will assign an EAL value. This value is basically the grade that the product receives after all of the tests it is put through. The Common Criteria uses a different assurance rating system than the previously used criteria. It has packages of specifications that must be met for a product to obtain the corresponding rating. These ratings and packages are collectively called the EALs. Once a product achieves any type of rating, customers can view this information on an Evaluated Products List (EPL) to understand which product provides the most security assurance. So if you are going to purchase a product and you have a certain security assurance specification that the product must meet, you can view the EPL to see what maps to your needs."
+   ],
+   "images": [
+    "data/img/cap03_q21_0.jpeg"
+   ]
+  },
+  {
+   "n": 22,
+   "q": "Different access control models provide specific types of security measures and functionality in applications and operating systems. What model is being expressed in the graphic that follows?",
+   "options": [
+    "Noninterference",
+    "Biba",
+    "Bell-LaPadula",
+    "Chinese Wall"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The Chinese Wall model was created to provide access controls that can change dynamically, depending upon a user’s previous actions. The main goal of the model is to protect against conflicts of interest by users’ access attempts. For example, if a large marketing company provides marketing promotions and materials for two banks, an employee working on a project for Bank A should not look at the information the marketing company has on its other bank customer, Bank B. Such action could create a conflict of interest because the banks are competitors. If the marketing company’s project manager for the Bank A project could view information on Bank B’s new marketing campaign, he may try to trump its promotion to please his more direct customer.",
+    "A is incorrect because multilevel security properties can be expressed in many ways, one being Noninterference. The Chinese Wall model does not focus on multilevel security properties and the Noninterference model does not focus on conflicts of interest. The concept of noninterference is implemented to ensure any actions that take place at a higher security level do not affect, or interfere with, actions that take place at a lower level and vice versa. This type of model does not concern itself with conflicts of interest, but rather with what a subject knows about the state of the system. So if an entity at a higher security level performs an action, it cannot change the state for the entity at the lower level. The Noninterference model is also focused on confidentiality. It works to ensure that subjects at a lower clearance level cannot access data or objects at a higher clearance level.",
+    "B is incorrect because the Biba is a state machine model that addresses the integrity of data within applications without the use of a wall construct. Although the Biba model is very similar to the Bell-LaPadula model, the Bell-LaPadula model uses a lattice of security levels (top secret, secret, sensitive, and so on). These security levels were developed mainly to ensure that sensitive data was only available to authorized individuals. The Biba model is not concerned with security levels and confidentiality, so it does not base access decisions upon this type of lattice. The Biba model uses a lattice of integrity levels. Biba compartmentalizes data based on integrity levels. It is an information flow model that controls information flow in a way that is intended to protect the integrity of the most trusted information. The Biba model was not built to address conflicts of interest.",
+    "C is incorrect because a system that employs the Bell-LaPadula model is called a multilevel security system, meaning users with different clearances use the system, and the system processes data at different classification levels. The level at which data is classified determines the handling procedures that should be used. The Bell- LaPadula model is a state machine model that enforces the confidentiality aspects of access control. A matrix and security levels are used to determine if subjects can access different objects. The subject’s clearance is compared to the object’s classification and then specific rules are applied to control how subject-to-object interactions can take place. The Bell-LaPadula model was not developed to address conflicts of interest."
+   ],
+   "images": [
+    "data/img/cap03_q22_0.jpeg"
+   ]
+  },
+  {
+   "n": 23,
+   "q": "There are many different types of access control mechanisms that are commonly embedded into all operating systems. Which of the following is the mechanism that is missing in this graphic?",
+   "options": [
+    "Trusted computing base",
+    "Security perimeter",
+    "Reference monitor",
+    "Domain"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The reference monitor is an abstract machine that mediates all access subjects have to objects, both to ensure that the subjects have the necessary access rights and to protect the objects from unauthorized access and destructive modification. For a system to achieve a high level of trust, it must require subjects (programs, users, or processes) to be fully authorized prior to accessing an object (file, program, or resource). A subject must not be allowed to use a requested resource until the subject has proven it has been granted access privileges to use the requested object. The reference monitor is an access control concept, not an actual physical component, which is why it is normally referred to as the “reference monitor concept” or an “abstract machine.” The reference monitor is the access control concept, and the code that actually enforces this concept is the security kernel.",
+    "A is incorrect because a security perimeter is a boundary that divides the trusted from the untrusted process access requests within software. The trusted processes within a system are referred to as being within the trusted computing base (TCB). The TCB is defined as the total combination of protection mechanisms within a computer system. The TCB includes hardware, software, and firmware. These are part of the TCB because the system is sure these components will enforce the security policy and not violate it. Not all components need to be trusted, and therefore not all components fall within the TCB. The security perimeter is the demarcation between what is within the TCB, the trusted processes, and what is not, the untrusted processes.",
+    "B is incorrect because not every process and resource falls within the TCB, so some of these components fall outside of an imaginary boundary referred to as the security perimeter. A security perimeter is a boundary that divides the trusted from the untrusted. For the system to stay in a secure and trusted state, precise communication standards must be developed to ensure that when a component within the TCB needs to communicate with a component outside the TCB, the communication cannot expose the system to unexpected security compromises. This type of communication is handled and controlled through interfaces. The security perimeter is a concept that helps enforce this type of security.",
+    "D is incorrect because a domain is defined as a set of objects that a subject is able to access. This domain can be all the resources a user can access, all the files available to a program, the memory segments available to a process, or the services and processes available to an application. A subject needs to be able to access and use objects (resources) to perform tasks, and the domain defines which objects are available to the subject and which objects are untouchable and therefore unusable by the subject. A common implementation of a domain is a networked Windows environment. Resources are logically partitioned within the network to ensure subjects can only access these resources."
+   ],
+   "images": [
+    "data/img/cap03_q23_0.jpeg"
+   ]
+  },
+  {
+   "n": 24,
+   "q": "There are several security enforcement components that are commonly built into operating systems. Which component is illustrated in the graphic that follows?",
+   "options": [
+    "Virtual machines",
+    "Interrupt",
+    "Cache memory",
+    "Protection rings"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. An operating system has several protection mechanisms to ensure processes do not negatively affect each other or the critical components. One security mechanism commonly used in operating systems is protection rings. These rings provide strict boundaries and definitions for what the processes that work within each ring can access and what operations they can successfully and securely execute. The processes that operate within the inner rings have more privileges than the processes operating in the outer rings, because the inner rings only permit the most trusted components and processes to operate within them. Protection rings support the availability, integrity, and confidentiality requirements of multitasking operating systems. The most commonly used architecture provides four protection rings: • Ring 0 Operating system kernel • Ring 1 Remaining parts of the operating system • Ring 2 I/O drivers and utilities • Ring 3 Applications and user activity",
+    "A is incorrect because a virtual instance of an operating system is known as a virtual machine. A virtual machine is commonly referred to as a guest that is executed in the host environment. Virtualization allows a single host environment to execute multiple guests at once, with multiple virtual machines dynamically pooling resources from a common physical system. Computer resources such as RAM, processors, and storage are emulated through the host environment. The virtual machines do not directly access these resources; instead, they communicate with the host environment responsible for managing system resources. Virtual machines do not work in a circular framework as shown in the graphic.",
+    "B is incorrect because an interrupt is a function used in operating systems that allows for slots of the CPU to be used. The most basic CPUs can do only one thing at a time. So the system has hardware and software interrupts. When a device needs to communicate with the CPU, it has to wait for its interrupt to be called upon. The same thing happens in software. Each process has an interrupt assigned to it. It is like pulling a number at a customer service department in a store. You can’t go up to the counter until your number has been called out. When a process is interacting with the CPU and an interrupt takes place (another process has requested access to the CPU), the current process’s information is stored in the process table, and the next process gets its time to interact with the CPU.",
+    "C is incorrect because cache memory is a type of memory used for high-speed writing and reading activities and it is not necessarily a security mechanism. When the system assumes (through its programmatic logic) that it will need to access specific information many times throughout its processing activities, it will store the information in cache memory so it is easily and quickly accessible. Data in cache can be accessed much more quickly than data stored in real memory. Therefore, any information needed by the CPU very quickly, and very often, is usually stored in cache memory, thereby improving the overall speed of the computer system. Cache memory also does not work in a circular framework as illustrated in the graphic."
+   ],
+   "images": [
+    "data/img/cap03_q24_0.jpeg"
+   ]
+  },
+  {
+   "n": 25,
+   "q": "A multitasking operating system can have several processes running at the same time. What are the components within the processes that are shown in the graphic that follows?",
+   "options": [
+    "Threads",
+    "Registers",
+    "Address buses",
+    "Process tables"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A process is a program in memory. More precisely, a process is the program’s instructions and all the resources assigned to the process by the operating system. It is just easier to group all of these instructions and resources together and control them as one entity, which is a process. When a process needs to send something to the CPU for processing, it generates a thread. A thread is made up of an individual instruction set and the data that must be worked on by the CPU. Most applications have several different functions. Word processors can open files, save files, open other programs (such as an e-mail client), and print documents. Each one of these functions requires a thread (instruction set) to be dynamically generated. So, for example, if Tom chooses to print his document, the word processor process generates a thread that contains the instructions of how this document should be printed (font, colors, text, margins, and so on). If he chooses to send a document via e-mail through this program, another thread is created that tells the e-mail client to open and what file needs to be sent. Threads are dynamically created and destroyed as needed. Once Tom is done printing his document, the thread that was generated for this functionality is destroyed.",
+    "B is incorrect because a register is a temporary storage location. Processing chips within the CPU cover only a couple of square inches but contain millions of transistors. All operations within the CPU are performed by electrical signals at different voltages in different combinations, and each transistor holds this voltage, which represents 0’s and 1’s to the computer. The CPU contains registers that point to memory locations that contain the next instructions to be executed and that enable the CPU to keep status information of the data that needs to be processed. While a register can hold the instructions that make up the thread before it is fed into the CPU, it is not a component of the processes themselves.",
+    "C is incorrect because an address bus is a hardwired connection to RAM chips and the individual input/output (I/O) devices in a computer system. In a computer, memory addresses of the instructions and data to be processed are held in registers until needed by the CPU. The CPU is connected to the address bus. Memory is cut up into sections that have individual addresses associated with them. I/O devices (CD-ROM, USB device, hard drive, and so on) are also allocated specific unique addresses. If the CPU needs to access some data, either from memory or from an I/O device, it sends down the address of where the needed data is located. The circuitry associated with the memory or I/O device recognizes the address the CPU sent down the address bus and instructs the memory or device to read the requested data and put it on the data bus. So the address bus is used by the CPU to indicate the location of the instructions to be processed, and the memory or I/O device responds by sending the data that resides at that memory location through the data bus.",
+    "D is incorrect because a process table is a way for an operating system to keep track of processes that are running. An operating system is responsible for creating new processes, assigning them resources, synchronizing their communication, and making sure nothing insecure is taking place. The operating system keeps a process table, which has one entry per process. The table contains each individual process’s state, stack pointer, memory allocation, program counter, and status of open files in use. The reason the operating system documents all of this status information is that the CPU needs all of it loaded into its registers when it needs to interact with, for example, process 1. When process 1’s CPU time slice is over, all of the current status information on process 1 is stored in the process table so that when its time slice is open again, all of this status information can be put back into the CPU registers. So, when it is process 2’s time with the CPU, its status information is transferred from the process table to the CPU registers; it is transferred back again when the time slice is over."
+   ],
+   "images": [
+    "data/img/cap03_q25_0.jpeg"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "Which of the following best describes the standard Charlie’s team needs to comply with?",
+   "options": [
+    "International standard on system design to allow for better quality, interoperability, extensibility, portability, and security",
+    "International standard on system security to allow for better threat modeling",
+    "International standard on system architecture to allow for better quality, interoperability, extensibility, portability, and security",
+    "International standard on system architecture to allow for better quality, extensibility, portability, and security"
+   ],
+   "scenario": "Charlie is a new security manager at a textile company that develops its own proprietary software for internal business processes. Charlie has been told that the new application his team needs to develop must comply with the ISO/IEC 42010 standard. He has found out that many of the critical applications have been developed in the C programming language and has asked for these applications to be reviewed for a specific class of security vulnerabilities.",
+   "answer": "C",
+   "explanation": [
+    "C. ISO/IEC 42010 has the goal of internationally standardizing the use of system architecture instead of product developers coming up with their own individual approaches. A disciplined approach to system architecture allows for better quality, interoperability, extensibility, portability, and security.",
+    "A is incorrect because the answer specifically states “design” instead of “architecture.” Some people mistakenly think that these are the same things, but architecture takes place before design. Architecture works at a higher, more strategic level compared to design. Software development is becoming a more disciplined industry and it is moving toward formal architecture requirements.",
+    "B is incorrect because the standard identified in the question does not deal with threat modeling. ISO/IEC 42010 addresses system architecture requirements and guidelines.",
+    "D is not the best answer since it is not as complete as answer C. This standard does address interoperability issues, which is not listed in this answer."
+   ]
+  },
+  {
+   "n": 27,
+   "q": "Which of the following is Charlie most likely concerned with in this situation?",
+   "options": [
+    "Injection attacks",
+    "Memory block",
+    "Buffer overflows",
+    "Browsing attacks"
+   ],
+   "scenario": "Charlie is a new security manager at a textile company that develops its own proprietary software for internal business processes. Charlie has been told that the new application his team needs to develop must comply with the ISO/IEC 42010 standard. He has found out that many of the critical applications have been developed in the C programming language and has asked for these applications to be reviewed for a specific class of security vulnerabilities.",
+   "answer": "C",
+   "explanation": [
+    "C. The C programming language is susceptible to buffer overflow attacks because some of its commands allow for direct pointer manipulations to take place. Specific commands can provide access to low-level memory addresses without carrying out bounds checking.",
+    "A is incorrect because the C programming language does not have any more vulnerabilities pertaining to injection attacks than any other languages. Injection attacks usually do not take place at the code level, but happen because an interface accepts data that are not properly filtered and validated.",
+    "B is incorrect because this is a distracter answer. There is no official programming language vulnerability referred to as “memory block.”",
+    "D is incorrect because a browsing attack is when someone is reviewing various assets for sensitive data. This does not relate to a programming language, but how access control is implemented."
+   ]
+  },
+  {
+   "n": 28,
+   "q": "Which of the following best describes the type of protection that needs to be provided by this product?",
+   "options": [
+    "Hardware isolation",
+    "Memory induction application",
+    "Data execution prevention",
+    "Domain isolation protection"
+   ],
+   "scenario": "Tim’s development team is designing a new operating system. One of the requirements of the new product is that critical memory segments need to be categorized as nonexecutable, with the goal of reducing malicious code from being able to execute instructions in privileged mode. The team also wants to make sure that attackers will have a difficult time predicting execution target addresses.",
+   "answer": "C",
+   "explanation": [
+    "C. Data execution prevention (DEP) is a security feature included in modern operating systems. It is intended to prevent a process from executing code from a nonexecutable memory region. This helps prevent certain exploits that store code via a buffer overflow, for example. DEP can mark certain memory locations as “off limits,” with the goal of reducing the “playing field” for hackers and malware.",
+    "A is incorrect because memory hardware isolation has to be done at the hardware level, not just in an operating system. Some systems that require a high level of security can be designed to ensure that memory is not shared in any fashion. This requires hardware design, and the operating system (or other software) has to then be designed to use that specific hardware environment.",
+    "B is incorrect because this is a distracter answer. This is not an official term or security issue.",
+    "D is incorrect because domain isolation does not deal specifically with memory protection as does data execution prevention (DEP). Domain isolation is not a specific technology, but a goal that operating systems attempt to accomplish. A domain is a set of resources that is available to an entity. Most people think of network domains in the Microsoft world, but a domain is just a set of resources. It is a general and old term. Domain isolation just means isolating one set of resources from another set of resources. This is commonly done so that one process cannot compromise another process’s resources."
+   ]
+  },
+  {
+   "n": 29,
+   "q": "Which of the following best describes the type of technology the team should implement to increase the work effort of buffer overflow attacks?",
+   "options": [
+    "Address space layout randomization",
+    "Memory induction application",
+    "Input memory isolation",
+    "Read-only memory integrity checks"
+   ],
+   "scenario": "Tim’s development team is designing a new operating system. One of the requirements of the new product is that critical memory segments need to be categorized as nonexecutable, with the goal of reducing malicious code from being able to execute instructions in privileged mode. The team also wants to make sure that attackers will have a difficult time predicting execution target addresses.",
+   "answer": "A",
+   "explanation": [
+    "A. Address space layout randomization (ASLR) is a control that involves randomly arranging the positions of a process’s address space and other memory segments. It randomly arranges the positions of key data areas, usually including the base of the executable and position of system libraries, memory heap, and memory stacks, in a process’s address space. ASLR makes it more difficult for an attacker to predict target addresses for specific memory attacks.",
+    "B is incorrect because this is a distracter answer. This is not an official term or security item.",
+    "C is incorrect because while memory isolation may help in protecting against buffer overflows, that is not the specific reason for its existence. Memory isolation is carried out to protect against many different memory attacks. Address space layout randomization (ASLR) has been specifically designed to try and outwit attackers and to make it more difficult for them to know a system’s memory address scheme for exploitation purposes.",
+    "D is incorrect because this is a distracter answer. This is not an official term or security item."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "Which of the following best describes the second operating system architecture described in the scenario?",
+   "options": [
+    "Layered",
+    "Microkernel",
+    "Monolithic",
+    "Kernel based"
+   ],
+   "scenario": "Operating systems have evolved and changed over the years. The earlier operating systems were monolithic and did not segregate critical processes from noncritical processes. As time went on operating system vendors started to reduce the amount of programming code that ran in kernel mode. Only the absolutely necessary code ran in kernel mode, and the remaining operating system code ran in user mode. This architecture introduced performance issues, which required the operating system vendors to reduce the critical operating system functionality to microkernels and allow the remaining operating system functionality to run in client/server models within kernel mode.",
+   "answer": "B",
+   "explanation": [
+    "B. In the microkernel architecture, a reduced amount of code is running in kernel mode carrying out critical operating system functionality. Only the absolutely necessary code runs in kernel mode, and the remaining operating system code runs in user mode. Traditional operating system functions, such as device drivers, protocol stacks, and file systems, are removed from the microkernel to run in user space.",
+    "A is incorrect because a layered operating system architecture focuses on constructing the functions of the operating system into hierarchical layers. This architecture does not focus on what is or is not running in kernel mode.",
+    "C is incorrect because the industry started with monolithic operating systems and evolved from it. A monolithic operating system does not segregate privileged and nonprivileged processes and does not use a kernel. MS-DOS is an example of a monolithic operating system.",
+    "D is incorrect because while there is no official architecture called “kernel-based,” this answer does not actually properly address the concept of reducing the amount of code that runs in kernel mode. The microkernel architecture specifically addressed this issue. A microkernel is the near-minimum amount of software that can provide the mechanisms needed to implement an operating system."
+   ]
+  },
+  {
+   "n": 31,
+   "q": "Which of the following best describes why there was a performance issue in the context of the scenario?",
+   "options": [
+    "Bloated programming code",
+    "I/O and memory location procedures",
+    "Mode transitions",
+    "Data and address bus architecture"
+   ],
+   "scenario": "Operating systems have evolved and changed over the years. The earlier operating systems were monolithic and did not segregate critical processes from noncritical processes. As time went on operating system vendors started to reduce the amount of programming code that ran in kernel mode. Only the absolutely necessary code ran in kernel mode, and the remaining operating system code ran in user mode. This architecture introduced performance issues, which required the operating system vendors to reduce the critical operating system functionality to microkernels and allow the remaining operating system functionality to run in client/server models within kernel mode.",
+   "answer": "C",
+   "explanation": [
+    "C. A mode transition is when the CPU has to change from processing code in user mode to kernel mode. This is a protection measure, but it causes a performance hit because all of the information on the new process has to be loaded into the registers for the CPU to work with. Transitions between modes are at the discretion of the executing thread when the transition is from a level of high privilege to one of low privilege (kernel to user mode), but transitions from lower to higher levels of privilege can take place only through secure, hardware-controlled “gates” that are carried out by executing special instructions or when external interrupts are received.",
+    "A is incorrect. While bloated (extra) programming code can cause performance issues in many situations, that is not what this question is focusing on. When comparing operating system architectures and associated performance issues, the focus comes down to how specific functions are carried out and how efficient those procedures are—not the amount of code needed to carry out the function.",
+    "B is incorrect because I/O and memory location do not have a direct correlation to operating system kernel architecture. The specific reason that many operating system vendors changed their products’ architecture had to do with the performance issues of mode transitions the CPU had to continually carry out.",
+    "D is incorrect because data and address bus architecture was not the specific reason that vendors moved to a microkernel architecture. This question is zeroing in on how much code ran in kernel versus user mode and how transitions took place, which has nothing to do with the bus architectures."
+   ]
+  },
+  {
+   "n": 32,
+   "q": "Which of the following best describes the last architecture described in this scenario?",
+   "options": [
+    "Hybrid microkernel",
+    "Layered",
+    "Monolithic",
+    "Hardened and embedded"
+   ],
+   "scenario": "Operating systems have evolved and changed over the years. The earlier operating systems were monolithic and did not segregate critical processes from noncritical processes. As time went on operating system vendors started to reduce the amount of programming code that ran in kernel mode. Only the absolutely necessary code ran in kernel mode, and the remaining operating system code ran in user mode. This architecture introduced performance issues, which required the operating system vendors to reduce the critical operating system functionality to microkernels and allow the remaining operating system functionality to run in client/server models within kernel mode.",
+   "answer": "A",
+   "explanation": [
+    "A. The hybrid microkernel architecture is a combination of monolithic and microkernel architectures. The critical operating system functionality is carried out in a microkernel construct, and the remaining functionality is carried out in a client/server model running within kernel mode. This architecture allows for the critical operating system functions to run in kernel mode and not experience the performance issues with previous architectures.",
+    "B is incorrect because a layered operating system architecture focuses on constructing the functions of the operating system into hierarchical layers. This architecture does not focus on what is or is not running in kernel mode.",
+    "C is incorrect because the industry started with monolithic operating systems and evolved from it. A monolithic operating system does not segregate privileged and nonprivileged processes and does not use a kernel. MS-DOS is an example of a monolithic operating system.",
+    "D is incorrect because an operating system that is hardened and embedded is not a major architecture. The term “hardened” just means secured, and “embedded” means that the operating system’s functionalities are stripped down to only provide the basic and necessary functions required of the hardware the software is installed upon. Mobile phones and specialized hardware commonly have embedded operating systems."
+   ]
+  }
+ ]
+}

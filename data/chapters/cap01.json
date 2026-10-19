@@ -1,0 +1,564 @@
+{
+ "id": 1,
+ "title_en": "Information Security Governance and Risk Management",
+ "title_es": "Seguridad de la Información: Gobernanza y Gestión de Riesgos",
+ "block": 1,
+ "questions": [
+  {
+   "n": 1,
+   "q": "Which of the following best describes the relationship between CobiT and ITIL?",
+   "options": [
+    "CobiT is a model for IT governance, whereas ITIL is a model for corporate governance.",
+    "CobiT provides a corporate governance roadmap, whereas ITIL is a customizable framework for IT service management.",
+    "CobiT defines IT goals, whereas ITIL provides the process-level steps on how to achieve them.",
+    "CobiT provides a framework for achieving business goals, whereas ITIL defines a framework for achieving IT service-level goals."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The Control Objectives for Information and related Technology (CobiT) is a framework developed by the Information Systems Audit and Control Association (ISACA) and the IT Governance Institute (ITGI). It defines goals for the controls that should be used to properly manage IT and ensure IT maps to business needs, not specifically just security needs. The Information Technology Infrastructure Library (ITIL) is the de facto standard of best practices for IT service management. A customizable framework, ITIL provides the goals, the general activities necessary to achieve these goals, and the input and output values for each process required to meet these determined goals. In essence, CobiT addresses “what is to be achieved,” while ITIL addresses “how to achieve it.”",
+    "A is incorrect because, while CobiT can be used as a model for IT governance, ITIL is not a model for corporate governance. Actually, Committee of Sponsoring Organizations of the Treadway Commission (COSO) is a model for corporate governance. CobiT is derived from the COSO framework. You can think of CobiT as a way to meet many of the COSO objectives, but only from the IT perspective. In order to achieve many of the objectives addressed in CobiT, an organization can use ITIL, which provides process-level steps for achieving IT service management objectives.",
+    "B is incorrect because, as previously stated, CobiT can be used as a model for IT governance, not corporate governance. COSO is a model for corporate governance. The second half of the answer is correct. ITIL is a customizable framework that is available as a series of books or online, for IT service management.",
+    "D is incorrect because CobiT defines goals for the controls that should be used to properly manage IT and ensure IT maps to business needs, not just IT security needs. ITIL provides steps for achieving IT service management goals as they relate to business needs. ITIL was created because of the increased dependence on information technology to meet business needs."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Jane has been charged with ensuring that clients’ personal health information is adequately protected before it is exchanged with a new European partner. What data security requirements must she adhere to?",
+   "options": [
+    "HIPAA",
+    "NIST SP 800-66",
+    "Safe Harbor",
+    "European Union Principles on Privacy"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The Safe Harbor requirements were created to harmonize the data privacy practices of the U.S. with the European Union’s stricter privacy controls, and to prevent accidental information disclosure and loss. The framework outlines how any entity that is going to move private data to and from Europe must go about protecting it. By certifying against this rule base, U.S. companies that work with European entities can more quickly and easily transfer data.",
+    "A is incorrect because the Health Insurance Portability and Accountability Act (HIPAA) does not specifically address data protection for the purposes of sharing it with European entities. HIPAA provides a framework and guidelines to ensure security, integrity, and privacy when handling confidential medical information within the U.S. The U.S. federal regulation also outlines how security should be managed for any facility that creates, accesses, shares, or destroys medical information.",
+    "B is incorrect because NIST SP 800-66 is a risk assessment methodology. It does not point out specific data privacy requirements. NIST SP 800-66 does apply to health care. It was originally designed to be implemented in the healthcare field and can be used by HIPAA clients to help achieve compliance.",
+    "D is incorrect because the European Union Principles on Privacy are the foundation for the European Union’s strict laws pertaining to data that is considered private. The purpose of the principles is not to prepare data specifically for its exchange with U.S. companies, nor are the requirements mandated for U.S. companies. This set of principles has six areas that address using and transmitting sensitive information, and all European states must abide by these principles to be in compliance."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "Global organizations that transfer data across international boundaries must abide by guidelines and transborder information flow rules developed by an international organization that helps different governments come together and tackle the economic, social, and governance challenges of a globalized economy. What organization is this?",
+   "options": [
+    "Committee of Sponsoring Organizations of the Treadway Commission",
+    "The Organisation for Economic Co-operation and Development",
+    "CobiT",
+    "International Organization for Standardization"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Almost every country has its own rules pertaining to what constitutes private data and how it should be protected. As the digital and information age came upon us, these different laws started to negatively affect business and international trade. Thus, the Organisation for Economic Co-operation and Development (OECD) developed guidelines for various countries so that data is properly protected and everyone follows the same rules.",
+    "A is incorrect because the Committee of Sponsoring Organizations of the Treadway Commission (COSO) was formed in 1985 to provide sponsorship for the National Commission on Fraudulent Financial Reporting, an organization that studies deceptive financial reports and what elements lead to them. The acronym COSO refers to a model for corporate governance that addresses IT at a strategic level, company culture, financial accounting principles, and more.",
+    "C is incorrect because the Control Objectives for Information and related Technology (CobiT) is a framework that defines goals for the controls that should be used to properly manage IT and ensure that IT maps to business needs. It is an international open standard that provides requirements for the control and security of sensitive data and a reference framework.",
+    "D is incorrect because the International Organization for Standardization (ISO) is an international standard-setting body consisting of representatives from national standards organizations. Its objective is to establish global standardizations. However, its standardizations go beyond the privacy of data as it travels across international borders. For example, some standards address quality control, while others address assurance and security."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "Steve, a department manager, has been asked to join a committee that is responsible for defining an acceptable level of risk for the organization, reviewing risk assessment and audit reports, and approving significant changes to security policies and programs. What committee is he joining?",
+   "options": [
+    "Security policy committee",
+    "Audit committee",
+    "Risk management committee",
+    "Security steering committee"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Steve is joining a security steering committee, which is responsible for making decisions on tactical and strategic security issues within the enterprise. The committee should consist of individuals from throughout the organization and meet at least quarterly. In addition to the responsibilities listed in the question, the security steering committee is responsible for establishing a clearly defined vision statement that works with and supports the organizational intent of the business. It should provide support for the goals of confidentiality, integrity, and availability as they pertain to the organization’s business objectives. This vision statement should, in turn, be supported by a mission statement that provides support and definition to the processes that will apply to the organization and allow it to reach its business goals.",
+    "A is incorrect because a security policy committee is a committee chosen by senior management to produce security policies. Usually senior management has this responsibility unless they delegate it to a board or committee. Security policies dictate the role that security plays within the organization. They can be organizational, issue-specific, or system-specific. The steering committee does not directly create policies but reviews and approves them if acceptable.",
+    "B is incorrect because the audit committee’s goal is to provide independent and open communications among the board of directors, management, internal auditors, and external auditors. Its responsibilities include the company’s system of internal controls, the engagement and performance of independent auditors, and the performance of the internal audit function. The audit committee would report its findings to the steering committee, but not be responsible for overseeing and approving any part of a security program.",
+    "C is incorrect because the purpose of a risk management committee is to understand the risks that the organization faces as a whole and work with senior management to reduce these risks to acceptable levels. This committee does not oversee the security program. The security steering committee usually reports its findings to the risk management committee as it relates to information security. A risk management committee must look at overall business risks, not just IT security risks."
+   ]
+  },
+  {
+   "n": 5,
+   "q": "As head of sales, Jim is the information owner for the sales department. Which of the following is not Jim’s responsibility as information owner?",
+   "options": [
+    "Assigning information classifications",
+    "Dictating how data should be protected",
+    "Verifying the availability of data",
+    "Determining how long to retain data"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The responsibility of verifying the availability of data is the only responsibility listed that does not belong to the information owner. Rather, it is the responsibility of the information custodian. The information custodian is also responsible for maintaining and protecting data as dictated by the information owner. This includes performing regular backups of data, restoring data from backup media, retaining records of activity, and fulfilling information security and data protection requirements in the company’s policies, guidelines, and standards. Information owners work at a higher level than the custodians. The owners basically state, “This is the level of integrity, availability, and confidentiality that needs to be provided—now go do it.” The custodian must then carry out these mandates and follow up with the installed controls to make sure they are working properly.",
+    "A is incorrect because as information owner Jim is responsible for assigning information classifications. (The question asked which of the following Jim is not responsible for.)",
+    "B is incorrect because information owners such as Jim are responsible for dictating how information should be protected. The information owner has the organizational responsibility for data protection and is liable for any negligence when it comes to protecting the organization’s information assets. This means that Jim must make decisions regarding how information is protected and ensure that the information custodian (a role usually filled by IT or security) is carrying out these decisions.",
+    "D is incorrect because determining how long to retain data is the responsibility of the information owner. The information owner is also responsible for determining who can access the information and ensuring that proper access rights are being used. He can approve access requests himself or delegate the function to business unit managers, who will approve requests based on user access criteria defined by the information owner."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "Assigning data classification levels can help with all of the following except:",
+   "options": [
+    "The grouping of classified information with hierarchical and restrictive security",
+    "Ensuring that nonsensitive data is not being protected by unnecessary controls",
+    "Extracting data from a database",
+    "Lowering the costs of protecting data"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Data classification does not involve the extraction of data from a database. However, data classification can be used to dictate who has access to read and write data that is stored in a database. Each classification should have separate handling requirements and procedures pertaining to how that data is accessed, used, and destroyed. For example, in a corporation, confidential information may only be accessed by senior management. Auditing could be very detailed and its results monitored daily, and degaussing or zeroization procedures may be required to erase the data. On the other hand, information classified as public may be accessed by all employees, and no special auditing or destruction methods required.",
+    "A is incorrect because assigning data classification levels can help with the grouping of classified information with hierarchical and restrictive security. Data that shares the same classification, for example, can be grouped together and assigned the same handling requirements and procedures pertaining to how it is accessed, used, and destroyed.",
+    "B is incorrect because assigning data classification levels can help ensure that nonsensitive data is being protected by the necessary controls. Data classification directly deals with ensuring that the different levels of sensitive data are being protected by the necessary controls. This answer is very tricky because of all the negatives, so make sure to read questions and answers slowly.",
+    "D is incorrect because data classification helps ensure data is protected in the most cost-effective manner. Protecting and maintaining data costs money, but it is important to spend this money for the information that actually requires protection. For example, data that is classified confidential may require additional access controls as compared to public data to restrict access. It may also require additional auditing and monitoring. This may be appropriate for a soda company’s proprietary recipe, but it would be a waste of resources if those same measures were implemented for the soda company’s employee directory."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "Which of the following is not included in a risk assessment?",
+   "options": [
+    "Discontinuing activities that introduce risk",
+    "Identifying assets",
+    "Identifying threats",
+    "Analyzing risk in order of cost or criticality"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Discontinuing activities that introduce risk is a way of responding to risk through avoidance. For example, there are many risks surrounding the use of instant messaging (IM) in the enterprise. If a company decides not to allow IM activity because there is not enough business need for its use, then prohibiting this service is an example of risk avoidance. Risk assessment does not include the implementation of countermeasures such as this.",
+    "B is incorrect because identifying assets is part of a risk assessment, and the question asks to identify what is not included in a risk assessment. In order to determine the value of assets, those assets must first be identified. Asset identification and valuation are also important tasks of risk management.",
+    "C is incorrect because identifying threats is part of a risk assessment, and the question asks to identify what is not included in a risk assessment. Risk is present because of the possibility of a threat exploiting a vulnerability. If there were no threats, there would be no risk. Risk ties the vulnerability, threat, and likelihood of exploitation to the resulting business impact.",
+    "D is incorrect because analyzing risk in order of cost or criticality is part of the risk assessment process, and the question asks to identify what is not included in a risk assessment. A risk assessment researches and quantifies the risk a company faces. Dealing with risk must be done in a cost-effective manner. Knowing the severity of the risk allows the organization to determine how to address it effectively."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "Sue has been tasked with implementing a number of security controls, including antivirus and antispam software, to protect the company’s e-mail system. What type of approach is her company taking to handle the risk posed by the system?",
+   "options": [
+    "Risk mitigation",
+    "Risk acceptance",
+    "Risk avoidance",
+    "Risk transference"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Risk can be dealt with in four basic ways: transfer it, avoid it, reduce it, or accept it. By implementing security controls such as antivirus and antispam software, Sue is reducing the risk posed by her company’s e-mail system. This is also referred to as risk mitigation, where the risk is decreased to a level considered acceptable. In addition to the use of IT security controls and countermeasures, risk can be mitigated by improving procedures, altering the environment, erecting barriers to the threat, and implementing early detection methods to stop threats as they occur, thereby reducing their possible damage.",
+    "B is incorrect because risk acceptance does not involve spending money on protection or countermeasures, such as antivirus software. When accepting risk, the company understands the level of risk it is faced with, as well as the potential cost of damage, and decides to live with it without implementing countermeasures. Many companies accept risk when the cost/benefit ratio indicates that the cost of the countermeasure outweighs the potential loss value.",
+    "C is incorrect because risk avoidance involves discontinuing the activity that is causing the risk, and in this case Sue’s company has chosen to continue to use e-mail. A company may choose to terminate an activity that introduces risk if that risk outweighs the activity’s business need. For example, a company may choose to block social media web sites for some departments because of the risk they pose to employee productivity.",
+    "D is incorrect because risk transference involves sharing the risks with another entity as in purchasing of insurance to transfer some of the risk to the insurance company. Many types of insurance are available to companies to protect their assets. If a company decides the total or residual risk is too high to gamble with, it can purchase insurance."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "The integrity of data is not related to which of the following?",
+   "options": [
+    "Unauthorized manipulation or changes to data",
+    "The modification of data without authorization",
+    "The intentional or accidental substitution of data",
+    "The extraction of data to share with unauthorized entities"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The extraction of data to share with unauthorized entities is a confidentiality issue, not an integrity issue. Confidentiality ensures that the necessary level of secrecy is enforced at each junction of data processing and prevents unauthorized disclosure. This level of confidentiality should prevail while data resides on systems and devices within the network, as it is transmitted, and once it reaches its destination. Integrity, on the other hand, is the principle that signifies the data has not been changed or manipulated in an unauthorized manner.",
+    "A is incorrect because integrity is related to the unauthorized manipulation or changes to data. Integrity is upheld when any unauthorized modification is prevented. Hardware, software, and communication mechanisms must work in concert to maintain and process data correctly and move data to intended destinations without unexpected alteration. The systems and network should be protected from outside interference and contamination.",
+    "B is incorrect because the modification of data without authorization is related to integrity. Integrity is about protecting data so that it cannot be changed either by users or other systems that do not have the rights to do so.",
+    "C is incorrect because the intentional or accidental substitution of data is related to integrity. Along with the assurance that data is not modified by unauthorized entities, integrity is upheld when the assurance of the accuracy and reliability of the information and systems is provided. An environment that enforces integrity prevents attackers, for example, from inserting a virus, logic bomb, or backdoor into a system that could corrupt or replace data. Users usually affect a system or its data’s integrity by mistake (although internal users may also commit malicious deeds). For example, a user may insert incorrect values into a data processing application that ends up charging a customer $3,000 instead of $300."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "There are several methods an intruder can use to gain access to company assets. Which of the following best describes masquerading?",
+   "options": [
+    "Changing an IP packet’s source address",
+    "Elevating privileges to gain access",
+    "An attempt to gain unauthorized access as another user",
+    "Creating a new authorized user with hacking tools"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Masquerading is an attempt to gain unauthorized access by impersonating an authorized user. Masquerading is commonly used by attackers carrying out phishing attacks and has been around for a long time. For example, in 1996 hackers posed as AOL staff members and sent messages to victims asking for their passwords in order to verify correct billing information or verify information about the AOL accounts. Today, phishers often masquerade as large banking companies and well-known Internet entities like Amazon.com and eBay. Masquerading is a type of active attack because the attacker is actually doing something instead of sitting back and gathering data.",
+    "A is incorrect because changing an IP packet’s source address is an example of masquerading and not a definition of masquerading. IP spoofing is the act of presenting false information within packets, to trick other systems and hide the origin of the message. This is usually done by hackers so that their identity cannot be successfully uncovered.",
+    "B is incorrect because elevating privileges is not part of masquerading. Elevating privileges is often the next step after being able to penetrate a system successfully, but it does not have anything to do directly with fooling a user or system about the attacker’s true identity.",
+    "D is incorrect because masquerading involves commonly posing as an authorized user that already exists in the system the attacker is attempting to access. It is common for the attacker then to attempt to create a new authorized user account on a compromised system, but successful masquerading has to happen first."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "A number of factors should be considered when assigning values to assets. Which of the following is not used to determine the value of an asset?",
+   "options": [
+    "The asset’s value in the external marketplace",
+    "The level of insurance required to cover the asset",
+    "The initial and outgoing costs of purchasing, licensing, and supporting the asset",
+    "The asset’s value to the organization’s production operations"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The level of insurance required to cover the asset is not a consideration when assigning values to assets. It is actually the other way around: By knowing the value of an asset, an organization can more easily determine the level of insurance coverage to purchase for that asset. In fact, understanding the value of an asset is the first step to understanding what security mechanisms should be put in place and what funds should go toward protecting it. This knowledge can also help companies perform effective cost/benefit analyses, understand exactly what is at risk, and comply with legal and regulatory requirements.",
+    "A is incorrect because the asset’s value in the external marketplace is a factor that should be considered when determining the value of an asset. It should also include the value the asset might have to competitors or what others are willing to pay for a given asset.",
+    "C is incorrect because the initial and outgoing costs of purchasing, licensing, and supporting the asset are considerations when determining the cost and value of an asset. The asset must be cost-effective to the business directly. If the supporting requirements of maintaining the asset outweighs the business need for the asset, its value will decrease.",
+    "D is incorrect because it is a factor to be considered when determining an asset’s value. The asset’s value to the organization’s production operations is the determination of cost to an organization if the asset is not available for a certain period of time. Along these same lines, the asset’s usefulness and role in the organization should be considered as well as the operational and production activities affected if the asset is unavailable. If the asset helps operations it is valuable; the trick is to figure out how valuable."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "Jill is establishing a companywide sales program that will require different user groups with different privileges to access information on a centralized database. How should the security manager secure the database?",
+   "options": [
+    "Increase the database’s security controls and provide more granularity.",
+    "Implement access controls that display each user’s permissions each time they access the database.",
+    "Change the database’s classification label to a higher security status.",
+    "Decrease the security so that all users can access the information as needed."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The best approach to securing the database in this situation would be to increase the controls and assign very granular permissions. These measures would ensure that users cannot abuse their privileges and the confidentiality of the information would be maintained. Granularity of permissions gives network administrators and security professionals additional control over the resources they are charged with protecting, and a fine level of detail enables them to give individuals just the precise level of access they need.",
+    "B is incorrect because implementing access controls that display each user’s permissions each time they access the database is an example of one control. It is not the overall way of dealing with user access to a full database of information. This may be an example of increasing database security controls, but it is only one example and more would need to be put into place.",
+    "C is incorrect because the classification level of the information in the database was previously determined based on its confidentiality, integrity, and availability levels. These levels do not change simply because more users need access to the data. Thus, you would never increase or decrease the classification level of information when more users or groups need to access that information. Increasing the classification level would only mean a smaller subset of users could access the database.",
+    "D is incorrect because it puts data at risk. If security is decreased so that all users can access it as needed, then users with lower privileges will be able to access data of higher classification levels. Lower security also makes it easier for intruders to break into the database. As stated in answer C, a classification level is not changed just because the number of users who need to access the data increases or decreases."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "As his company’s CISO, George needs to demonstrate to the Board of Directors the necessity of a strong risk management program. Which of the following should George use to calculate the company’s residual risk?",
+   "options": [
+    "threats × vulnerability × asset value = residual risk",
+    "SLE × frequency = ALE, which is equal to residual risk",
+    "(threats × vulnerability × asset value) × control gap = residual risk",
+    "(total risk – asset value) × countermeasures = residual risk"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Countermeasures are implemented to reduce overall risk to an acceptable level. However, no system or environment is 100 percent secure, and with every countermeasure some risk remains. The leftover risk after countermeasures are implemented is called residual risk. Residual risk differs from total risk, which is the risk companies face when they choose not to implement any countermeasures. While the total risk can be determined by calculating threats × vulnerability × asset value = total risk, residual risk can be determined by calculating (threats × vulnerability × asset value) × control gap = residual risk. Control gap is the amount of protection the control cannot provide.",
+    "A is incorrect because threats × vulnerability × asset value does not equal residual risk. It is the equation to calculate total risk. Total risk is the risk a company faces in the absence of any security safeguards or actions to reduce the overall risk exposure. The total risk is reduced by implementing safeguards and countermeasures, leaving the company with residual risk—or the risk left over after safeguards are implemented.",
+    "B is incorrect because SLE × frequency is the equation to calculate the annualized loss expectancy (ALE) as a result of a threat exploiting a vulnerability and the business impact. The frequency is the threat’s annual rate of occurrence (ARO). The ALE is not equal to residual risk. ALE indicates how much money a specific type of threat is likely to cost the company over the course of a year. Knowing the real possibility of a threat and how much damage, in monetary terms, the threat can cause is important in determining how much should be spent to try and protect against that threat in the first place.",
+    "D is incorrect and is a distracter answer. There is no such formula like this used in risk assessments. The actual equations are threats × vulnerability × asset value = total risk; and (threats × vulnerability × asset value) × control gap = residual risk."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "Capability Maturity Model Integration (CMMI) came from the software engineering world and is used within organizations to help lay out a pathway of how incremental improvement can take place. This model is used by organizations in self-assessment and to develop structured steps that can be followed so an organization can evolve from one level to the next and constantly improve its processes. In the CMMI model graphic shown, what is the proper sequence of the levels?",
+   "options": [
+    "Initial, Defined, Managed, Quantitatively Managed, Optimizing",
+    "Initial, Defined, Quantitatively Managed, Optimizing, Managed",
+    "Defined, Managed, Quantitatively Managed, Optimizing",
+    "Initial, Managed, Defined, Quantitatively Managed, Optimizing"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Capability Maturity Model Integration (CMMI) is an organizational development model for process improvement developed by Carnegie Mellon. While organizations know that they need to constantly make their security programs better, it is not always easy to accomplish because “better” is a vague and nonquantifiable concept. The only way we can really improve is to know where we are starting from, where we need to go, and the steps we need to take in between. This is how the security industry uses the CMMI model. A security program starts at Level 1 and is chaotic in nature. Processes are not predictable, and the security team is reactive to issues that arise—not proactive. The model uses the following maturity levels: Initial, Managed, Defined, Quantitatively Managed, Optimizing.",
+    "A is incorrect because it has the Defined level as the second level in the model. The actual second level is referred to as Managed. The developer of CMMI is Carnegie Mellon University, and they have modified this model to be used in three main categories: product and service development (CMMI-DEV), service establishment management (CMMI-SVC), and product and service acquisition (CMMI-ACQ). You do not need to know this level of detail for the exam, but you should understand that this is a flexible model that can be used for different situations. The Managed level will be defined slightly differently based upon how the model is being used. Different entities have modified the basic CMMI model to map to organizational security programs. For example, ISACA has laid out a CMMI model showing how ISO 27000 standards can be accomplished and IT security governance can be practiced. The latest version of CMMI has included these security topics: • OPSD - Organizational Preparedness for Secure Development • SMP - Secure Management in Projects • SRTS - Security Requirements and Technical Solution • SVV - Security Verification and Validation",
+    "B is incorrect because the Defined and Managed levels are out of order. It might be confusing at first as to why Managed (Level 2) comes before Defined (Level 3). Level 2 basically means that the organization is not just practicing security by the seat of its pants. It is managing the processes—the processes are not managing the organization. An organization can only be considered to be at Level 3 if it has defined many things that will be tracked. This is the first part of creating a meaningful metric system for process improvement and optimization. Defining things means putting useful data about the security program into formats that can be used in quantitative analysis.",
+    "C is incorrect because the order of levels is wrong. The correct order is Initial, Managed, Defined, Quantitatively Managed, Optimizing. Organizations can only be assessed and assigned a level starting at Level 2. Level 1 basically means that there is no coherent structure. Level 2 means the program is being managed, Level 3 means things that can be counted are created, Level 4 means the organization is counting things and using quantitative measures to grade their improvement, and Level 5 means that the organization has control over the security program as a whole and is now focused on just making things more optimized. This is a process improvement model, and these levels are considered maturity levels—as the security program improves, it can be evaluated and achieve a higher maturity level."
+   ],
+   "images": [
+    "data/img/cap01_q14_0.jpeg"
+   ]
+  },
+  {
+   "n": 15,
+   "q": "When developing a formal architecture (i.e., enterprise security architecture) as illustrated in the following graphic, what is the first item that needs to be identified, and what is the second item that needs to be captured?",
+   "options": [
+    "Stakeholders, concerns",
+    "Framework, architecture",
+    "Model, architecture",
+    "Metrics, process improvement model"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. First, the system’s stakeholders need to be identified, which is who depends upon the system and who is affected by the success or failure of the system. “System” is a general term that can represent a piece of software, network, or in our context, an enterprise security program. One stakeholder of a security program is the CEO, whose main concern could be the effects security issues have on the company’s revenue. Another stakeholder could be the legal department, whose main concern is the liability risk as it pertains to the company’s security program. Next, the concerns of the stakeholders need to be understood and captured. The stakeholders’ concerns are one of the most important reasons that system architectures as illustrated in the question are developed. The architecture is a tool that allows the stakeholders to best understand if the system is meeting their concerns by being able to understand the system from their viewpoint. Architecture views are representations of the system’s architecture that are meaningful to one or more stakeholders. The architect develops a set of views that will enable the architecture to be communicated to, and understood by, all the stakeholders, and enable them to verify that the system will address their concerns.",
+    "B is incorrect because it lists framework and architecture, but the question asks what needs to be identified and captured while in the process of developing an architecture. Notice the difference between an architecture framework and an actual architecture. You use the framework as a guideline on how to build an architecture that best fits your company’s needs. Each architecture will be different because each company has different business drivers, security and regulatory requirements, cultures, and organizational structures—but if each company starts with the same architectural framework, then their architectures will have similar structures and goals. An enterprise security framework is general in nature and can be used by companies around the world as a foundation. Each company modifies the original framework, which results in their own unique architecture.",
+    "C is incorrect because it lists model and architecture as the first things to accomplish when building an architecture. The relationship between an architecture and framework is similar to three people starting with a two-story ranch-style house blueprint. One person chooses to have a four-bedroom house built because they have three children, another person chooses to have a larger living room and three bedrooms in their house, and a third person chooses two bedrooms and two living rooms. Each person started with the same blueprint (framework) and modified it to meet their needs (architecture). Organizations can all start with the same framework and then modify it and develop an architecture that meets their specific needs. So three companies can start with the same enterprise security framework and modify it to meet their needs, which results in three different architectures. The architecture describes the system from the viewpoint of a stakeholder.",
+    "D is incorrect because it is listing distractors as answers. An enterprise architecture and framework have to be developed before any metrics and process improvement models can be chosen and deployed. The architecture and framework are very high-level structures that must encompass all aspects of the security program from the top down. Metrics and improvement models can only be used once the program is designed and rolled out to assess the program’s success and progress."
+   ],
+   "images": [
+    "data/img/cap01_q15_0.jpeg"
+   ]
+  },
+  {
+   "n": 16,
+   "q": "Susan, an attorney, has been hired to fill a new position at Widgets Inc. The position is Chief Privacy Officer (CPO). What is the primary function of her new role?",
+   "options": [
+    "Ensuring the protection of partner data",
+    "Ensuring the accuracy and protection of company financial information",
+    "Ensuring that security policies are defined and enforced",
+    "Ensuring the protection of customer, company, and employee data"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The Chief Privacy Officer (CPO) position is being created by companies in response to the increasing demands on organizations to protect myriad types of data. The CPO is responsible for ensuring the security of customer, company, and employee data, which keeps the company free from legal prosecution and—hopefully—out of the headlines. Thus, the CPO is directly involved with setting policies on how data is collected, protected, and distributed to third parties. The CPO is usually an attorney and reports to the Chief Security Officer.",
+    "A is incorrect because protecting partner data is just a small subset of all the data the CPO is responsible for protecting. CPOs are responsible for ensuring the protection of customer, company, and employee data. Partner data is among the various types of data that the CPO is responsible for protecting. In addition, the CPO is responsible for knowing how its company’s suppliers, partners, and other third parties are protecting its sensitive information. Many times, companies will need to review these other parties (which have copies of data needing protection).",
+    "B is incorrect because the accuracy of financial information is the responsibility of its data owner—the Chief Financial Officer (CFO). The CFO is responsible for the corporation’s account and financial activities, and the overall financial structure of the organization. The CPO is responsible for helping to ensure the secrecy of this data, but not the accuracy of the data. The financial information is also a small subset of all the data types the CPO is responsible for protecting.",
+    "C is incorrect because the definition and enforcement of security policies is the responsibility of senior management, commonly delegated to the CISO or CSO—not the CPO. A security policy is an overall general statement that dictates what role security plays within the organization. The CPO’s responsibilities as they relate to policies are to contribute to the setting of data protection policies, including how data is collected, protected, and distributed to third parties."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "Jared plays a role in his company’s data classification system. In this role, he must practice due care when accessing data and ensure that the data is used only in accordance with allowed policy while abiding by the rules set for the classification of the data. He does not determine, maintain, or evaluate controls, so what is Jared’s role?",
+   "options": [
+    "Data owner",
+    "Data custodian",
+    "Data user",
+    "Information systems auditor"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Any individual who routinely uses data for work-related tasks is a data user. Users must have the necessary level of access to the data to perform the duties within their position and are responsible for following operational security procedures to ensure the data’s confidentiality, integrity, and availability to others. This means that users must practice due care and act in accordance with both security policy and data classification rules.",
+    "A is incorrect because the data owner has a greater level of responsibility in the protection of the data. Data owners are responsible for classifying the data, regularly reviewing classification levels, and delegating the responsibility of the data protection duties to the data custodian. The data owner is typically a manager or executive in the organization and is held responsible when it comes to protecting the company’s information assets.",
+    "B is incorrect because the data custodian is responsible for the implementation and maintenance of security controls as dictated by the data owner. In other words, the data custodian is the technical caretaker of the controls that protects the data. Her duties include making backups, restoring data, implementing and maintaining countermeasures, and administering controls.",
+    "D is incorrect because an information systems auditor is responsible for evaluating controls. After evaluating the controls, the auditor provides reports to management, illustrating the mapping between the set acceptable risk level of the organization and her findings. This does not have to do with using the data or practicing due care with the use of data."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "Risk assessment has several different methodologies. Which of the following official risk methodologies was not created for the purpose of analyzing security risks?",
+   "options": [
+    "FAP",
+    "OCTAVE",
+    "ANZ 4360",
+    "NIST SP 800-30"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. While ANZ 4360 can be used to analyze security risks, it was not created for that purpose. It takes a much broader approach to risk management than other risk assessment methodologies, such as NIST and OCTAVE, which focus on IT threats and information security risks. ANZ 4360 can be used to understand a company’s financial, capital, human safety, and business decisions risks.",
+    "A is incorrect because there is no formal FAP risk analysis approach. It is a distracter answer.",
+    "B is incorrect because OCTAVE focuses on IT threats and information security risks. OCTAVE is meant to be used in situations where people manage and direct the risk evaluation for information security within their organization. The organization’s employees are given the power to determine the best approach for evaluating security.",
+    "D is incorrect because NIST SP 800-30 is specific to IT threats and how they relate to information security risks. It focuses mainly on systems. Data is collected from network and security practice assessments, and from people within the organization. The data is then used as input values for the risk analysis steps outlined in the 800-30 document."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "Which of the following is not a characteristic of a company with a security governance program in place?",
+   "options": [
+    "Board members are updated quarterly on the company’s state of security.",
+    "All security activity takes place within the security department.",
+    "Security products, services, and consultants are deployed in an informed manner.",
+    "The organization has established metrics and goals for improving security."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. If all security activity takes place within the security department, then security is working within a silo and is not integrated throughout the organization. In a company with a security governance program, security responsibilities permeate the entire organization, from executive management down the chain of command. A common scenario would be executive management holding business unit managements responsible for carrying out risk management activities for their specific business units. In addition, employees are held accountable for any security breaches they participate in, either maliciously or accidentally.",
+    "A is incorrect because security governance is a set of responsibilities and practices exercised by the board and executive management of an organization with the goal of providing strategic direction, ensuring that objectives are achieved, ascertaining that risks are managed appropriately, and verifying that the organization’s resources are used responsibly. An organization with a security governance program in place has a board of directors that understands the importance of security and is aware of the organization’s security performance and breaches.",
+    "C is incorrect because security governance is a coherent system of integrated security components that includes products, personnel, training, processes, etc. Thus, an organization with a security governance program in place is likely to purchase and deploy security products, managed services, and consultants in an informed manner. They are also constantly reviewed to ensure they are cost-effective.",
+    "D is incorrect because security governance requires performance measurement and oversight mechanisms. An organization with a security governance program in place continually reviews its processes, including security, with the goal of continued improvement. On the other hand, an organization that lacks a security governance program is likely to march forward without analyzing its performance and therefore repeatedly makes similar mistakes."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "Michael is charged with developing a classification program for his company. Which of the following should he do first?",
+   "options": [
+    "Understand the different levels of protection that must be provided.",
+    "Specify data classification criteria.",
+    "Identify the data custodians.",
+    "Determine protection mechanisms for each classification level."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Before Michael begins developing his company’s classification program, he must understand the different levels of protection that must be provided. Only then can he develop the necessary classification levels and their criteria. One company may choose to use only two layers of classification, while another may choose to use more. Regardless, when developing classification levels, he should keep in mind that too many or too few classification levels will render the classification ineffective; there should be no overlap in the criteria definitions between classification levels; and classification levels should be developed for both data and software.",
+    "B is incorrect because data classification criteria cannot be established until the classification levels themselves have been defined. The classification criteria are used by data owners to know what classification should be assigned to specific data. Basically, the classifications are defined buckets and the criteria help data owners determine what bucket each data set should be put into.",
+    "C is incorrect because there is no need to identify the data custodians until classification levels are defined, criteria are determined for how data are classified, and the data owner has indicated the classification of the data she is responsible for. Remember, the data custodian is responsible for implementing and maintaining the controls specified by the data owner.",
+    "D is incorrect because protection mechanisms for each classification level cannot be determined until the classification levels themselves are defined based on the different levels of protection that are required. The types of controls implemented per classification will depend upon the level of protection that management and the security team have determined is needed."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "There are four ways of dealing with risk. In the graphic that follows, which method is missing and what is the purpose of this method?",
+   "options": [
+    "Risk transference. Share the risk with other entities.",
+    "Risk reduction. Reduce the risk to an acceptable level.",
+    "Risk rejection. Accept the current risk.",
+    "Risk assignment. Assign risk to a specific owner."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Once a company knows the amount of total and residual risk it is faced with, it must decide how to handle it. Risk can be dealt with in four basic ways: transfer it, avoid it, reduce it, or accept it. Many types of insurance are available to companies to protect their assets. If a company decides the total or residual risk is too high to gamble with, it can purchase insurance, which would transfer the risk to the insurance company.",
+    "B is incorrect because another approach is risk mitigation, where the risk is reduced to a level considered acceptable enough to continue conducting business. The implementation of firewalls, training, and intrusion/detection protection systems represent types of risk mitigation. Risk reduction is the same as risk mitigation, which is already listed in the graphic.",
+    "C is incorrect because companies should never reject risk, which basically means that they refuse to deal with it. Risk commonly has a negative business impact and if not dealt with properly the company could have to deal with things such as the loss of production resources, legal liability issues, or a negative effect on its reputation. It is important that identified risk be dealt with properly through transferring it, avoiding it, reducing it, or accepting it.",
+    "D is incorrect because while someone could be delegated to deal with a specific risk, this is not one of the methods that is used to deal with risk. Even if risk was assigned to a specific entity to deal with it, she would still need to either transfer, avoid, reduce, or accept the risk."
+   ],
+   "images": [
+    "data/img/cap01_q21_0.jpeg"
+   ]
+  },
+  {
+   "n": 22,
+   "q": "The following graphic contains a commonly used risk management scorecard. Identify the proper quadrant and its description.",
+   "options": [
+    "Top-right quadrant is high impact, low probability.",
+    "Top-left quadrant is high impact, medium probability.",
+    "Bottom-left quadrant is low impact, high probability.",
+    "Bottom-right quadrant is low impact, high probability."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The bottom-right quadrant contains low-impact, high-probability risks. This means that there is a high chance that specific threats will exploit specific vulnerabilities. Although these risks are commonly frequent, their business impact is low. Out of the four quadrants, the risks that reside in this quadrant should be dealt with after the first two higher quadrants. An example of a risk that could reside in this quadrant is a virus that infects a user workstation. Since viruses are so common this would mean that this risk has a high probability of taking place. This is only a user workstation and not a production system, so the impact would be low.",
+    "A is incorrect because the top-right quadrant contains high-impact, high-probability risks. This means that there is a high chance that specific threats will exploit specific vulnerabilities. These risks are commonly frequent and their business impact is high. Out of the four quadrants, the risks that reside in this quadrant should be dealt with first. An example of a risk that would reside in this quadrant is an attacker compromising an internal mail server. If the proper countermeasures are not in place, there is a high probability that this would occur. Since this is a resource that the whole company depends upon, it would have a high business impact.",
+    "B is incorrect because the top-left quadrant contains high-impact, low-probability risks. This means that there is a low chance that specific threats will exploit specific vulnerabilities. These risks are commonly infrequent and their business impact is low. Out of the four quadrants, the risks that reside in this quadrant should be dealt with after the risks that reside in the top-right quadrant. An example of this type of risk is an attacker compromising an internal DNS server. If there is an external-facing DNS server and a DMZ is in place, an attacker being able to access an internal DNS server is low. But if this does happen, this would have a high business impact since all systems depend upon this resource.",
+    "C is incorrect because the bottom-left quadrant contains low-impact, low-probability risks. This means that there is a low chance that specific threats will exploit specific vulnerabilities. These risks are commonly infrequent and their business impact is low. Out of the four quadrants, the risks that reside in this quadrant should be dealt with after the risks in all of the other three quadrants. An example of this type of risk would be a legacy file server that is hardly used failing and going offline. Since it is not commonly used by users, it would have a low business impact, and if the correct countermeasures are in place, there would be a low probability of this occurring."
+   ],
+   "images": [
+    "data/img/cap01_q22_0.jpeg"
+   ]
+  },
+  {
+   "n": 23,
+   "q": "What are the three types of policies that are missing from the following graphic?",
+   "options": [
+    "Regulatory, Informative, Advisory",
+    "Regulatory, Mandatory, Advisory",
+    "Regulatory, Informative, Public",
+    "Regulatory, Informative, Internal Use"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A Regulatory type of policy ensures that the organization is following standards set by specific industry regulations. It is very detailed and specific to a type of industry. It is used in financial institutions, healthcare facilities, public utilities, and other government-regulated industries. An Informative type of policy informs employees of certain topics. It is not an enforceable policy, but rather one that teaches individuals about specific issues relevant to the company. It could explain how the company interacts with partners, indicate the company’s goals and mission, and provide a general reporting structure in different situations. An Advisory type of policy strongly advises employees as to which types of behaviors and activities should and should not take place within the organization. It also outlines possible ramifications if employees do not comply with the established behaviors and activities. This policy type can be used, for example, to describe how to handle medical information, financial transactions, or how to process confidential information.",
+    "B is incorrect because Mandatory is not one of the categories of a type of policy; thus, this answer is a distracter.",
+    "C is incorrect because Public is not one of the categories of a type of policy; thus, this answer is a distracter.",
+    "D is incorrect because Internal Use is not one of the categories of a type of policy; thus, this answer is a distracter."
+   ],
+   "images": [
+    "data/img/cap01_q23_0.jpeg"
+   ]
+  },
+  {
+   "n": 24,
+   "q": "List in the proper order from the table on the top of the next page the learning objectives that are missing and their proper definitions.",
+   "options": [
+    "Understanding, recognition and retention, skill",
+    "Skill, recognition and retention, skill",
+    "Recognition and retention, skill, understanding",
+    "Skill, recognition and retention, understanding"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Awareness training and materials remind employees of their responsibilities pertaining to protecting company assets. Training provides skills needed to carry out specific tasks and functions. Education provides management skills and decision-making capabilities.",
+    "A is incorrect because the different types of training and education do not map to the listed results. Companies today spend a lot of money on security devices and technologies, but they commonly overlook the fact that individuals must be trained to use these devices and technologies. Without such training, the money invested toward reducing threats can be wasted, and the company is still insecure.",
+    "B is incorrect because the different types of training and education do not map to the listed results. Different roles require different types of training or education. A skilled staff is one of the most critical components to the security of a company.",
+    "D is incorrect because the different types of training and education do not map to the listed results. A security-awareness program is typically created for at least three types of audiences: management, staff, and technical employees. Each type of awareness training must be geared toward the individual audience to ensure each group understands its particular responsibilities, liabilities, and expectations."
+   ],
+   "images": [
+    "data/img/cap01_q24_0.jpeg"
+   ]
+  },
+  {
+   "n": 25,
+   "q": "What type of risk analysis approach does the following graphic provide?",
+   "options": [
+    "Quantitative",
+    "Qualitative",
+    "Operationally Correct",
+    "Operationally Critical"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A qualitative risk analysis approach does not assign monetary values to components and losses. Instead, qualitative methods walk through different scenarios of risk possibilities and rank the seriousness of the threats and the validity of the different possible countermeasures based on opinions. Qualitative analysis techniques include judgment, best practices, intuition, and experience. This graphic shows a rating system, which qualitative risk analysis uses instead of percentages and monetary numbers.",
+    "A is incorrect because a quantitative risk analysis attempts to assign percentages and monetary values to all elements of the risk analysis process. These elements may include safeguard costs, asset value, business impact, threat frequency, safeguard effectiveness, exploit probabilities, and so on. When all of these are quantified, the process is said to be quantitative. Each element within the analysis (asset value, threat frequency, severity of vulnerability, impact damage, safeguard costs, safeguard effectiveness, uncertainty, and probability items) is quantified and entered into equations to determine total and residual risks.",
+    "C is incorrect because there is no Operationally Correct formal risk analysis approach. This is a distracter answer.",
+    "D is incorrect because there is no formal Operationally Critical risk analysis approach. This is a distracter answer."
+   ],
+   "images": [
+    "data/img/cap01_q25_0.jpeg"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "ISO/IEC 27000 is part of a growing family of ISO/IEC information security management systems (ISMS) standards. It comprises information security standards published jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC). Which of the following provides an incorrect mapping of the individual standards that make up this family of standards?",
+   "options": [
+    "ISO/IEC 27002 Code of practice for information security management",
+    "ISO/IEC 27003 Guideline for ISMS implementation",
+    "ISO/IEC 27004 Guideline for information security management measurement and metrics framework",
+    "ISO/IEC 27005 Guideline for bodies providing audit and certification of information security management systems"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The ISO/IEC 27005 standard is the guideline for information security risk management. ISO/IEC 27005 is an international standard for how risk management should be carried out in the framework of an information security management system (ISMS).",
+    "A is incorrect because ISO/IEC 27002 is the code of practice for information security management; thus, it has a correct mapping. ISO/IEC 27002 provides best practice recommendations and guidelines as they pertain to initiating, implementing, or maintaining information security management systems (ISMS).",
+    "B is incorrect because ISO/IEC 27003 is the guideline for ISMS implementation; thus, it has a correct mapping. It focuses on the critical aspects needed for successful design and implementation of an information security management system (ISMS) in accordance with ISO/IEC 27001:2005. It describes the process of ISMS specification and design from inception to the production of implementation plans.",
+    "C is incorrect because ISO/IEC 27004 is the guideline for information security management measurement and metrics framework; thus, it has a correct mapping. It provides guidance on the development and use of measures and measurement in order to assess the effectiveness of an implemented information security management system (ISMS) and controls or groups of controls, as specified in ISO/IEC 27001."
+   ],
+   "key_errata": "B"
+  },
+  {
+   "n": 27,
+   "q": "Which of the following is the criteria Sam’s company was most likely certified under?",
+   "options": [
+    "SABSA",
+    "Capability Maturity Model Integration",
+    "Information Technology Infrastructure Library",
+    "Prince2"
+   ],
+   "scenario": "Sam is the security manager of a company that makes most of its revenue from its intellectual property. Sam has implemented a process improvement program that has been certified by an outside entity. His company received a Level 2 during an appraisal process, and he is putting in steps to increase this to a Level 3. A year ago when Sam carried out a risk analysis, he determined that the company was at too much of a risk when it came to potentially losing trade secrets. The countermeasure his team implemented reduced this risk, and Sam determined that the annualized loss expectancy of the risk of a trade secret being stolen once in a hundred-year period is now $400.",
+   "answer": "B",
+   "explanation": [
+    "B. Capability Maturity Model Integration (CMMI) is a process improvement approach that is used to help organizations improve their performance. The CMMI model may also be used as a framework for appraising the process maturity of the organization. The levels used in CMMI are Level 1–Initial, Level 2–Managed, Level 3–Defined, Level 4–Quantitatively Managed, and Level 5– Optimizing.",
+    "A is incorrect because Sherwood Applied Business Security Architecture (SABSA) is a model and methodology for the development of information security enterprise architectures. Since it is a framework, this means it provides a structure for individual architectures to be built from. Since it is a methodology also, this means it provides the processes to follow to build and maintain this architecture.",
+    "C is incorrect because the Information Technology Infrastructure Library (ITIL) is the de facto standard of best practices for IT service management. ITIL was created because of the increased dependence on information technology to meet business needs. Although ITIL has a component that deals with security, its focus is more toward internal service level agreements between the IT department and the “customers” it serves. The customers are usually internal departments. ITIL does not use the levels described in the scenario.",
+    "D is incorrect because PRINCE2 (PRojects IN Controlled Environments) is a process-based method for effective project management. It is commonly used by the UK government and is not a topic covered by the CISSP exam."
+   ],
+   "key_errata": "C"
+  },
+  {
+   "n": 28,
+   "q": "What is the associated single loss expectancy value in this scenario?",
+   "options": [
+    "$65,000",
+    "$400,000",
+    "$40,000",
+    "$4,000"
+   ],
+   "scenario": "Sam is the security manager of a company that makes most of its revenue from its intellectual property. Sam has implemented a process improvement program that has been certified by an outside entity. His company received a Level 2 during an appraisal process, and he is putting in steps to increase this to a Level 3. A year ago when Sam carried out a risk analysis, he determined that the company was at too much of a risk when it came to potentially losing trade secrets. The countermeasure his team implemented reduced this risk, and Sam determined that the annualized loss expectancy of the risk of a trade secret being stolen once in a hundred-year period is now $400.",
+   "answer": "C",
+   "explanation": [
+    "C. The formula to calculate the Annualized Loss Expectancy value (ALE) is Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO) = ALE. In this scenario, if the ALE is $400 and the ARO is 0.01, then the SLE is $40,000.",
+    "A is incorrect because the formula to obtain the SLE is Asset Value × Exposure Factor = SLE, and ALE is Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO) = ALE. If the ALE of the risk of a trade secret being stolen once in a hundred-year period is $400, then you have to work backwards to obtain the SLE value. If the ALE is $400 and the ARO is 0.01, then the resulting SLE value is $40,000.",
+    "B is incorrect because the formula to obtain the SLE is Asset Value × Exposure Factor = SLE, and ALE is Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO) = ALE. In this scenario, the risk of an asset being stolen once in a hundred-year period is calculated at the ALE being $400. If the ALE is $400 and the ARO is 0.01, then the resulting SLE value is $40,000.",
+    "D is incorrect because the formula to obtain the SLE is Asset Value × Exposure Factor = SLE, and ALE is Single Loss Expectancy (SLE) × Annualized Rate of Occurrence (ARO) = ALE. The goal of carrying out these calculations is to fully understand the criticality of specific risks and to know how much can be spent on implementing a countermeasure in a cost-effective manner."
+   ],
+   "key_errata": "D"
+  },
+  {
+   "n": 29,
+   "q": "Which of the following best describes the control types the company originally had in place?",
+   "options": [
+    "Administrative preventive controls are the policies and procedures. Technical preventive controls are securing the system, network segmentation, and intrusion detection system. Physical detective controls are the physical location of the database and PIN and smart card access controls.",
+    "Administrative preventive controls are the policies. Technical preventive controls are securing the system and intrusion detection system. Physical preventive controls are the physical location of the database and PIN and smart card access controls.",
+    "Administrative corrective controls are the policies and procedures. Technical preventive controls are securing the system, network segmentation, and intrusion detection system. Physical preventive controls are the physical location of the database and PIN and smart card access controls.",
+    "Administrative preventive controls are the policies and procedures. Technical preventive controls are securing the system and network segmentation. The technical detective control is the intrusion detection system. Physical preventive controls are the physical location of the database and PIN and smart card access controls."
+   ],
+   "scenario": "Barry has just been hired as the company security officer at an international financial institution. He has reviewed the company’s data protection policies and procedures. He sees that the company stores its sensitive data within a secured database. The database is located in a network segment all by itself, which is monitored by a network-based intrusion detection system. The database is hosted on a server kept within a server room, which can only be accessed by personnel with the correct PIN value and smart card. Barry finds that the sensitive data backups are not being properly secured and requests that the company implement a secure courier service that moves backup tapes to a secured location. His management states that this option is too expensive, so Barry implements a local hierarchy storage management system that properly protects the sensitive data.",
+   "answer": "D",
+   "explanation": [
+    "D. The administrative preventive controls are the policies and procedures. Technical preventive controls are securing the system and network segmentation. The technical detective control is the intrusion detection system. Physical preventive controls are the physical location of the database and PIN and smart card access controls.",
+    "A is incorrect because an intrusion detection system is not a preventive control; this is an example of a detective control. It is important to have both prevention and detection controls in place.",
+    "B is incorrect because this answer does not mention procedures, which is an administrative protective control. The answer also incorrectly states that an intrusion detection system is a preventive control, but it is a detective control.",
+    "C is incorrect because the answer incorrectly states that an intrusion detection system is a preventive control, but it is a detective control. The answer also states that policies and procedures are corrective controls, but they are preventive controls."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "The storage management system that Barry put into place is referred to as which of the following?",
+   "options": [
+    "Administrative control",
+    "Compensating control",
+    "Physical control",
+    "Confidentiality control"
+   ],
+   "scenario": "Barry has just been hired as the company security officer at an international financial institution. He has reviewed the company’s data protection policies and procedures. He sees that the company stores its sensitive data within a secured database. The database is located in a network segment all by itself, which is monitored by a network-based intrusion detection system. The database is hosted on a server kept within a server room, which can only be accessed by personnel with the correct PIN value and smart card. Barry finds that the sensitive data backups are not being properly secured and requests that the company implement a secure courier service that moves backup tapes to a secured location. His management states that this option is too expensive, so Barry implements a local hierarchy storage management system that properly protects the sensitive data.",
+   "answer": "B",
+   "explanation": [
+    "B. A compensating control is an alternate control. Instead of a courier service, the company implemented an internal storage management system. A compensating control can be administrative, physical, or technical in nature.",
+    "A is incorrect because the storage management system is not an administrative control; it is a technical compensating control.",
+    "C is incorrect because the storage management system is not a physical control; it is a technical compensating control.",
+    "D is incorrect and a distracter. The main categories of controls are administrative, technical and physical. The controls can provide many different types of services and protection, confidentiality being one type of protection."
+   ]
+  },
+  {
+   "n": 31,
+   "q": "Which are the two most common situations that require the type of control covered in the scenario to be implemented?",
+   "options": [
+    "Defense-in-depth is required, and the current controls only provide one protection layer.",
+    "Primary control costs too much or negatively affects business operations.",
+    "Confidentiality is the highest concern in a situation where defense-in-depth is required.",
+    "Availability is the highest concern in a situation where defense-in-depth is required."
+   ],
+   "scenario": "Barry has just been hired as the company security officer at an international financial institution. He has reviewed the company’s data protection policies and procedures. He sees that the company stores its sensitive data within a secured database. The database is located in a network segment all by itself, which is monitored by a network-based intrusion detection system. The database is hosted on a server kept within a server room, which can only be accessed by personnel with the correct PIN value and smart card. Barry finds that the sensitive data backups are not being properly secured and requests that the company implement a secure courier service that moves backup tapes to a secured location. His management states that this option is too expensive, so Barry implements a local hierarchy storage management system that properly protects the sensitive data.",
+   "answer": "B",
+   "explanation": [
+    "B. A compensating control is implemented because the primary control that was suggested is too expensive, but this type of protection is still required. A less expensive control that provides this same type of protection is identified and implemented. Another situation where a compensating control might be implemented is if the primary control negatively affects business operations.",
+    "A is incorrect because while a compensating control can help in providing defense-in-depth, this is not the reason this category of control would be put into place.",
+    "C is incorrect because a compensating control may or may not provide confidentiality. But the service that a control provides, as in confidentiality, is not the reason a compensating control is put into place. A compensating control is an alternate control type.",
+    "D is incorrect because a compensating control may or may not provide availability. But the service that a control provides, as in availability, is not the reason a compensating control is put into place. A compensating control is an alternate control type."
+   ]
+  }
+ ]
+}

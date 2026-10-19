@@ -1,0 +1,537 @@
+{
+ "id": 8,
+ "title_en": "Legal, Regulations, Investigations, and Compliance",
+ "title_es": "Regulaciones Legales, Investigaciones y Cumplimiento",
+ "block": 2,
+ "questions": [
+  {
+   "n": 1,
+   "q": "Cyberlaw categorizes computer-related crime into three categories. Which of the following is an example of a crime in which the use of a computer would be categorized as incidental?",
+   "options": [
+    "Carrying out a buffer overflow to take control of a system",
+    "The electronic distribution of child pornography",
+    "Attacking financial systems to steal funds",
+    "Capturing passwords as they are sent to the authentication server"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Laws have been created to combat three categories of crime: computer-assisted, computer-targeted, and computer is incidental. If a crime falls into the “computer is incidental” category, this means a computer just happened to be involved in some secondary manner, but its involvement is insignificant. The digital distribution of child pornography is an example of “computer is incidental.” The actual crime is obtaining and sharing child pornography pictures or graphics. The pictures could be stored on a file server, or they could be kept in a physical file in someone’s desk. So if a crime falls within this category, the computer is not attacking another computer, and a computer is not being attacked, but the computer is still used in some manner. Thus, the computer is a source of additional evidence related to the crime.",
+    "A is incorrect because carrying out a buffer overflow to take control of a system is an example of a computer-targeted crime. A computer-targeted crime concerns incidents where a computer was the victim of an attack crafted to harm it (and its owners) specifically. Other examples of computer-targeted crimes include distributed denial-of-service attacks, installing malware with the intent to cause destruction, and installing rootkits and sniffers for malicious purposes.",
+    "C is incorrect because attacking financial systems to steal funds is an example of a computer-assisted crime. A computer-assisted crime is where a computer was used as a tool to help carry out a crime. Other examples of computer-assisted crimes include obtaining military and intelligence material by attacking military systems, and carrying out information warfare activities by attacking critical national infrastructure systems.",
+    "D is incorrect because capturing passwords as they are sent to the authentication server is an example of a computer-targeted crime. Some confusion typically exists between the two categories, “computer-assisted crimes” and “computer-targeted crimes,” because intuitively it would seem any attack would fall into both of these categories. One way to look at it is that a computer-targeted crime could not take place without a computer, while a computer-assisted crime could. Thus, a computer-targeted crime is one that did not, and could not, exist before computers became of common use. In other words, in the good old days, you could not carry out a buffer overflow on your neighbor, or install malware on your enemy’s system. These crimes require that computers be involved."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Which organization has been developed to deal with economic, social, and governance issues, and with how sensitive data is transported over borders?",
+   "options": [
+    "European Union",
+    "Council of Europe",
+    "Safe Harbor",
+    "Organisation for Economic Co-operation and Development"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Global organizations that move data across other country boundaries must be aware of and follow the Organisation for Economic Co-operation and Development (OECD) Guidelines. Since most countries have a different set of laws pertaining to the definition of private data and how it should be protected, international trade and business gets more convoluted and can negatively affect the economy of nations. The OECD is an international organization that helps different governments come together and tackle the economic, social, and governance challenges of a globalized economy. Because of this, the OECD came up with guidelines for the various countries to follow so that data is properly protected and everyone follows the same type of rules. One of these rules is that subjects should be able to find out whether an organization has their personal information and, if so, what that information is, to correct erroneous data and to challenge denied requests to do so.",
+    "A is incorrect because the European Union is not an organization that deals with economic, social, and governance issues, but does address the protection of sensitive data. The European Union Principles on Privacy are: The reason for the gathering of data must be specified at the time of collection; data cannot be used for other purposes; unnecessary data should not be collected; data should only be kept for as long as it is needed to accomplish the stated task; only the necessary individuals who are required to accomplish the stated task should be allowed access to the data; whoever is responsible for securely storing the data should not allow unintentional “leaking” of data.",
+    "B is incorrect because the Council of Europe is responsible for the creation of the Convention on Cybercrime. The Council of Europe Convention on Cybercrime is one example of an attempt to create a standard international response to cybercrime. In fact, it is the first international treaty seeking to address computer crimes by coordinating national laws, and improving investigative techniques and international cooperation. The Convention’s objectives include the creation of a framework for establishing jurisdiction and extradition of the accused. For example, extradition is only available by treaty and when the event is a crime in both jurisdictions.",
+    "C is incorrect because Safe Harbor is not an organization but a set of requirements for organizations that wish to exchange data with European entities. Europe has always had tighter control over protecting privacy information than the U.S. and other parts of the world. So in the past when U.S. and European companies needed to exchange data, confusion erupted and business was interrupted because the lawyers had to get involved to figure out how to work within the structures of the differing laws. To clear up this mess, a “safe harbor” framework was created, which outlines how any entity that is going to move privacy data to and from Europe must go about protecting it. U.S. companies that deal with European entities can become certified against this rule base so data transfer can happen more quickly and easily."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "Different countries have different legal systems. Which of the following correctly describes customary law?",
+   "options": [
+    "Not many countries work under this law purely; most instead use a mixed system where this law, which deals mainly with personal conduct and patterns of behavior, is an integrated component.",
+    "It covers all aspects of human life, but is commonly divided into responsibilities and obligations to others, and religious duties.",
+    "It is a rule-based law focused on codified law.",
+    "Based on previous interpretations of laws, this system reflects the community’s morals and expectations."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Customary law deals primarily with personal conduct and patterns of behavior. It is based on the traditions and customs of the region. It came about as communities emerged and the cooperation of individuals became necessary. Not many countries work under a purely customary law system; most instead use a mixed system where customary law is an integrated component. (Codified civil law systems emerged from customary law.) Customary law is mainly used in regions of the world that have mixed legal systems; for example, China and India. Restitution in a customary law system is commonly in the form of a monetary fine or service.",
+    "B is incorrect because it describes religious law systems. Where customary law deals mainly with personal conduct and patterns of behavior, religious law systems are commonly divided into responsibilities and obligations to others, and religious duties. Religious law systems are based on the religious beliefs of a region. In Islamic countries, for example, the law is based on the rules of the Koran. The law, however, is different in every Islamic country.",
+    "C is incorrect because civil (code) law is rule-based and, for the most part, is focused on codified law, i.e., laws that are written down. Civil law is the most widespread legal system in the world and the most common legal system in Europe. It is established by states or nations for self-regulation; thus, civil law can be divided into subdivisions such as French civil law, German civil law, etc.",
+    "D is incorrect because common law is based on previous interpretations of laws. In the past, judges would walk throughout the country enforcing laws and settling disputes. They did not have a written set of laws, so they based their laws on custom and precedent. This system reflects the community’s morals and expectations."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "Widgets Inc. wishes to protect its logo from unauthorized use. Which of the following will protect the logo and ensure that others cannot copy and use it?",
+   "options": [
+    "Patent",
+    "Copyright",
+    "Trademark",
+    "Trade secret"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Intellectual property can be protected by several different laws, depending upon the type of resource it is. A trademark is used to protect a word, name, symbol, sound, shape, color, or combination of these—such as a logo. The reason a company would trademark one of these, or a combination, is that it represents their company (brand identity) to a group of people or to the world. Companies have marketing departments that work very hard in coming up with something new that will cause the company to be noticed and stand out in a crowd of competitors, and trademarking the result of this work with a government registrar is a way of properly protecting it and ensuring others cannot copy and use it.",
+    "A is incorrect because a patent covers an invention, whereas a trademark protects a word, name, symbol, sound, shape, color, or combination thereof. Patents are given to individuals or companies to grant them legal ownership of, and enable them to exclude others from using or copying, the invention covered by the patent. The invention must be novel, useful, and not obvious. A patent is the strongest form of intellectual property protection.",
+    "B is incorrect because in the United States, copyright law protects the right of an author to control the public distribution, reproduction, display, and adaptation of his original work. The law covers many categories of work: pictorial, graphic, musical, dramatic, literary, pantomimes, motion picture, sculptural, sound recording, and architectural. Copyright law does not cover the specific resource. It protects the expression of the idea of the resource instead of the resource itself. A copyright law is usually used to protect an author’s writings, an artist’s drawings, a programmer’s source code, or specific rhythms and structures of a musician’s creation.",
+    "D is incorrect because trade secret law protects certain types of information or resources from unauthorized use or disclosure. For a company to have its resource qualify as a trade secret, the resource must provide the company with some type of competitive value or advantage. A trade secret can be protected by law if developing it requires special skill, ingenuity, and/or expenditure of money and effort."
+   ]
+  },
+  {
+   "n": 5,
+   "q": "Which of the following best describes the newest set of standards that auditors use to evaluate the controls of a service organization as it relates to internal control over financial reporting?",
+   "options": [
+    "SysTrust Service Controls Standard",
+    "Service Organization Controls",
+    "WebTrust Service Controls Standard",
+    "Statement on Auditing Standards No. 70"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Service Organization Controls (SOC) are a series of standards that are used by auditors to measure various controls on financial information within a service organization. Service organizations are entities that operate information systems and provide information system services to other companies and organizations. SOC audits are carried out by independent third-party auditors to evaluate the trust and confidence that should be assigned to the service organization. SOC 1 pertains to financial controls, and SOC 2 pertains to trust services (Security, Availability, Confidentiality, Process Integrity, and Privacy). SOC 1 basically replaced SAS 70 and is in accordance with Statement on Standards for Attestation Engagements (SSAE) No. 16, Reporting on Controls at a Service Organization. SOC 1 accomplished the original purpose of SAS 70 by providing a means of auditing internal controls over financial reporting.",
+    "A is incorrect because SysTrust does not deal specifically with financial information reports. It is an assurance criterion that was jointly developed by the American Institute of Certified Public Accountants (AICPA) and the Canadian Institute of Chartered Accountants (CICA). It was designed to increase the assurance of management, customers, and business partners with systems that support a business or particular activity by an outside organization. A SysTrust evaluation tests whether or not a specific system is reliable when measured against three essential principles: availability, security, and integrity. “System” is a broad term that commonly accounts for a group of systems and processes that provide IT operations. So if your organization outsourced specific IT operations to another company, you would need a way to ensure that these services are reliable from different aspects (availability, security, integrity). The outsourced company can have a SysTrust evaluation conducted and provide your organization with the results. If this company met all of the requirements of the SysTrust criteria, then it has achieved the SysTrust certification. Just as the CISSP credential will account for your skill level and knowledge base within the information security industry, the SysTrust certification accounts for the level of reliability a company that provides outsourced IT services has obtained. SOC 2 is similar to SysTrust because it evaluates service organizations based upon its own trust services criteria, which include security, availability, confidentiality, process integrity, and privacy. SysTrust Service Controls Standard is a distractor answer. This evaluation is only referred to as SysTrust in the industry.",
+    "C is incorrect because WebTrust is an evaluation criteria and certification that focuses on service organizations that provide e-commerce functionality. It does not include financial controls. WebTrust is a measurement criterion that is to be used when an auditor needs to provide attestation as it pertains to controls relevant to the security, availability, and processing integrity of a system, and the confidentiality and privacy of the information processed by the system. For example, in the most recent version (Version 2.0) of the WebTrust Trust Services Principles and Criteria for Certification Authorities – SSL Baseline with Network Security, requirements are outlined. WebTrust is a family of e-commerce assurance and auditing programs developed by the American Institute of Certified Public Accountants (AICPA) and the Canadian Institute of Chartered Accountants (CICA). So, SOC 1 replaced SAS 70 and is an evaluation criterion for a service organization’s financial controls, SysTrust is an evaluation criterion for a service organization’s IT and operations controls, WebTrust is an evaluation criterion for a service organization’s e-commerce controls, and WebTrust Service Controls Standard is a distractor answer. This evaluation is only referred to as WebTrust in the industry.",
+    "D is incorrect because Statement on Auditing Standards No. 70 (SAS 70) is an evaluation criterion and certification for service organizations as it pertains to its financial controls, but is outdated and has been replaced. SAS 70 is an auditing statement issued by the Auditing Standards Board of the American Institute of Certified Public Accountants (AICPA) that attests to the assurance level of a company’s financial controls. SAS 70 also provides guidance to auditors of financial statements of an entity that uses one or more service organizations. SAS 70 was always an evaluation criteria used by financial auditors. These auditors reviewed how a service organization carried out “financial housekeeping” and kept its financial records. The auditors need to ensure that the organization was not “cooking its books” by reviewing the controls that were in place to make sure that all financial activities were accurate and above board. In 2002, when the Sarbanes-Oxley Act of 2002 (SOX) was enacted, the scope of an SAS 70 audit was increased to also include computer and information security controls. SAS 70 was not originally created to evaluate controls outside of the financial world, and the industry came to expect too much from this type of an audit. This is why the SysTrust and WebTrust evaluations were created and later SOC 2. These later certifications focus on IT and information security–related controls."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "There are different types of approaches to regulations. Which of the following is an example of self-regulation?",
+   "options": [
+    "The Health Insurance Portability and Accountability Act",
+    "The Sarbanes-Oxley Act",
+    "The Computer Fraud and Abuse Act",
+    "PCI Data Security Standard"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Privacy is becoming more threatened as the world relies more and more on technology. There are several approaches to addressing privacy, including regulations created and enforced by the government and self-regulatory regulations. The Payment Card Industry Data Security Standard (PCI DSS) is an example of a self-regulatory approach. It is mandated by the credit card companies and applies to any entity that processes, transmits, stores, or accepts credit card data. Varying levels of compliance and penalties exist and depend on the size of the customer and the volume of transactions. However, credit cards are used by millions and accepted almost anywhere, which means just about every business in the world must comply with the PCI DSS. PCI DSS is not a government-created and enforced regulation. While the CISSP exam does not require you to know specific regulations, you must understand the different approaches to regulations.",
+    "A is incorrect because the Health Insurance Portability and Accountability Act (HIPAA) is a U.S. federal regulation that applies to any organization that is in possession of personal medical information and healthcare data. This regulation provides a framework and guidelines to ensure security, integrity, and privacy when handling confidential medical information. HIPAA outlines how security should be managed for any facility that creates, accesses, shares, or destroys medical information.",
+    "B is incorrect because the Sarbanes-Oxley Act (SOX) was created by the U.S. government in the wake of corporate scandals and fraud that cost investors billions of dollars and threatened to undermine the economy. The regulation applies to any company that is publicly traded on U.S. markets. Much of the law governs accounting practices and the methods used by companies to report on their financial status. However, some parts, Section 404 in particular, apply directly to information technology.",
+    "C is incorrect because the Computer Fraud and Abuse Act is the primary U.S. federal antihacking statute. It prohibits seven forms of computer activity and makes them federal crimes. These acts range from felonies to misdemeanors with corresponding small to large fines and jail sentences. One example is the knowing access of a protected computer without authorization or in excess of authorization with the intent to defraud. While the CISSP exam does not require you to know specific laws and regulations, you do need to understand why various laws and regulations are put into place and why they are used."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "Which of the following means that a company did all it could have reasonably done to prevent a security breach?",
+   "options": [
+    "Downstream liability",
+    "Responsibility",
+    "Due diligence",
+    "Due care"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Due care means that a company did all it could have reasonably done, under the circumstances, to prevent security breaches, and also took reasonable steps to ensure that if a security breach did take place, proper controls or countermeasures were in place to mitigate the damages. In short, due care means that a company practiced common sense and prudent management and acted responsibly. If a company has a facility that burns to the ground, the arsonist is only one small piece of this tragedy. The company is responsible for providing fire detection and suppression systems, fire-resistant construction material in certain areas, alarms, exits, fire extinguishers, and backups of all the important information that could be affected by a fire. If a fire burns a company’s building to the ground and consumes all the records (customer data, inventory records, and similar information that is necessary to rebuild the business), then the company did not exercise due care to ensure it was protected from such loss (by backing up to an offsite location, for example). In this case, the employees, shareholders, customers, and everyone affected could potentially successfully sue the company. However, if the company did everything expected of it in the previously listed respects, it is harder to successfully sue for failure to practice due care.",
+    "A is incorrect because downstream liability means that one company’s activities—or lack of them—can negatively affect another company. If one of the companies does not provide the necessary level of protection and its negligence affects a partner it is working with, the affected company can sue the upstream company. For example, let’s say company A and company B have constructed an extranet. Company A does not put in controls to detect and deal with viruses. Company A gets infected with a destructive virus, which is spread to company B through the extranet. The virus corrupts critical data and causes a massive disruption to company B’s production. Therefore, company B can sue company A for being negligent. This is an example of downstream liability.",
+    "B is incorrect because responsibility generally refers to the obligations and expected actions and behaviors of a particular party. An obligation may have a defined set of specific actions that are required, or a more general and open approach, which enables the party to decide how it will fulfill the particular obligation. Due diligence is a better answer to this question. Responsibility is not considered a legal term as the other answers are.",
+    "C is incorrect because due diligence means that the company properly investigated all of its possible weaknesses and vulnerabilities. Before you can figure out how to properly protect yourself, you need to find out what it is you are protecting yourself against. This is what due diligence is all about—researching and assessing the current level of vulnerabilities so that the true risk level is understood. Only after these steps and assessments take place can effective controls and safeguards be identified and implemented. Due diligence is identifying all of the potential risks and due care is actually doing something to mitigate those risks."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "Which of the following is a U.S. copyright law that criminalizes the production and dissemination of technology, devices, or services that circumvent access control measures put into place to protect copyright material?",
+   "options": [
+    "Copyright law",
+    "Digital Millennium Copyright Act",
+    "Federal Privacy Act",
+    "SOPA"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Digital Millennium Copyright Act (DMCA) is a U.S. copyright law that criminalizes the production and dissemination of technology, devices, or services that circumvent access control measures that are put into place to protect copyright material. So if you figure out a way to “unlock” the proprietary way that Barnes & Noble protects its e-books, you can be charged under this act. Even if you don’t share the actual copyright-protected books with someone, you still broke this specific law and can be found guilty. The United States already had a copyright protection law on the books that grants the creator of an original work exclusive rights to its use and distribution, with the goal of allowing the creator to receive compensation for their work. As copyright-protected works were distributed more and more in the digital world, the industry needed a way to implement access control of these works to ensure only the authorized individuals had access to it. Various digital rights management (DRM) technologies were developed and deployed to protect these works, which were quickly hacked and compromised, allowing unauthorized access to copyright-protected content. The DMCA was created to make the breaking of these DRM technologies illegal.",
+    "A is incorrect because the copyright law has nothing to do with circumventing access controls. Copyright is a form of intellectual property protection that grants the creator of an original work exclusive rights to its use and distribution, usually for a limited time, to allow the creator to receive compensation for their work. Copyright is applicable to any expressible form of an idea or information that is substantive and discrete. There are national copyright laws and international copyright agreements that have unique requirements but have the same overall goal of protecting creative works. Copyright is usually enforced through the civil legal system, but in some situations, breaking this law is considered a criminal act. So the copyright law protects the content (i.e., book, song, art) and DMCA protects the access control technology put in place to prevent unauthorized individuals from gaining access to this content.",
+    "C is incorrect because there is no law specifically called the Federal Privacy Act. The Privacy Act of 1974 is a U.S. federal law that establishes a Code of Fair Information Practice that governs the collection, maintenance, use, and dissemination of personally identifiable information about individuals that is maintained in systems of records by federal agencies. So this privacy law has nothing to do with copyright content or access control technologies. The focus of this law is to keep the government in check and not allow it to gather too much data on its citizens that could be used for Big Brother–type activities. This law outlines what type of data government agencies can gather, how long they can keep it, how they have to protect the gathered data, and the agencies’ responsibilities as it pertains to sharing and destroying this type of data.",
+    "D is incorrect because the Stop Online Piracy Act (SOPA) is a U.S. bill that was introduced, but never passed, to expand the ability of law enforcement to enforce online copyright infringement rules and restrict online trafficking in counterfeit goods. The goal of this proposed law was to restrict access to web sites that host or facilitate the trading of pirated content. SOPA does not deal with access control technologies like DMCA, but provides a legal structure to go after owners of web sites who share content that they do not own. Content developers in the United States could rely upon the copyright law, but this only applies within the United States. SOPA has an international reach and would require search engines and hosting companies to cut off access to web sites that were serving up content that they did not own. There was a lot of push back to SOPA, and as of this writing it has not been passed."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "A suspected crime has been reported within your organization. Which of the following steps should the incident response team take first?",
+   "options": [
+    "Establish a procedure for responding to the incident.",
+    "Call in forensics experts.",
+    "Determine that a crime has been committed.",
+    "Notify senior management."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. When a suspected crime is reported, the incident response team should follow a set of predetermined steps to ensure uniformity in their approach and make sure no steps are skipped. First, the incident response team should investigate the report and determine that an actual crime has been committed. If the team determines that a crime has been carried out, senior management should be informed immediately. At this point, the company must decide if it wants to conduct its own forensics investigation or call in external experts.",
+    "A is incorrect because a procedure for responding to an incident should be established before an incident takes place. Incident handling is commonly a recovery plan that responds to malicious technical threats. While the primary goal of incident handling is to contain and mitigate any damage caused by an incident and to prevent any further damage, other objectives include detecting a problem, determining its cause, resolving the problem, and documenting the entire process.",
+    "B is incorrect because calling in a forensics team does not occur until the incident response team has investigated the report and verified that a crime has occurred. Then the company can decide if it wants to conduct its own forensics investigation or call in external experts. If experts are going to be called in, the system that was attacked should be left alone in order to try and preserve as much evidence of the attack as possible.",
+    "D is incorrect because the incident response team must first determine that a crime has indeed been carried out before it can notify senior management. There is no need to alarm senior management if the report is false."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "During an incident response, what stage involves mitigating the damage caused by an incident?",
+   "options": [
+    "Investigation",
+    "Containment",
+    "Triage",
+    "Analysis"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A proper containment strategy buys the incident response team time to properly investigate and determine the incident’s root cause. The containment strategy should be based on the category of the attack (i.e., whether it was internal or external), the assets affected by the incident, and the criticality of those assets. Containment strategies can be proactive or reactive. Which is best depends on the environment and the category of the attack. In some cases, the best action might be to disconnect the affected system from the network. Disconnecting the affected system from the network is a reactive strategy, not a proactive strategy. The system is taken offline after it is attacked. If it was taken offline before it was attacked (you’d need some indication that the system was going to be attacked), then the strategy would be proactive.",
+    "A is incorrect because the investigation stage involves the proper collection of relevant data and includes analysis, interpretation, reaction, and recovery. The goals of this stage are to reduce the impact of the incident, identify the cause of the incident, resume operations as soon as possible, and apply what was learned to prevent the incident from recurring. It is also at this stage where computer forensics comes into play. Management must decide if law enforcement should be brought in to carry out the investigation, if evidence should be collected for the purposes of prosecution, or if the hole should just be patched.",
+    "C is incorrect because triage involves taking information about the incident, investigating the incident’s severity, and setting priorities on how to deal with it. This begins with an initial screening of the reported event to determine whether it is indeed an incident and whether the incident handling process should be initiated. If the event is determined to be a real incident, it is identified and classified. Incidents should be categorized according to their level of potential risk, which is influenced by the type of incident, the source, its rate of growth, and the ability to contain the damage. This, in turn, determines what notifications are required during the escalation process, and sets the scope and procedures for the investigation.",
+    "D is incorrect because the analysis stage involves gathering data such as audit logs, video captures, human accounts of activities, etc., to try and figure out the root cause of the incident. The goals are to figure out who did this, how they did it, when they did it, and why. Management must be continually kept abreast of these activities because they will be the ones making the big decisions on how the incident is to be handled."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "Which of the following is a correct statement regarding computer forensics?",
+   "options": [
+    "It is the study of computer technology.",
+    "It is a set of hardware-specific processes that must be followed in order for evidence to be admissible in a court of law.",
+    "It encompasses network and code analysis, and may be referred to as electronic data discovery.",
+    "Computer forensics responsibilities should be assigned to a network administrator before an incident occurs."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Forensics is a science and an art that requires specialized techniques for the recovery, authentication, and analysis of electronic data that could have been affected by a criminal act. It is the coming together of computer science, information technology, and engineering with the legal system. When discussing computer forensics with others, you might hear the terms digital forensics, network forensics, electronic data discovery, cyber forensics, and forensic computing. (ISC)2 uses computer forensics as a synonym for all of these other terms, so that’s what you will most likely see on the CISSP exam. Computer forensics encompasses all domains in which evidence is in a digital or electronic form, either in storage or on the wire.",
+    "A is incorrect because computer forensics involves more than just the study of information technology. It encompasses the study of information technology but stretches into evidence gathering and protecting and working within specific legal systems.",
+    "B is incorrect because computer forensics does not refer to hardware or software. It is a set of specific processes relating to reconstruction of computer usage, examination of residual data, authentication of data by technical analysis or explanation of technical features of data, and computer usage that must be followed in order for evidence to be admissible in a court of law.",
+    "D is incorrect because computer forensics should be conducted by people with the proper training and skill set, which could or could not be the network administrator. Digital evidence can be fragile and must be worked with appropriately. If someone reboots the attacked system or inspects various files, it could corrupt viable evidence, change timestamps on key files, and erase footprints the criminal may have left."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "Which of the following dictates that all evidence be labeled with information indicating who secured and validated it?",
+   "options": [
+    "Chain of custody",
+    "Due care",
+    "Investigation",
+    "Motive, opportunity, and means"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A crucial piece in the digital forensics process is keeping a proper chain of custody of the evidence. Because evidence from these types of crimes can be very volatile and easily dismissed from court due to improper handling, it is important to follow very strict and organized procedures when collecting and tagging evidence in every single case. Furthermore, the chain of custody should follow evidence through its entire life cycle, beginning with identification and ending with its destruction, permanent archiving, or return to owner. When copies of data need to be made, this process must meet certain standards to ensure quality and reliability. Specialized software for this purpose can be used. The copies must be able to be independently verified and must be tamperproof. Each piece of evidence should be marked in some way with the date, time, initials of the collector, and a case number if one has been assigned. The piece of evidence should then be sealed in a container, which should be marked with the same information. The container should be sealed with evidence tape, and if possible, the writing should be on the tape so that a broken seal can be detected.",
+    "B is incorrect because due care means to carry out activities that a reasonable person would be expected to carry out in the same situation. In short, due care means that a company practiced common sense and prudent management, and acted responsibly. If a company does not practice due care in its efforts to protect itself from computer crime, it can be found negligent and legally liable for damages. A chain of custody, on the other hand, is a history that shows how evidence was collected, analyzed, transported, and preserved in order to be presented in court. Because electronic evidence can be easily modified, a clearly defined chain of custody demonstrates that the evidence is trustworthy.",
+    "C is incorrect because investigation involves the proper collection of relevant data during the incident response process and includes analysis, interpretation, reaction, and recovery. The goals of this stage are to reduce the impact of the incident, identify the cause of the incident, resume operations as soon as possible, and apply what was learned to prevent the incident from recurring. It is also at this stage where it is determined whether a forensics investigation will take place. The chain of custody dictates how this material should be properly collected and protected during its life cycle of being evidence.",
+    "D is incorrect because motive, opportunity, and means is a strategy used to understand why a crime was carried out and by whom. This is the same strategy used to determine the suspects in a traditional, noncomputer crime. Motive is the “who” and “why” of a crime. Understanding the motive for a crime is an important piece in figuring out who would engage in such an activity. For example, many hackers attack big-name sites because when the sites go down, it is splashed all over the news. However, once these activities are no longer so highly publicized, the individuals will eventually stop initiating these types of attacks because their motive will have been diminished. Opportunity is the “where” and “when” of a crime. Opportunities usually arise when certain vulnerabilities or weaknesses are present. If a company does not have a firewall, hackers and attackers have all types of opportunities within that network. Once a crime fighter finds out why a person would want to commit a crime (motive), she will look at what could allow the criminal to be successful (opportunity). Means pertains to the capabilities a criminal would need to be successful. Suppose a crime fighter was asked to investigate a complex embezzlement that took place within a financial institution. If the suspects were three people who knew how to use a mouse, a keyboard, and a word processing application, but only one of them was a programmer and system analyst, the crime fighter would realize that this person may have the means to commit this crime much more successfully than the other two individuals."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "There are several categories of evidence. How is a witness’s oral testimony categorized?",
+   "options": [
+    "Best evidence",
+    "Secondary evidence",
+    "Circumstantial evidence",
+    "Conclusive evidence"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Several types of evidence can be used in a trial, such as written, oral, computer-generated, and visual or audio. Oral evidence is testimony of a witness. Visual or audio is usually a captured event during the crime or right after it. Not all evidence is equal in the eyes of the law and some types of evidence have more clout, or weight, than others. Secondary evidence is not viewed as reliable and strong in proving innocence or guilt (or liability in civil cases) when compared to best evidence. Oral evidence, such as a witness’s testimony, and copies of original documents are placed in the secondary evidence category.",
+    "A is incorrect because there is no firsthand reliable proof that supports oral evidence’s validity. Best evidence is the primary evidence used in a trial because it provides the most reliability. An example of something that would be categorized as best evidence is an original signed contract.",
+    "C is incorrect because circumstantial evidence can prove an intermediate fact that can then be used to deduce or assume the existence of another fact. This type of fact is used so the judge or jury will logically assume the existence of a primary fact. For example, if a suspect told a friend he was going to bring down eBay’s web site, a case could not rest on that piece of evidence alone because it is circumstantial. However, this evidence can cause the jury to assume that because the suspect said he was going to do it, and hours later it happened, maybe he was the one who did the crime.",
+    "D is incorrect because conclusive evidence is irrefutable and cannot be contradicted. A witness’s testimony can be refuted. Conclusive evidence is very strong all by itself and does not require corroboration."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "For evidence to be legally admissible, it must be authentic, complete, sufficient, and reliable. Which characteristic refers to the evidence having a reasonable and sensible relationship to the findings?",
+   "options": [
+    "Complete",
+    "Reliable",
+    "Authentic",
+    "Sufficient"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. It is important that evidence be admissible, authentic, complete, sufficient, and reliable to the case at hand. These characteristics of evidence provide a foundation for a case and help ensure that the evidence is legally permissible. For evidence to be authentic, or relevant, it must have a reasonable and sensible relationship to the findings. If a judge rules that a person’s past traffic tickets cannot be brought up in a murder trial, this means the judge has ruled that the traffic tickets are not relevant to the case at hand. Thus, the prosecuting lawyer cannot even mention them in court. In addition, authentic evidence must be original; that is, it cannot be a copy or a summary of the original.",
+    "A is incorrect because evidence that is complete presents the whole truth. All evidence, even exculpatory evidence, must be handed over. This means that a prosecutor cannot present just part of the evidence that is favorable to his side of the case.",
+    "B is incorrect because evidence that is reliable must be consistent with the facts. Evidence cannot be reliable if it is based on someone’s opinion or copies of an original document, because there is too much room for error. Reliable evidence means it is factual and not circumstantial. Examples of unreliable evidence include computer-generated documentation and an investigator’s notes because they can be modified without any indication.",
+    "D is incorrect because evidence that is sufficient, or believable, is persuasive enough to convince a reasonable person of its validity. This means the evidence cannot be subject to personal interpretation. Sufficient evidence also means it cannot be easily doubted."
+   ]
+  },
+  {
+   "n": 15,
+   "q": "Which of the following best describes exigent circumstances?",
+   "options": [
+    "The methods used to capture a suspect’s actions are neither legal nor ethical.",
+    "Enticement is used to capture a suspect’s actions.",
+    "Hacking does not actually hurt anyone.",
+    "The seizure of evidence by law enforcement because there is concern that a suspect will attempt to destroy it."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Search and seizure activities can get tricky, depending on what is being searched for and where. In some circumstances, a law enforcement agent may seize evidence that is not included in the warrant, such as if the suspect tries to destroy the evidence. In other words, if there is an impending possibility that evidence might be destroyed, law enforcement may quickly seize the evidence to prevent its destruction. This is referred to as exigent circumstances, and a judge will later decide whether the seizure was proper and legal before allowing the evidence to be admitted. For example, if a police officer had a search warrant that allowed him to search a suspect’s living room but no other rooms, and then he saw the suspect dumping cocaine down the toilet, the police officer could seize the cocaine even though it was in a room not covered under his search warrant.",
+    "A is incorrect because entrapment is used to describe illegal and/or unethical methods that are used to capture a suspect’s actions. For example, suppose a web page has a link that indicates that if an individual clicks it, she could then download thousands of MP3 files for free. However, when she clicks that link, she is taken to the honeypot system instead, and the company records all of her actions and attempts to prosecute. Entrapment does not prove that the suspect had the intent to commit a crime; it only proves she was successfully tricked.",
+    "B is incorrect because enticement means that legal and ethical means were used to capture a suspect’s actions, as opposed to illegal and unethical methods, which are referred to as entrapment. A honeypot serves as a good example of enticement. Companies put systems in their screened subnets that either emulate services that attackers usually like to take advantage of or actually have the services enabled. The hope is that if an attacker breaks into the company’s network, she will go right to the honeypot instead of the systems that are actual production machines. The attacker will be enticed to go to the honeypot system because it has many open ports and services running and exhibits vulnerabilities that the attacker would want to exploit. The company can log the attacker’s actions and later attempt to prosecute.",
+    "C is incorrect because the idea that hacking does not actually hurt anyone is a common ethical fallacy. It is used by some in the computing world to justify unethical acts, such as capturing passwords and using them to gain unauthorized access to network resources. The phrase does not define exigent circumstances."
+   ]
+  },
+  {
+   "n": 16,
+   "q": "What role does the Internet Architecture Board play regarding technology and ethics?",
+   "options": [
+    "It creates criminal sentencing guidelines.",
+    "It issues ethics-related statements concerning the use of the Internet.",
+    "It edits Request for Comments.",
+    "It maintains ten commandments for ethical behavior."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Internet Architecture Board (IAB) is the coordinating committee for Internet design, engineering, and management. It is responsible for the architectural oversight of the Internet Engineering Task Force (IETF) activities, Internet Standards Process oversight and appeal, and editor of Request for Comments (RFCs). The IAB issues ethics-related statements concerning the use of the Internet. It considers the Internet to be a resource that depends upon availability and accessibility to be useful to a wide range of people. It is mainly concerned with irresponsible acts on the Internet that could threaten its existence or negatively affect others. It sees the Internet as a great gift and works hard to protect it for all who depend upon it. The IAB sees the use of the Internet as a privilege, which should be treated as such and used with respect.",
+    "A is incorrect because the Federal Sentencing Guidelines are rules used by judges when determining the proper punitive sentences for specific felonies or misdemeanors that individuals or corporations commit. The guidelines work as a uniform sentencing policy for entities that carry out felonies and/or serious misdemeanors in the U.S. federal court system. The IAB does not have anything to do with these topics.",
+    "C is incorrect because, while the Internet Architecture Board is responsible for editing Request for Comments (RFCs), this task is not related to ethics. This answer is a distracter.",
+    "D is incorrect because the Computer Ethics Institute is a nonprofit organization that works to help advance technology by ethical means. The Computer Ethics Institute has developed its own Ten Commandments of Computer Ethics: 1. Thou shalt not use a computer to harm other people. 2. Thou shalt not interfere with other people’s computer work. 3. Thou shalt not snoop around in other people’s computer files. 4. Thou shalt not use a computer to steal. 5. Thou shalt not use a computer to bear false witness. 6. Thou shalt not copy or use proprietary software for which you have not paid. 7. Thou shalt not use other people’s computer resources without authorization or proper compensation. 8. Thou shalt not appropriate other people’s intellectual output. 9. Thou shalt think about the social consequences of the program you are writing or the system you are designing. 10. Thou shalt always use a computer in ways that ensure consideration and respect for your fellow humans."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "Which of the following statements is not true of dumpster diving?",
+   "options": [
+    "It is legal.",
+    "It is unethical.",
+    "It is illegal.",
+    "It is a nontechnical attack."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Dumpster diving refers to the concept of rummaging through a company’s or individual’s garbage for discarded documents, information, and other precious items that could then be used in an attack against that person or company. Dumpster diving is legal. Trespassing is illegal, however, and may be done in the process of dumpster diving. Industrial spies can raid corporate dumpsters to find proprietary and confidential information. Credit card thieves can go through dumpsters to retrieve credit card information from discarded receipts. Phreakers have been known to dumpster-dive at telephone companies, hoping to find manuals on how the internals of the telephone systems work.",
+    "A is incorrect because dumpster diving is considered legal. Trespassing, on the other hand, is illegal. While the area where garbage is kept is usually not highly guarded, physical access to the premises is required and dumpsters are often located on private property. Trespassing laws concerning dumpster diving vary in different states, as well as how rigorously they are upheld.",
+    "B is incorrect because dumpster diving is perceived as unethical if used for malicious purposes. Just because something is legal, like dumpster diving, does not make it right. An interesting relationship exists between law and ethics. Most often, laws are based on ethics and are put in place to ensure that others act in an ethical way. However, laws do not apply to everything—that is when ethics should apply. Some things may not be illegal, but that does not necessarily mean they are ethical.",
+    "D is incorrect because it is true that dumpster diving is a nontechnical attack. Dumpster diving is the act of going through someone’s trash with the hope of uncovering useful information."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "Which of the following is a legal form of eavesdropping when performed with prior consent or a warrant?",
+   "options": [
+    "Denial of service",
+    "Dumpster diving",
+    "Wiretapping",
+    "Data diddling"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Most communications signals are vulnerable to some type of wiretapping or eavesdropping. It can usually be done undetected and is referred to as a passive attack. Tools used to intercept communications include cellular scanners, radio receivers, microphone receivers, tape recorders, network sniffers, and telephone-tapping devices. It is illegal to intentionally eavesdrop on another person’s conversation under many countries’ existing wiretap laws. In many cases, this action is only acceptable if the person consents or there is a court order allowing law enforcement to perform these types of activities. Under the latter circumstances, the law enforcement officers must show probable cause to support their allegation that criminal activity is taking place and can only listen to relevant conversations. These requirements are in place to protect an individual’s privacy rights.",
+    "A is incorrect because denial of service (DoS) is an attack, not a form of eavesdropping. A DoS has the intent of overwhelming a victim system so that it can no longer carry out its intended functionality.",
+    "B is incorrect because dumpster diving is legal unless it involves trespassing. Dumpster diving refers to going through someone’s trash to find confidential or useful information. This is not considered a type of eavesdropping.",
+    "D is incorrect because data diddling is the act of willfully modifying information, programs, or documentation in an effort to commit fraud or disrupt production. Many times, this modification happens before the data is entered into an application or as soon as it completes processing and is outputted from an application. For instance, if a loan processor is entering information for a customer’s loan of $100,000, but instead enters $150,000 and then moves the extra approved money somewhere else, this would be a case of data diddling."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "What type of common law deals with violations committed by individuals against government laws, which are created to protect the public?",
+   "options": [
+    "Criminal law",
+    "Civil law",
+    "Tort law",
+    "Regulatory law"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Criminal law is used when an individual’s conduct violates the government’s laws, which have been developed to protect the public. Jail sentences are commonly the punishment for criminal law cases, whereas in civil law cases the punishment is usually an amount of money that the liable individual must pay the victim. For example, in the O.J. Simpson case, he was first tried and found not guilty in the criminal law case, but then was found liable in the civil law case. This seeming contradiction can happen because the burden of proof is lower in civil cases than in criminal cases.",
+    "B is incorrect because civil law deals with wrongs against individuals or companies that result in damages or loss. This is referred to as tort law. Examples include trespassing, betray, negligence, and products liability. A civil lawsuit would result in financial restitution and/or community service instead of jail sentences. When someone sues another person in civil court, the jury decides upon liability instead of innocence or guilt. If the jury determines the defendant is liable for the act, then the jury decides upon the punitive damages of the case.",
+    "C is incorrect because tort law is another name for civil law, which deals with wrongs committed against individuals or companies that result in injury or damages. Civil law does not use prison time as a punishment, but usually requires financial restitution.",
+    "D is incorrect because regulatory law deals with regulatory standards that regulate performance and conduct. Government agencies create these standards, which are applied to companies and organizations within those specific industries. Some examples of regulatory laws could be that every building used for business must have a fire detection and suppression system, must have easily seen exit signs, and cannot have blocked doors, in case of a fire. Companies that produce and package food and drug products are regulated by many standards so the public is protected and aware of their actions."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "During what stage of incident response is it determined if the source of the incident was internal or external, and how the offender penetrated and gained access to the asset?",
+   "options": [
+    "Analysis",
+    "Containment",
+    "Tracking",
+    "Follow-up"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Incident response begins with triage. During triage, the scope and severity of the incident is assessed. If it is determined that an incident has indeed occurred, then the incident response team moves to the investigation stage. This stage involves the collection of data, as well as analysis, interpretation, reaction, and recovery. The next stage is containment. The team isolates the systems involved in the incident to buy time to conduct a full investigation. During analysis, more data is collected and analyzed to determine the root cause of the incident. Once we have as much information as we can get in the analysis stage and answered as many questions as we can, we then move to the tracking stage. We determine if the source of the incident was internal or external and how the offender penetrated and gained access to the asset.",
+    "A is incorrect because during analysis data is gathered (audit logs, video captures, human accounts of activities, system activities) to try to figure out the root cause of the incident.",
+    "B is incorrect because the purpose of containment is to isolate the incident to prevent further damage and buy the incident response team time to conduct their investigation.",
+    "D is incorrect because the follow-up or recovery stage occurs after the incident is understood. It involves implementing the necessary fix to ensure this type of incident cannot happen again. This may require blocking certain ports, deactivating vulnerable services or functionalities, switching over to another processing facility, or applying a patch. This is properly called “following recovery procedures,” because just arbitrarily making a change to the environment may introduce more problems. The recovery procedures may state that a new image needs to be installed, backup data need to be restored, the system needs to be tested, and all configurations are properly set."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "Which of the following is not true of a forensics investigation?",
+   "options": [
+    "The crime scene should be modified as necessary.",
+    "A file copy tool may not recover all data areas of the device that are necessary for investigation.",
+    "Contamination of the crime scene may not negate derived evidence, but it should still be documented.",
+    "Only individuals with knowledge of basic crime scene analysis should have access to the crime scene."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The principles of criminalistics are included in the forensic investigation process. They are identification of the crime scene, protection of the environment against contamination and loss of evidence, identification of evidence and potential sources of evidence, and collection of evidence. In regard to minimizing the degree of contamination, it is important to understand that it is impossible not to change a crime scene—be it physical or digital. The key is to minimize changes and document what you did and why, and how the crime scene was affected.",
+    "B is incorrect because it is true that a file copy tool may not recover all data areas of the device necessary for investigation. During the examination and analysis process of a forensics investigation, it is critical that the investigator works from an image that contains all of the data from the original disk. It must be a bit-level copy, sector by sector, to capture deleted files, slack spaces, and unallocated clusters. These types of images can be created through the use of specialized tools such as FTK Imager, DD, EnCase, and Safeback, or the -dd Unix utility.",
+    "C is incorrect because it is true that if a crime scene becomes contaminated, that should be documented. While it may not negate the derived evidence, it will make investigating the crime and providing useful evidence for court more challenging. Whether the crime scene is physical or digital, it is important to control who comes in contact with the evidence of the crime to ensure its integrity.",
+    "D is incorrect because the statement is true. Only authorized individuals should be allowed to access the crime scene, and these individuals should have knowledge of basic crime scene analysis. Other measures to protect the crime scene include documenting who is at the crime scene and the last individuals to interact with the system. In court, the integrity of the evidence may be in question if there are too many people milling around."
+   ]
+  },
+  {
+   "n": 22,
+   "q": "Great care must be taken to capture clues from a computer or device during a forensics exercise. Which of the following does not correctly describe the efforts that should be taken to protect an image?",
+   "options": [
+    "The original image should be hashed with MD5 and/or SHA- 256.",
+    "Two time-stamped images should be created.",
+    "New media should be properly purged before images are created on them.",
+    "Some systems must be imaged while they are running."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Acquiring evidence on live systems and those using network storage complicates matters because you cannot turn off the system in order to make a copy of the hard drive. Business-critical systems commonly cannot suffer downtime. So these systems and others, such as those using on-the-fly encryption, must be imaged while they are running. Thus, the answer, “Some systems must be imaged while they are running,” is correct in and of itself. However, this measure is not one that is taken to protect an image, as the question specifies. It is taken to avoid interrupting business operations.",
+    "A is incorrect because hashing the original image with MD5 or SHA-256 is a measure that is taken to protect the original image during the investigative process. To ensure that the original image is not modified, it is important to create message digests for files and directories before and after the analysis to prove the integrity of the original image. MD5 and SHA-256 are just two of the hashing algorithms that can be used to ensure the integrity of image data.",
+    "B is incorrect because two time-stamps should be created to ensure the integrity of the data during the investigative process. The original media should have two copies created: a primary image (a control copy that is stored in a library) and a working image (used for analysis and evidence collection). These should be time-stamped to show when the evidence was collected. The investigator works from the duplicate image because it preserves the original evidence, prevents inadvertent alteration of original evidence during examination, and allows re-creation of the duplicate image if necessary.",
+    "C is incorrect because when newly created images need to be saved to a new medium, the medium has to be “clean” of any residual data. Purging a new medium before an image is created and saved to it is a necessary measure to ensure that any old data does not contaminate the images. The investigator must make sure the new medium has been properly purged, meaning it does not contain any residual data. Some incidents have occurred where drives that were new and right out of the box (shrink-wrapped) contained old data not purged by the vendor."
+   ]
+  },
+  {
+   "n": 23,
+   "q": "Which of the following attacks can be best prevented by limiting the amount of electrical signals emitted from a computer system?",
+   "options": [
+    "Salami attack",
+    "Emanations capturing",
+    "Password sniffing",
+    "IP spoofing"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Every electrical device emits electrical radiation into the surrounding environment. These waves contain information, comparable to how wireless technologies work. This radiation can be carried over a distance, depending on the strength of the signals and the material and objects in the surrounding area. Attackers have used devices to capture this radiation and port them to their own computer systems so that they can access information not intended for them. Companies that have information of such sensitive nature that attackers would go through this much trouble usually have special computer systems with shielding that permit only a small amount of electrical signals to be emitted. The companies can also use material within the walls of the building to stop these types of electrical waves from passing through them.",
+    "A is incorrect because a salami attack is one in which the attacker commits several small crimes with the hope that the overall larger crime will go unnoticed. It has nothing necessarily to do with electrical signals. Salami attacks usually take place in the accounting departments of companies, and the most common example of a salami attack involves subtracting a small amount of funds from many accounts with the hope that such an insignificant amount would be overlooked. For example, a bank employee may alter a banking software program to subtract 5 cents from each of the bank’s customers’ accounts once a month and move this amount to the employee’s bank account. If this happened to all of the bank’s 50,000 customer accounts, the intruder could make up to $30,000 a year.",
+    "C is incorrect because password sniffing involves sniffing network traffic with the hope of capturing passwords being sent between computers or devices. It has nothing necessarily to do with capturing electrical signals. Capturing a password is tricky, because it is a piece of data that is usually only used when a user wants to authenticate into a domain or access a resource. Some systems and applications do send passwords over the network in cleartext, but a majority of them do not anymore. Instead, the user’s workstation performs a one-way hashing function on the password and sends only the resulting value to the authenticating system or service. The authenticating system has a file containing all users’ password hash values, not the passwords themselves, and when the authenticating system is asked to verify a user’s password, it compares the hashing value sent to what it has in its file.",
+    "D is incorrect because IP spoofing does not involve the capturing of electrical signals. IP spoofing involves either manually changing the IP address within a packet to show a different address or, more commonly, using a tool that is programmed to provide this functionality for the attacker. Several attacks that take place use spoofed IP addresses, which give the victim little hope of finding the real system and individual who initiated the attack."
+   ]
+  },
+  {
+   "n": 24,
+   "q": "As a CISSP candidate, you must sign a Code of Ethics. Which of the following is from the (ISC)2 Code of Ethics for the CISSP?",
+   "options": [
+    "Information should be shared freely and openly; thus, sharing confidential information should be ethical.",
+    "Think about the social consequences of the program you are writing or the system you are designing.",
+    "Discourage unnecessary fear or doubt.",
+    "Do not participate in Internet-wide experiments in a negligent manner."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. (ISC)2 requires all certified system security professionals to commit to fully supporting its Code of Ethics. If a CISSP intentionally or knowingly violates this Code of Ethics, he or she may be subject to a peer review panel, which will decide whether the certification should be relinquished. The following list is an overview, but each CISSP candidate should read the full version and understand the Code of Ethics before attempting this exam: • Act honorably, honestly, justly, responsibly, and legally, and protect society. • Work diligently, provide competent services, and advance the security profession. • Encourage the growth of research—teach, mentor, and value the certification. • Discourage unnecessary fear or doubt, and do not consent to bad practices. • Discourage unsafe practices, and preserve and strengthen the integrity of public infrastructures. • Observe and abide by all contracts, expressed or implied, and give prudent advice. • Avoid any conflict of interest, respect the trust that others put in you, and take on only those jobs you are fully qualified to perform. • Stay current on skills, and do not become involved with activities that could injure the reputation of other security professionals.",
+    "A is incorrect because it is not an ethics statement within the (ISC)2 canons. It is an ethical fallacy used by many in the computing world to justify unethical acts. Some people in the industry feel as though all information should be available to all people; thus, they might release sensitive information to the world that was not theirs to release because they feel as though they are doing something right.",
+    "B is incorrect because the statement is from the Computer Ethics Institute’s Ten Commandments of Computer Ethics, not the (ISC)2 canons. The Computer Ethics Institute is a nonprofit organization that works to help advance technology by ethical means.",
+    "D is incorrect because it is an ethics statement issued by the Internet Architecture Board (IAB). The IAB issues ethics-related statements concerning the use of the Internet. It considers the Internet to be a resource that depends upon availability and accessibility to be useful to a wide range of people. It is mainly concerned with irresponsible acts on the Internet that could threaten its existence or negatively affect others. It sees the Internet as a great gift and works hard to protect it for all who depend upon it."
+   ]
+  },
+  {
+   "n": 25,
+   "q": "What concept states that a criminal leaves something behind and takes something with them?",
+   "options": [
+    "Modus operandi",
+    "Profiling",
+    "Locard’s Principle of Exchange",
+    "Motive, opportunity, and means"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Locard’s Principle of Exchange provides information that is useful for profiling. The principle states that a criminal leaves something behind and takes something with him. This principle is the foundation of criminalistics. Even in an entirely digital crime scene, Locard’s Principle of Exchange can shed light on who the perpetrator(s) may be.",
+    "A is incorrect because modus operandi (MO) refers to a distinct method criminals use to carry out their crime that can be used to help identify them. For example, an MO for computer criminals may include the use of specific hacking tools, or targeting specific systems or networks. The method usually involves repetitive signature behaviors, such as sending e-mail messages or programming syntax. Knowledge of the criminal’s MO and signature behaviors can be useful throughout the investigative process. Law enforcement can use the information to identify other offenses by the same criminal, for example.",
+    "B is incorrect because profiling (or psychological crime scene analysis) is an investigative technique that involves developing behavioral or characteristic patterns of an attacker who has not been caught. By creating an outline of an attacker’s characteristics, the investigative team may gain insight into the attacker’s thought processes that can then be used to identify him or, at the very least, the tool he used to conduct the crime. Locard’s Principle of Exchange, which states that a criminal leaves something behind and takes something with him, provides information that is useful for profiling.",
+    "D is incorrect because motive, opportunity, and means is a strategy used to determine the suspects of a crime. Motive refers to the “who” and “why” of a crime. Determining the motive for a crime can help investigators identify who would carry out the activity. Opportunity refers to the “where” and “when” of a crime. This is usually a vulnerability or weakness in the environment that allowed the criminal to be successful. Means refers to the capabilities required for the criminal’s activities to be successful. Does the criminal have the skills required to hack into a system, for example?"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "Which of the following was the first international treaty seeking to address computer crimes by coordinating national laws and improving investigative techniques and international cooperation?",
+   "options": [
+    "Council of Global Convention on Cybercrime",
+    "Council of Europe Convention on Cybercrime",
+    "Organisation for Economic Co-operation and Development",
+    "Organisation for Cybercrime Co-operation and Development"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Council of Europe (CoE) Convention on Cybercrime is one example of an attempt to create a standard international response to cybercrime. It is the first international treaty seeking to address computer crimes by coordinating national laws and improving investigative techniques and international cooperation. The convention’s objectives include the creation of a framework for establishing jurisdiction and extradition of the accused. For example, extradition can only take place when the event is a crime in both jurisdictions.",
+    "A is incorrect because it is a distracter answer. The official name for the treaty is Council of Europe Convention on Cybercrime. It serves as a guideline for any country developing comprehensive national legislation against cybercrime and as a framework for international cooperation between state parties to this treaty.",
+    "C is incorrect because the Organisation for Economic Co-operation and Development (OECD) is an international organization that helps different governments come together and tackle the economic, social, and governance challenges of a globalized economy. Because of this, the OECD came up with guidelines for the various countries to follow so that data are properly protected and everyone follows the same type of rules.",
+    "D is incorrect because this is a distracter answer. There is no official entity with this name."
+   ]
+  },
+  {
+   "n": 27,
+   "q": "Lee is a new security manager who is in charge of ensuring that his company complies with the European Union Principles on Privacy when his company is interacting with their European partners. The set of principles that deals with transmitting data considered private is encompassed within which of the following laws or regulations?",
+   "options": [
+    "Data Protection Directive",
+    "Organisation for Economic Co-operation and Development",
+    "Federal Private Bill",
+    "Privacy Protection Law"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The European Union (EU) in many cases takes individual privacy much more seriously than most other countries in the world, so they have strict laws pertaining to data that are considered private, which are based on the European Union Principles on Privacy. This set of principles addresses using and transmitting information considered private in nature. The principles and how they are to be followed are encompassed within the EU’s Data Protection Directive. All states in Europe must abide by these principles to be in compliance, and any company wanting to do business with an EU company, which will include exchanging privacy type of data, must comply with this directive.",
+    "B is incorrect because the Organisation for Economic Co-operation and Development (OECD) is an international organization that helps different governments come together and tackle the economic, social, and governance challenges of a globalized economy. Because of this, the OECD came up with guidelines for the various countries to follow so that data are properly protected and everyone follows the same type of rules.",
+    "C is incorrect because this is a distracter answer. There is no official bill with this name.",
+    "D is incorrect because this is a distracter answer. There is no official law with this name."
+   ]
+  },
+  {
+   "n": 28,
+   "q": "The common law system is broken down into which of the following categories?",
+   "options": [
+    "Common, civil, criminal",
+    "Legislation, bills, regulatory",
+    "Civil, criminal, regulatory",
+    "Legislation, bills, civil"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The common law system is broken down into the following: • Criminal • Based on common law, statutory law, or a combination of both. • Addresses behavior that is considered harmful to society. • Punishment usually involves a loss of freedom, such as incarceration, or monetary fines. • Civil/tort • Offshoot of criminal law. • Under civil law, the defendant owes a legal duty to the victim. In other words, the defendant is obligated to conform to a particular standard of conduct, usually set by what a “reasonable man of ordinary prudence” would do to prevent foreseeable injury to the victim. • Administrative (regulatory) • Laws and legal principles created by administrative agencies to address a number of areas, including international trade, manufacturing, environment, and immigration.",
+    "A is incorrect because it only lists two categories of a common law system and incorrectly lists the third category as “common.” The correct third category is regulatory.",
+    "B is incorrect because this answer does not list categories of a legal system. Legislation (or “statutory law”) is law that has been enacted by a legislature or other governing body. A bill is a proposed law under consideration by a legislature. Regulatory relates to administrative regulation laws that are enforced by a governing body. These are components that make up a legal system, but do not represent the specific categories of a common law system.",
+    "D is incorrect because this answer does not list categories of a legal system. Legislation (or “statutory law”) is law that has been enacted by a legislature or other governing body. A bill is a proposed law under consideration by a legislature. The answer does list civil, which is one category of the common law system."
+   ]
+  },
+  {
+   "n": 29,
+   "q": "Privacy is becoming more threatened as the world relies more and more on technology. There are several approaches to addressing privacy, including the generic approach and regulation by industry. Which of the following best describes these two approaches?",
+   "options": [
+    "The generic approach is vertical enactment. Regulation by industry is horizontal enactment.",
+    "The generic approach is horizontal enactment. Regulation by industry is vertical enactment.",
+    "The generic approach is government enforced. Regulation by industry is self-enforced.",
+    "The generic approach is self-enforced. Regulation by industry is government enforced."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The generic approach is horizontal enactment—rules that stretch across all industry boundaries. It affects all industries, including government. Regulation by industry is vertical enactment. It defines requirements for specific verticals, such as the financial sector and health care.",
+    "A is incorrect because the generic approach is horizontal enactment. Regulation by industry is vertical enactment. This answer has the two definitions switched.",
+    "C is incorrect because generic and vertical approaches to regulatory enforcement can be government or industry. Generic just means that privacy protection is enforced across various industries. Vertical means that privacy protection is specific to one industry.",
+    "D is incorrect because generic and vertical approaches can be enforced by the government or carried out through self-enforcement. The terms “generic” and “vertical” have nothing to do with who enforces the privacy protection rules; they just specify if a specific industry is targeted or if the rules apply to several industries in the same manner."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "Which of the following best describes the organization that developed the best practices that Stephanie needs to ensure her company’s procedures map to?",
+   "options": [
+    "Internet Activities Board",
+    "International Organization on Computer Evidence",
+    "Department of Defense Forensics Committee",
+    "International Forensics Standards Board"
+   ],
+   "scenario": "Stephanie has been put in charge of developing incident response and forensics procedures her company needs to carry out if an incident occurs. She needs to ensure that their procedures map to the international principles for gathering and protecting digital evidence. She also needs to ensure that if and when internal forensics teams are deployed, they have labels, tags, evidence bags, cable ties, imaging software, and other associated tools.",
+   "answer": "B",
+   "explanation": [
+    "B. The International Organization on Computer Evidence (IOCE) was appointed to draw up international principles for the procedures relating to digital evidence, to ensure the harmonization of methods and practices among nations, and to guarantee the ability to use digital evidence collected by one national state in the courts of another state. The principles developed by IOCE for the standardized recovery of computer-based evidence are governed by the following attributes: • Consistency with all legal systems • Allowance for the use of a common language • Durability • Ability to cross international and state boundaries • Ability to instill confidence in the integrity of evidence • Applicability to all forensic evidence • Applicability at every level, including that of individual, agency, and country",
+    "A is incorrect because the Internet Architecture Board (IAB) is the coordinating committee for Internet design, engineering, and management. It is responsible for the architectural oversight of the Internet Engineering Task Force (IETF) activities, Internet Standards Process oversight and appeal, and editor of Request for Comments (RFCs). This organization used to be called the Internet Activities Board but now goes under the new name of Internet Architecture Board.",
+    "C is incorrect because this is a distracter answer. There is no official group with this name.",
+    "D is incorrect because this is a distracter answer. There is no official group with this name."
+   ]
+  },
+  {
+   "n": 31,
+   "q": "Which of the following best describes what Stephanie needs to build for the deployment teams?",
+   "options": [
+    "Local and remote imaging system",
+    "Forensics field kit",
+    "Chain of custody procedures and tools",
+    "Digital evidence collection software"
+   ],
+   "scenario": "Stephanie has been put in charge of developing incident response and forensics procedures her company needs to carry out if an incident occurs. She needs to ensure that their procedures map to the international principles for gathering and protecting digital evidence. She also needs to ensure that if and when internal forensics teams are deployed, they have labels, tags, evidence bags, cable ties, imaging software, and other associated tools.",
+   "answer": "B",
+   "explanation": [
+    "B. When forensics teams are deployed to investigate a potential crime, they should be properly equipped with all of the tools and supplies needed. The following are some of the common items in the forensics field kits: • Documentation tools—Tags, labels, and timelined forms • Disassembly and removal tools—Antistatic bands, pliers, tweezers, screwdrivers, wire cutters, and so on • Package and transport supplies—Antistatic bags, evidence bags and tape, cable ties, and others",
+    "A is incorrect because imaging software and tools only make up some of the tools that a forensics team needs. These types of tools do not include the items identified in the question, which are labels, tags, evidence bags, cable ties, imaging software, and other associated tools. These items should be organized and be in a field kit.",
+    "C is incorrect because chain of custody procedures and tools only make up some of the components that a forensics team needs. These types of tools do not include the items identified in the question, which are labels, tags, evidence bags, cable ties, imaging software, and other associated tools. These items should be organized and be in a field kit. A chain of custody is a history that shows how evidence was collected, analyzed, transported, and preserved in order to be presented in court. Because electronic evidence can be easily modified, a clearly defined chain of custody demonstrates that the evidence is trustworthy.",
+    "D is incorrect because digital evidence collection tools only make up some of the components that a forensics team needs. These types of tools do not include the items identified in the question, which are labels, tags, evidence bags, cable ties, imaging software, and other associated tools. These items should be organized and be in a field kit. There are specialized software suites that allow forensics personnel to properly collect, analyze, and manage digital evidence through its life cycle. They are important, but only one component of an overall forensics kit."
+   ]
+  }
+ ]
+}

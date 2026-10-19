@@ -1,0 +1,30 @@
+{
+  "name": "a3-simulador",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "description": "Simulador CISSP con grupos, roles y reportes",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --env-file=.env server/index.js",
+    "test": "node --test tests/*.test.cjs",
+    "test:e2e": "node tools/prueba_e2e.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.14",
+    "playwright-core": "^1.64.1",
+    "supertest": "^7.3.1"
+  }
+}

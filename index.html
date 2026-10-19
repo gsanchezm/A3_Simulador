@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CISSP Exam Suite · Actividad A3 – Seguridad Avanzada</title>
+  <meta name="description" content="Simulador oficial de exámenes prácticos CISSP (3rd Ed. Shon Harris) para la Actividad A3 de Seguridad Avanzada. Dashboard interactivo con reportes exportables a PDF." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Contenedor Maestro de la Aplicación (Dashboard Canvas) -->
+  <div class="app-layout">
+
+    <!-- ================= SIDEBAR LATERAL VIOLETA ================= -->
+    <aside class="sidebar" id="app-sidebar">
+      <div class="sidebar-brand" id="btn-side-home" title="Ir al Dashboard">
+        <!-- Icono Escudo CISSP -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Dashboard Home -->
+        <button class="nav-item active" id="nav-dash" title="Dashboard Principal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </button>
+        <!-- Exámenes / Dominios -->
+        <button class="nav-item" id="nav-exams-list" title="Exámenes y Dominios">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </button>
+        <!-- Resumen General -->
+        <button class="nav-item" id="nav-summary" title="Reporte y Resumen Global">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="nav-item btn-logout" id="btn-logout" title="Cerrar Sesión">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+        <button class="nav-item" id="btn-help-modal" title="Información y Ayuda">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ================= CONTENEDOR CENTRAL ================= -->
+    <div class="main-wrapper">
+
+      <!-- HEADER SUPERIOR -->
+      <header class="app-header">
+        <div class="header-title-block">
+          <h1 id="page-heading">Panel Principal</h1>
+          <div class="subtitle" id="page-subheading">Exámenes de Práctica CISSP (3.ª Ed.) · Actividad A3</div>
+        </div>
+
+        <div class="header-actions">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="domain-search" placeholder="Buscar dominio o tema..." />
+          </div>
+
+          <div class="user-profile-badge" id="btn-edit-student" title="Configurar datos de estudiante">
+            <div class="user-avatar" id="avatar-initials">GS</div>
+            <div class="user-info">
+              <span class="user-name" id="badge-name">Gilberto Sánchez Mares</span>
+              <span class="user-sub" id="badge-id">Mat: 70215592620 · Seguridad Avanzada</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ================= VISTA 0: LOGIN / AUTH PORTAL ================= -->
+      <section class="view-panel" id="view-auth">
+        <div class="auth-wrapper">
+          <div class="auth-card">
+            <div class="auth-brand-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h2 style="font-size:1.5rem; font-weight:800; color:var(--text-main);">Portal de Exámenes CISSP</h2>
+            <p style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">Acceso para alumnos, maestros y administración</p>
+
+            <div class="auth-tabs">
+              <button class="auth-tab-btn active" id="tab-login">Iniciar Sesión</button>
+              <button class="auth-tab-btn" id="tab-register">Crear Cuenta</button>
+            </div>
+
+            <form class="auth-form" id="auth-form">
+              <div class="student-field-row" id="field-auth-name" style="display:none;">
+                <label for="auth-in-name">Nombre Completo</label>
+                <input class="student-input" id="auth-in-name" placeholder="Nombre y apellidos" autocomplete="name" />
+              </div>
+
+              <div class="student-field-row" id="field-auth-role" style="display:none;">
+                <label for="auth-in-role">Tipo de cuenta</label>
+                <select class="student-input" id="auth-in-role">
+                  <option value="student">Alumno (requiere invitación)</option>
+                  <option value="teacher">Maestro (requiere aprobación)</option>
+                </select>
+              </div>
+
+              <div class="student-field-row" id="field-auth-invite" style="display:none;">
+                <label for="auth-in-invite">Código o enlace de invitación</label>
+                <input class="student-input" id="auth-in-invite" placeholder="Código recibido del maestro" />
+              </div>
+
+              <div class="student-field-row" id="field-auth-student-id" style="display:none;">
+                <label for="auth-in-student-id">Matrícula (opcional)</label>
+                <input class="student-input" id="auth-in-student-id" placeholder="Tu matrícula" />
+              </div>
+
+              <div class="student-field-row">
+                <label for="auth-in-id">Correo electrónico</label>
+                <input class="student-input" type="email" id="auth-in-id" placeholder="nombre@universidad.edu" autocomplete="email" required />
+              </div>
+
+              <div class="student-field-row">
+                <label for="auth-in-pass">Contraseña (mínimo 12 caracteres)</label>
+                <input type="password" class="student-input" id="auth-in-pass" placeholder="Contraseña segura" autocomplete="current-password" required />
+              </div>
+
+              <button class="auth-btn-submit" type="submit" id="btn-auth-submit">
+                Entrar al Simulador
+              </button>
+
+            </form>
+
+            <p style="font-size:0.72rem; color:var(--text-subtle); margin-top:16px;">
+              Tus resultados se guardan en tu cuenta y se separan por grupo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= VISTA 1: DASHBOARD ================= -->
+      <section class="view-panel" id="view-dashboard">
+        <div class="table-card class-switcher">
+          <label for="student-group-select"><b>Universidad · Materia · Grupo</b></label>
+          <select class="student-input" id="student-group-select"></select>
+          <div class="join-row">
+            <input class="student-input" id="student-join-token" placeholder="Código o enlace para unirte a otro grupo" />
+            <button class="btn-secondary" id="btn-student-join">Unirme</button>
+          </div>
+        </div>
+        <div class="dashboard-grid">
+
+          <!-- COLUMNA IZQUIERDA: HERO + WIDGETS + DOMINIOS -->
+          <div class="dashboard-left">
+
+            <!-- OVERVIEW HERO CARD CON ONDA ONDULADA (Como la referencia) -->
+            <div class="hero-overview-card">
+              <div class="hero-overview-top">
+                <h3>Progreso General CISSP</h3>
+                <span class="hero-period-pill" id="hero-progress-pill">0% Completado</span>
+              </div>
+
+              <!-- Sparkline SVG interactivo -->
+              <div class="wave-chart-container">
+                <svg class="wave-chart-svg" viewBox="0 0 600 120" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Área rellena bajo la curva -->
+                  <path d="M 0,90 Q 75,50 150,75 T 300,30 T 450,65 T 600,45 L 600,120 L 0,120 Z" fill="url(#waveGrad)"/>
+                  <!-- Línea de la onda -->
+                  <path d="M 0,90 Q 75,50 150,75 T 300,30 T 450,65 T 600,45" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Puntos activos en la curva -->
+                  <circle cx="150" cy="75" r="4" fill="#ffffff"/>
+                  <circle cx="300" cy="30" r="6" fill="#ff6584" stroke="#ffffff" stroke-width="2"/>
+                  <circle cx="450" cy="65" r="4" fill="#ffffff"/>
+                </svg>
+
+                <!-- Tooltip badge flotante al estilo de referencia -->
+                <div class="chart-tooltip-badge" style="left: 46%; top: 6px;">
+                  <span id="tooltip-score-lbl">Meta de Aprobación</span>
+                  <b id="tooltip-score-val">70% Calificación</b>
+                </div>
+              </div>
+
+              <!-- 3 Métricas clave en la base del card -->
+              <div class="hero-metrics-row">
+                <div class="hero-metric-item">
+                  <span class="lbl">Preguntas Totales</span>
+                  <div class="val" id="stat-total-q">308</div>
+                  <span class="sub" id="stat-total-chapters">10 Capítulos de Examen</span>
+                </div>
+                <div class="hero-metric-item">
+                  <span class="lbl">Exámenes Realizados</span>
+                  <div class="val" id="stat-completed-exams">0 / 10</div>
+                  <span class="sub" id="stat-completed-sub">0% cobertura</span>
+                </div>
+                <div class="hero-metric-item">
+                  <span class="lbl">Promedio General</span>
+                  <div class="val" id="stat-avg-score">—</div>
+                  <span class="sub">Aprobación mínima: 70%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- FILA DE 2 WIDGETS DE BLOQUES (Bloque 1 y Bloque 2) -->
+            <div class="block-widgets-row">
+              <!-- Widget Bloque 1 (Morado) -->
+              <div class="block-widget purple" id="widget-block-1">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                  <div class="widget-icon-pill">
+                    <!-- Icono Candado / Seguridad de Red -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                  </div>
+                  <span class="hero-period-pill" id="b1-status-pill">0/5 Listos</span>
+                </div>
+                <div class="widget-title-area">
+                  <span class="tag">Bloque 1 · Dominios 1 al 5</span>
+                  <h4>Gobernanza, Accesos y Redes</h4>
+                </div>
+                <div class="widget-bottom-meta">
+                  <div>
+                    <div class="big-stat" id="b1-stat-avg">—</div>
+                    <div class="stat-lbl">Promedio Bloque 1</div>
+                  </div>
+                  <button class="widget-arrow-btn" title="Ir a Capítulos Bloque 1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Widget Bloque 2 (Rosa/Coral como en la referencia) -->
+              <div class="block-widget pink" id="widget-block-2">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                  <div class="widget-icon-pill">
+                    <!-- Icono Llave Criptográfica / Software -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                      <path d="m21 2-2 2m-6 6 4-4m-6 6 2-2m-4 4 2-2"/>
+                      <circle cx="7.5" cy="15.5" r="5.5"/>
+                    </svg>
+                  </div>
+                  <span class="hero-period-pill" id="b2-status-pill">0/5 Listos</span>
+                </div>
+                <div class="widget-title-area">
+                  <span class="tag">Bloque 2 · Dominios 6 al 10</span>
+                  <h4>Criptografía, BCP y Operaciones</h4>
+                </div>
+                <div class="widget-bottom-meta">
+                  <div>
+                    <div class="big-stat" id="b2-stat-avg">—</div>
+                    <div class="stat-lbl">Promedio Bloque 2</div>
+                  </div>
+                  <button class="widget-arrow-btn" title="Ir a Capítulos Bloque 2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: READINESS + RECENT ATTEMPTS -->
+          <div class="dashboard-right">
+
+            <!-- CISSP READINESS GAUGE -->
+            <div class="readiness-widget">
+              <div class="side-card-header" style="justify-content:center; margin-bottom:4px;">
+                <h4>Nivel de Preparación</h4>
+              </div>
+              <p style="font-size:0.75rem; color:var(--text-muted);">Alineación hacia la certificación CISSP</p>
+
+              <div class="readiness-gauge-circle">
+                <svg viewBox="0 0 140 140">
+                  <defs>
+                    <linearGradient id="purple-gauge-grad" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#6554c0"/>
+                      <stop offset="100%" stop-color="#ff6584"/>
+                    </linearGradient>
+                  </defs>
+                  <circle class="bg-circle" cx="70" cy="70" r="56" />
+                  <circle class="fill-circle" id="gauge-fill-circle" cx="70" cy="70" r="56"
+                          stroke-dasharray="351.8" stroke-dashoffset="351.8" />
+                </svg>
+                <div class="readiness-center-text">
+                  <b id="gauge-pct-val">0%</b>
+                  <span>Preparación</span>
+                </div>
+              </div>
+
+              <div style="font-size:0.78rem; font-weight:700; color:var(--text-muted); margin-top:8px;" id="gauge-status-desc">
+                Pendiente de Evaluaciones
+              </div>
+            </div>
+
+            <!-- RECENT ATTEMPTS / HISTORIAL -->
+            <div class="side-card">
+              <div class="side-card-header">
+                <h4>Intentos Recientes</h4>
+                <span class="link-small" id="link-view-all-summary">Ver Todo</span>
+              </div>
+              <div class="recent-activity-list" id="recent-activity-box">
+                <div style="font-size:0.8rem; color:var(--text-muted); text-align:center; padding:18px 0;">
+                  Aún no hay intentos registrados. ¡Selecciona un dominio abajo para comenzar a practicar!
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- SECCIÓN DE DOMINIOS CISSP (ANCHO COMPLETO 100% PARA DISTRIBUCIÓN PERFECTA) -->
+        <div class="domains-section-full">
+          <div class="section-header-row">
+            <div>
+              <h3>Dominios del Examen CISSP</h3>
+              <p style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
+                <span id="catalog-chapters-label">10 Capítulos</span> de práctica del libro oficial Shon Harris (3.ª Edición)
+              </p>
+            </div>
+            <div class="filter-capsules">
+              <button class="filter-capsule active" data-filter="all">Todos (10)</button>
+              <button class="filter-capsule" data-filter="1">Bloque 1 (1–5)</button>
+              <button class="filter-capsule" data-filter="2">Bloque 2 (6–10)</button>
+            </div>
+          </div>
+
+          <!-- Grid de tarjetas de capítulos a lo ancho de toda la pantalla -->
+          <div class="domain-cards-grid" id="domains-grid"></div>
+        </div>
+      </section>
+
+      <!-- ================= VISTA 2: EXAM RUNNER (100% INGLÉS ORIGINAL EN PREGUNTAS) ================= -->
+      <section class="view-panel" id="view-exam">
+        <div class="exam-container">
+
+          <!-- TARJETA PRINCIPAL DE LA PREGUNTA -->
+          <article class="exam-card-main">
+            <div class="exam-header-bar">
+              <div>
+                <span class="exam-tag-capsule" id="exam-tag-badge">Capítulo 1 · Preguntas oficiales (inglés original)</span>
+                <h2 style="font-size:1.2rem; font-weight:700; margin-top:6px;" id="exam-domain-title">Information Security Governance</h2>
+              </div>
+              <div class="exam-timer-capsule">
+                <span class="timer-pulse"></span>
+                <span id="exam-timer-display">00:00</span>
+              </div>
+            </div>
+
+            <!-- Escenario compartido (si la pregunta lo requiere, en inglés original) -->
+            <div class="scenario-box" id="exam-scenario-box" style="display:none;">
+              <div class="scenario-box-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:14px;height:14px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                Escenario de Referencia (Reference Scenario)
+              </div>
+              <div id="exam-scenario-content"></div>
+            </div>
+
+            <!-- Texto de la pregunta (Inglés original) -->
+            <div class="question-prompt-text" id="exam-question-text"></div>
+
+            <!-- Imagen / Gráfico de la pregunta (si aplica) -->
+            <div class="question-image-box" id="exam-image-box" style="display:none;"></div>
+
+            <!-- Opciones A, B, C, D (Inglés original) -->
+            <div class="options-stack" id="exam-options-container"></div>
+
+            <!-- Botones inferiores de navegación -->
+            <div class="exam-footer-nav">
+              <button class="btn-secondary" id="btn-exam-prev">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><polyline points="15 18 9 12 15 6"/></svg>
+                Anterior
+              </button>
+
+              <button class="btn-flag" id="btn-exam-flag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="width:16px;height:16px;"><path d="M4 22V4m0 0h13l-2 4 2 4H4"/></svg>
+                Marcar para Revisión
+              </button>
+
+              <button class="btn-primary" id="btn-exam-next">
+                Siguiente
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- SIDEBAR DE NAVEGACIÓN DEL EXAMEN -->
+          <aside class="exam-side-panel">
+            <div class="exam-nav-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h4 style="font-size:0.95rem; font-weight:700;">Navegación de Preguntas</h4>
+                <span style="font-size:0.75rem; font-weight:700; color:var(--color-purple);" id="exam-progress-counter">0/30</span>
+              </div>
+
+              <div class="exam-grid-buttons" id="exam-nav-grid"></div>
+
+              <div style="display:flex; gap:12px; margin-top:16px; font-size:0.72rem; color:var(--text-muted);">
+                <span><b style="color:var(--color-purple);">●</b> Respondidas</span>
+                <span><b style="color:var(--color-warning);">●</b> Marcadas</span>
+              </div>
+            </div>
+
+            <button class="btn-finish-exam" id="btn-submit-exam">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:18px;height:18px;"><polyline points="20 6 9 17 4 12"/></svg>
+              Finalizar y Calificar Examen
+            </button>
+
+            <button class="btn-secondary" id="btn-cancel-exam" style="width:100%; justify-content:center; color:var(--color-danger);">
+              Abandonar Intento
+            </button>
+          </aside>
+
+        </div>
+      </section>
+
+      <!-- ================= VISTA 3: REPORTE DE RESULTADOS ================= -->
+      <section class="view-panel" id="view-report"></section>
+
+      <!-- ================= VISTA 4: RESUMEN GLOBAL ================= -->
+      <section class="view-panel" id="view-summary"></section>
+
+      <section class="view-panel" id="view-teacher"></section>
+      <section class="view-panel" id="view-admin"></section>
+
+    </div>
+  </div>
+
+  <!-- MODAL DE CONFIRMACIÓN -->
+  <div class="modal-overlay" id="app-modal">
+    <div class="modal-dialog">
+      <h3 style="font-size:1.25rem; font-weight:800; margin-bottom:8px;" id="modal-title">Confirmar Acción</h3>
+      <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.55;" id="modal-body">Texto descriptivo</p>
+      <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:24px;">
+        <button class="btn-secondary" id="modal-btn-cancel">Cancelar</button>
+        <button class="btn-primary" id="modal-btn-ok">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST BUBBLE -->
+  <div class="toast-bubble" id="app-toast">Notificación</div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

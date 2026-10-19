@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+.nyc_output/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+reportes/pruebas/
+tools/raw_cap*.txt
+tools/debug.txt
+tools/qa.txt

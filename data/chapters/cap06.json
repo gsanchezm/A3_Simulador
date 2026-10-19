@@ -1,0 +1,535 @@
+{
+ "id": 6,
+ "title_en": "Cryptography",
+ "title_es": "Criptografía",
+ "block": 2,
+ "questions": [
+  {
+   "n": 1,
+   "q": "There are several components involved with steganography. Which of the following refers to a file that has hidden information in it?",
+   "options": [
+    "Stego-medium",
+    "Concealment cipher",
+    "Carrier",
+    "Payload"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Steganography is a method of hiding data in another media type so that the very existence of the data is concealed. Only the sender and receiver are supposed to be able to see the message because it is secretly hidden in a graphic, wave file, document, or other type of media. The message is not necessarily encrypted, just hidden. Encrypted messages can draw attention because it tells the bad guy, “This is something sensitive.” A message hidden in a picture would not attract this type of attention, even though the exact same secret message can be embedded into this image. Steganography is a type of security through obscurity. The components involved with steganography are the carrier, stego-medium, and payload. The carrier is a signal, data stream, or file that has hidden information inside of it. In other words, it carries the payload.",
+    "A is incorrect because the stego-medium is the medium in which the information is hidden in steganography. If the message were held within a graphic, the stego-medium could be JPEG or TIFF. If the message were embedded within a file, the stego-medium could be a Word document. A stego-medium can be a graphic type, wave file type, document type, or other type of media.",
+    "B is incorrect because a concealment cipher is a type of steganography method that involves putting a message within a message. It is a way to hide a secret message within something familiar from the world around us. This answer does not specify a specific component of steganography but is a specific type of steganography.",
+    "D is incorrect because the payload is the information that is to be concealed and transported through the use of steganography. The payload is the actual information that the sender wants to keep secret."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Which of the following correctly describes the relationship between SSL and TLS?",
+   "options": [
+    "TLS is the open-community version of SSL.",
+    "SSL can be modified by developers to expand the protocol’s capabilities.",
+    "TLS is a proprietary protocol, while SSL is an open-community protocol.",
+    "SSL is more extensible and backward compatible with TLS."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Secure Sockets Layer (SSL) and Transport Layer Security (TLS) are cryptographic protocols that are used to secure communications by encrypting segments of network connections. Both protocols work at the transport layer. TLS is the open-community version of SSL. Because TLS is an open-community protocol, its specifications can be modified by vendors within the community to expand what it can do and what technologies it can work with. SSL is a proprietary protocol, and TLS was developed by a standards body, making it an open-community protocol.",
+    "B is incorrect because SSL is a proprietary protocol developed by Netscape. This means the technology community cannot easily extend SSL to inter-operate and expand in its functionality. If a protocol is proprietary in nature, as SSL is, the technology community cannot directly change its specifications and functionality. The reason that TLS was developed was to standardize how data can be transmitted securely through a protocol and how vendors can modify the protocol and still allow for interoperability.",
+    "C is incorrect because the statement is backward. TLS is not proprietary. It is the open-community version of SSL, which is proprietary. The differences between the latest version of SSL (3.0) and TLS are slight, but TLS can be modified by developers to increase its functionality and work with other technologies. SSL, on the other hand, can only be modified by Netscape. Its code is not open to others.",
+    "D is incorrect because TLS is actually more extensible than SSL and is not backward compatible with SSL. TLS and SSL provide the same type of functionality and are very similar, but not similar enough to work directly together. If two devices need to communicate securely, they need to be using either TLS or SSL— they cannot use a hybrid approach and still be able to communicate."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "Which of the following incorrectly describes steganography?",
+   "options": [
+    "It is a type of security through obscurity.",
+    "Modifying the most significant bit is the most common method used.",
+    "Steganography does not draw attention to itself like encryption does.",
+    "Media files are ideal for steganographic transmission because of their large size."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Steganography is the method of hiding data in another media type so that the very existence of the data is concealed. One of the most common methods of embedding the message into some type of medium is using the least significant bit (LSB)—not the most significant bit. Many types of files have some bits that can be modified and not affect the file they are in, which is where secret data can be hidden without altering the file in a visible manner. In the LSB approach, graphics with a high resolution or an audio file that has many different types of sounds (high bit rate) are the most successful in hiding information within. There is commonly no noticeable distortion, and the file is usually not increased to a size that can be detected. A 24-bit bitmap file will have 8 bits representing each of the three color values, which are red, green, and blue. These 8 bits are within each pixel. If we consider just the blue, there will be 28 different values of blue. The difference between 11111111 and 11111110 in the value for blue intensity is likely to be undetectable by the human eye.",
+    "A is incorrect because steganography is a type of security through obscurity. Security through obscurity means that instead of actually securing something with a countermeasure, someone uses secrecy as the way to protect the asset. An example of security through obscurity is if a network administrator changes his HTTP port from 80 to 8080 with the hopes that no one will figure this out. Security through obscurity means that you are trying to fool the potential attacker and you assume that the attacker will not be clever enough to figure out your trickery.",
+    "C is incorrect because it is true that steganography does not draw attention to itself as does encryption. An encrypted message can draw attention because it tells the bad guy that the encrypted information is sensitive (otherwise, it wouldn’t be encrypted in the first place). An attacker may then be motivated to break the encryption and uncover the information. The goal of steganography is that the attacker not even know that the sensitive information exists and thus will not attempt to capture it.",
+    "D is incorrect because it is true that larger media files are ideal for steganographic transmission because there are more bits to manipulate with a lower chance that anyone will notice. As a simple example, a sender might start with an innocuous image file and adjust the color of every hundredth pixel to correspond to a letter in the alphabet, a change so subtle that someone not specifically looking for it is unlikely to notice it. The larger the file, the more obscurity can be accomplished because there are more bits to work with and manipulate."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "Which of the following correctly describes a drawback of symmetric key systems?",
+   "options": [
+    "Computationally less intensive than asymmetric systems",
+    "Work much more slowly than asymmetric systems",
+    "Carry out mathematically intensive tasks",
+    "Key must be delivered via secure courier"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. In order for two users to exchange messages encrypted with a symmetric algorithm, they must first figure out how to distribute the key. If a key is compromised, then all messages encrypted with that key can be decrypted and read by an intruder. It is not safe to simply send the key in an e-mail message, because the key is not protected and can be easily intercepted and used by attackers. Thus, one user must send the key to the other using an out-of-band method. The user can save the key on a thumb drive and walk it over to the other person’s desk, or have a secure courier deliver it. This is a disadvantage of symmetric cryptography because distribution is a hassle, as well as clumsy and insecure.",
+    "A is incorrect because it describes an advantage of symmetric algorithms. Because they are less computationally intensive than asymmetric algorithms, symmetric algorithms tend to be much faster. They can encrypt and decrypt relatively quickly large amounts of data that would take an unacceptable amount of time to encrypt and decrypt with an asymmetric algorithm.",
+    "B is incorrect because asymmetric systems work much more slowly than symmetric systems. The speed with which symmetric algorithms work is an advantage. Asymmetric algorithms are slower than symmetric algorithms because they use much more complex mathematics to carry out their functions, which requires more processing time. However, asymmetric algorithms can provide authentication and nonrepudiation, whereas symmetric algorithms cannot. Because both users employ the same key to encrypt and decrypt messages, symmetric cryptosystems can provide confidentiality but they cannot provide authentication or nonrepudiation. There is no way to prove through cryptography who actually sent a message if two people are using the same key.",
+    "C is incorrect because asymmetric algorithms carry out mathematically intensive tasks. Symmetric algorithms, on the other hand, carry out relatively simplistic mathematical functions on the bits during the encryption and decryption processes. They substitute and scramble (transpose) bits, which is not overly difficult or processor-intensive. The reason it is hard to break this type of encryption is that the symmetric algorithms carry out this type of functionality over and over again. So a set of bits will go through a long series of being substituted and transposed."
+   ]
+  },
+  {
+   "n": 5,
+   "q": "Which of the following occurs in a PKI environment?",
+   "options": [
+    "The RA creates the certificate, and the CA signs it.",
+    "The CA signs the certificate.",
+    "The RA signs the certificate.",
+    "The user signs the certificate."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A certificate authority (CA) is a trusted organization (or server) that maintains and issues digital certificates. When a person requests a certificate, the registration authority (RA) verifies that individual’s identity and passes the certificate request off to the CA. The CA constructs the certificate, digitally signs it, sends it to the requester, and maintains the certificate over its lifetime. The CA digitally signs it so that the receiver can verify that the certificate came from that specific CA. The CA digitally signs the certificate with its private key, and the receiver verifies this signature with the CA’s public key.",
+    "A is incorrect because the registration authority (RA) does not create the certificate; the certificate authority (CA) creates it and signs it. The RA performs the certification registration duties. The RA establishes and confirms the identity of the individual requesting the certificate, initiates the certification process with a CA on behalf of an end user, and can perform certificate life-cycle management functions. The RA cannot issue certificates but can act as a broker between the user and the CA. When users need new certificates, they make requests to the RA, and the RA verifies all necessary identification information before allowing a request to go to the CA.",
+    "C is incorrect because the registration authority (RA) does not sign the certificate. The certificate authority (CA) signs the certificate. The RA validates the user’s identity and then sends the request for a certificate to the CA.",
+    "D is incorrect because the user does not sign the certificate. In a PKI environment, a user’s certificate is created and signed by the certificate authority (CA). The CA is a trusted third party that generates and maintains user certificates, which hold their public keys. The certificate is digitally signed to provide confidence to others that the certificate was created by that specific CA."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "Encryption can happen at different layers of an operating system and network stack. Where does PPTP encryption take place?",
+   "options": [
+    "Data link layer",
+    "Within applications",
+    "Transport layer",
+    "Data link and physical layers"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The Point-to-Point Tunneling Protocol (PPTP) is a method for implementing virtual private networks (VPNs). It is a Microsoft-proprietary VPN protocol that works at the data link layer of the OSI model. PPTP can only provide a single connection and can only work over PPP connections.",
+    "B is incorrect because end-to-end encryption takes place within the applications. End-to-end encryption means that only the data payload is encrypted. If encryption works at any layer of the OSI model, then headers and trailers can also be encrypted. Since PPTP works at the data link layer, headers and trailers from the upper layers can be encrypted and protected along with the data payload.",
+    "C is incorrect because SSL is an example of an encryption technology that works at the transport layer, not PPTP. SSL uses public key encryption and provides data encryption, server authentication, message integrity, and optional client authentication to display secured portions of a web site to a user. When HTTP runs over SSL, you have HTTP Secure (HTTPS). HTTP works at the application layer, but SSL still works at the transport layer.",
+    "D is incorrect because PPTP works at the data link layer, but not the physical layer. The physical layer technologies convert the bits from the data link layer into some type of transmission format. If the data transmission is taking place over a UTP connection, then the data is converted into electronic voltage at the physical layer. If data transmission is taking place over fiber lines, then the data is converted into photons. Specifications for the physical layer include the timing of voltage changes, voltage levels, and the physical connectors for electrical, optical, and mechanical transmission."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "Which of the following correctly describes the difference between public key cryptography and public key infrastructure?",
+   "options": [
+    "Public key cryptography is the use of an asymmetric algorithm, while public key infrastructure is the use of a symmetric algorithm.",
+    "Public key cryptography is used to create public/private key pairs, and public key infrastructure is used to perform key exchange and agreement.",
+    "Public key cryptography provides authentication and nonrepudiation, while public key infrastructure provides confidentiality and integrity.",
+    "Public key cryptography is another name for asymmetric cryptography, while public key infrastructure consists of public key cryptographic mechanisms."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Public key cryptography is asymmetric cryptography; the terms are used interchangeably. Public key cryptography is one piece in a public key infrastructure (PKI), which is made up of many different parts, including certificate authorities, registration authorities, certificates, keys, programs, and users. The infrastructure contains the pieces that will identify users, create and distribute certificates, maintain and revoke certificates, distribute and maintain encryption keys, and enable all technologies to communicate and work together for the purpose of encrypted communication and authentication.",
+    "A is incorrect because PKI uses a hybrid system of symmetric and asymmetric key algorithms and methods. Public key cryptography is the use of an asymmetric algorithm. Thus, the terms asymmetric cryptography and public key cryptography are interchangeable and mean the same thing. Examples of asymmetric algorithms are RSA, elliptic curve cryptosystem (ECC), Diffie- Hellman, and El Gamal.",
+    "B is incorrect because public key cryptography is the use of asymmetric algorithms, which are used to create public/private key pairs, perform key exchange or agreement, and generate and verify digital signatures. Public key infrastructure, on the other hand, is not an algorithm, a protocol, or an application—it is an infrastructure based on symmetric and asymmetric cryptography.",
+    "C is incorrect because a PKI does not provide authentication, nonrepudiation, confidentiality, and integrity directly—it can use algorithms that provide these security services. A PKI uses asymmetric, symmetric, and hashing algorithms. Symmetric algorithms provide confidentiality, asymmetric algorithms provide authentication and nonrepudiation, and hashing algorithms provide integrity."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "Which of the following best describes Key Derivation Functions (KDFs)?",
+   "options": [
+    "Keys are generated from a master key.",
+    "Session keys are generated from each other.",
+    "Asymmetric cryptography is used to encrypt symmetric keys.",
+    "A master key is generated from a session key."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. For complex keys to be generated, commonly a master key is created and then symmetric keys (subkeys) are generated from it. Key Derivation Functions (KDFs) derive encryption keys from a secret value. The secret value can be a master key, passphrase, or password. KDFs are used to help ensure the randomness of the key values to make it harder for the attacker to uncover them. The KDF commonly uses a pseudorandom number generator with the secret value to make each encryption key unique.",
+    "B is incorrect because session keys are commonly generated from the master key—not from each other. For example, if an application is responsible for creating a session key for each subject that requests one, it should not be giving out the same instance of that one key. Different systems need to have different symmetric keys to ensure that the window for the bad guy to capture and uncover that key is smaller than if the same key is used over and over again. When two or more keys are created from a master key, they are called subkeys.",
+    "C is incorrect because the encryption of keys has nothing to do with KDFs. KDF pertains to the procedures of creating unique and strong encryption keys. KDF helps to ensure that enough randomness is involved when generating new keys so that the attacker has a harder time uncovering them.",
+    "D is incorrect because the statement is backward. A session key is commonly generated from a master key. When keys are generated from an original value, as in a master key, the resulting keys are referred to as subkeys or subsession keys."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "An elliptic curve cryptosystem is an asymmetric algorithm. What sets it apart from other asymmetric algorithms?",
+   "options": [
+    "It provides digital signatures, secure key distribution, and encryption.",
+    "It computes discrete logarithms in a finite field.",
+    "It uses a larger percentage of resources to carry out encryption.",
+    "It is more efficient."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Elliptic curves are rich mathematical structures that have shown usefulness in many different types of applications. An elliptic curve cryptosystem (ECC) differs from other asymmetric algorithms due to its efficiency. ECC is more efficient than any other asymmetric algorithm because of less intensive mathematics. In most cases, the longer the key, the more protection that is provided, but ECC can provide the same level of protection with a key size that is shorter than what RSA requires. Because longer keys require more resources to perform mathematical tasks, the smaller keys used in ECC require fewer resources of the device. And fewer resources make for a more efficient algorithm.",
+    "A is incorrect because ECC is not the only asymmetric algorithm that provides digital signatures, secure key distribution, and encryption. These services are also provided by RSA and other asymmetric algorithms. Using its one-way function, ECC provides encryption and signature verification, and the inverse direction performs decryption and signature generation. It can also be used as a key exchange protocol, meaning it is used to encrypt the symmetric key to get it securely to its destination.",
+    "B is incorrect because Diffie-Hellman and El Gamal calculate discrete logarithms in a finite field. In the field of mathematics that deals with elliptic curves, points on the curves compose a structure called a group. These points are the values used in mathematical formulas for ECC’s encryption and decryption processes. The algorithm computes discrete logarithms of elliptic curves, which is different from calculating discrete logarithms in a finite field.",
+    "C is incorrect because ECCs use much fewer resources when compared to other asymmetric algorithms. Some devices, like wireless devices and cellular phones, have limited processing capacity, storage, power, and bandwidth. With these types of devices, efficiency of resource use is very important."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "If implemented properly, a one-time pad is a perfect encryption scheme. Which of the following incorrectly describes a requirement for implementation?",
+   "options": [
+    "The pad must be securely distributed and protected at its destination.",
+    "The pad must be made up of truly random values.",
+    "The pad must always be the same length.",
+    "The pad must be used only one time."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. A one-time pad is a perfect encryption scheme because it is considered unbreakable if implemented properly. It was invented by Gilbert Vernam in 1917, so sometimes it is referred to as the Vernam cipher. The pad must be at least as long as the message. If it is not as long as the message, the pad will need to be reused to cover the whole message. This would be the same thing as using a pad more than one time, which could introduce patterns.",
+    "A is incorrect because it is true that the pad must be securely distributed and protected at its destination. This is a very cumbersome process to accomplish, because the pads are usually just individual pieces of paper that need to be delivered by a secure courier and properly guarded at each destination. One-time pads have been used throughout history to protect different types of sensitive data. Today, they are still in place for many types of militaries as a backup encryption option if current encryption processes (that require computers and a power source) are unavailable for reasons of war or attacks.",
+    "B is incorrect because it is true that the pad must be made up of truly random values. This may not seem like a difficult task, but even our computer systems today do not have truly random number generators; rather, they have pseudorandom number generators. These generators are seeded by an initial value from some component within the computer system (time, CPU cycles, etc.). Although a computer system is complex, it is a predictable environment, so if the seeding value is predictable in any way, the resulting values created are not truly random—but pseudorandom.",
+    "D is incorrect because it is true that the pad must be used only one time. If the pad is used more than one time, this might introduce patterns in the encryption process that will aid an evildoer in his goal of breaking the encryption. Although the one-time pad approach to encryption can provide a very high degree of security, it is impractical in most situations because of all of its different requirements. Each possible pair of entities that might want to communicate in this fashion must receive, in a secure fashion, a pad. This type of key management can be overwhelming and may require more overhead than it is worth. The distribution of the pad can be challenging, and the sender and receiver must be perfectly synchronized so that each is using the same pad."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "Sally is responsible for key management within her organization. Which of the following incorrectly describes a principle of secure key management?",
+   "options": [
+    "Keys should be backed up or escrowed in case of emergencies.",
+    "The more a key is used, the shorter its lifetime should be.",
+    "Less secure data allows for a shorter key lifetime.",
+    "Keys should be stored and transmitted by secure means."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Key management is critical for proper protection. Part of key management is determining the lifespan of keys. The key’s lifetime should correspond with the sensitivity of the data it is protecting. Less secure data may allow for a longer key lifetime, whereas more sensitive data might require a shorter key lifetime. Keys should be properly destroyed when their lifetime comes to an end. The processes of changing and destroying keys should be automated and hidden from the user. They should be integrated into software or the operating system. It only adds complexity and opens the doors for more errors when processes are done manually and depend upon end users to perform certain functions.",
+    "A is incorrect because it is true that keys should be backed up or escrowed in case of emergencies. Keys are at risk of being lost, destroyed, or corrupted. Backup copies should be available and easily accessible when required. If data are encrypted and then the user accidentally loses the necessary key to decrypt it, this information would be lost forever if there were not a backup key. The application being used for cryptography may have key recovery options, or it may require copies of the keys to be kept in a secure place.",
+    "B is incorrect because it is true that the more a key is used, the shorter its lifetime should be. The frequency of use of a cryptographic key has a direct correlation to how often the key should be changed. The more a key is used, the more likely it is to be captured and compromised. If a key is used infrequently, then this risk drops dramatically. The necessary level of security and the frequency of use can dictate the frequency of key updates. A mom-and-pop diner might only change its cryptography keys every month, whereas an information warfare military unit might change them every day or every week.",
+    "D is incorrect because it is true that keys should be stored and transmitted by secure means. Keys are stored before and after distribution. When a key is distributed to a user, it needs a secure place within the file system to be stored and used in a controlled method. The key, the algorithm that will use the key, configurations, and parameters are stored in a module that also needs to be protected. If an attacker is able to obtain these components, she could masquerade as another user and decrypt, read, and re-encrypt messages not intended for her."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "Mandy needs to calculate how many keys must be generated for the 260 employees using the company’s PKI asymmetric algorithm. How many keys are required?",
+   "options": [
+    "33,670",
+    "520",
+    "67,340",
+    "260"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. With asymmetric algorithms, every user must have at least one pair of keys (private and public). In public key systems, each entity has different keys, or asymmetric keys. The two different asymmetric keys are mathematically related. If a message is encrypted by one key, the other key is required in order to decrypt the message. The formula for determining the number of keys needed in this environment is N × 2, which is the number of people (N) multiplied by the number of keys each person would need (2). In a public key system, the pair of keys is made up of one public key and one private key. The public key can be known to everyone, and the private key must be known and used only by the owner.",
+    "A is incorrect because 33,670 is the number of keys needed in a symmetric key cryptosystem. Each pair of users who want to exchange data using symmetric key encryption must have two instances of the same key. This means that if Dan and Bob want to communicate, both need to obtain a copy of the same key. If Dan also wants to communicate using symmetric encryption with Norm and Dave, he needs to have three separate keys, one for each friend. This might not sound like a big deal until Dan realizes that he may communicate with hundreds of people over a period of several months, and keeping track and using the correct key that corresponds to each specific receiver can become a daunting task. If ten people needed to communicate securely with each other using symmetric keys, then 45 keys would need to be kept track of. If 100 people were going to communicate, then 4,950 keys would be involved. The equation used to calculate the number of symmetric keys needed is: N(N – 1) / 2 = number of keys.",
+    "C is incorrect because 67,340 is the total derived from N(N – 1), which is part of the formula used to determine the number of keys needed in a symmetric key cryptosystem. The complete formula is N(N – 1) / 2. The question, however, asked for the number of keys that would be used in a public key infrastructure’s asymmetric algorithms. Asymmetric—not symmetric—keys are used in a public key cryptosystem. The formula for determining the number of asymmetric keys that are needed is N × 2.",
+    "D is incorrect because each user in a public key infrastructure requires at least one key pair—a public key and a private key. One key cannot encrypt and decrypt the same message. So each user requires at least two keys. Thus, the formula for determining the number of asymmetric keys that are needed is N × 2."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "Which of the following works similarly to stream ciphers?",
+   "options": [
+    "One-time pad",
+    "AES",
+    "Block",
+    "RSA"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Stream ciphers were developed to provide the same type of protection one-time pads do, which is why they work in such a similar manner. In reality, stream ciphers cannot provide the level of protection one-time pads do, but because stream ciphers are implemented through software and automated means, they are much more practical. A one-time pad is a perfect encryption scheme because it is considered unbreakable if implemented properly. This cipher uses a pad made up of random values. A plaintext message that needs to be encrypted is converted into bits, and a one-time pad is made up of random bits. This encryption process uses a binary mathematical function called exclusive-OR, usually abbreviated as XOR. XOR is an operation that is applied to two bits and is a function commonly used in binary mathematics and encryption methods. Stream ciphers also encrypt at the bit level, which is how they are similar to one-time pad encryption schemes.",
+    "B is incorrect because AES is a symmetric block cipher. When a block cipher is used for encryption and decryption purposes, the message is divided into blocks of bits. These blocks are then put through mathematical functions, one block at a time. Stream ciphers encrypt data one bit at a time whereas a block cipher encrypts data one block of bits at a time. Suppose you need to encrypt a message you are sending to your friend and you are using a block cipher that uses 64 bits block size. Your message of 640 bits is chopped up into 10 individual blocks of 64 bits. Each block is put through a succession of mathematical formulas, and what you end up with is 10 blocks of encrypted text. You send this encrypted message to your friend. He has to have the same block cipher and key, and those 10 ciphertext blocks go back through the algorithm in the reverse sequence and end up in your plaintext message.",
+    "C is incorrect because as stated in the preceding answer, when a block cipher is used for encryption and decryption purposes, the message is divided into blocks of bits. These blocks are then put through mathematical functions, one block at a time.",
+    "D is incorrect because RSA is a public key algorithm that is the most popular when it comes to asymmetric algorithms. Asymmetric algorithms use a different type of mathematics than symmetric and are nothing similar to one-time pad encryption schemes. The security of this algorithm comes from the difficulty of factoring large numbers into their original prime numbers."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "There are two main types of symmetric ciphers: stream and block. Which of the following is not an attribute of a good stream cipher?",
+   "options": [
+    "Statistically unbiased keystream",
+    "Statistically predictable",
+    "Long periods of no repeating patterns",
+    "Keystream not linearly related to key"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The two main types of symmetric algorithms are block ciphers and stream ciphers. A block cipher performs mathematical functions on blocks of bits at a time. A stream cipher, on the other hand, does not divide a message into blocks. Instead, a stream cipher treats the message as a stream of bits and performs mathematical functions on each bit individually. Good stream ciphers offer the following: unpredictable statistical results, long periods of no repeating patterns, a statistically unbiased keystream, and a keystream that is not linearly related to the key. If a stream cipher is statistically predictable, then it will be possible for an attacker to uncover the key and break the cipher.",
+    "A is incorrect because a statistically unbiased keystream is an attribute of a good stream cipher. A statistically unbiased keystream means that there are as many zeros as there are ones. There should be no dominance in the number of zeros or ones in the keystream.",
+    "C is incorrect because long periods of no repeating patterns within keystream values is a characteristic of a good stream cipher. The ultimate goal of any encryption is to provide a high level of randomness so that an attacker cannot reverse engineer and uncover the key that was used during the encryption process.",
+    "D is incorrect because a keystream not linearly related to a key is an attribute of a good stream cipher. This means that if someone figures out the keystream values, that does not mean he now knows the key value. This is important because the key provides the randomness of the encryption process. Most encryption algorithms are public, so people know how they work. The secret to the secret sauce is the key. The key provides randomness, so that the stream of bits that are XORed to the plaintext are as random as possible."
+   ]
+  },
+  {
+   "n": 15,
+   "q": "Which of the following best describes how a digital signature is created?",
+   "options": [
+    "The sender encrypts a message digest with his private key.",
+    "The sender encrypts a message digest with his public key.",
+    "The receiver encrypts a message digest with his private key.",
+    "The receiver encrypts a message digest with his public key."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A digital signature is a hash value that has been encrypted with the sender’s private key. The act of digital signing means encrypting the message’s hash value with a private key. If Sam wants to ensure that the message he sends to Debbie is not modified and he wants her to be sure it came only from him, he can digitally sign the message. This means that a one-way hashing function would be run on the message, and then Sam would encrypt that hash value with his private key. When Debbie receives the message, she will perform the hashing function on the message and come up with her own hash value. Then she will decrypt the sent hash value (digital signature) with Sam’s public key. She then compares the two values, and if they are the same, she can be sure the message was not altered during transmission. She is also sure the message came from Sam because the value was encrypted with his private key.",
+    "B is incorrect because if the sender encrypts the message digest with his public key, the recipient will not be able to decrypt it. The recipient would need access to the sender’s private key, which should never happen. The private key should always be kept secret.",
+    "C is incorrect because the receiver should decrypt the message digest with the sender’s public key. The message digest is encrypted with the sender’s private key, which can only be decrypted with the sender’s public key.",
+    "D is incorrect because the receiver should decrypt the message digest with the sender’s public key. The message digest is encrypted with the sender’s private key, which can only be decrypted with the sender’s public key."
+   ]
+  },
+  {
+   "n": 16,
+   "q": "In cryptography, different steps and algorithms provide different types of security services. Which of the following provides only authentication, non-repudiation, and integrity?",
+   "options": [
+    "Encryption algorithm",
+    "Hash algorithm",
+    "Digital signature",
+    "Encryption paired with a digital signature"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. A digital signature is a hash value that has been encrypted with the sender’s private key. The act of signing means encrypting the message’s hash value with a private key. A message can be digitally signed, which provides authentication, nonrepudiation, and integrity. The hashing function ensures the integrity of the message, and the signing of the hash value provides authentication and nonrepudiation.",
+    "A is incorrect because encryption algorithms provide confidentiality. Encryption is most commonly carried out with the use of symmetric algorithms. Symmetric algorithms can only provide confidentiality and not authentication, nonrepudiation, and integrity.",
+    "B is incorrect because hashing algorithms provide data integrity. Hashing algorithms generate message digests (also called hash values) to detect whether modification has taken place. The sender and receiver independently generate their own digests, and the receiver compares these values. If they differ, the receiver knows the message has been altered. A hashing algorithm cannot provide authentication or nonrepudiation.",
+    "D is incorrect because encryption and a digital signature provide confidentiality, authentication, nonrepudiation, and integrity. The encryption alone provides confidentiality. And the digital signature provides authentication, nonrepudiation, and integrity. The question asks for which can only provide authentication, nonrepudiation, and integrity."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "Advanced Encryption Standard is an algorithm used for which of the following?",
+   "options": [
+    "Data integrity",
+    "Bulk data encryption",
+    "Key recovery",
+    "Distribution of symmetric keys"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Advanced Encryption Standard (AES) is a data encryption standard that was developed to improve upon the previous de facto standard—the Data Encryption Standard (DES). As a symmetric algorithm, AES is used to encrypt bulk data. Symmetric algorithms, of any kind, are used to encrypt large amounts of data (bulk), while asymmetric algorithms are used to encrypt a small amount of data as in keys and hashing values.",
+    "A is incorrect because the Advanced Encryption Standard (AES) is an encryption algorithm and therefore provides confidentiality, not data integrity. Hashing algorithms, such as SHA-1, MD2, MD4, MD5, and HAVAL, provide data integrity.",
+    "C is incorrect because the Advanced Encryption Standard (AES) is not used for key recovery. However, AES generates and makes use of keys, which require key recovery procedures. Keys are at risk of being lost, destroyed, or corrupted. Backup copies should be available and easily accessible when required. If data are encrypted and then the user accidentally loses the necessary key to decrypt it, this information would be lost forever if there were not a backup key to save the day. The application being used for cryptography may have key recovery options, or it may require copies of the keys to be kept in a secure place.",
+    "D is incorrect because asymmetric algorithms are used to protect symmetric keys while being distributed. AES is a symmetric algorithm. In a hybrid system, the symmetric algorithm creates a secret key that will be used to encrypt the bulk, or the message, and the asymmetric key encrypts the secret key for transmission."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "SSL is a de facto protocol used for securing transactions that occur over untrusted networks. Which of the following best describes what takes place during an SSL connection setup process?",
+   "options": [
+    "The server creates a session key and encrypts it with a public key.",
+    "The server creates a session key and encrypts it with a private key.",
+    "The client creates a session key and encrypts it with a private key.",
+    "The client creates a session key and encrypts it with a public key."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Secure Sockets Layer (SSL) uses public key encryption and provides data encryption, server authentication, message integrity, and optional client authentication. When a client accesses a web site, that web site may have both secured and public portions. The secured portion would require the user to be authenticated in some fashion. When the client goes from a public page on the web site to a secured page, the web server will start the necessary tasks to invoke SSL and protect this type of communication. The server sends a message back to the client, indicating a secure session should be established, and the client in response sends its security parameters. The server compares those security parameters to its own until it finds a match. This is the handshaking phase. The server authenticates to the client by sending it a digital certificate, and if the client decides to trust the server, the process continues. The client generates a session key and encrypts it with the server’s public key. This encrypted key is sent to the web server, and they both use this symmetric key to encrypt the data they send back and forth.",
+    "A is incorrect because the server does not create the session key; the client creates a session key and encrypts it with the server’s public key. SSL is commonly used in web transactions and works in the following way: client creates session key, client encrypts session key with server’s public key and sends it to the server, server receives session key and decrypts it with its private key.",
+    "B is incorrect because the server does not create the session key, and it is not encrypted with the private key. The client creates a session key and encrypts it with the server’s public key. The server receives the session key and decrypts it with its private key. The session key is then used to encrypt the data that is transmitted between the client and server.",
+    "C is incorrect because the client uses the server’s public key to encrypt the session key it generates. If the client encrypted the session key with the private key, then any entity that possessed the client’s public key would be able to decrypt the session key. This does not provide any security. By encrypting the session key with the server’s public key, only the server—which possesses the corresponding private key—can decrypt it."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "The CA is responsible for revoking certificates when necessary. Which of the following correctly describes a CRL and OSCP?",
+   "options": [
+    "The CRL was developed as a more streamlined approach to OCSP.",
+    "OCSP is a protocol that submits revoked certificates to the CRL.",
+    "OCSP is a protocol developed specifically to check the CRL during a certificate validation process.",
+    "CRL carries out real-time validation of a certificate and reports to the OCSP."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The CA is responsible for creating and handing out certificates, maintaining them, and revoking them if necessary. Revocation is handled by the CA, and the revoked certificate information is stored on a certificate revocation list (CRL). This is a list of every certificate that has been revoked. This list is maintained and updated periodically. A certificate may be revoked because the key holder’s private key was compromised or because the CA discovered the certificate was issued to the wrong person. If the certificate becomes invalid for some reason, the CRL is the mechanism for the CA to let others know this information. The Online Certificate Status Protocol (OCSP) is being used more and more compared to the cumbersome CRL approach. When using just a CRL, the user’s browser must either check a central CRL to find out if the certification has been revoked or the CA continually pushes out CRL values to the clients to ensure they have an updated CRL. If OCSP is implemented, it does this work automatically in the background. It carries out real-time validation of a certificate and reports back to the user whether the certificate is valid, invalid, or unknown.",
+    "A is incorrect because a certificate revocation list (CRL) is actually a cumbersome approach to managing and validating revoked certificates. The Online Certificate Status Protocol (OCSP) is increasingly being used to address this. OCSP does this work in the background, doing what the user’s web browser would do when just using CRL. OCSP checks a central CRL to see if a certification has been revoked.",
+    "B is incorrect because the Online Certificate Status Protocol (OCSP) does not submit revoked certificates to the certificate revocation list (CRL). The certificate authority (CA) is responsible for the creation, distribution, and maintenance of certificates. This includes revoking them when necessary and storing the information on a CRL.",
+    "D is incorrect because the Online Certificate Status Protocol (OCSP), not the certificate revocation list (CRL), carries out real-time validation of a certificate. In addition, the OCSP reports back to the user whether the certificate is valid, invalid, or unknown."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "End-to-end encryption is used by users, and link encryption is used by service providers. Which of the following correctly describes these technologies?",
+   "options": [
+    "Link encryption does not encrypt headers and trailers.",
+    "Link encryption encrypts everything but data link messaging.",
+    "End-to-end encryption requires headers to be decrypted at each hop.",
+    "End-to-end encryption encrypts all headers and trailers."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Encryption can be performed at different communication levels, each with different types of protection and implications. Two general modes of encryption implementation are link encryption and end-to-end encryption. Link encryption encrypts all the data along a specific communication path, as in a satellite link, T3 line, or telephone circuit. Not only is the user information encrypted, but the header, trailers, addresses, and routing data that are part of the packets are also encrypted. The only traffic not encrypted in this technology is the data link control messaging information, which includes instructions and parameters that the different link devices use to synchronize communication methods. Link encryption provides protection against packet sniffers and eavesdroppers. In end-to-end encryption, the headers, addresses, routing, and trailer information are not encrypted, enabling attackers to learn more about a captured packet and where it is headed. With end-to-end encryption only the data payload is encrypted.",
+    "A is incorrect because link encryption does encrypt the headers and trailers. This is a major advantage to using link encryption: the headers, trailers, and data payload are encrypted except for the data link messaging. It also works seamlessly at a lower layer in the OSI model, so users do not need to do anything to initiate it.",
+    "C is incorrect because the headers are not encrypted with end-to-end encryption, so there is no need to decrypt them at each hop. This is an advantage of using end-to-end encryption. Other advantages include additional flexibility for the user in choosing what gets encrypted and how, and a higher granularity of functionality because each application or user can choose specific configurations.",
+    "D is incorrect because end-to-end encryption does not encrypt any headers or trailers. As a result, they are not protected. This is the primary disadvantage to using end-to-end encryption. If the headers and trailers need to be protected, then link encryption should be used."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "What do the SA values in the graphic of IPSec that follows represent?",
+   "options": [
+    "Security parameter index",
+    "Security ability",
+    "Security association",
+    "Security assistant"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Each IPSec VPN device will have at least one security association (SA) for each secure connection it uses. The SA, which is critical to the IPSec architecture, is a record of the configurations the device needs to support an IPSec connection over a VPN connection. When two devices complete their handshaking process, which means they have agreed upon a long list of parameters they will use to communicate, these data must be recorded and stored somewhere, which is in the SA. The SA can contain the authentication and encryption keys, the agreed-upon algorithms, the key lifetime, the source IP address, and other information. When a device receives a packet via the IPSec protocol, it is the SA that tells the device what to do with the packet. So if device B receives a packet from device C via IPSec, device B will look to the corresponding SA to tell it how to decrypt the packet, how to properly authenticate the source of the packet, which key to use, and how to reply to the message if necessary.",
+    "A is incorrect because a security parameter index (SPI) keeps track of the different SAs. SAs are directional, so a device will have one SA for outbound traffic and a different SA for inbound traffic for each individual communication channel. If a device is connecting to three devices, it will have at least six SAs, one for each inbound or outbound connection per remote device. So how can a device keep all of these SAs organized and ensure that the right SA is invoked for the right connection? With the SPI, that’s how. Each device has an SPI that keeps track of the different SAs and tells the device which one is appropriate to invoke for the different packets it receives.",
+    "B is incorrect because there is no component within IPSec officially referred to as security ability. This is a distracter answer.",
+    "D is incorrect because there is no component within IPSec officially referred to as security assistant. This is a distracter answer."
+   ],
+   "images": [
+    "data/img/cap06_q21_0.jpeg"
+   ]
+  },
+  {
+   "n": 22,
+   "q": "There are several different types of technologies within cryptography that provide confidentiality. What is represented in the graphic that follows?",
+   "options": [
+    "Running key cipher",
+    "Concealment cipher",
+    "Steganography",
+    "One-time pad"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. A one-time pad is a perfect encryption scheme because it is considered unbreakable if implemented properly. A one-time pad uses a pad with random values that are XORed against the message to produce ciphertext. The plaintext message shown in the graphic that needs to be encrypted has been converted into bits, and our one-time pad is made up of random bits. This encryption process uses a binary mathematical function called exclusive-OR, usually abbreviated as XOR. The receiver must have the same one-time pad to decrypt the message, by reversing the process.",
+    "A is incorrect because a running key cipher uses a key that does not require an electronic algorithm and bit alterations but cleverly uses components in the physical world around you. For instance, the algorithm could be a set of books agreed upon by the sender and receiver. The key in this type of cipher could be a book page, line number, and column count. If I get a message from my super-secret spy buddy and the message reads “149l6c7.299l3c7.911l5c8,” this could mean for me to look at the 1st book in our predetermined series of books, the 49th page, 6th line down the page, and the 7th column. So I write down the letter in that column, which is m. The second set of numbers starts with 2, so I go to the 2nd book, 99th page, 3rd line down, and then to the 7th column, which is p. The last letter I get from the 9th book, 11th page, 5th line, 8th column, which is t. So now I have come up with my important secret message, which is mpt.",
+    "B is incorrect because a concealment cipher is a message within a message. If my spy buddy and I decide our key value is every third word, then when I get a message from him, I will pick out every third word and write it down. Suppose he sends me a message that reads, “The saying, ‘The time is right’ is not cow language, so is now a dead subject.” Because my key is every third word, I come up with “The right cow is dead.”",
+    "C is incorrect because steganography is a method of hiding data in another media type so that the very existence of the data is concealed. Only the sender and receiver are supposed to be able to see the message because it is secretly hidden in a graphic, wave file, document, or other type of media. The message is not encrypted, just hidden. Encrypted messages can draw attention because it tells the bad guy, “This is something sensitive.” A message hidden in a picture would not attract this type of attention, even though the exact same secret message can be embedded into this image. Steganography is a type of security through obscurity."
+   ],
+   "images": [
+    "data/img/cap06_q22_0.jpeg"
+   ]
+  },
+  {
+   "n": 23,
+   "q": "There are several different types of important architectures within public key infrastructures. Which architecture does the graphic that follows represent?",
+   "options": [
+    "Cross-certification",
+    "Cross-revocation list",
+    "Online Certificate Status Protocol",
+    "Registration authority"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. When independent PKIs need to interconnect to allow for secure communication to take place (either between departments or different companies), there must be a way for the two root CAs to trust each other. The two CAs do not have a CA above them they can both trust, so they must carry out cross-certification. A cross-certification is the process undertaken by CAs to establish a trust relationship in which they rely upon each other’s digital certificates and public keys as if they had issued them themselves. When this is set up, a CA for one company can validate digital certificates from the other company and vice versa.",
+    "B is incorrect because a cross-revocation list (CRL) contains all of the revoked certifications within a PKI. The CA is responsible for creating and handing out certificates, maintaining them, and revoking them if necessary. Revocation is handled by the CA, and the revoked certificate information is stored on a CRL. This is a list of every certificate that has been revoked. This list is maintained and updated periodically. A certificate may be revoked because the key holder’s private key was compromised or because the CA discovered the certificate was issued to the wrong person. An analogy for the use of a CRL is how a driver’s license is used by a police officer. If an officer pulls over Sean for speeding, the officer will ask to see Sean’s license. The officer will then run a check on the license to find out if Sean is wanted for any other infractions of the law and to verify the license has not expired. The same thing happens when a person compares a certificate to a CRL. If the certificate became invalid for some reason, the CRL is the mechanism for the CA to let others know this information.",
+    "C is incorrect because the Online Certificate Status Protocol (OCSP) carries out real-time validation of a certificate and reports back to the user whether the certificate is valid, invalid, or unknown. When using just a CRL, the user’s browser must either check a central CRL to find out if the certification has been revoked or continually push out CRL values to the clients to ensure they have an updated CRL. If OCSP is implemented, it does this work automatically in the background. OCSP checks the CRL that is maintained by the CA. So the CRL is still being used, but now we have a protocol developed specifically to check the CRL during a certificate validation process.",
+    "D is incorrect because the registration authority (RA) performs the certification registration duties. The RA establishes and confirms the identity of an individual and initiates the certification process with a CA on behalf of an end user. The RA cannot issue certificates but can act as a broker between the user and the CA. When users need new certificates, they make requests to the RA, and the RA verifies all necessary identification information before allowing a request to go to the CA."
+   ],
+   "images": [
+    "data/img/cap06_q23_0.jpeg"
+   ]
+  },
+  {
+   "n": 24,
+   "q": "There are different ways of providing integrity and authentication within cryptography. What type of technology is shown in the graphic that follows?",
+   "options": [
+    "One-way hash",
+    "Digital signature",
+    "Birthday attack",
+    "Collision"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. When a hash algorithm is applied to a message, it produces a message digest, and this value is signed with a private key to produce a digital signature. It provides authentication, data integrity, and nonrepudiation. The act of signing is the actual encryption of the value with the private key. When Maureen receives the message, she will perform the hashing function on the message and come up with her own hash value. Then she will decrypt the sent hash value (digital signature) with Kevin’s public key. She then compares the two values, and if they are the same, she can be sure the message was not altered during transmission. She is also sure the message came from Kevin because the value was encrypted with his private key.",
+    "A is incorrect because a one-way hash is a function that takes a variable-length string and a message and produces a fixed-length value called a hash value. For example, if Kevin wants to send a message to Maureen and he wants to ensure the message does not get altered in an unauthorized fashion while it is being transmitted, he would calculate a hash value for the message and append it to the message itself. When Maureen receives the message, she performs the same hashing function Kevin used and then compares her result with the hash value sent with the message. If the two values are the same, Maureen can be sure the message was not altered during transmission. If the two values are different, Maureen knows the message was altered, either intentionally or unintentionally, and she discards the message.",
+    "C is incorrect because a birthday attack is an attack on hashing functions through brute force. The attacker tries to create two messages with the same hashing value. A good hashing algorithm should not produce the same hash value for two different messages. If the algorithm does produce the same value for two distinctly different messages, this is called a collision. An attacker can attempt to force a collision, which is referred to as a birthday attack. Hash algorithms usually use message digest sizes (the value of n) that are large enough to make collisions difficult to accomplish, but they are still possible. An algorithm that has 160-bit output, like SHA-1, may require approximately 280 computations to break. This means there is a less than 1 in 280 chance that someone could carry out a successful birthday attack. A hashing algorithm that has a larger bit output is less vulnerable to brute-force attacks such as a birthday attack.",
+    "D is incorrect because a collision is when two hashed messages result in the same value. A strong one-hash function should not provide the same hash value for two or more different messages. If a hashing algorithm takes steps to ensure it does not create the same hash value for two or more messages, it is said to be collision free. If a hashing algorithm generates a message digest of 60 bits, there is a high likelihood that an adversary can find a collision using only 230 inputs."
+   ],
+   "images": [
+    "data/img/cap06_q24_0.jpeg"
+   ]
+  },
+  {
+   "n": 25,
+   "q": "A widely used family of symmetric algorithms is called block ciphers. When these types of algorithms are being used, a message that needs to be encrypted is segmented into individual blocks and each block is encrypted. These algorithms work in different modes, and each mode has a specific use case. Which mode is being represented in the graphic and what is its most common use case?",
+   "options": [
+    "Electronic Code Book mode is used when individual and unique keys are needed to encrypt each block.",
+    "Counter Mode is used when encryption and decryption need to take place in parallel and independent block recovery is available.",
+    "Cipher Block Chaining Mode is used when added complexity is required by incorporating subkeys for each block encryption function.",
+    "Output Feedback Mode is used when segmented ciphertext blocks are required for in-line encryption functionality."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Counter (CTR) Mode does not incorporate any chaining between blocks that are being encrypted as most of the other block cipher modes do. This means that the receiving end does not have to wait and receive all of the message blocks before starting to decrypt the message. The individual blocks are not coupled or dependent upon each other. Since the receiving end can decrypt the blocks as soon as they are received, the decryption process happens faster compared to other modes. Since the blocks are not chained and dependent upon each other, the individual message blocks can be independently recovered if necessary. Encryption modes that chain the blocks together do not allow for independent recovery—if one block gets corrupted, subsequent blocks become irrecoverable. For these reasons, CTR is most commonly used in newer versions of protocols as in IPSec and in technologies such as Wi-Fi. CTR mode is used when data within multiple packets need to be transmitted between two systems over a network connection; thus, it is used by networking protocols. Other block modes, such as Electronic Code Book, are most often used within applications, not protocols.",
+    "A is incorrect because Electronic Code Book (ECB) is not being represented in the graphic and this mode is not used for the stated reason of requiring unique keys per block. ECB mode is commonly used when a small amount of data (i.e., PIN value) needs to be encrypted. CTR Mode is used when larger amounts of data need to be encrypted (i.e., e-mail, document) and transmitted over a network. CTR uses incremental counters as shown in the top of the graphic (00000000, 00000001, 00000002). These counter values are used in conjunction with a key to carry out encryption and decryption. ECB does not use any counter values because the amount of data that is being encrypted is smaller and not optimized for network-based transmission.",
+    "C is incorrect because Cipher Block Chaining (CBC) Mode is not being represented in the graphic and the stated use case for CBC is not correct. CBC Mode is used when large amounts of data need to be encrypted. The chaining effect adds more randomness to the encryption process because each block is used to encrypt the next block. (One block of bits is used to scramble the next block of bits to make it harder to reverse engineer.) CTR does not incorporate this chaining property; instead, it uses sequence counter values (1, 2, 3, etc.). The sequence counter values do not provide as much randomness as the chaining function, but these are used when data need to be decrypted quickly. So CBC Mode is commonly used within applications that will reside on one system, and CTR Mode is used by protocols that need to transmit encrypted data to different nodes on a network.",
+    "D is incorrect because Output Feedback (OFB) Mode is not being represented in the graphic and the stated use case for OFB is not correct. OFB Mode is used when a block cipher needs to emulate a stream cipher. This means that an encryption algorithm (i.e., DES, AES) is being used to encrypt blocks of data one bit at a time (stream) instead of one block at a time. The OFB Mode is used when the amount of data that needs to be encrypted is small (i.e., 8 bits) and the data need to be transmitted (i.e., synchronous link). While all of these modes might sound confusing, each exists for a specific purpose. ECB Mode is used to encrypt small data sets, such as a PIN value on the magnetic strip of your credit card. CBC Mode is used when encrypting items such as Word documents on your laptop. CTR is used when a transmission protocol such as VPN needs to transmit encrypted data over a network. OFB is used when data sets such as keystrokes need to be encrypted and transmitted to a back-end system. When a programmer develops software that uses block algorithms, these modes are configurations for the algorithm and are passed into the block algorithm (i.e., AES) as parameters. This is how a developer “configures” an algorithm. For example, when a developer uses AES in a VPN, he would configure the algorithm to use the CTR Mode. If a developer is using AES to encrypt a PIN for a credit card, he would configure the algorithm to work in ECB Mode."
+   ],
+   "images": [
+    "data/img/cap06_q25_0.jpeg"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "If Marge uses her private key to create a digital signature on a message she is sending to George, but she does not show or share her private key with George, what is it an example of?",
+   "options": [
+    "Key clustering",
+    "Avoiding a birthday attack",
+    "Providing data confidentiality",
+    "Zero-knowledge proof"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Zero-knowledge proof means that someone can tell you something without telling you more information than you need to know. In cryptography, it means proving that you have a specific key without sharing that key or showing it to anyone. A zero-knowledge proof is an interactive method for one party to prove to another that a (usually mathematical) statement is true without revealing anything sensitive.",
+    "A is incorrect because key clustering is an instance when two different keys generate the same ciphertext from the same plaintext. This is caused if there is a logical flaw in an algorithm.",
+    "B is incorrect because if the algorithm does produce the same value for two distinctly different messages, this is called a collision. An attacker can attempt to force a collision, which is referred to as a birthday attack. This attack is based on the mathematical birthday paradox that exists in standard statistics. It is a cryptographic attack that exploits the mathematics behind the birthday problem in the probability theory. This is not what is being addressed in the question.",
+    "C is incorrect because confidentiality provided through cryptography is usually in place when data are encrypted with a key. If the data are considered bulk data, then a symmetric key is used. Not showing others a private key keeps the private key secret, but this is not necessarily confidentiality."
+   ]
+  },
+  {
+   "n": 27,
+   "q": "There are two main functions that Trusted Platform Modules (TPMs) carry out within systems today. Which of the following best describes these two functions?",
+   "options": [
+    "Sealing a hard disk drive is when the decryption key that can be used to decrypt data on the drive is stored on the TPM. Binding is when data pertaining to the system’s state are hashed and stored on the TPM.",
+    "Binding a hard disk drive is when whole-disk encryption is enabled through the use of the TPM. Sealing is when a digital certificate is sealed within a TPM and the system cannot boot up without this certificate being validated.",
+    "Sealing a hard disk drive is when whole-disk encryption is enabled through the use of the TPM. Binding is when a digital certificate is sealed within a TPM and the system cannot boot up without this certificate being validated.",
+    "Binding a hard disk drive is when the decryption key that can be used to decrypt data on the drive is stored on the TPM. Sealing is when data pertaining to the system’s state are hashed and stored on the TPM."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The essence of the TPM lies in a protected and encapsulated microcontroller security chip that provides a safe haven for storing and processing security-intensive data such as keys, passwords, and digital certificates. “Binding” a hard disk drive is the most common usage scenario of the TPM—where the content of a given hard disk drive is affixed with a particular computing system. Another application of the TPM is “sealing” a system’s state to a particular hardware and software configuration.",
+    "A is incorrect because binding a hard disk drive is when the decryption key that can be used to decrypt data on the drive is stored on the TPM. Sealing is when data pertaining to the system’s state are hashed and stored on the TPM.",
+    "B is incorrect because binding a hard disk drive is when the decryption key that can be used to decrypt data on the drive is stored on the TPM. Sealing is when data pertaining to the system’s state are hashed and stored on the TPM. The content of the hard disk drive is encrypted, and the decryption key is stored away in the TPM chip. To ensure safe storage of the decryption key, it is further “wrapped” with another encryption key. Binding a hard disk drive makes its content basically inaccessible to other systems, and any attempt to retrieve the drive’s content by attaching it to another system will be very difficult.",
+    "C is incorrect because sealing a system is fairly straightforward. The TPM generates hash values based on the system’s configuration files and is stored. A sealed system will only be activated once the TPM verifies the integrity of the system’s configuration by comparing it with the original “sealing” value."
+   ]
+  },
+  {
+   "n": 28,
+   "q": "Which of the following is most likely the item that is the root of the problem when it comes to the necessary randomness explained in the scenario?",
+   "options": [
+    "Asymmetric algorithm",
+    "Out-of-band communication compromise",
+    "Number generator",
+    "Symmetric algorithm"
+   ],
+   "scenario": "Jack has been told that successful attacks have been taking place and data that have been encrypted by his company’s software systems have leaked to the company’s competitors. Through Jack’s investigation he has discovered that the lack of randomness in the seeding values used by the encryption algorithms in the company’s software uncovered patterns and allowed for successful reverse engineering.",
+   "answer": "C",
+   "explanation": [
+    "C. A number generator is used to create a stream of random values and must be seeded by an initial value. This piece of software obtains its seeding value from some component within the computer system (time, CPU cycles, etc.). Although a computer system is complex, it is a predictable environment, so if the seeding value is predictable in any way, the resulting values created are not truly random, but pseudorandom. If the values from a number generated illustrate patterns and those patterns are recognizable during cryptographic processes, this weakness could allow an attacker to reverse engineer the algorithm and gain access to confidential data.",
+    "A is incorrect because an asymmetric algorithm carries out cryptographic functions through the use of two different key types, public and private. This is also called public key cryptography. Components, as in number generators, can be used with asymmetric algorithms, but they are a class of algorithms and do not necessarily integrate randomness issues.",
+    "B is incorrect because out-of-band communication just means that communication data are being sent through a channel that is different from the encrypted data that are traveling. It does not have any direct correlation with randomness issues.",
+    "D is incorrect because a symmetric algorithm carries out cryptographic functions through the use of two instances of the same key. Components, as in number generators, can be used with symmetric algorithms, but they are a class of algorithms and do not necessarily cause randomness issues."
+   ]
+  },
+  {
+   "n": 29,
+   "q": "Which of the following best describes the role of the values that is allowing for patterns as described in the scenario?",
+   "options": [
+    "Initialization vector",
+    "One-time password",
+    "Master symmetric key",
+    "Subkey"
+   ],
+   "scenario": "Jack has been told that successful attacks have been taking place and data that have been encrypted by his company’s software systems have leaked to the company’s competitors. Through Jack’s investigation he has discovered that the lack of randomness in the seeding values used by the encryption algorithms in the company’s software uncovered patterns and allowed for successful reverse engineering.",
+   "answer": "A",
+   "explanation": [
+    "A. Initialization vectors (IVs) are random values that are used with algorithms to ensure patterns are not created during the encryption process. They are used with keys and do not need to be encrypted when being sent to the destination. If IVs are not used, then two identical plaintext values that are encrypted with the same key will create the same ciphertext. Providing attackers with these types of patterns can make their job easier in breaking the encryption method and uncovering the key.",
+    "B is incorrect because a one-time pad is an encryption method created by Gilbert Vernam that is considered impossible to crack if carried out properly. A one-time pad uses a pad with random values that are XORed against the message to produce ciphertext. The pad is at least as long as the message itself and is used once and then discarded. This technology is not addressed in this scenario.",
+    "C is incorrect because for complex keys to be generated, commonly a master key is created, and then symmetric keys are generated from it. For example, if an application is responsible for creating a session key for each subject that requests one, it should not be giving out the same instance of that one key. Different subjects need to have different symmetric keys to ensure that the window for the attack to capture and uncover that key is smaller than if the same key were to be used over and over again. When two or more keys are created from a master key, they are called subkeys. This is not a component of the randomness issue addressed in the scenario.",
+    "D is incorrect because when two or more keys are created from a master key, they are called subkeys. This is not a component of the randomness issue addressed in the scenario."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "Sometimes when studying for an industry certification exam as in the CISSP, people do not fully appreciate that the concepts and technologies that they need to learn to pass the test directly relate to real-world security issues. To enforce how exam-oriented theoretical concepts directly relate to the practical world of security, choose the correct answer that best describes the Heartbleed SSL\\TLS vulnerability, which is considered to be one of the most critical attack vectors in the history of the Internet.",
+   "options": [
+    "Digital certificates were stolen through a tunneled attack within the SSL and TLS protocols.",
+    "Certificate authorities were compromised when their SSL and TLS connections were hijacked through the use of TCP hijacking sessions.",
+    "Bounds checking was not implemented and allowed for sensitive data to be obtained by attackers from memory segments on web servers.",
+    "Cross-site scripting was allowed to take place on web servers that ran a vulnerable version of Java."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. OpenSSL implemented an SSL\\TLS extension outlined by the IETF in RFP 6520 that allows a connection to remain active between two systems communicating over this security protocol. The way that OpenSSL implemented this extension allows the sending system to request data that it is not authorized to access— such as web server private keys. When an attacker obtains a web server’s private key, this circumvents all of the security provided by a public key infrastructure (PKI) environment that the SSL\\TLS protocol is based upon. The point is that if you do not really understand how a PKI works and how private and public keys work, the role of digital certificates in security protocols—such as SSL\\TLS, bounds checking, and buffer over-reads—you won’t understand straightforward vulnerabilities such as Heartbleed. While you will not be asked about a specific vulnerability on the CISSP exam, you will be expected to understand all of the components and technologies involved that allow for this vulnerability to be so dangerous and powerful.",
+    "A is incorrect because this vulnerability did not involve the stealing of digital certificates and there is actually no security issue involved with digital certificates being “stolen.” Digital certificates commonly reside in open and accessible directories and are shared between entities that participate in a PKI, so there is no threat of them being stolen. Digital certificates are created by certificate authorities, which generate a hash and a digital signature on each individual digital certificate. This digital signature protects the integrity of the certificate and allows a receiver to detect if a certificate has been modified. It is the fact that each digital certificate is protected with a digital signature created by the originating certificate authority that allows us to store these certificates in locations that do not require controls against theft.",
+    "B is incorrect because this vulnerability does not have anything to do with a certificate authority being compromised, and TCP hijacking is not a successful way of compromising any SSL\\TLS connection. TCP hijacking is an attack that takes advantage of the fact that TCP packet sequence numbers can be predicted, which allows an attacker to insert himself within an active TCP session and take over the connection and use it for his nefarious purposes. SSL\\TLS works at a higher level of the network stack compared to TCP, and the hijacking of a TCP session does not equate to compromising a secure connection using this security protocol. It is important to not only understand how attacks such as TCP hijacking take place, but also what attack types can and cannot accomplish.",
+    "D is incorrect because the Heartbleed vulnerability does not have anything to do with cross-site scripting or Java. Rather, it is a vulnerability within the implementation of the SSL\\TLS protocol. Cross-site scripting (XSS) is a vulnerability within a web application that allows an attacker to compromise the web application and then have the capability of injecting malicious client-side scripts into web pages viewed by potential victims. XSS relates to a vulnerability within a web app running on a web server, not the SSL\\TLS protocol. As a security professional, it is important to understand where specific vulnerabilities reside and what they are able to accomplish. An XSS vulnerability cannot lead to a compromise that a Heartbleed attack can accomplish, and the Heartbleed vulnerability cannot accomplish the same outcome as a compromised XSS vulnerability."
+   ]
+  }
+ ]
+}

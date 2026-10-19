@@ -1,0 +1,536 @@
+{
+ "id": 9,
+ "title_en": "Software Development Security",
+ "title_es": "Seguridad del Desarrollo de Software",
+ "block": 2,
+ "questions": [
+  {
+   "n": 1,
+   "q": "A new software development company has been launched to create mobile device apps for different customers. The company has talented software programmers employed, but has not been able to implement standardized development processes that can be improved upon over time. Which of the following would be the best approach for this company to take in order to improve its software development processes?",
+   "options": [
+    "Capability Maturity Model Integration",
+    "System development life cycle",
+    "ISO/IEC 27002",
+    "Certification and accreditation processes"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The Capability Maturity Model Integration (CMMI) for development is a comprehensive integrated set of guidelines for developing products and software. It addresses the different phases of a software development life cycle, including concept definition, requirements analysis, design, development, integration, installation, operations, and maintenance and what should happen in each phase. The model describes procedures, principles, and practices that underlie software development process maturity. This model was developed to help software vendors improve their development processes by providing an evolutionary path from an ad hoc “fly by the seat of your pants” approach to a more disciplined and repeatable method that improves software quality, reduces the life cycle of development, provides better project management capabilities, allows for milestones to be created and met in a timely manner, and takes a more proactive approach than the less effective reactive approach.",
+    "B is incorrect because the system development life cycle (SDLC) addresses how a system should be developed and maintained throughout its life cycle and does not entail process improvement. Each system has its own life cycle, which is made up of the following phases: initiation, acquisition/development, implementation, operation/maintenance, and disposal. A system development life cycle is different from a software development life cycle, even though they are commonly confused. The industry as a whole is starting to differentiate between system and software life-cycle processes because at a certain point of granularity, the manner in which a computer system is dealt with is different from how a piece of software is dealt with. A computer system should be installed properly, tested, patched, scanned continuously for vulnerabilities, monitored, and replaced when needed. A piece of software should be designed, coded, tested, documented, released, and maintained. In either case, the question is asking for a type of process improvement model for software development, which is the focus of Capability Maturity Model Integration and not a system development life cycle.",
+    "C is incorrect because ISO/IEC 27002 is an international standard created by the International Organization for Standardization (ISO) and by the International Electrotechnical Commission (IEC) that outlines how to create and maintain an organizational information security management system (ISMS). While ISO/IEC 27002 has a section that deals with information systems acquisition, development, and maintenance, it does not provide a process improvement model for software development. It provides guidance on how to build security into applications, but it does not provide guidance on how to create standardized development procedures for a team of programmers. The focus of ISO/IEC 27002 is how to build a security program within an organization.",
+    "D is incorrect because a certification and accreditation (C&A) process deals with testing and evaluating systems against a predefined criteria. This does not have anything to do with software development process improvement. The certification process is the technical testing of a system. Established verification procedures are followed to ensure the effectiveness of the system and its security controls. Accreditation is the formal authorization given by management to allow a system to operate in a specific environment. The accreditation decision is based upon the results of the certification process. C&A procedures are commonly carried out within government and military environments to ensure that systems and software are providing the necessary functionality and security to support critical missions."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Database software should meet the requirements of what is known as the ACID test. Why should database software carry out atomic transactions, which is one requirement of the ACID test, when OLTP is used?",
+   "options": [
+    "So that the rules for database integrity can be established",
+    "So that the database performs transactions as a single unit without interruption",
+    "To ensure that rollbacks cannot take place",
+    "To prevent concurrent processes from interacting with each other"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Online transaction processing (OLTP) is used when databases are clustered to provide high fault tolerance and performance. It provides mechanisms to watch for and deal with problems when they occur. For example, if a process stops functioning, the monitor mechanisms within OLTP can detect this and attempt to restart the process. If the process cannot be restarted, then the transaction taking place will be rolled back to ensure no data is corrupted or that only part of a transaction happens. OLTP records transactions as they occur (in real time), which usually updates more than one database in a distributed environment. This type of complexity can introduce many integrity threats, so the database software should implement the characteristics of what’s known as the ACID test: • Atomicity Divides transactions into units of work and ensures that all modifications take effect or none takes effect. Either the changes are committed or the database is rolled back. • Consistency A transaction must follow the integrity policy developed for that particular database and ensure all data are consistent in the different databases. • Isolation Transactions execute in isolation until completed, without interacting with other transactions. The results of the modification are not available until the transaction is completed. • Durability Once the transaction is verified as accurate on all systems, it is committed, and the databases cannot be rolled back. The term “atomic” means that the units of a transaction will occur together or not at all, thereby ensuring that if one operation fails, the others will not be carried out and corrupt the data in the database.",
+    "A is incorrect because OLTP and ACID enforce, but do not establish, the integrity rules that are outlined in the database security policy. Representing the letter C in ACID, consistency relates to the enforcement and enforceability of integrity rules. Database software that demonstrates consistency conducts transactions that follow a specific integrity policy and ensure all data are the same in the different databases.",
+    "C is incorrect because atomicity divides transactions into units of work and ensures that all modifications take effect or none takes effect. Either the changes are committed or the database is rolled back. This means if something does not happen correctly, the database is reverted (rolled back) to its original state. After the transaction happens properly, a rollback cannot take place, which is the durability component of the ACID test. This question is specifically asking about the atomic transaction approach, not durability.",
+    "D is incorrect because atomic transactions do not address the isolation of processes that are carrying out database transactions; this is the “isolation” component of the ACID test. It is important that a process that is carrying out a transaction cannot be interrupted or modified by another process. This is to ensure the integrity, accuracy, and confidentiality of the data that is being processed during the transaction."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "Lisa has learned that most databases implement concurrency controls. What is concurrency, and why must it be controlled?",
+   "options": [
+    "Processes running at different levels, which can negatively affect the integrity of the database if not properly controlled.",
+    "The ability to deduce new information from reviewing accessible data, which can allow an inference attack to take place.",
+    "Processes running simultaneously, which can negatively affect the integrity of the database if not properly controlled.",
+    "Storing data in more than one place within a database, which can negatively affect the integrity of the database if not properly controlled."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Databases are commonly used by many different applications simultaneously and many users interacting with them at one time. Concurrency means that different processes (applications and users) are accessing the database at the same time. If this is not controlled properly, the processes can overwrite each other’s data or cause deadlock situations. The negative result of concurrency problems is the reduction of the integrity of the data held within the database. Database integrity is provided by concurrency protection mechanisms. One concurrency control is locking, which prevents users from accessing and modifying data being used by someone else.",
+    "A is incorrect because concurrency refers to processes running simultaneously, not at different levels. Concurrency issues come up when the database can be accessed at the same time by different users and/or applications. If controls are not in place, two users can access and modify the same data at the same time, which can be detrimental to a dynamic environment.",
+    "B is incorrect because the ability to deduce new information from reviewing accessible data occurs when a subject at a lower security level indirectly guesses or infers data at a higher level. This can lead to an inference attack. It is not related to concurrency. Concurrency has to do with integrity, while inference is related to confidentiality.",
+    "D is incorrect because storing data in more than one place is not a problem with concurrency. Concurrency becomes a problem when two subjects or applications are trying to modify the same data at the same time."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "Robert has been asked to increase the overall efficiency of the sales database by implementing a procedure that structures data to minimize duplication and inconsistencies. What procedure is this?",
+   "options": [
+    "Polymorphism",
+    "Normalization",
+    "Implementation of database views",
+    "Constructing schema"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Normalization is a process that eliminates redundancy, organizes data efficiently, reduces the potential for anomalies during data operations, and improves data consistency within databases. It is a systematic way of ensuring that a database structure is designed properly to be free of certain undesirable characteristics—insertion, update, and deletion anomalies—that could lead to a loss of data integrity.",
+    "A is incorrect because polymorphism is when different objects are given the same input and react differently. As a simplistic example of polymorphism, suppose three different objects receive the input “Bob.” Object A would process this input and produce the output “43-year-old white male.” Object B would receive the input “Bob” and produce the output “Husband of Sally.” Object C would produce the output “Member of User group.” Each object received the same input but responded with a different output.",
+    "C is incorrect because database views are logical access controls and are implemented to permit one group, or a specific user, to see certain information while restricting another group from viewing it altogether. For example, database views can be implemented to allow middle management to see their departments’ profits and expenses without viewing the whole company’s profits. Database views do not minimize duplicate data; rather, they manipulate how data is viewed by specific users/groups.",
+    "D is incorrect because schema of a database system is its structure described in a formal language. In a relational database, the schema defines the tables, the fields, relationships, views, indexes, procedures, queues, database links, directories, and so on. The schema describes the database and its structure, but not the data that will live within that database itself. This is similar to a blueprint of a house. The blueprint can state that there will be four rooms, six doors, 12 windows, and so on without describing the people who will live in the house."
+   ]
+  },
+  {
+   "n": 5,
+   "q": "Which of the following correctly best describes an object-oriented database?",
+   "options": [
+    "When an application queries for data, it receives both the data and the procedure.",
+    "It is structured similarly to a mesh network for redundancy and fast data retrieval.",
+    "Subject must have knowledge of the well-defined access path in order to access data.",
+    "The relationships between data entities provide the framework for organizing data."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. In an object-oriented database, objects are instantiated when needed, and the data and procedure (called method) go with the object when it is requested. This differs from a relational database, in which the application uses its own procedures to obtain and process data when retrieved from the database.",
+    "B is incorrect because a mesh network is a physical topology and has nothing to do with databases. A mesh topology is a network of interconnected routers and switches that provides multiple paths to all the nodes on the network. In a full mesh topology, every node is directly connected to every other node, which provides a great degree of redundancy. In a partial mesh topology, every node is not directly connected. The Internet is an example of a partial mesh topology.",
+    "C is incorrect because subjects accessing a hierarchical database—not an object-oriented database—must have knowledge of the access path in order to access data. In the hierarchical database model, records and fields are related in a logical tree structure. Parents can have one child, many children, or no children. The tree structure contains branches, and each branch has a number of data fields. To access data, the application must know which branch to start with and which route to take through each layer until the data is reached.",
+    "D is incorrect because the relationships between data entities provide the framework for organizing data in a relational database. A relational database is composed of two-dimensional tables, and each table contains unique rows, columns, and cells. Each cell contains one data value that represents a specific attribute within a given row. These data entities are linked by relationships, which provide the framework for organizing the data."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "Fred has been told he needs to test a component of the new content management application under development to validate its data structure, logic, and boundary conditions. What type of testing should he carry out?",
+   "options": [
+    "Acceptance testing",
+    "Regression testing",
+    "Integration testing",
+    "Unit testing"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Unit testing involves testing an individual component in a controlled environment to validate data structure, logic, and boundary conditions. After a programmer develops a component, it is tested with several different input values and in many different situations. Unit testing can start early in development and usually continues throughout the development phase. One of the benefits of unit testing is finding problems early in the development cycle, when it is easier and less expensive to make changes to individual units.",
+    "A is incorrect because acceptance testing is carried out to ensure that the code meets customer requirements. This testing is for part or all of the application, but not commonly one individual component.",
+    "B is incorrect because regression testing refers to the retesting of a system after a change has taken place to ensure its functionality, performance, and protection. Essentially, regression testing is done to identify bugs that have caused functionality to stop working as intended as a result of program changes. It is not unusual for developers to fix one problem, only to inadvertently create a new problem, or for the new fix to break a fix to an old problem. Regression testing may include checking previously fixed bugs to make sure they have not re-emerged and rerunning previous tests.",
+    "C is incorrect because integration testing involves verifying that components work together as outlined in design specifications. After unit testing, the individual components or units are combined and tested together to verify that they meet functional, performance, and reliability requirements."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "Which of the following is the best description of a component-based system development method?",
+   "options": [
+    "Components periodically revisit previous stages to update and verify design requirements",
+    "Minimizes the use of arbitrary transfer control statements between components",
+    "Uses independent and standardized modules that are assembled into serviceable programs",
+    "Implemented in module-based scenarios requiring rapid adaptations to changing client requirements"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Component-based development involves the use of independent and standardized modules. Each standard module consists of a functional algorithm or instruction set and is provided with interfaces to communicate with each other. Component-based development adds reusability and pluggable functionality into programs, and is widely used in modern programming to augment program coherence and substantially reduce software maintenance costs. A common example of these modules is “objects” that are frequently used in object-oriented programming.",
+    "A is incorrect because the spiral method of system development periodically revisits previous stages to update and verify design requirements. The spiral method builds upon the waterfall method. It uses discrete phases of development with an emphasis on risk analysis, prototypes, and simulations. The spiral method does not specify the development and testing of components.",
+    "B is incorrect because structured programming development involves the use of logical blocks to achieve system design using procedural programming. A structured program layout minimizes the use of arbitrary transfer control statements like GOTO and emphasizes on single points of entry and exit. This hierarchical approach makes it easier for the program to be understood and modified later on.",
+    "D is incorrect because extreme programming is a methodology that is generally implemented in scenarios requiring rapid adaptations to changing client requirements. Extreme programming emphasizes client feedback to evaluate project outcomes and to analyze project domains that may require further attention. The coding principle of extreme programming throws out the traditional long-term planning carried out for code reuse and instead focuses on creating simple code optimized for the contemporary assignment."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "There are many types of viruses that hackers can use to damage systems. Which of the following is not a correct description of a polymorphic virus?",
+   "options": [
+    "Intercepts antivirus’s call to the operating system for file and system information",
+    "Varies the sequence of its instructions using noise, a mutation engine, or random-number generator",
+    "Can use different encryption schemes requiring different decryption routines",
+    "Produces multiple, varied copies of itself"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A tunneling virus—not a polymorphic virus—attempts to install itself under an antivirus program. When the antivirus conducts its health check on critical files, file sizes, modification dates, etc., it makes a request to the operating system to gather this information. If the virus can put itself between the antivirus and the operating system, then when the antivirus sends out a system call for this type of information, the tunneling virus can intercept the call and respond with information that indicates the system is free of virus infections. The polymorphic virus also attempts to fool antivirus scanners, but it does so by producing varied but operational copies of itself. Even if antivirus software finds and disables one or two copies, other copies may still remain active within the system.",
+    "B is incorrect because a polymorphic virus can vary the sequence of its instructions by including noise, or bogus instructions, with other useful instructions. It can also use a mutation engine and a random-number generator to change the sequence of its instructions in the hopes of not being detected. The original functionality stays the same, but the code changes, making it close to impossible to identify all versions of the virus using a fixed signature.",
+    "C is incorrect because a polymorphic virus can use different encryption schemes requiring different decryption routines. This requires an antivirus scan for several scan strings, one for each possible decryption method, in order to identify all copies of this type of virus. Polymorphic virus writers most commonly hide a virus’s payload with encryption and add a decryption method to the code. Once it is encrypted, the code is meaningless. However, a virus that is encrypted is not necessarily a polymorphic virus. To be polymorphic, the virus’s encryption and decryption algorithms must mutate with each new version of itself.",
+    "D is incorrect because a polymorphic virus produces multiple, varied copies of itself in an effort to avoid detection by antivirus software. A polymorphic virus has the capability to change its own code, enabling the virus to have hundreds or thousands of variants. These activities can cause the virus scanner to not properly recognize the virus and to leave it to do its damage."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "Which of the following best describes the role of the Java Virtual Machine in the execution of Java applets?",
+   "options": [
+    "Converts the source code into bytecode and blocks the sandbox",
+    "Converts the bytecode into machine-level code",
+    "Operates only on specific processors within specific operating systems",
+    "Develops the applets, which run in a user’s browser"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Java is an object-oriented, platform-independent programming language. It is employed as a full-fledged programming language and is used to write complete programs and short programs, called applets, which run in a user’s browser. Java is platform independent because it creates intermediate code, bytecode, which is not processor-specific. The Java Virtual Machine (JVM) then converts the bytecode into machine-level code that the processor on the particular system can understand.",
+    "A is incorrect because the Java Virtual Machine converts the bytecode into machine-level code. It does not convert the source code into bytecode—a Java compiler does that. The JVM also creates a virtual machine within an environment called a sandbox. This virtual machine is an enclosed environment in which the applet carries out its activities. Applets are commonly sent over HTTP within a requested web page, which means the applet executes as soon as it arrives. It can carry out malicious activity on purpose or accidentally if the developer of the applet did not do his part correctly. So the sandbox strictly limits the applet’s access to any system resources. The JVM mediates access to system resources to ensure the applet code behaves and stays within its own sandbox.",
+    "C is incorrect because Java is an object-oriented, platform-independent programming language. Other languages are compiled to object code for a specific operating system and processor. This is why a particular application may run on Windows but not on Macintosh. An Intel processor does not necessarily understand machine code compiled for an Alpha processor, and vice versa. Java is platform-independent because it creates intermediate code— bytecode—which is not processor-specific.",
+    "D is incorrect because the Java Virtual Machine does not write applets. Java is employed as a full-fledged programming language and is used to write complete programs and short programs, called applets, which run in a user’s browser. A programmer creates a Java applet and runs it through a compiler. The Java compiler converts the source code into bytecode. The user then downloads the Java applet. The bytecode is converted into machine-level code by the JVM. Finally, the applet runs when called upon."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "What type of database software integrity service guarantees that tuples are uniquely identified by primary key values?",
+   "options": [
+    "Concurrent integrity",
+    "Referential integrity",
+    "Entity integrity",
+    "Semantic integrity"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Entity integrity guarantees that the tuples are uniquely identified by primary key values. A tuple is a row in a two-dimensional database. A primary key is a value in the corresponding column that makes each row unique. For the sake of entity integrity, every tuple must contain one primary key. If a tuple does not have a primary key, it cannot be referenced by the database.",
+    "A is incorrect because concurrent integrity is not a database software formal term. This is a distracter answer. There are three main types of integrity services: semantic, referential, and entity. Concurrency refers to a piece of software being accessed by multiple users and/or applications at the same time. If controls are not in place, two users can access and modify the same data simultaneously.",
+    "B is incorrect because referential integrity refers to all foreign keys referencing existing primary keys. There should be a mechanism in place that ensures that no foreign key contains a reference to a primary key of a nonexisting record or a null value. This type of integrity control ensures that the relationships between the different tables are working and can properly communicate to each other.",
+    "D is incorrect because a semantic integrity mechanism ensures that structural and semantic rules of a database are enforced. These rules pertain to data types, logical values, uniqueness constraints, and operations that could adversely affect the structure of the database."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "In computer programming, cohesion and coupling are used to describe modules of code. Which of the following is a favorable combination of cohesion and coupling?",
+   "options": [
+    "Low cohesion, low coupling",
+    "High cohesion, high coupling",
+    "Low cohesion, high coupling",
+    "High cohesion, low coupling"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. When a module is described as having high cohesion and low coupling, that is a good thing. Cohesion reflects how many different types of tasks a module can carry out. High cohesion means that the module carries out one basic task (such as subtraction of values) or several tasks that are very similar (such as subtraction, addition, multiplication). The higher the cohesion, the easier it is to update or modify and not affect the other modules that interact with it. This also means the module is easier to reuse and maintain because it is more straightforward when compared to a module with low cohesion. Coupling is a measurement that indicates how much interaction one module requires to carry out its tasks. If a module has low or loose coupling, this means the module does not need to communicate with many other modules to carry out its job. These modules are easier to understand and easier to reuse than those that depend upon many other modules to carry out their tasks. It is also easier to make changes to these modules without affecting many modules around them.",
+    "A is incorrect because a module with low cohesion is not desirable. A module with low cohesion carries out multiple different tasks and increases the complexity of the module, which makes it harder to maintain and reuse. The higher a module’s cohesion, the fewer tasks it carries out and the easier it is to update or modify that module without affecting others that interact with it.",
+    "B is incorrect because a module with high coupling is not desirable. High coupling means a module depends upon many other modules to carry out its tasks. This makes it difficult to understand, reuse, and make changes because of the interdependencies with other modules. As an analogy, a company would want its employees to be able to carry out their individual jobs with the least amount of dependencies on other workers. If Joe had to talk with five other people just to get one task done, too much complexity exists, it’s too time-consuming, and more places are created where errors can take place.",
+    "C is incorrect because it states the exact opposite of what is desirable. A module that has low cohesion and high coupling is complex in that it carries out multiple different types of tasks and depends upon many other modules to carry them out. These characteristics make the module harder to maintain and reuse, largely because of the greater possibility of affecting other modules that interact with it."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "When an organization is unsure of the final nature of the product, what type of system development method is most appropriate for them?",
+   "options": [
+    "Cleanroom",
+    "Exploratory Model",
+    "Modified Prototype Method",
+    "Iterative Development"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Modified Prototype Method is a method specifically designed to confront challenges in web application development and allows developers to swiftly translate client requirements into a displayable product or prototype. Modified prototypes are generally used when both the developer and the client are unsure of the final nature of the product. Using modifiable prototypes allows the final product to be carved out as the system specifications become less hazy.",
+    "A is incorrect because the Cleanroom is an approach that attempts to prevent errors or mistakes by following structured and formal methods of developing and testing. This approach is used for high-quality and critical applications that will be put through a strict certification process. The specifications and clear understanding of the end product must be fully understood before development begins.",
+    "B is incorrect because the Exploratory Model is a method that is used in instances where clearly defined project objectives have not been presented. Instead of focusing on explicit tasks, the Exploratory Model relies on covering a set of specifications that are likely to encase the final product’s working. Testing is an important part of exploratory development, as it ascertains that the current phase of the project is compliant with likely implementation scenarios.",
+    "D is incorrect because the Iterative Development approach takes a cyclic approach to software development. It focuses on mapping out project milestones through continually assessing the current state of the project with the initial objectives on the basis of resources, time frames, and execution plan. Iterative Development provides a dynamic method of evaluating a project’s overall status and allows corrective amendments to improve project effectiveness."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "Which of the following statements does not correctly describe SOAP and Remote Procedure Calls?",
+   "options": [
+    "SOAP was designed to overcome the compatibility and security issues associated with Remote Procedure Calls.",
+    "Both SOAP and Remote Procedure Calls were created to enable application-layer communication.",
+    "SOAP enables the use of Remote Procedure Calls for information exchange between applications over the Internet.",
+    "HTTP was not designed to work with Remote Procedure Calls, but SOAP was designed to work with HTTP."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. The Simple Object Access Protocol (SOAP) was created to use instead of Remote Procedure Calls (RPCs) to allow applications to exchange information over the Internet. SOAP is an XML-based protocol that encodes messages in a web service setup. It allows programs running on different operating systems to communicate over web-based communication methods.",
+    "A is incorrect because SOAP was created to overcome the compatibility and security issues that RPCs introduced when trying to enable communication between objects of different applications over the Internet. SOAP is designed to work across multiple operating system platforms, browsers, and servers.",
+    "B is incorrect because it is true that both SOAP and RPCs were created to enable application-layer communication. SOAP is an XML-based protocol that encodes messages in a web service setup. So if you have a Windows 2000 computer, for instance, and you need to access a Windows 2008 computer that offers a specific web service, the programs on both systems can communicate using SOAP without running into interoperability issues. This communication most commonly takes place over HTTP, since it is readily available in basically all computers today.",
+    "D is incorrect because the statement is correct: HTTP was not designed to specifically work with RPCs, but SOAP was designed to work with HTTP. SOAP actually defines an XML schema or a structure of how communication is going to take place. The SOAP XML schema defines how objects communicate directly. One advantage of SOAP is that the program calls will most likely get through firewalls since HTTP communication is commonly allowed. This helps ensure that the client/server model is not broken by getting denied by a firewall in between the communicating entities."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "Computer programs that are based on human logic by using “if/then” statements and inference engines are called __________________.",
+   "options": [
+    "expert systems",
+    "artificial neural networks",
+    "Distributed Computing Environment",
+    "Enterprise JavaBeans"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Expert systems emulate human logic to solve problems that would usually require human intelligence and intuition. These systems represent expert knowledge as data or rules within the software. Expert systems collect data of human know-how and hold it in some type of database. These fragments of data are used to reason through a problem. Rule-based programming is a common way of developing expert systems. The rules are based on if-then logic units and specify a set of actions to be performed for a given situation. This is one way expert systems are used to find patterns, which is called pattern matching. A mechanism, called the inference engine, automatically matches facts against patterns and determines which rules are applicable. The actions of the corresponding rules are executed when the inference engine is instructed to begin execution.",
+    "B is incorrect because an artificial neural network (ANN) is a mathematical or computational model based on the neural structure of the brain. Computers perform activities like calculating large numbers, keeping large ledgers, and performing complex mathematical functions, but they cannot recognize patterns or learn from experience as the brain can. ANNs contain many units that stimulate neurons, each with a small amount of memory. The units work on data that are input through their many connections. Via training rules, the systems are able to learn from examples and have the capability to generalize.",
+    "C is incorrect because Distributed Computing Environment (DCE) is a standard developed by the Open Software Foundation (OSF), also called Open Group. It is basically middleware that is available to many vendors to use within their products. DCE has nothing to do with the emulation of human logic. DCE is a set of management services with a communications layer based on RPC. It is a layer of software that sits on the top of the network layer and provides services to the applications above it.",
+    "D is incorrect because Enterprise JavaBeans (EJB) is a structural design for the development and implementation of distributed applications written in Java. EJB provides interfaces and methods to allow different applications to be able to communicate across a networked environment. EJB has nothing to do with the emulation of human logic."
+   ]
+  },
+  {
+   "n": 15,
+   "q": "Which of the following is a correct description of the pros and cons associated with third-generation programming languages?",
+   "options": [
+    "The use of heuristics reduced programming effort, but the amount of manual coding for a specific task is usually more than the preceding generation.",
+    "The use of syntax similar to human language reduced development time, but the language is resource intensive.",
+    "The use of binary was extremely time consuming but resulted in fewer errors.",
+    "The use of symbols reduced programming time, but the language required knowledge of machine architecture."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Third-generation programming languages are easier to work with compared to earlier languages because their syntax is similar to human languages. This reduces program development time and allows for simplified and swift debugging. However, these languages can be very resource intensive when compared to the second-generation programming languages.",
+    "A is incorrect because it attempts to describe the pros and cons of fourth-generation programming. It is true that the use of heuristics in fourth-generation programming languages drastically reduced the programming effort and the possibility of errors in code. However, it is not true that the amount of manual coding was usually more than that required of third-generation languages. On the contrary, the most remarkable aspect of fourth-generation languages is that the amount of manual coding required to perform a specific task may be ten times less than for the same task on a third-generation language.",
+    "C is incorrect because the statement alludes to the pros and cons of machine language, the first-generation programming language. The first portion of the statement is true: Programming in binary was time consuming. The second half, however, is incorrect. Programming in binary was very prone to errors.",
+    "D is incorrect because it describes second-generation programming languages. By introducing symbols to represent complicated binary codes, second-generation programming languages reduced programming and debugging times. Unfortunately, these languages required extensive knowledge of machine architecture, and the programs that were written in it were hardware specific."
+   ]
+  },
+  {
+   "n": 16,
+   "q": "It can be very challenging for programmers to know what types of security should be built into the software that they create. The amount of vulnerabilities, threats, and risks involved with software development can seem endless. Which of the following describes the best first step for developers to take to identify the security controls that should be coded into a software project?",
+   "options": [
+    "Penetration testing",
+    "Regression testing",
+    "Threat modeling",
+    "Attack surface analysis"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Threat modeling is a systematic approach used to understand how different threats could be realized and how a successful compromise could take place. A threat model is created to define a set of possible attacks that can take place so the necessary countermeasures can be identified and implemented. Through the use of a threat model, the software team can identify and rate threats. Rating the threats based upon the probability of exploitation and the associated impact of each exploitation allows the team to focus on the threats that present the greatest risk. When using threat modeling in software development, the process starts at the design phase and should continue in an iterative process through each phase of the software’s life cycle. Different software development threat modeling approaches exist, but they have many of the same steps, including identifying assets, trust boundaries, data flows, entry points, privilege code, etc. This approach also includes building attack trees, which represent the goals of each attack and the attack methodologies. The output of all of these steps is then reviewed and security controls selected and coded into the software.",
+    "A is incorrect because penetration testing is basically attacking a system to identify any weaknesses or vulnerabilities. A penetration test can be carried out on the software only after it has been at least partially developed; it is not a tool that can be used at the coding stage. A penetration test is different from building a threat model. A threat model is developed so that vulnerabilities and their associated threats can be identified and removed or mitigated. A threat model outlines all of the possible attack vectors that could be theoretically exploited. A penetration test is the act of exploiting vulnerabilities in the real world to fully understand what an attacker can accomplish when exploiting specific vulnerabilities.",
+    "B is incorrect because regression testing is a type of test that is carried out to identify software bugs that exist after changes have taken place. The goal of regression testing is to ensure that changes that have taken place do not introduce new faults. Testers need to figure out if a change to one part of a software program will affect other parts of the software. A software regression is a bug (flaw) that makes a feature stop working after a change (i.e., patch applied, software upgrade) takes place. A software performance regression is a fault that does not cause the feature to stop working, but the performance of the function is degraded. Regression testing is not security focused and is not used with the goals of identifying vulnerabilities.",
+    "D is incorrect because an attack surface analysis is used to map out the parts of a software program that need to be reviewed and tested for vulnerabilities. An attack surface consists of the components that are available to be used by an attacker against the software itself. The attack surface is a sum of the different attack vectors that can be used by an unauthorized user to compromise the system. The more attack surface that is available to attackers, the more they have to work with and use against the software itself. Securing software commonly includes reducing the attack surface and applying defense-in-depth to the portions of the software that cannot have their surface reduced. There is a recursive relationship between an attack surface analysis and threat modeling. When there are changes to an attack surface, threat modeling should take place to identify the new threats that will need to be dealt with. So an attack surface analysis charts out what areas need to be analyzed, and threat modeling allows the developers to walk through attack scenarios to determine the reality of each identified threat."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "Mary is creating malicious code that will steal a user’s cookies by modifying the original client-side Java script. What type of cross-site scripting vulnerability is she exploiting?",
+   "options": [
+    "Second order",
+    "DOM-based",
+    "Persistent",
+    "Nonpersistent"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Mary is exploiting a document object model (DOM)–based cross-site scripting (XSS) vulnerability, which is also referred to as local cross-site scripting. DOM is the standard structure layout to represent HTML and XML documents in the browser. In such attacks the document components such as form fields and cookies can be referenced through JavaScript. The attacker uses the DOM environment to modify the original client side JavaScript. This causes the victim’s browser to execute the resulting abusive JavaScript code. The most effective way to prevent these attacks is to disable scripting support in the browser.",
+    "A is incorrect because a second-order vulnerability, or persistent XSS vulnerability, is targeted at web sites that allow users to input data that is stored in a database or other location, such as a forum or message board. Second-order vulnerabilities allow the most dominant type of attacks.",
+    "C is incorrect because a persistent XSS vulnerability is simply another name for a second-order vulnerability. As previously stated, these vulnerabilities allow users to input data that is stored in a database or other location such as an online forum or message board. These types of platforms are among the most commonly plagued by XSS vulnerabilities. The best way to overcome these vulnerabilities is through secure programming practices. Each and every user input should be filtered, and only a limited set of known and secure characters should be allowed for user input.",
+    "D is incorrect because nonpersistent XSS vulnerabilities, also referred to as reflected vulnerabilities, occur when an attacker tricks the victim into opening a URL programmed with a rogue script to steal the victim’s sensitive information (such as a cookie). The principle behind this attack lies in exploiting lack of proper input or output validation on dynamic web sites."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "Of the following steps that describe the development of a botnet, which best describes the step that comes first?",
+   "options": [
+    "Infected server sends attack commands to the botnet.",
+    "Spammer pays a hacker for use of a botnet.",
+    "Controller server instructs infected systems to send spam to mail servers.",
+    "Malicious code is sent out that has bot software as its payload."
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The creation of a botnet begins with the hacker sending systems malicious code that has the bot software as its payload. A bot is a piece of dormant code that carries out functionality for its master. Also known as a zombie, the code can be used to forward items sent to it as in spam or attack commands. The zombie code sends a message to the attacker indicating that a specific system has been compromised and can be used by the attacker. When an attacker has a collection of these compromised systems, it is referred to as a botnet.",
+    "A is incorrect because before a server can act as a controlling server of the botnet, there must be compromised systems to control. These systems are created by sending malicious code to the individual system that has bot software as its payload. Then, once installed, the bot logs in to an internet relay chat (IRC) server that it is coded to contact. This IRC server then is used to control the botnet. (IRC is just one type of communication channel that can be used.)",
+    "B is incorrect because the development of a botnet begins with the attacker sending out malicious code that has the bot software as its payload. While a spammer could commission an attacker to develop a botnet, that is not the first step in its actual development. In addition to renting out the botnet to spammers, hackers can use the infected systems to carry out powerful distributed denial-of-service attacks.",
+    "C is incorrect because the last step in the use of a botnet to send spam is the controller server instructing the infected systems to send out spam messages to mail servers. Spammers use this method so that their messages have a higher likelihood of getting through mail server spam filters since the sending IP addresses are those of the victim’s system. Thus, the source IP addresses change constantly. This also helps ensure that the original sender is not located or identified."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "Which of the following antivirus detection methods is the most recent to the industry and monitors suspicious code as it executes within the operating system?",
+   "options": [
+    "Behavior blocking",
+    "Fingerprint detection",
+    "Signature-based detection",
+    "Heuristic detection"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Of the methods listed, behavior blocking is the most recent evolution in antivirus detection. Behavior blocking allows suspicious code to execute within the operating system and watches its interactions looking for suspicious activities. These activities include writing to startup files or the Run keys in the Registry; opening, deleting, or modifying files; scripting e-mail messages to send executable code; and creating or modifying macros and scripts. If the antivirus program detects some of these potentially malicious activities, it can terminate the software and provide a message to the user. A drawback to behavior blockers is that the malicious code must actually execute in real time. This type of constant monitoring also requires a high level of system resources.",
+    "B is incorrect because fingerprint detection (also referred to as signature-based detection) does not monitor suspicious code as it is executing. Instead, antivirus software scans incoming data and compares files, e-mail messages, etc., for signatures that match those in the antivirus’s database. A signature is a sequence of code that was extracted from the virus itself, or the steps it carries out in its attack. If a match is identified, then the antivirus software takes whatever protective action(s) it is configured to carry out. It may quarantine the file, attempt to clean the file by removing the virus, provide a warning message dialog box to the user, and/or log the event.",
+    "C is incorrect because signature-based detection uses signatures (virus code patterns) to identify malicious software or activity patterns before they are executed in the operating system. Signature-based detection is an effective way to detect malicious software, but there is a delayed response time to new threats. Once a virus is detected, the antivirus vendor must study it, develop and test a new signature, release the signature, and all customers must download it.",
+    "D is incorrect because heuristic detection analyzes the overall structure of executable code, evaluates the coded instructions and logic functions, and evaluates the likelihood of it being malicious. Antivirus software that uses heuristic detection has a type of “suspiciousness counter,” which is incremented as the program finds more potentially malicious attributes. Once a predefined threshold is met, the code is officially considered dangerous and the antivirus software protects the system."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "Which of the following describes object-oriented programming deferred commitment?",
+   "options": [
+    "Autonomous objects, which cooperate through exchanges of messages",
+    "The internal components of an object can be refined without changing other parts of the system",
+    "Object-oriented analysis, design, and modeling maps to business needs and solutions",
+    "Other programs using same objects"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Deferred commitment means that the internal components of an object can be refined without changing other parts of the system. Non-object-oriented programming applications are written as monolithic entities. This means an application is just one big pile of code. If you need to change something in this pile, you would need to go through the whole program’s logic functions to figure out what your one change is going to break. If you choose to write your program in an object-oriented language, you don’t have one monolithic application, but an application that is made up of smaller components (objects). If you need to make changes or updates to some functionality in your application, you can just change the code within the class that creates the object carrying out that functionality and not worry about everything else the program actually carries out.",
+    "A is incorrect because autonomous objects, which cooperate through exchanges of messages, refer to object-oriented programming’s modularity. An object is preassembled code that is a self-contained module. Objects need to be able to communicate with each other, and this happens by using messages that are sent to the receiving object’s application programming interface. If object A needs to tell object B that a user’s checking account must be reduced by $40, it sends object B a message. The message is made up of the destination, the method that needs to be performed, and the corresponding arguments.",
+    "C is incorrect because the description, “Object-oriented analysis, design, and modeling maps to business needs and solutions,” refers to naturalness. An object’s method should naturally map to business objectives. A method is the functionality or procedure an object can carry out. An object may be constructed to accept data from a user and reformat the request so that a back-end server can understand and process it. Another object may perform a method that extracts data from a database and populates a web page with this information. Or an object may carry out a withdrawal procedure to allow the user of an ATM to extract money from her account. These are business needs.",
+    "D is incorrect because reusability refers to different programs being able to use the same objects. Most applications have some type of functionality in common. Instead of developing the same code to carry out the same functionality for ten different applications, using OOP allows you to just create the object once and let it be reused in other applications. This reduces development time and saves money. The objects can be catalogued in a library, which provides an economical way for more than one application to call upon the objects. The library provides an index and pointers to where objects actually live within the system or on another system."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "What object-oriented programming term, or concept, is illustrated in the graphic that follows?",
+   "options": [
+    "Methods",
+    "Messages",
+    "Abstraction",
+    "Data hiding"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. In object-oriented programming objects need to be able to communicate with each other and this happens by using messages that are sent to the receiving object’s application program interface (API). For example, if object A needs to tell object B that a user’s checking account must be reduced by $40, it sends object B a message. The message is made up of the destination, the method that needs to be performed, and the corresponding arguments. This graphic illustrates object communication through the use of their messaging functionality.",
+    "A is incorrect because a method is the functionality or procedure an object can carry out, not the way objects communicate with each other. An object, for example, may be constructed to accept data from a user and to reformat the request so that a back-end server can understand and process it. These functions are the methods that can be carried out by the specific objects—basically what the object can do. Another object may perform a method that extracts data from a database and populates a web page with the necessary information. These are just some examples of the various methods objects may carry out.",
+    "C is incorrect because abstraction is the capability to suppress unnecessary details so the important, inherent properties can be examined and reviewed. Abstraction enables the separation of conceptual aspects of a system. For example, if a software architect needs to understand how data flows through the program, she would want to understand the big pieces of the program and trace the steps the data takes from first being input into the program all the way until it exits the program as output. Abstraction can be provided by OOP, but this is not what is being shown in the graphic.",
+    "D is incorrect because data hiding refers to the concept that data and operations internal to objects are hidden from other objects. Each object encapsulates its data and processes. Data hiding protects an object’s private data from outside access. No object should be allowed to, or have the need to, access another object’s internal data or processes. Data hiding is basically keeping what is supposed to be secret, secret."
+   ],
+   "images": [
+    "data/img/cap09_q21_0.jpeg"
+   ]
+  },
+  {
+   "n": 22,
+   "q": "Protection methods can be integrated into software programs. What type of protection method is illustrated in the graphic that follows?",
+   "options": [
+    "Polymorphism",
+    "Polyinstantiation",
+    "Cohesiveness",
+    "Object classes"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. Polyinstantiation is the simultaneous existence of multiple information objects, which refer to the same real-world concept but differ by their classification level and/or their contents. The multiple instances are commonly distinguished by their security levels. Polyinstantiation is when more than one copy of an object is made, and the other copy is modified to have different attributes. This can be done for several reasons. A way to use polyinstantiation is for security purposes, to ensure that a lower-level subject could not access an object at a higher level. If a lower subject does not have the clearance of top secret, then it should not be able to access data at this classification level.",
+    "A is incorrect because polymorphism is the capability of different objects to respond differently to the same message. This is possible because objects can belong to different classes, meaning they will exhibit different behaviors. Polymorphism can take place in the following example: Object A and Object B are created from the same parent class, but Object B is also under a subclass. Object B would have some different characteristics from Object A because of this inheritance from the parent class and the subclass. When Object A and Object B receive the same input, they would result in different outputs because only one of them inherited characteristics from the subclass. An analogy of polymorphism is if someone gave you and me the same message and I responded with X and you responded with Y—so the same input and different outputs.",
+    "C is incorrect because cohesiveness means that one module is carrying out only one task. If a module is highly cohesive, this means that all elements in the module directly deal with the one basic task the module carries out, or a group of similar tasks. A module should have well-defined responsibilities, which means that it has high cohesiveness. If you were a highly cohesive module, you would carry out your one specific task you were built to do, for example taking out the trash.",
+    "D is incorrect because an object class is a blueprint or prototype that defines the variables (data) and methods (procedures) common to all objects within it. A class provides a type of empty template of variables that will be populated when the object is instantiated. Objects are members, or instances, of classes. A real-world object, such as a table, is a member (or an instance) of a larger class of objects called “furniture.” The furniture class will have a set of attributes associated with it, and when an object is generated, it inherits these attributes. The attributes may be color, dimensions, weight, style, and cost. These attributes apply if a chair, table, or loveseat object is generated or instantiated. Because the table is a member of the class furniture, the table inherits all attributes defined for the class."
+   ],
+   "images": [
+    "data/img/cap09_q22_0.jpeg"
+   ]
+  },
+  {
+   "n": 23,
+   "q": "There are several types of attacks that programmers need to be aware of. What attack does the graphic that follows illustrate?",
+   "options": [
+    "Traffic analysis",
+    "Race condition",
+    "Covert storage",
+    "Buffer overflow"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. A buffer is an area reserved by an application to store something in it, like some user input. After the application receives the input, an instruction pointer points the application to do something with the input that’s been put in the buffer. A buffer overflow occurs when an application erroneously allows an invalid amount of input to be written into the buffer area, overwriting the instruction pointer in the code that told the program what to do with the input. Once the instruction pointer is overwritten, whatever code has been placed in the buffer can then be executed, all under the security context of the application.",
+    "A is incorrect because traffic analysis is a method of uncovering information by watching traffic patterns on a network. For example, heavy traffic between the HR department and headquarters could indicate an upcoming layoff. Another example is if there is a lot of traffic between two military units, this may indicate that a military attack is being planned. Traffic padding can be used to counter this kind of attack, in which decoy traffic is sent out over the network to disguise patterns and make it more difficult to uncover them.",
+    "B is incorrect because when two different processes need to carry out their tasks on a resource, they need to follow the correct sequence. Process one needs to carry out its work before process two accesses the same resource and carries out its tasks. If process two goes before process one, the outcome could be very different. If an attacker could manipulate the processes so that process two did its thing first, she is controlling the outcome of the processing procedure, which is referred to as a race condition attack.",
+    "C is incorrect because in a covert storage channel, processes are able to communicate through some type of storage space on the system. For example, System A is infected with a Trojan horse that has installed software that will be able to communicate to another process in a nefarious way. System A has a very sensitive file (File 2) that is of great interest to a particular attacker. The software the Trojan horse installed is able to read this file and it needs to send the contents of the file to the attacker, which can only happen one bit at a time. The intrusive software is going to communicate to the attacker by locking a specific file (File 3). When the attacker attempts to access File 3 and finds it has a software lock enabled on it, the attacker interprets this to mean the first bit in the sensitive file is a 1. The second time the attacker attempts to access File 3, it is not locked. The attacker interprets this value to be zero. This continues until all of the data in the sensitive file are sent to the attacker."
+   ],
+   "images": [
+    "data/img/cap09_q23_0.jpeg"
+   ]
+  },
+  {
+   "n": 24,
+   "q": "Databases and applications commonly carry out the function that is illustrated in the graphic that follows. Which of the following best describes the concept that this graphic is showing?",
+   "options": [
+    "Checkpoint",
+    "Commit",
+    "Two-phase commit",
+    "Data dictionary"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A checkpoint is used to recover data if there is a system failure or problem during a transaction. It is used to periodically save the state of the application and the user’s information. It is used so that if the application endures a glitch, it has the necessary tools to bring the user back to his working environment without losing any data. You can experience this with a word processor when it asks you if you want to review the recovered version of a file you were working on. The word processor has saved your document as you have worked on it and is able to bring it back in case the system runs into trouble.",
+    "B is incorrect because a commit operation completes a transaction and executes all changes just made by the user. As its name indicates, once the commit command is executed, the changes are committed and reflected in the database. These changes can be made to data or schema information. When these changes are committed, they are then available to all other applications and users. If a user attempts to commit a change and it cannot complete correctly, a rollback is performed. This ensures that partial changes do not take place and that data is not corrupted.",
+    "C is incorrect because a two-phase commit mechanism is a control that is used in databases to ensure the integrity of the data held within the database. Databases commonly carry out transaction processes, which means the user and the database interact at the same time. The databases need to make sure each database is properly modified, or no modification takes place at all. When a database change is submitted by the user, the different databases initially store these changes temporarily. A transaction monitor will then send out a “precommit” command to each database. If all the right databases respond with an acknowledgment, then the monitor sends out a “commit” command to each database. This ensures that all of the necessary information is stored in all the right places at the right time.",
+    "D is incorrect because a data dictionary is a central collection of data element definitions, schema objects, and reference keys for a database. The schema objects can contain tables, views, indexes, procedures, functions, and triggers. A data dictionary can also contain the default values for columns, integrity information, the names of users, the privileges and roles for users, and auditing information. It is a tool used to centrally manage parts of a database by controlling data about the data (referred to as metadata) within the database. It provides a cross-reference between groups of data elements and the databases."
+   ],
+   "images": [
+    "data/img/cap09_q24_0.jpeg"
+   ]
+  },
+  {
+   "n": 25,
+   "q": "There are several different types of databases. Which type does the graphic that follows illustrate?",
+   "options": [
+    "Relational",
+    "Hierarchical",
+    "Network",
+    "Object-oriented"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A hierarchical database uses a tree-like structure to define relationships between data elements, using a parent/child relationship. The structure and relationship between the data elements are different from those in a relational database. The tree structure contains branches, and each branch has a number of leaves, or data fields. These databases have well-defined, prespecified access paths, but they are not as flexible in creating relationships between data elements as a relational database. Hierarchical databases are useful for mapping one-to-many relationships.",
+    "A is incorrect because a relational database model uses attributes (columns) and tuples (rows) to contain and organize information. It presents information in the form of tables. A relational database is composed of two-dimensional tables, and each table contains unique rows, columns, and cells (the intersection of a row and a column). Each cell contains only one data value that represents a specific attribute value within a given tuple. These data entities are linked by relationships. The relationships between the data entities provide the framework for organizing data.",
+    "C is incorrect because a network database model is built upon the hierarchical data model, but instead of being constrained by having to “know” how to go from one branch to another and then from one parent to a child to find a data element, the network database model allows each data element to have multiple parent and child records. This forms a redundant network-like structure instead of a strict tree structure. (The name does not indicate it is on or distributed throughout a network, it just describes the data element relationships.)",
+    "D is incorrect because an object-oriented database is designed to handle a variety of data (images, audio, documents, video). An object-oriented database management system (ODBMS) is more dynamic in nature than a hierarchical database, because objects can be created when needed and the data and procedure (called method) go with the object when it is requested. In a hierarchical database, the application has to use its own procedures to obtain data from the database and then process the data for its needs. The hierarchical database does not actually provide procedures, as object-oriented databases do. The object-oriented database has classes to define the attributes and procedures of its objects."
+   ],
+   "images": [
+    "data/img/cap09_q25_0.jpeg"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "Which of the following is most likely the standard Trent’s company wants to comply with?",
+   "options": [
+    "ISO/IEC 27005",
+    "ISO/IEC 27001",
+    "ISO/IEC 27034",
+    "BS 7799"
+   ],
+   "scenario": "Trent is the new manager of his company’s internal software development department. He has been told by his management that the group needs to be compliant with the international standard that provides guidance to organizations in integrating security into the processes used for managing their applications. His new boss told him that he should join and get familiar with the Web Application Security Consortium, and Trent just received an e-mail stating that one of the company’s currently deployed applications has a zero day vulnerability.",
+   "answer": "C",
+   "explanation": [
+    "C. ISO/IEC 27034 is the international standard that provides guidance to organizations in integrating security to the processes used for managing their applications. It is applicable to in-house developed applications, applications acquired from third parties, and where the development or the operation of the application is outsourced.",
+    "A is incorrect because ISO/IEC 27005:2011 provides guidelines for information security risk management. It supports ISO/IEC 27001 and is designed to assist in the proper implementation of information security based on a risk management approach.",
+    "B is incorrect because ISO/IEC 27001:2005 specifies the requirements for establishing, implementing, operating, monitoring, reviewing, maintaining, and improving a documented information security management system within the context of the organization’s overall business risks. It specifies requirements for the implementation of security controls customized to the needs of individual organizations or parts thereof.",
+    "D is incorrect because BS 7799 was written by the UK government’s Department of Trade and Industry and outlines how an information security management system (ISMS) (aka security program) should be built and maintained. The goal was to provide guidance to organizations on how to design, implement, and maintain policies, processes, and technologies to manage risks to its sensitive information assets."
+   ]
+  },
+  {
+   "n": 27,
+   "q": "Which of the following best describes the consortium Trent’s boss wants him to join?",
+   "options": [
+    "Nonprofit organization that produces open-source software and follows widely agreed upon best-practice security standards for the World Wide Web.",
+    "U.S. DHS group that provides best practices, tools, guidelines, rules, principles, and other resources for software developers, architects, and security practitioners to use.",
+    "Group of experts who create proprietary software tools used to help improve the security of software worldwide.",
+    "Group of experts and organizations who certify products based on an agreed-upon security criteria."
+   ],
+   "scenario": "Trent is the new manager of his company’s internal software development department. He has been told by his management that the group needs to be compliant with the international standard that provides guidance to organizations in integrating security into the processes used for managing their applications. His new boss told him that he should join and get familiar with the Web Application Security Consortium, and Trent just received an e-mail stating that one of the company’s currently deployed applications has a zero day vulnerability.",
+   "answer": "A",
+   "explanation": [
+    "A. The Web Application Security Consortium (WASC) is a nonprofit organization made up of an international group of experts, industry practitioners, and organizational representatives who produce open-source and widely agreed upon best-practice security standards for the World Wide Web.",
+    "B is incorrect because the U.S. Department of Homeland Security (DHS) provides best practices, tools, guidelines, rules, principles, and other resources that software developers, architects, and security practitioners can use to build security into software in every phase of its development. This DHS initiative is called Build Security In (BSI), and it is a collaborative effort that allows many entities across the industry to participate and provide useful material.",
+    "C is incorrect because this is a distracter answer. There is no official organization that provides proprietary tools for the listed purpose.",
+    "D is incorrect because the Web Application Security Consortium does not certify products. Instead it provides guidance and open-source best practices on how to integrate security into software."
+   ]
+  },
+  {
+   "n": 28,
+   "q": "Which of the following best describes the type of vulnerability mentioned in this scenario?",
+   "options": [
+    "Dynamic vulnerability that is polymorphic",
+    "Static vulnerability that is exploited by server-side injection parameters",
+    "Vulnerability that does not currently have an associated solution",
+    "Database vulnerability that directly affects concurrency"
+   ],
+   "scenario": "Trent is the new manager of his company’s internal software development department. He has been told by his management that the group needs to be compliant with the international standard that provides guidance to organizations in integrating security into the processes used for managing their applications. His new boss told him that he should join and get familiar with the Web Application Security Consortium, and Trent just received an e-mail stating that one of the company’s currently deployed applications has a zero day vulnerability.",
+   "answer": "C",
+   "explanation": [
+    "C. Zero day vulnerabilities are vulnerabilities that do not currently have a resolution. If a vulnerability is identified and there is not a pre-established fix (patch, configuration, update), it is considered a zero day. A zero day attack is an attack that exploits a previously unknown vulnerability in a system, meaning that the attack occurs between the time it is identified and the solution is prepared—that is, on “day zero” of the awareness of the vulnerability. This leaves zero days for the victim to react and apply a patch to the vulnerability.",
+    "A is incorrect because a zero day vulnerability can be any type of vulnerability that does not have a current resolution that victims and potential victims can implement. A zero day vulnerability is not specific in nature, as in a dynamic polymorphic vulnerability; it is just a general category that can include this type of vulnerability and many more. A polymorphic attack just means that it changes itself, with the goal of being undetected.",
+    "B is incorrect because a zero day vulnerability can be any type of vulnerability that does not have a current resolution that victims and potential victims can implement. A zero day vulnerability is not specific in nature, as in server-side injection; it is just a general category that can include this type of vulnerability and many more. Server-side includes (SSI) injection attacks allow the exploitation of a web application by injecting scripts in HTML pages or executing arbitrary codes remotely.",
+    "D is incorrect because concurrency within databases specifically pertains to correctly executing several transactions simultaneously. If there is a vulnerability that directly affects the successful execution of database transactions, then there is a risk of negatively affecting the integrity of the data held within and processed by database software. This does not have anything to do directly with a zero day vulnerability."
+   ]
+  },
+  {
+   "n": 29,
+   "q": "___________________ provides a machine-readable description of the specific operations provided by a specific web service. ______________ provides a method for web services to be registered by service providers and located by service consumers.",
+   "options": [
+    "Web Services Description Language; Universal Description, Discovery and Integration",
+    "Universal Description, Discovery and Integration; Web Services Description Language",
+    "Web Services Description Language; Simple Object Access Protocol",
+    "Simple Object Access Protocol; Universal Description, Discovery and Integration"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Services within a service-oriented architecture (SOA) are usually provided through web services. A web service allows for web-based communication to happen seamlessly using web-based standards as in Simple Object Access Protocol (SOAP), HTTP, Web Services Description Language (WSDL), Universal Description, Discovery and Integration (UDDI), and XML. WSDL provides a machine-readable description of the specific operations provided by the service. UDDI is an XML-based registry that lists available services. UDDI provides a method for services to be registered by service providers and located by service consumers.",
+    "B is incorrect because the terms are not in the correct order and do not map to the definitions provided within the question. WSDL provides a machine-readable description of the specific operations provided by the service. UDDI is an XML-based registry that lists available services. UDDI provides a method for services to be registered by service providers and located by service consumers.",
+    "C is incorrect because Simple Object Access Protocol (SOAP) is an XML-based protocol that encodes messages in a web service environment. SOAP actually defines an XML schema of how communication is going to take place. The SOAP XML schema defines how objects communicate directly. SOAP is not an item identified in this question.",
+    "D is incorrect because Simple Object Access Protocol (SOAP) is an XML-based protocol that encodes messages in a web service environment. SOAP actually defines an XML schema of how communication is going to take place. The SOAP XML schema defines how objects communicate directly. This is not what the question is addressing."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "Sally has found out that software programmers in her company are making changes to software components and uploading them to the main software repository without following version control or documenting their changes. This is causing a lot of confusion and has caused several teams to use the older versions. Which of the following would be the best solution for this situation?",
+   "options": [
+    "Software change control management",
+    "Software escrow",
+    "Software configuration management",
+    "Software configuration management escrow"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. When changes take place to a software product during its development life cycle, a configuration management system can be put into place that allows for change control processes to take place through automation. A product that provides software configuration management (SCM) identifies the attributes of software at various points in time and performs a methodical control of changes for the purpose of maintaining software integrity and traceability throughout the software development life cycle. It defines the need to track changes and provides the ability to verify that the final delivered software has all of the approved changes that are supposed to be included in the release. During a software development project the centralized code repositories are often kept in systems that can carry out SCM functionality, which manages and tracks revisions made by multiple people against a single master set.",
+    "A is incorrect because this is not the official term for this type of functionality. Software change control management is only a part of software configuration management. A software configuration management system also provides concurrency management, versioning, and synchronization.",
+    "B is incorrect because in a software escrow framework, a third party keeps a copy of the source code, and possibly other materials, which it will release to the customer only if specific circumstances arise, mainly if the vendor who developed the code goes out of business or for some reason is not meeting its obligations and responsibilities. This procedure protects the customer, because the customer pays the vendor to develop software code for them, and if the vendor goes out of business, the customer otherwise would no longer have access to the actual code.",
+    "D is incorrect because this is a distracter answer. This is not an official term."
+   ]
+  }
+ ]
+}

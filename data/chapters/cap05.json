@@ -1,0 +1,539 @@
+{
+ "id": 5,
+ "title_en": "Telecommunications and Network Security",
+ "title_es": "Telecomunicaciones y Seguridad de la Red",
+ "block": 1,
+ "questions": [
+  {
+   "n": 1,
+   "q": "Layer 2 of the OSI model has two sublayers. What are those sublayers, and what are two IEEE standards that describe technologies at that layer?",
+   "options": [
+    "LCL and MAC; IEEE 802.2 and 802.3",
+    "LCL and MAC; IEEE 802.1 and 802.3",
+    "Network and MAC; IEEE 802.1 and 802.3",
+    "LLC and MAC; IEEE 802.2 and 802.3"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The data link layer, or Layer 2, of the OSI model is responsible for adding a header and a trailer to a packet to prepare the packet for the local area network or wide area network technology binary format for proper line transmission. Layer 2 is divided into two functional sublayers. The upper sublayer is the Logical Link Control (LLC) and is defined in the IEEE 802.2 specification. It communicates with the network layer, which is immediately above the data link layer. Below the LLC is the Media Access Control (MAC) sublayer, which specifies the interface with the protocol requirements of the physical layer. Thus, the specification for this layer depends on the technology of the physical layer. The IEEE MAC specification for Ethernet is 802.3, Token Ring is 802.5, wireless LAN is 802.11, and so on. When you see a reference to an IEEE standard, such as 802.11 or 802.16, it refers to the protocol working at the MAC sublayer of the data link layer of the protocol stack.",
+    "A is incorrect because LCL is a distracter. The correct acronym for the upper sublayer of the data link layer is LLC. It stands for the Logical Link Control. By providing multiplexing and flow control mechanisms, the LLC enables the coexistence of network protocols within a multipoint network and their transportation over the same network media.",
+    "B is incorrect because LCL is a distracter. The sublayers of the data link layer are the Logical Link Control (LLC) and the Media Access Control (MAC). Furthermore, the LLC is defined in the IEEE 802.2 specification, not 802.1. The IEEE 802.1 specifications are concerned with protocol layers above the MAC and LLC layers. It addresses LAN/MAN architecture, network management, internetworking between LANs and WANs, and link security, etc.",
+    "C is incorrect because network is not a sublayer of the data link layer. The sublayers of the data link layer are the Logical Link Control (LLC) and the Media Access Control (MAC). The LLC sits between the network layer (the layer immediately above the data link layer) and the MAC sublayer. Also, the LLC is defined in the IEEE 802.2 specification, not IEEE 802.1. As just explained, 802.1 standards address areas of LAN/MAN architecture, network management, internetworking between LANs and WANs, and link security. The IEEE 802.1 group’s four active task groups are Internetworking, Security, Audio/Video Bridging, and Data Center Bridging."
+   ]
+  },
+  {
+   "n": 2,
+   "q": "Which of the following is not an effective countermeasure against spam?",
+   "options": [
+    "Open mail relay servers",
+    "Properly configured mail relay servers",
+    "Filtering on an e-mail gateway",
+    "Filtering on the client"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. An open mail relay server is not an effective countermeasure against spam; in fact, spammers often use them to distribute spam, as they allow an attacker to mask their identity. An open mail relay is an SMTP server that is configured to allow inbound SMTP connections from anyone and to anyone on the Internet. This is how the Internet was originally set up, but many relays are now properly configured to prevent attackers from using them to distribute spam or pornography.",
+    "B is incorrect because a properly configured mail relay server only allows e-mail that is destined and originating from known users to pass through it. In this way, a closed mail relay server helps prevent the distribution of spam. In order to be considered closed, an SMTP server should be configured to accept and forward messages from local IP addresses to local mailboxes, from local IP addresses to nonlocal mailboxes, from known and trusted IP addresses to local mailboxes, and from clients that are authenticated and authorized. Servers that are left open are considered to be the result of poor systems administration.",
+    "C is incorrect because implementing spam filters on an e-mail gateway is the most common countermeasure against spam. Doing so helps protect network and server capacity, reduces the risk of legitimate e-mail being discarded, and saves users time. A number of commercial spam filters based on a variety of algorithms are available. The filtering software accepts e-mail as its input and either forwards the message unchanged to the recipient, redirects the message for delivery elsewhere, or discards the message.",
+    "D is incorrect because filtering on the client is a countermeasure against spam. In fact, filtering can take place at the gateway, which is the most popular method, on the e-mail server, or on the client. There are also different methods of filtering. Filtering based on keywords was once a popular method but has since become obsolete because it is prone to false positives and spammers can easily bypass them. Now more sophisticated filters are used. These are based on statistical analysis or analysis of e-mail traffic patterns."
+   ]
+  },
+  {
+   "n": 3,
+   "q": "Robert is responsible for implementing a common architecture used when customers need to access confidential information through Internet connections. Which of the following best describes this type of architecture?",
+   "options": [
+    "Two-tiered model",
+    "Screened subnet",
+    "Three-tiered model",
+    "Public and private DNS zones"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Many of today’s e-commerce architectures use a three-tiered architecture approach. The three-tier architecture is a client-server architecture in which the user interface, functional process logic, and data storage run as independent components that are developed and maintained, often on separate platforms. The three-tier architecture allows for any one of the tiers to be upgraded or modified as needed without affecting the other two tiers because of its modularity. In the case of e-commerce, the presentation layer is a front-end web server that users interact with. It can serve both static and cached dynamic content. The business logic layer is where the request is reformatted and processed. This is commonly a dynamic content processing and generation-level application server. The data storage is where the sensitive data is held. It is a backend database that holds both the data and the database management system software that is used to manage and provide access to the data. The separate tiers may be connected with middleware and run on separate physical servers.",
+    "A is incorrect because two-tiered, or client-server, describes an architecture in which a server provides services to one or more clients that request those services. Many of today’s business applications and Internet protocols use the client-server model. This architecture uses two systems: a client and a server. The client is one tier and the server is another tier, hence the two-tier architecture. Each instance of the client software is connected to one or more servers. The client sends its information request to a server, which processes the request and returns the data to the client. A three-tier architecture is a better approach for protecting sensitive information when requests are coming in from the Internet. It provides one extra tier that an attacker must exploit to gain access to the sensitive data being held on the backend server.",
+    "B is incorrect because a screened host architecture means that one firewall is in place to protect one server, which is basically a one-tier architecture. An external, public-facing firewall screens the requests coming in from an untrusted network as in the Internet. If the one tier, the only firewall, is compromised, then the attacker can gain access to the sensitive data that resides on the server relatively easily.",
+    "D is incorrect because while separating DNS servers into public and private servers provides protection, it is not an actual architecture used for the purpose requested in the question. Organizations should implement split DNS (public and private facing), which means a DNS server in the DMZ handles external resolution requests, while an internal DNS server handles only internal requests. This helps ensure that the internal DNS has layers of protection and is not exposed to Internet connections."
+   ]
+  },
+  {
+   "n": 4,
+   "q": "Since sending spam (unwanted messages) has increased over the years and e-mail has become a common way of sending out malicious links and malware, the industry has developed different ways to combat these issues. One approach is to use a sender policy framework, which is an e-mail validation system. In the following graphic, what type of system receives the request in step 2 and replies in step 3?",
+   "options": [
+    "DNS server",
+    "E-mail server",
+    "RADIUS server",
+    "Authentication server"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Sender policy framework (SPF) is an e-mail validation system designed to prevent spam and malicious e-mail by detecting e-mail spoofing. Attackers commonly spoof e-mail addresses to try and fool the receiver into thinking that the message came from a known and trusted source. SPF allows network administrators to specify which hosts are allowed to send mail from a given domain by implementing an SPF record in the Domain Name System (DNS). The e-mail server is configured to check with the DNS server to verify that an e-mail coming from a specific domain was sent from an IP address that has been sanctioned by the sending domain’s administrator. In the graphic, step 2 is the e-mail server sending this validation request to a DNS server, and step 4 illustrates the resulting validation process that is followed.",
+    "B is incorrect because the e-mail server is being represented between steps 1 and 2. The graphic shows how an e-mail is sent to an e-mail server on a specific domain. The e-mail server is configured to verify that the message comes from a host that is allowed to send it by checking with the source domain’s DNS server. If the DNS server has a record that indicates that e-mail from the sending host is allowed, then the e-mail server will forward the message onto the intended destination. The sender’s address is sent at the beginning of a Simple Mail Transfer Protocol (SMTP) transmission. If the e-mail server rejects e-mail from that specific address, the sending client will receive a rejection message. If the client is relaying the message on behalf of another entity (message transfer agent), then a bounced message is sent to the original sending address. SPF deals with e-mail spoofing and cannot detect or prevent e-mail address forgery. Attackers commonly use e-mail spoofing to carry out phishing attacks with the goal of obtaining private or sensitive information from the victim.",
+    "C is incorrect because RADIUS is not involved with this type of verification. Remote Authentication Dial-In User Service (RADIUS) is a networking protocol that provides centralized Authentication, Authorization, and Accounting (AAA) functionality for individual end users that need to connect to a remote system or a network. RADIUS is an authentication framework used to authenticate users, not domain names or e-mail–sending entities. RADIUS is a client/server protocol that is commonly used with network access servers (NAS), remote access servers (RAS), and 802.1X port authentication.",
+    "D is incorrect because the graphic is illustrating how a DNS server is part of the SPF validation process. The DNS server is not an authentication server. A DNS server contains records that mainly contain IP-to-hostname mappings. In an SPF setup, the DNS server would have a record indicating which sending servers the receiving e-mail server is allowed to accept e-mail from, which is configured by the network administrator. SPF is necessary because the Simple Mail Transfer Protocol (SMTP) does not have inherent security functionality to detect spoofed messages. An attacker could spoof an e-mail address and essentially claim to be any source address, and there is nothing within SMTP to identify this activity. Attackers commonly carry out this type of spoofing attack with the goal of tricking an end user into accepting the message and clicking a malicious link or a malicious attachment."
+   ],
+   "images": [
+    "data/img/cap05_q04_0.jpeg"
+   ]
+  },
+  {
+   "n": 5,
+   "q": "Which of the following indicates to a packet where to go and how to communicate with the right service or protocol on the destination computer?",
+   "options": [
+    "Socket",
+    "IP address",
+    "Port",
+    "Frame"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. UDP and TCP are transport protocols that applications use to get their data across a network. They both use ports to communicate with upper OSI layers and to keep track of various conversations that take place simultaneously. The ports are also the mechanism used to identify how other computers access services. When a TCP or UDP message is formed, a source and a destination port are contained within the header information along with the source and destination IP addresses. This makes up a socket, which is how packets know where to go—by the address—and how to communicate with the right service or protocol on the other computer—by the port number. The IP address acts as the doorway to a computer, and the port acts as the doorway to the actual protocol or service. To communicate properly, the packet needs to know these doors.",
+    "B is incorrect because an IP address does not tell a packet how to communicate with a service or protocol. The purpose of an IP address is host or network interface identification and location addressing. Each node in a network has a unique IP address. This information, along with the source and destination ports, makes up a socket. The IP address tells the packet where to go, and the port indicates how to communicate with the right service or protocol.",
+    "C is incorrect because the port only tells the packet how to communicate with the right service or protocol. It does not tell the packet where to go. The IP address provides this information. A port is a communications endpoint used by IP protocols such as TCP and UDP. Ports are identified by a number. They are also associated with an IP address and a protocol used for communication.",
+    "D is incorrect because frame is the term used to refer to a datagram after it is given a header and trailer at the data link layer. A message is formed and passed to the application layer from a program and sent down through the protocol stack. Each protocol at each layer adds its own information (headers and trailers) to the message and passes it down to the next level. As the message is passed down the stack, it goes through a sort of evolution, and each stage has a specific name that indicates what is taking place. When an application formats data to be transmitted over the network, the data is called a message. The message is sent to the transport layer, where TCP does its magic on the data. The bundle of data is now a segment. The segment is sent to the network layer. The network layer adds routing and addressing, and now the bundle is called a datagram. The network layer passes off the datagram to the data link layer, which frames the datagram with a header and a trailer, and now it is called a frame."
+   ]
+  },
+  {
+   "n": 6,
+   "q": "Several different tunneling protocols can be used in dial-up situations. Which of the following would be best to use as a VPN tunneling solution?",
+   "options": [
+    "L2P",
+    "PPTP",
+    "IPSec",
+    "L2TP"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. A virtual private network (VPN) is a secure, private connection through a public network or an otherwise unsecure environment. It is a private connection because the encryption and tunneling protocols are used to ensure the confidentiality and integrity of the data in transit. It is important to remember that VPN technology requires a tunnel to work, and it assumes encryption. The protocols that can be used for VPNs are Point-to-Point Tunneling Protocol (PPTP), IPSec, and L2TP. Point-to-Point Tunneling Protocol (PPTP), a Microsoft protocol, allows remote users to set up a PPP connection to a local ISP and then create a secure VPN to their destination. PPTP has been the de facto industry-standard tunneling protocol for years, but the new de facto standard for VPNs is IPSec. PPTP is designed for client/server connectivity and establishes a single point-to-point connection between two computers. It works at the data link layer and transmits only over IP networks.",
+    "A is incorrect because L2P does not exist. This is a distracter answer.",
+    "C is incorrect because although IPSec is one of the three primary VPN tunneling protocols, it is not used over dial-up connections. It supports only IP networks and works at the network layer, providing security on top of IP. IPSec handles multiple connections at the same time, and provides secure authentication and encryption.",
+    "D is incorrect because L2TP is not a tunneling protocol that works over a dial-up connection. L2TP is a tunneling protocol that can extend a VPN over various WAN network types (IP, X.25, frame relay). A hybrid of L2F and PPTP, L2TP works at the data link layer and transmits over multiple types of networks, not just IP. However, it must be combined with IPSec for security so it is not considered a VPN solution by itself."
+   ]
+  },
+  {
+   "n": 7,
+   "q": "Which of the following correctly describes Bluejacking?",
+   "options": [
+    "Bluejacking is a harmful, malicious attack.",
+    "It is the process of taking over another portable device via a Bluetooth-enabled device.",
+    "It is commonly used to send contact information.",
+    "The term was coined by the use of a Bluetooth device and the act of hijacking another device."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Bluetooth is vulnerable to an attack called Bluejacking, which entails an attacker sending an unsolicited message to a device that is Bluetooth-enabled. Bluejackers look for a receiving device, such as a mobile device or laptop, and then send a message to it. Often, the Bluejacker is trying to send their business card to be added to the victim’s contact list in their address book. The countermeasure is to put the Bluetooth-enabled device into nondiscoverable mode so that others cannot identify this device in the first place. If you receive some type of message this way, just look around you. Bluetooth only works within a ten-meter distance, so it is coming from someone close by.",
+    "A is incorrect because Bluejacking is actually a harmless nuisance rather than a malicious attack. It is the act of sending unsolicited messages to Bluetooth-enabled devices. The first act took place in a bank in which the attacker polled the network and found an active Nokia phone. He then sent the message “Buy Ericcson.”",
+    "B is incorrect because Bluejacking does not involve taking over another device. It does not give the attacker control of the target device. Rather, the Bluejacker simply sends an unsolicited message to the Bluetooth-enabled device. These messages are usually text only, but it is possible to also send images or sounds. Victims are often unfamiliar with Bluejacking and may think their phone is malfunctioning or that they have been attacked by a virus or hijacked by a Trojan horse.",
+    "D is incorrect because the term Bluejacking has nothing to do with hijacking, which means to take over something. The name Bluejacking was invented by a Malaysian IT consultant who sent the message “Buy Ericsson” to another Bluetooth-enabled device."
+   ]
+  },
+  {
+   "n": 8,
+   "q": "DNS is a popular target for attackers due to its strategic role on the Internet. What type of attack uses recursive queries to poison the cache of a DNS server?",
+   "options": [
+    "DNS spoofing",
+    "Manipulation of the hosts file",
+    "Social engineering",
+    "Domain litigation"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. DNS plays a strategic role in the transmission of traffic on the Internet. The DNS directs traffic to the appropriate address by mapping domain names to their corresponding IP addresses. DNS queries can be classified as either recursive or iterative. In a recursive query the DNS server often forwards the query to another server and returns the inquirer the proper response. In an iterative query, the DNS server responds with an address for another DNS server that might be able to answer the question, and the client then proceeds to ask the new DNS server. Attackers use recursive queries to poison the cache of a DNS server. In this manner, attackers can point systems to a web site that they control and that contains malware or some other form of attack. Here’s how it works: An attacker sends a recursive query to a victim DNS server asking for the IP address of the domain www.logicalsecurity.com. The DNS server forwards the query to another DNS server. However, before the other DNS server responds, the attacker injects his own IP address. The victim server accepts the IP address and stores it in its cache for a specific period of time. The next time a system queries the server to resolve www.logicalsecurity.com to its IP address, the server will direct users to the attacker’s IP address. This is called DNS spoofing or DNS poisoning.",
+    "B is incorrect because manipulating the hosts file does not use recursive queries to poison the cache of a DNS server. A client first queries a hosts file before issuing a request to a DNS server. Some viruses add invalid IP addresses of antivirus vendors to the hosts file in order to prevent the download of virus definitions and prevent detection. This is an example of manipulating the hosts file.",
+    "C is incorrect because social engineering does not involve querying a DNS server. Social engineering refers to the manipulation of individuals for the purpose of gaining unauthorized access or information. Social engineering takes advantage of people’s desire to be helpful and/or trusting. It is a nontechnical attack that may use technology in its execution. For example, an attacker might pose as a user’s manager and send him a spoofed e-mail asking for the password to an application. The user, wanting to help and keep his manager’s favor, is likely to provide the password.",
+    "D is incorrect because domain litigation does not involve poisoning a DNS server’s cache. Domain names are subject to trademark risks, including the temporary unavailability or permanent loss of an established domain name. A victim company could lose its entire Internet presence as a result of domain litigation. Organizations concerned over the possibility of trademark disputes related to their domain name(s) should establish contingency plans. For example, a company may establish a second, unrelated domain that can still represent the company’s name."
+   ]
+  },
+  {
+   "n": 9,
+   "q": "IP telephony networks require the same security measures as those implemented on an IP data network. Which of the following is unique to IP telephony?",
+   "options": [
+    "Limiting IP sessions going through media gateways",
+    "Identification of rogue devices",
+    "Implementation of authentication",
+    "Encryption of packets containing sensitive information"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. A media gateway is the translation unit between disparate telecommunications networks. VoIP Media Gateways perform the conversion between Time Division Multiplexing (TDM) voice to Voice over Internet Protocol (VoIP). As a security measure, the number of calls via media gateways should be limited. Otherwise, media gateways are vulnerable to denial-of-service attacks, hijacking, and other types of attacks.",
+    "B is incorrect because it is necessary to identify rogue devices on both IP telephony and data networks. On IP telephony networks, it is necessary to look specifically for rogue IP phones and softphones. Rogue means that these devices are unauthorized. They are therefore not managed or secured by IT and can introduce additional risk to the network. A common rogue device found on data networks is wireless access points. A rogue access point can provide an entry to the network for unauthorized users.",
+    "C is incorrect because authentication is recommended for both data and voice networks. In both cases, authentication allows you to register users and equipment on the network so that you can verify they are who they say they are when they try to connect to the network. Authentication also allows you to deny access to users and devices that are not authorized.",
+    "D is incorrect because sensitive data can be transmitted on either a voice or data network and should be encrypted in both cases. Eavesdropping is a very real threat for VoIP networks. Consider all the sales meetings, management meetings, financial meetings, etc., that are conducted over the phone. Every word that is spoken in those meetings is vulnerable to eavesdropping. Encrypting voice data is one of the best ways to protect this sensitive data."
+   ]
+  },
+  {
+   "n": 10,
+   "q": "Cross-site scripting (XSS) is an application security vulnerability usually found in web applications. What type of XSS vulnerability occurs when a victim is tricked into opening a URL programmed with a rogue script to steal sensitive information?",
+   "options": [
+    "Persistent XSS vulnerability",
+    "Nonpersistent XSS vulnerability",
+    "Second-order vulnerability",
+    "DOM-based vulnerability"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. XSS attacks enable an attacker to inject their malicious code into vulnerable web pages. When an unsuspecting user visits the infected page, the malicious code executes on the victim’s browser and may lead to stolen cookies, hijacked sessions, malware execution, bypassed access control, or aid in exploiting browser vulnerabilities. There are three different XSS vulnerabilities: persistent, nonpersistent, and DOM-based. A nonpersistent vulnerability (also called a reflected vulnerability) occurs when an attacker tricks the victim into opening a URL programmed with a rogue script to steal the victim’s sensitive information, such as a cookie or session ID. The principle behind this attack lies in exploiting the lack of proper input or output validation on dynamic web sites. An XSS attack such as this can potentially cause damage on a huge scale. The stolen cookies can lead to compromised web mail systems, flooded blogs, and disclosed bank accounts. Most of the phishing attacks are caused by XSS vulnerabilities.",
+    "A is incorrect because a persistent vulnerability is targeted at web sites that allow users to input data that is stored in a database or similar location, such as a forum or message board. The code for this type of attack can be rendered automatically without the need of luring a user to a third-party web site. The best way to overcome the XSS vulnerability is through secure programming practices. Web application developers must ensure that every user input is filtered. Only a limited set of known and secure characters should be allowed for user input.",
+    "C is incorrect because a second-order vulnerability is another name for a persistent XSS vulnerability, which targets web sites that allow users to input data that is stored in a database.",
+    "D is incorrect because in a DOM-based XSS vulnerability the attacker uses the Document Object Model (DOM) environment to modify the original client-side JavaScript. This causes the victim’s browser to execute the resulting abusive JavaScript code. Thus, cross-site attacks can be used to exploit vulnerabilities in the victim’s web browser. Once the system is successfully compromised by the attacker, he may further penetrate into other systems on the network or execute scripts that may spread through the internal network. As for the client’s side, the most effective way to prevent XSS attacks is to disable scripting language support in the browser. If this is not feasible, then content filtering proxy servers may be used."
+   ]
+  },
+  {
+   "n": 11,
+   "q": "Angela wants to group together computers by department to make it easier for them to share network resources. Which of the following will allow her to group computers logically?",
+   "options": [
+    "VLAN",
+    "Open network architecture",
+    "Intranet",
+    "VAN"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Virtual LANs (VLANs) enable the logical separation and grouping of computers based on resource requirements, security, or business needs in spite of the standard physical location of the systems. This technology allows Angela to logically place all computers within the same department on the same VLAN network so that all users can receive the same broadcast messages and can access the same types of resources, regardless of their physical location. This means that computers can be grouped together even if they are not located on the same network.",
+    "B is incorrect because open network describes technologies that can make up a network. It is one that no vendor owns, that is not proprietary, and that can easily integrate various technologies and vendor implementations of those technologies. The OSI model provides a framework for developing products that will work within an open network architecture. Vendors use the OSI model as a blueprint and develop their own protocols and interfaces to produce functionality that is different from that of other vendors. However, because these vendors use the OSI model as their starting place, integration of other vendor products is an easier task, and the interoperability issues are less burdensome than if the vendors had developed their own networking framework from scratch.",
+    "C is incorrect because an intranet is a private network that a company uses when it wants to use the Internet and web-based technologies for internal networks. The company has web servers and client machines using web browsers, and it uses the TCP/IP protocol suite. The web pages are written in HTML or XML, and are accessed via HTTP.",
+    "D is incorrect because a value-added network (VAN) is an electronic data interchange (EDI) infrastructure developed and maintained by a service bureau. Here’s an example of how a VAN works: A retail store such as Target tracks its inventory by having employees scan bar codes on individual items. When the inventory of an item—such as garden hoses—becomes low, an employee sends a request for more garden hoses. The request goes to a mailbox at a VAN that Target pays to use, and the request is then pushed out to the garden hose supplier. Because Target deals with thousands of suppliers, using a VAN simplifies the ordering process. There is no need to manually track down the right supplier and submit a purchase order."
+   ]
+  },
+  {
+   "n": 12,
+   "q": "Which of the following incorrectly describes how routing commonly takes place on the Internet?",
+   "options": [
+    "EGP is used in the areas “between” each AS.",
+    "Regions of nodes that share characteristics and behaviors are called ASs.",
+    "CAs are specific nodes that are responsible for routing to nodes outside of their region.",
+    "Each AS uses IGP to perform routing functionality."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. A CA, or Certificate Authority, is a trusted third party that provides digital certificates for use in a public key infrastructure. Certificate Authorities have nothing to do with routing. A PKI environment provides a hierarchical trust model but does not deal with routing of traffic.",
+    "A is incorrect because the statement is true. The Exterior Gateway Protocol (EGP) functions between each autonomous system (AS). The architecture of the Internet that supports these various ASs is created so that no entity that needs to connect to a specific AS has to know or understand the interior protocols that can be used. Instead, for ASs to communicate, they just have to be using the same exterior routing protocols.",
+    "B is incorrect because the statement is true; regions of nodes (networks) that share characteristics and behaviors are called autonomous systems (ASs). These ASs are independently controlled by different corporations and organizations. An AS is made up of computers and devices, which are administered by a single entity and use a common Interior Gateway Protocol (IGP). The boundaries of these ASs are delineated by border routers. These routers connect to the border routers of other ASs and run interior and exterior routing protocols. Internal routers connect to other routers within the same AS and run interior routing protocols. So, in reality, the Internet is just a network made up of ASs and routing protocols.",
+    "D is incorrect because Interior Gateway Protocol (IGP) handles routing tasks within each AS. There are two categories of IGPs: distance-vector routing protocols and link-state routing protocols. Distance-vector routing protocols include Routing Information Protocol (RIP) and Interior Gateway Routing Protocol (IGRP). Routers using these protocols do not possess information about the entire network topology. Nodes using link-state routing protocols, on the other hand, possess information about the complete network topology. Examples of these protocols include Open Shortest Path First (OSPF) and Intermediate System to Intermediate System (IS- IS)."
+   ]
+  },
+  {
+   "n": 13,
+   "q": "Both de facto and proprietary interior protocols are in use today. Which of the following is a proprietary interior protocol that chooses the best path between the source and destination?",
+   "options": [
+    "IGRP",
+    "RIP",
+    "BGP",
+    "OSPF"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Interior Gateway Routing Protocol (IGRP) is a distance-vector routing protocol that was developed by, and is proprietary to, Cisco Systems. Whereas Routing Information Protocol (RIP) uses one criterion to find the best path between the source and the destination, IGRP uses five criteria to make a “best route” decision. A network administrator can set weights on these different metrics so that the protocol works best in that specific environment.",
+    "B is incorrect because Routing Information Protocol (RIP) is not proprietary. RIP is a standard that outlines how routers exchange routing table data and is considered a distance-vector protocol, which means it calculates the shortest distance between the source and the destination. It is considered a legacy protocol, because of its slow performance and lack of functionality. It should only be used in small networks. RIP version 1 has no authentication, and RIP version 2 sends passwords in clear text or hashed with MD5.",
+    "C is incorrect because the Border Gateway Protocol (BGP) is an Exterior Gateway Protocol (EGP). BGP enables routers on different ASs to share routing information to ensure effective and efficient routing between the different networks. BGP is commonly used by Internet service providers to route data from one location to the next on the Internet.",
+    "D is incorrect because Open Shortest Path First (OSPF) is not proprietary. OSPF uses link-state algorithms to send out routing table information. The use of these algorithms allows for smaller, more frequent routing table updates to take place. This provides a more stable network than RIP but requires more memory and CPU resources to support this extra processing. OSPF allows for a hierarchical routing network that has a backbone link connecting all subnets together. OSPF is the preferred protocol and has replaced RIP in many networks today. Authentication can take place with clear text passwords or hashed passwords, or you can choose to configure no authentication on the routers using this protocol."
+   ]
+  },
+  {
+   "n": 14,
+   "q": "When a system needs to send data to an end user, that data may have to travel over different networking protocols to get to the destination. The different protocol types depend upon how far geographically the data needs to travel, the types of intermediate devices involved, and how this data needs to be protected during transmission. In the following graphic, which two WAN protocols are missing, and what is the best reasoning for their functionality in the transmission scenario being illustrated?",
+   "options": [
+    "PPTP is being used since the traffic needs to travel over different WAN technologies. PPP is being used because the “last leg” of the transmission is over a multiplexed telecommunication link.",
+    "L2FP is being used since the traffic needs to travel over different WAN technologies. PPP is being used because the “last leg” of the transmission is over a serial telecommunication link.",
+    "L2TP is being used since the traffic needs to travel over different WAN technologies. PPP is being used because the “last leg” of the transmission is over a serial telecommunication link.",
+    "IPSec tunnel mode is being used since the traffic needs to travel over different WAN technologies. PPP is being used because the “last leg” of the transmission is over a multiplexed telecommunication link."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Point-to-point protocol (PPP) is a data link protocol that carries out framing and encapsulation for point-to-point connections. Telecommunication devices commonly use PPP as their data link protocol, which encapsulates data to be sent over serial connection links. Layer 2 Tunneling Protocol (L2TP) is used when a PPP connection needs to be extended through a non-IP– based WAN network. L2TP tunnels PPP traffic over various network types such as ATM and Frame Relay. This means that when two networks are connected by WAN links, each network’s gateway device (i.e., border router) is configured to use L2TP. When the destination gateway system receives data over the L2TP, it “unwraps” the packets by stripping off the L2TP headers and sends the packets over the next leg of the transmission, which in this graphic is a telecommunication link using PPP.",
+    "A is incorrect because PPTP is used when a PPP connection needs to be extended through an IP-based network. PPTP does not work over non-IP networks such as Frame Relay and ATM. PPTP is an older protocol that is not used to transmit data over complex non- IP WAN links as shown in this graphic. PPTP uses Generic Routing Encapsulation (GRE) and TCP to encapsulate PPP packets and to extend a PPP connection through an IP network. The second part of the answer states that PPP is used for multiplexed telecommunication links, which is incorrect because multiplexing takes place at the physical layer and is carried out by devices, not at the data link layer through a protocol.",
+    "B is incorrect because there is no protocol called L2FP. This is a distractor answer. L2F is Cisco’s Layer 2 Forwarding proprietary protocol used for tunneling PPP traffic. This protocol is used to create secure virtual private connections over the Internet. Various functionalities of the L2F and PPTP protocols were combined to create the L2TP protocol. The two end-points of an L2TP tunnel are called the LAC (L2TP Access Concentrator) and the LNS (L2TP Network Server). Once an L2TP tunnel is established between the two ends, the network traffic between the peers is bidirectional.",
+    "D is incorrect because IPSec can only work over IP-based networks and is not a WAN VPN technology that extends PPP connections. For data to travel over WAN links of this type, a data link protocol needs to be used, and IPSec is a network layer protocol. IPSec is a suite of protocols developed to protect traffic traveling over an IP network, because the basic Internet Protocol (IP) does not have any type of security functionality built into it. When an L2TP connection requires the security functionality that IPSec provides (authentication, integrity, confidentiality), the L2TP and IPSec protocols are configured to work together to provide the necessary level of protection. The second part of the answer states that PPP is used for multiplexed telecommunication links, which is incorrect because multiplexing takes place at the physical layer and is carried out by devices, not at the data link layer through a protocol."
+   ],
+   "images": [
+    "data/img/cap05_q14_0.jpeg"
+   ]
+  },
+  {
+   "n": 15,
+   "q": "Which of the following does not describe IP telephony security?",
+   "options": [
+    "VoIP networks should be protected with the same security controls used on a data network.",
+    "Softphones are more secure than IP phones.",
+    "As endpoints, IP phones can become the target of attacks.",
+    "The current Internet architecture over which voice is transmitted is less secure than physical phone lines."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. IP softphones should be used with caution. A softphone is a software application that allows the user to make phone calls via a computer over the Internet. A softphone, which replaces dedicated hardware, behaves like a traditional telephone. It can be used with a headset connected to a PC’s sound card or with a USB phone. Skype is an example of a softphone application. Compared to hardware-based IP phones, softphones make an IP network more vulnerable. However, softphones are no worse than any other interactive Internet application. In addition, data-centered malware can more easily enter a network via softphones because they do not separate voice traffic from data as do IP phones.",
+    "A is incorrect because the statement correctly describes IP telephony network security. An IP telephony network uses the same technology as a traditional IP network, only it can support voice applications. Therefore, the IP telephony network is susceptible to the same vulnerabilities as a traditional IP network and should be protected accordingly. This means the IP telephony network should be engineered to have the proper security.",
+    "C is incorrect because the statement is true. IP phones on an IP telephony network are the equivalent of a workstation on a data network in terms of their vulnerability to attack. Thus, IP phones should be protected with many of the same security controls that are implemented in a traditional workstation. For example, default administrator passwords should be changed. Unnecessary remote access features should be disabled. Logging should be enabled and the firmware upgrade process should be secured.",
+    "D is incorrect because the statement is true. For the most part, the current Internet architecture over which voice is transmitted is less secure than physical phone lines. Physical phone lines provide point-to-point connections, which are harder to tap into than the software-based tunnels that make up most of the Internet. This is an important factor to take into consideration when securing an IP telephony network because the network is now transmitting two invaluable assets—data and voice. It is not unusual for personally identifiable information, financial information, and other sensitive data to be spoken over the phone. Intercepting this information over an IP telephony network is as easy as intercepting regular data. Now voice traffic needs to be encrypted, too."
+   ]
+  },
+  {
+   "n": 16,
+   "q": "When an organization splits naming zones, the names of its hosts that are only accessible from an intranet are hidden from the Internet. Which of the following best describes why this is done?",
+   "options": [
+    "To prevent attackers from accessing servers",
+    "To prevent the manipulation of the hosts file",
+    "To avoid providing attackers with valuable information that can be used to prepare an attack",
+    "To avoid providing attackers with information needed for cybersquatting"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Many companies have their own internal DNS servers to resolve their internal hostnames. These companies usually also use the DNS servers at their ISPs to resolve hostnames on the Internet. An internal DNS server can be used to resolve hostnames on the entire network, but usually more than one DNS server is used so that the load can be split up and so that redundancy and fault tolerance are in place. Within DNS servers, networks are split into zones. One zone may contain all hostnames for the marketing and accounting departments, and another zone may contain hostnames for the administration, research, and legal departments. It is a good idea to split DNS zones when possible so that the names of hosts that are accessible only from an intranet are not visible from the Internet. This information is valuable to an attacker who is planning an attack because it can lead to other information, such as the network structure, organizational structure, or server operating systems.",
+    "A is incorrect because this is not the best answer for this question. Naming zones are split up so that attackers cannot learn information about internal systems, such as names, IP addresses, functions, and so on. One of the secondary attacks after exploiting a DNS server could be accessing a server in an unauthorized manner, but ensuring unauthorized access just to servers is not the main reason to split DNS zones.",
+    "B is incorrect because splitting naming zones has to do with how DNS servers are set up to resolve hostnames, not manipulate the hosts file. The hosts file can be manipulated for a number of reasons, both for good and bad. The hosts file always maps the hostname localhost to the IP address 127.0.0.1 (this is the loopback network interface, which is defined in RFC 3330), as well as other hosts. Some viruses add invalid IP addresses of antivirus vendors to the hosts file to avoid detection. By adding frequently visited IP addresses to the hosts file, you can increase the speed of web browsing. You can also block spyware and ad networks by adding lists of spyware and ad network sites to the hosts file and mapping them to the loopback network interface. This way, these sites always point back to the user’s machine and the sites cannot be reached.",
+    "D is incorrect because hackers do not need information on a DNS server to carry out cybersquatting. Cybersquatting occurs when an attacker purchases a well-known brand or company name, or variation thereof, as a domain name with the goal of selling it to the rightful owner. In the meantime, the company can be misrepresented to the public. The only way an organization can avoid cybersquatting is by registering adjacent domains and variations on the domain, or by trademark litigation."
+   ]
+  },
+  {
+   "n": 17,
+   "q": "Which of the following best describes why e-mail spoofing is easily executed?",
+   "options": [
+    "SMTP lacks an adequate authentication mechanism.",
+    "Administrators often forget to configure an SMTP server to prevent inbound SMTP connections for domains it doesn’t serve.",
+    "Keyword filtering is technically obsolete.",
+    "Blacklists are undependable."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. E-mail spoofing is easy to execute because SMTP lacks an adequate authentication mechanism. An attacker can spoof e-mail sender addresses by sending a TELNET command to port 25 of a mail server followed by a number of SMTP commands. Spammers use e-mail spoofing to obfuscate their identity. Oftentimes, the purported sender of a spam e-mail is actually another victim of spam whose e-mail address has been sold to or harvested by a spammer.",
+    "B is incorrect because the answer alludes to open mail relay servers. The failure to configure an SMTP server to prevent SMTP connections for domains it doesn’t serve is not a common mistake. It is well known that an open mail relay allows spammers to hide their identity and is a principal tool in the distribution of spam. Open mail relays are, therefore, considered a sign of bad system administration. An open relay is not required for e-mail spoofing.",
+    "C is incorrect because keyword filtering is a countermeasure that can be used to help suppress spam. While keyword filtering by itself was popular at one time, it is no longer an effective countermeasure when used just by itself. Keyword filtering is prone to false positives and spammers have found creative ways to work around it. For example, keywords may be intentionally misspelled or one or two letters of a common word swapped with a special character.",
+    "D is incorrect because blacklists list open mail relay servers that are known for sending spam. Administrators can use blacklists to prevent the delivery of e-mail originating from those hosts in an effort to suppress spam. However, blacklists cannot be depended upon for complete protection because they are often managed by private organizations and individuals according to their own rules."
+   ]
+  },
+  {
+   "n": 18,
+   "q": "Which of the following is not a benefit of VoIP?",
+   "options": [
+    "Cost",
+    "Convergence",
+    "Flexibility",
+    "Security"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Voice over Internet Protocol (VoIP) refers to transmission technologies that deliver voice communications over IP networks. IP telephony uses technologies that are similar to TCP/IP, so its vulnerabilities are also similar. The voice system is vulnerable to application manipulation (such as toll fraud and blocking), unauthorized administrative access, and poor implementation. In terms of the network and media, it is also vulnerable to denial-of-service attacks against the gateways and network resources. Eavesdropping is also a concern, since data traffic is sent in cleartext unless it is encrypted.",
+    "A is incorrect because cost is a benefit of VoIP. Using VoIP means a company has to pay for and maintain only one network, instead of one network dedicated to data transmission and another network dedicated to voice transmission. Telephony features such as conference calling, call forwarding, and automatic redial are free from open-source VoIP implementations, while traditional telecommunications companies charge extra for them. And, finally, VoIP costs are lower because of the way they are billed. VoIP calls are billed per megabyte, while regular telephone calls are billed by the minute. In general, it is cheaper to send data over the Internet for a given period of time than it is to use the regular telephone for that same amount of time.",
+    "B is incorrect because convergence is a benefit of VoIP. Convergence refers to the merging of the traditional IP network with the traditional analog phone network. This is a benefit because a company no longer has to pay for and maintain separate networks for data and voice. However, while convergence saves money and administration overhead, certain security issues must be understood and dealt with.",
+    "C is incorrect because flexibility is a benefit of VoIP. The technology easily supports multiple telephone calls over a single Internet broadband connection without having to add extra lines. It also offers location independence. All that is needed to obtain a WAN or MAN phone connection to a VoIP provider is an adequate Internet connection. VoIP can also be integrated with other Internet services, such as video conversation, file exchange during a call, and audio conferencing."
+   ]
+  },
+  {
+   "n": 19,
+   "q": "Today, satellites are used to provide wireless connectivity between different locations. What two prerequisites are needed for two different locations to communicate via satellite links?",
+   "options": [
+    "They must be connected via a phone line and have access to a modem.",
+    "They must be within the satellite’s line of sight and footprint.",
+    "They must have broadband and a satellite in low Earth orbit.",
+    "They must have a transponder and be within the satellite’s footprint."
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. For two different locations to communicate via satellite links, they must be within the satellite’s line of sight and footprint (area covered by the satellite). The sender of information modulates the data onto a radio signal that is transmitted to the satellite. A transponder on the satellite receives this signal, amplifies it, and relays it to the receiver. The receiver must have a certain type of antenna, which is one of those circular, dish-like components on top of buildings. The antenna contains one or more microwave receivers, depending upon how many satellites it is accepting data from. The size of the footprint depends upon the type of satellite being used. It can be as large as a country or only a few hundred feet in circumference.",
+    "A is incorrect because a phone line and a modem are not wireless. However, in most cases satellite broadband is a hybrid system that uses a regular phone line and modem-like technologies for data and requests sent from the user’s machine, but employs a satellite link to send data to the user.",
+    "C is incorrect because the satellite provides broadband transmission. It is commonly used for television channels and PC Internet access. While it is certainly necessary to have a satellite in orbit, and those in low Earth orbit are commonly used for two-way paging, international cellular communication, TV stations, and Internet use, it is not the best answer to this question.",
+    "D is incorrect because the two locations do not require a transponder. The transponder is on the satellite itself. The transponder receives a signal, amplifies it, and sends it to the receiver. However, it is necessary for the two locations to be within the satellite’s footprint."
+   ]
+  },
+  {
+   "n": 20,
+   "q": "Brad is a security manager at Thingamabobs Inc. He is preparing a presentation for his company’s executives on the risks of using instant messaging (IM) and his reasons for wanting to prohibit its use on the company network. Which of the following should not be included in his presentation?",
+   "options": [
+    "Sensitive data and files can be transferred from system to system over IM.",
+    "Users can receive information—including malware—from an attacker posing as a legitimate sender.",
+    "IM use can be stopped by simply blocking specific ports on the network firewalls.",
+    "A security policy is needed specifying IM usage restrictions."
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Instant messaging (IM) allows people to communicate with one another through a type of real-time and personal chat room. It alerts individuals when someone who is on their “buddy list” has accessed the intranet/Internet so that they can send text messages back and forth in real time. The technology also allows for files to be transferred from system to system. The technology is made up of clients and servers. The user installs an IM client (AOL, ICQ, Yahoo Messenger, and so on) and is assigned a unique identifier. This user gives out this unique identifier to people whom she wants to communicate with via IM. Blocking specific ports on the firewalls is not usually effective because the IM traffic may be using common ports that need to be open (HTTP port 80 and FTP port 21). Many of the IM clients autoconfigure themselves to work on another port if their default port is unavailable and blocked by the firewall.",
+    "A is incorrect because in addition to text messages, instant messaging allows for files to be transferred from system to system. These files could contain sensitive information, putting the company at business and legal risk. And, of course, sharing files over IM can eat up network bandwidth and impact network performance as a result.",
+    "B is incorrect because the statement is true. Because of the lack of strong authentication, accounts can be spoofed so that the receiver accepts information from a malicious user instead of the legitimate sender. There have also been numerous buffer overflow and malformed packet attacks that have been successful with different IM clients. These attacks are usually carried out with the goal of obtaining unauthorized access to the victim’s system.",
+    "D is incorrect because Brad should include in his presentation the need for a security policy specifying IM usage restrictions. This is just one of several best practices for protecting an environment from IM-related security breaches. Other best practices include implementing an integrated antivirus/firewall product on all computers, configuring firewalls to block IM traffic, upgrading IM software to more secure versions, and implementing corporate IM servers so that internal employees communicate within the organization’s network only."
+   ]
+  },
+  {
+   "n": 21,
+   "q": "There are several different types of authentication technologies. Which type is being shown in the graphic that follows?",
+   "options": [
+    "802.1x",
+    "Extensible Authentication Protocol",
+    "Frequency hopping spread spectrum",
+    "Orthogonal frequency-division multiplexing"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The 802.1x standard is a port-based network access control that ensures a user cannot make a full network connection until he is properly authenticated. This means a user cannot access network resources and no traffic is allowed to pass, other than authentication traffic, from the wireless device to the network until the user is properly authenticated. An analogy is having a chain on your front door that enables you to open the door slightly to identify a person who knocks before you allow him to enter your house. User authentication provides a higher degree of confidence and protection than system authentication.",
+    "B is incorrect because Extensible Authentication Protocol (EAP) is not a specific authentication technology; instead, it provides a framework to enable many types of authentication techniques to be used during point-to-point (PPP) connections. As the name states, it extends the authentication possibilities from the norm (PAP and CHAP) to other methods such as one-time passwords, token cards, biometrics, Kerberos, and future mechanisms. So when a user connects to an authentication server and both have EAP capabilities, they can negotiate between a longer list of possible authentication methods.",
+    "C is incorrect because spread spectrum means that something is distributing individual signals across the allocated frequencies in some fashion. This is used in wireless communication and is not an authentication technology. Frequency hopping spread spectrum (FHSS) takes the total amount of bandwidth (spectrum) and splits it into smaller subchannels. The sender and receiver work at one of these channels for a specific amount of time and then move to another channel. The sender puts the first piece of data on one frequency, the second on a different frequency, and so on. The FHSS algorithm determines the individual frequencies that will be used and in what order, and this is referred to as the sender’s and receiver’s hop sequence.",
+    "D is incorrect because orthogonal frequency-division multiplexing (OFDM) is a digital multicarrier modulation scheme that compacts multiple modulated carriers tightly together, reducing the required bandwidth. The modulated signals are orthogonal (perpendicular) and do not interfere with each other. OFDM uses a composite of narrow channel bands to enhance its performance in high-frequency bands. This is used in wireless communication and is not an authentication technology."
+   ],
+   "images": [
+    "data/img/cap05_q21_0.jpeg"
+   ]
+  },
+  {
+   "n": 22,
+   "q": "What type of security encryption component is missing from the table that follows?",
+   "options": [
+    "Service Set ID",
+    "Temporal Key Integrity Protocol",
+    "Ad hoc WLAN",
+    "Open system authentication"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. The Temporal Key Integrity Protocol (TKIP) generates random values used in the encryption process, which makes it much harder for an attacker to break. To allow for an even higher level of encryption protection, the standard also includes the new Advanced Encryption Standard (AES) algorithm to be used in new WLAN implementations. TKIP actually works with the wired equivalent privacy (WEP) protocol by feeding it keying material, which is data to be used for generating new dynamic keys. WEP uses the RC4 encryption algorithm, and the current implementation of the algorithm provides very little protection. More complexity is added to the key generation process with the use of TKIP, which makes it much more difficult for attackers to uncover the encryption keys. The IEEE working group developed TKIP so that customers would only need to obtain firmware or software updates instead of purchasing new equipment for this type of protection.",
+    "A is incorrect because when wireless devices work in infrastructure mode, the access point (AP) and wireless clients form a group referred to as a Basic Service Set (BSS). This group is assigned a name, which is the Service Set ID (SSID) value. This value has nothing to do with encryption. Any hosts that wish to participate within a particular WLAN must be configured with the proper SSID. Various hosts can be segmented into different WLANs by using different SSIDs. The reasons to segment a WLAN into portions are the same reasons wired systems are segmented on a network: the users require access to different resources, have different business functions, or have different levels of trust.",
+    "C is incorrect because an ad hoc WLAN has nothing to do with encryption, but rather with how wireless devices on a network are set up. An ad hoc WLAN has no access points; the wireless devices communicate with each other through their wireless NICs instead of going through a centralized device. To construct an ad hoc network, wireless client software is installed on contributing hosts and configured for peer-to-peer operation mode.",
+    "D is incorrect because open system authentication (OSA) just means a wireless device does not need to prove it has a specific cryptographic key for authentication. Depending upon the product and the configuration, a network administrator can also limit access to specific MAC addresses. OSA does not require the wireless device to prove to an access point it has a specific cryptographic key to allow for authentication purposes. In many cases, the wireless device needs to provide only the correct SSID value. In OSA implementations, all transactions are in clear text because no encryption is involved. So an intruder can sniff the traffic, capture the necessary steps of authentication, and walk through the same steps to be authenticated and associated to an AP."
+   ],
+   "images": [
+    "data/img/cap05_q22_0.jpeg"
+   ]
+  },
+  {
+   "n": 23,
+   "q": "What type of technology is represented in the graphic that follows?",
+   "options": [
+    "Asynchronous Transfer Mode",
+    "Synchronous Optical Networks",
+    "Frequency-division multiplexing",
+    "Multiplexing"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. Multiplexing is a method of combining multiple channels of data over a single transmission path. The transmission is so fast and efficient that the ends do not realize they are sharing a line with many other entities. The systems “think” they have the line all to themselves. Telephone systems have been around for about 100 years, and they started as copper-based analog systems. Central switching offices connected individual telephones manually (via human operators) at first, and later by using electronic switching equipment. After two telephones were connected, they had an end-to-end connection, or an end-to-end circuit. Multiple phone calls were divided up and placed on the same wire, which is multiplexing.",
+    "A is incorrect because Asynchronous Transfer Mode (ATM) is a high-speed network technology that is used in LAN and WAN implementations by carriers, ISPs, and telephone companies. This technology is not what is shown in the graphic. ATM encapsulates data in fixed cells and can be used to deliver data over the Synchronous Optical Networks (SONET) network. The analogy of a highway and cars is used to describe the SONET and ATM relationship. SONET is the highway that provides the foundation (or network) for the cars—the ATM packets—to travel on.",
+    "B is incorrect because Synchronous Optical Networks (SONET) is actually a standard for telecommunications transmissions over fiber-optic cables. Carriers and telephone companies have deployed SONET networks for North America, and if they follow the SONET standards properly, these various networks can communicate with little difficulty. A metropolitan area network (MAN) is usually a backbone that connects LANs to each other and LANs to WANs, the Internet, and telecommunications and cable networks. A majority of today’s MANs are SONET or FDDI rings provided by the telecommunications service providers.",
+    "C is incorrect because frequency-division multiplexing is a form of signal multiplexing that involves assigning nonoverlapping frequency ranges to different signals or to each “user” of a medium. This is a type of multiplexing, but works over wireless signal spectrums instead of a time-based approach shown in the graphic. It can also be used to combine multiple signals before final modulation onto a carrier signal. In this case the carrier signals are referred to as subcarriers; each frequency within the spectrum is used as a channel to move data. An example is a stereo FM transmission."
+   ],
+   "images": [
+    "data/img/cap05_q23_0.jpeg"
+   ]
+  },
+  {
+   "n": 24,
+   "q": "What type of telecommunication technology is illustrated in the graphic that follows?",
+   "options": [
+    "Digital Subscriber Line",
+    "Integrated Services Digital Network",
+    "BRI ISDN",
+    "Cable modem"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The cable television companies have been delivering television services to homes for years, and then they started delivering data transmission services for users who have cable modems and want to connect to the Internet at high speeds. Cable modems provide high-speed access, up to 50 Mbps, to the Internet through existing cable coaxial and fiber lines. The cable modem provides upstream and downstream conversions. Not all cable companies provide Internet access as a service, mainly because they have not upgraded their infrastructure to move from a one-way network to a two-way network. Once this conversion takes place, data can come down from a central point (referred to as the head) to a residential home and back up to the head and onto the Internet.",
+    "A is incorrect because Digital Subscriber Line (DSL) is another type of high-speed connection technology used to connect a home or business to the service provider’s central office. It uses existing phone lines and provides a 24-hour connection to the Internet. This does indeed sound better than sliced bread, but only certain people can get this service because you have to be within a 2.5-mile radius of the DSL service provider’s equipment. As the distance between a residence and the central office increases, the transmission rates for DSL decrease. DSL does not go through the cable TV lines and does not have to go through the conversion from analog to digital and back as illustrated in the graphic. DSL is a broadband technology that can provide up to a 52 Mbps transmission speed without replacing the carrier’s copper wire.",
+    "B is incorrect because the Integrated Services Digital Network (ISDN) is a communications protocol provided by telephone companies and ISPs that does not need to go through the conversion process shown in the graphic. This protocol and the necessary equipment enable data, voice, and other types of traffic to travel over a medium in a digital manner previously used only for analog voice transmission. Telephone companies went all digital many years ago, except for the local loops, which consist of the copper wires that connect houses and businesses to their carrier provider’s central offices. These central offices contain the telephone company’s switching equipment, and it is here the analog-to-digital transformation takes place.",
+    "C is incorrect because the Integrated Services Digital Network (ISDN) breaks the telephone line into different channels and transmits data in a digital form rather than the old analog form. ISDN provides two basic home and business services: Basic Rate Interface (BRI) and Primary Rate Interface (PRI). BRI has two B channels that enable data to be transferred and one D channel that provides for call setup, connection management, error control, caller ID, and more. The bandwidth available with BRI is 144 Kbps, whereas the top modems can provide only 56 Kbps. The BRI service is common for residential use, and the PRI, which has 23 B channels and one D channel, is more commonly used in corporations."
+   ],
+   "images": [
+    "data/img/cap05_q24_0.jpeg"
+   ]
+  },
+  {
+   "n": 25,
+   "q": "Which type of WAN tunneling protocol is missing from the table that follows?",
+   "options": [
+    "IPSec",
+    "FDDI",
+    "L2TP",
+    "CSMA/CD"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. Tunneling is the main ingredient to a VPN because that is how the VPN creates its connection. Three main tunneling protocols are used in VPN connections: PPTP, L2TP, and IPSec. L2TP provides the functionality of the Point-to-Point Tunneling Protocol (PPTP), but it can work over networks other than just IP, and it provides a higher level of security when combined with IPSec. L2TP does not provide any encryption or authentication services, so it needs to be combined with IPSec if those services are required. The processes that L2TP uses for encapsulation are similar to those used by PPTP. The PPP frame is encapsulated with L2TP. One limitation of PPTP is that it can work only over IP networks, so other protocols must be used to move data over frame relay, X.25, and ATM links.",
+    "A is incorrect because the Internet Protocol Security (IPSec) protocol suite provides a method of setting up a secure channel for protected data exchange between two devices. The devices that share this secure channel can be two servers, two routers, a workstation and a server, or two gateways between different networks. IPSec is a widely accepted standard for providing network layer protection. IPSec is commonly used with L2TP to provide protection for the data that travels over this type of communication path as shown in the graphic.",
+    "B is incorrect because Fiber Distributed Data Interface (FDDI) technology is a high-speed token-passing media access technology. FDDI has a data transmission speed of up to 100 Mbps and is usually used as a backbone network using fiber-optic cabling. FDDI also provides fault tolerance by offering a second counter-rotating fiber ring. The primary ring has data traveling clockwise and is used for regular data transmission. The second ring transmits data in a counterclockwise fashion and is invoked only if the primary ring goes down. Sensors watch the primary ring and, if it goes down, invoke a ring wrap so that the data will be diverted to the second ring. Each node on the FDDI network has relays that are connected to both rings, so if a break in the ring occurs, the two rings can be joined. L2TP is used for WAN connections, while FDDI is commonly used for MAN connections.",
+    "D is incorrect because Carrier Sense Multiple Access with Collision Detection (CSMA/CD) is a network access method in which a carrier sensing scheme is used. A transmission is called a carrier, so if a computer is transmitting frames, it is performing a carrier activity. When computers use the CSMA/CD protocol, they monitor the transmission activity, or carrier activity, on the wire so they can determine when would be the best time to transmit data. Each node monitors the wire continuously and waits until the wire is free before it transmits its data. As an analogy, consider several people gathered in a group talking here and there about this and that. If a person wants to talk, she usually listens to the current conversation and waits for a break before she proceeds to talk. If she does not wait for the first person to stop talking, she will be speaking at the same time as the other person, and the people around them may not be able to understand fully what each is trying to say."
+   ],
+   "images": [
+    "data/img/cap05_q25_0.jpeg"
+   ]
+  },
+  {
+   "n": 26,
+   "q": "IPv6 has many new and different characteristics and functionality compared to IPv4. Which of the following is an incorrect functionality or characteristic of IPv6? i. IPv6 allows for nonscoped addresses, which enables an administrator to restrict specific addresses for specific servers or file and print sharing, for example. ii. IPv6 has IPSec integrated into the protocol stack, which provides application-based secure transmission and authentication. iii. IPv6 has more flexibility and routing capabilities compared to IPv4 and allows for Quality of Service (QoS) priority values to be assigned to time-sensitive transmissions. iv. The protocol offers autoconfiguration, which makes administration much easier compared to IPv4, and it does not require network address translation (NAT) to extend its address space.",
+   "options": [
+    "i, iii",
+    "i, ii",
+    "ii, iii",
+    "ii, iv"
+   ],
+   "answer": "B",
+   "explanation": [
+    "B. IPv6 allows for scoped addresses, which enables an administrator to restrict specific addresses for specific servers or file and print sharing, for example. IPv6 has IPSec integrated into the protocol stack, which provides end-to-end secure transmission and authentication.",
+    "A is incorrect. IPv6 allows for scoped addresses, which enables an administrator to restrict specific addresses for specific servers or file and print sharing, for example. IPv6 has more flexibility and routing capabilities and allows for Quality of Service (QoS) priority values to be assigned to time-sensitive transmissions.",
+    "C is incorrect. IPv6 has more flexibility and routing capabilities and allows for Quality of Service (QoS) priority values to be assigned to time-sensitive transmissions. IPv6 has IPSec integrated into the protocol stack, which provides end-to-end secure transmission and authentication.",
+    "D is incorrect because IPv6 has IPSec integrated into the protocol stack, which provides end-to-end secure transmission and authentication. The protocol offers autoconfiguration, which makes administration much easier, and it does not require network address translation (NAT) to extend its address space."
+   ]
+  },
+  {
+   "n": 27,
+   "q": "Hanna is a new security manager for a computer consulting company. She has found out that the company has lost intellectual property in the past because malicious employees installed rogue devices on the network, which were used to capture sensitive traffic. Hanna needs to implement a solution that ensures only authorized devices are allowed access to the company network. Which of the following IEEE standards was developed for this type of protection?",
+   "options": [
+    "IEEE 802.1AR",
+    "IEEE 802.1AE",
+    "IEEE 802.1AF",
+    "IEEE 802.1XR"
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. The IEEE 802.1AR standard specifies unique per-device identifiers (DevID) and the management and cryptographic binding of a device (router, switch, access point) to its identifiers. A verifiable unique device identity allows establishment of the trustworthiness of devices; thus, it facilitates secure device provisioning. A secure device identifier (DevID) is cryptographically bound to a device and supports authentication of the device’s identity. Locally significant identities can be securely associated with an initial manufacturer-provisioned DevID and used in provisioning and authentication protocols to allow a network administrator to establish the trustworthiness of a device and select appropriate policies for transmission and reception of data and control protocols to and from the device.",
+    "B is incorrect because 802.1AE is the IEEE MAC Security standard (MACSec), which defines a security infrastructure to provide data confidentiality, data integrity, and data origin authentication. Where a VPN connection provides protection at the higher networking layers, MACSec provides hop-by-hop protection at layer 2.",
+    "C is incorrect because 802.1AR provides a unique ID for a device. 802.1AE provides data encryption, integrity, and origin authentication functionality. 802.1AF carries out key agreement functions for the session keys used for data encryption. Each of these standards provides specific parameters to work within an 802.1X EAP-TLS framework.",
+    "D is incorrect because this is a distracter answer. This is not a valid standard."
+   ]
+  },
+  {
+   "n": 28,
+   "q": "There are common cloud computing service models. _______________ usually requires companies to deploy their own operating systems, applications, and software onto the provided infrastructure. _________________ is the software environment that runs on top of the infrastructure. In the __________ model the provider commonly gives the customers network-based access to a single copy of an application.",
+   "options": [
+    "Platform as a Service, Infrastructure as a Service, Software as a Service",
+    "Platform as a Service, Platform as Software, Application as a Service",
+    "Infrastructure as a Service, Application as a Service, Software as a Service",
+    "Infrastructure as a Service, Platform as Software, Software as a Service"
+   ],
+   "answer": "D",
+   "explanation": [
+    "D. The most common cloud service models are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS).",
+    "A is incorrect because these items are not in the correct order. Infrastructure as a Service (IaaS) is when cloud providers offer the infrastructure environment of a traditional data center in an on-demand delivery method. Companies deploy their own operating systems, applications, and software onto this provided infrastructure and are responsible for maintaining them.",
+    "B is incorrect because the most common cloud service models are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). There are no models called Platform as Software or Application as a Service. These are distracters. Platform as a Service (PaaS) is when cloud providers deliver a computing platform, which can include an operating system, database, and web server as a holistic execution environment. Where IaaS is the “raw IT network,” PaaS is the software environment that runs on top of the IT network.",
+    "C is incorrect because the most common cloud service models are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). There is no model called Platform as Software. With Software as a Service (SaaS), the provider gives users access to specific application software (CRM, e-mail, games). The provider gives the customers network-based access to a single copy of an application created specifically for SaaS distribution and use."
+   ]
+  },
+  {
+   "n": 29,
+   "q": "____________ is a set of extensions to DNS that provides to DNS clients (resolvers) origin authentication of DNS data to reduce the threat of DNS poisoning, spoofing, and similar attack types.",
+   "options": [
+    "Resource records",
+    "Zone transfer",
+    "DNSSEC",
+    "Resource transfer"
+   ],
+   "answer": "C",
+   "explanation": [
+    "C. DNSSEC is a set of extensions to DNS that provide to DNS clients (resolvers) origin authentication of DNS data to reduce the threat of DNS poisoning, spoofing, and similar attack types. DNSSEC is a suite of Internet Engineering Task Force (IETF) specifications for securing services provided by the DNS as used on IP networks.",
+    "A is incorrect because a DNS server contains records that map hostnames to IP addresses, which are referred to as resource records. When a user’s computer needs to resolve a hostname to an IP address, it looks to its networking settings to find its DNS server. The computer then sends a request containing the hostname to the DNS server for resolution. The DNS server looks at its resource records and finds the record with this particular hostname, retrieves the address, and replies to the computer with the corresponding IP address.",
+    "B is incorrect because primary and secondary DNS servers synchronize their information through a zone transfer. After changes take place to the primary DNS server, those changes must be replicated to the secondary DNS server. It is important to configure the DNS server to allow zone transfers to take place only between the specific servers.",
+    "D is incorrect because it is a distracter answer."
+   ]
+  },
+  {
+   "n": 30,
+   "q": "Which of the following best describes the difference between a virtual firewall that works in bridge mode versus one that is embedded into a hypervisor?",
+   "options": [
+    "Bridge-mode virtual firewall allows the firewall to monitor individual traffic links, and hypervisor integration allows the firewall to monitor all activities taking place within a host system.",
+    "Bridge-mode virtual firewall allows the firewall to monitor individual network links, and hypervisor integration allows the firewall to monitor all activities taking place within a guest system.",
+    "Bridge-mode virtual firewall allows the firewall to monitor individual traffic links, and hypervisor integration allows the firewall to monitor all activities taking place within a guest system.",
+    "Bridge-mode virtual firewall allows the firewall to monitor individual guest systems, and hypervisor integration allows the firewall to monitor all activities taking place within a network system."
+   ],
+   "answer": "A",
+   "explanation": [
+    "A. Virtual firewalls can be bridge-mode products, which monitor individual traffic links between virtual machines, or they can be integrated within the hypervisor of a virtualized environment. The hypervisor is the software component that carries out virtual machine management and oversees guest system software execution. If the firewall is embedded within the hypervisor, then it can “see” and monitor all the activities taking place within the host system.",
+    "B is incorrect because bridge-mode virtual firewall allows the firewall to monitor individual traffic links between hosts, not network links. Hypervisor integration allows the firewall to monitor all activities taking place within a host system, not a guest system.",
+    "C is incorrect because bridge-mode virtual firewall allows the firewall to monitor individual traffic links, and hypervisor integration allows the firewall to monitor all activities taking place within a host system, not a guest system. The hypervisor is the software component that carries out virtual machine management and oversees guest system software execution. If the firewall is embedded within the hypervisor, then it can “see” and monitor all the activities taking place within the system.",
+    "D is incorrect because a bridge-mode virtual firewall allows the firewall to monitor individual traffic between guest systems, and hypervisor integration allows the firewall to monitor all activities taking place within a host system, not a network system."
+   ]
+  }
+ ]
+}
