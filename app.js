@@ -232,13 +232,13 @@
       ? `Mat: ${profile.id || '—'} · ${profile.course || 'Sin grupo'}`
       : currentUser?.role === 'teacher' ? 'Maestro' : 'Administrador';
 
-    const initials = (profile.name || 'GS')
+    const initials = (profile.name || 'US')
       .split(' ')
       .filter(Boolean)
       .slice(0, 2)
       .map((w) => w[0].toUpperCase())
       .join('');
-    $('#avatar-initials').textContent = initials || 'GS';
+    $('#avatar-initials').textContent = initials || 'US';
   }
 
   function updateReadinessGauge(coveragePct, avgScore) {

@@ -75,3 +75,38 @@ test('roles, invitación, aislamiento por grupo e intentos ilimitados', async ()
   })).status, 400);
   await db.end();
 });
+
+test('una respuesta incorrecta y una omitida bajan la calificación en el servidor', async () => {
+  const memory = newDb();
+  const { Pool } = memory.adapters.createPg();
+  const db = new Pool();
+  await initializeDatabase(db, 'admin@example.com', 'admin-password-12345');
+  const app = createApp(db, 'test-signing-key-longer-than-32-characters');
+  const admin = request.agent(app);
+  const teacher = request.agent(app);
+  const student = request.agent(app);
+  const password = 'strong-password-123';
+  const signup = await teacher.post('/api/auth/signup-teacher').send({ name: 'Maestra', email: 'm@example.com', password });
+  await admin.post('/api/auth/login').send({ email: 'admin@example.com', password: 'admin-password-12345' });
+  await admin.patch(`/api/admin/teachers/${signup.body.user.id}`).send({ approved: true });
+  await teacher.post('/api/auth/login').send({ email: 'm@example.com', password });
+  const groupId = (await teacher.post('/api/teacher/groups').send({ university: 'U', subject: 'S', name: 'G' })).body.group.id;
+  const invite = (await teacher.post(`/api/teacher/groups/${groupId}/invitations`).send({})).body.link;
+  await student.post('/api/auth/signup-student').send({
+    name: 'Alumno', email: 'a@example.com', password, invite: new URL(invite).searchParams.get('invite'),
+  });
+
+  const questions = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'chapters', 'cap01.json'), 'utf8')).questions;
+  const answers = Object.fromEntries(questions.map(question => [question.n, question.answer]));
+  const wrong = ['A', 'B', 'C', 'D'].find(letter => letter !== questions[0].answer);
+  answers[questions[0].n] = wrong;
+  delete answers[questions[1].n];
+  const attempt = await student.post('/api/student/attempts').send({ groupId, chapter: 1, answers, duration: 10, start: Date.now() - 10000 });
+  assert.equal(attempt.status, 201);
+  assert.equal(attempt.body.attempt.score, questions.length - 2);
+  assert.equal(attempt.body.attempt.detail[0].given, wrong);
+  assert.equal(attempt.body.attempt.detail[1].given, null);
+  assert.equal(attempt.body.attempt.pct, (questions.length - 2) / questions.length * 100);
+  assert.equal((await student.post('/api/student/attempts').send({ groupId, chapter: 1, answers: { 1: 'Z' } })).status, 400);
+  await db.end();
+});
