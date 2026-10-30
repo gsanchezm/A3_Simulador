@@ -18,8 +18,20 @@ const sessionMillis = 7 * 24 * 60 * 60 * 1000;
 function fail(status, message) {
   const error = new Error(message);
   error.status = status;
+  error.isAppError = true; // sólo estos mensajes son seguros de mostrar al cliente
   throw error;
 }
+
+// Número de proxies de confianza delante de la app (0 = ninguno, no se confía en X-Forwarded-For).
+function parseTrustProxy(value) {
+  const text = String(value ?? '').trim();
+  if (text === '' || text === '0') return false;
+  if (!/^[1-9]\d{0,2}$/.test(text)) throw new Error('TRUST_PROXY debe ser el número de proxies de confianza (por ejemplo 1) o quedar vacío');
+  return Number(text);
+}
+
+// Consultas de invitaciones: sólo valen si el maestro dueño del grupo sigue aprobado.
+const approvedGroups = `SELECT g.id FROM groups g JOIN users t ON t.id=g.teacher_id WHERE t.approved=true`;
 
 function publicUser(user) {
   return { id: user.id, name: user.name, email: user.email, role: user.role,
@@ -30,10 +42,12 @@ function cookieOptions() {
   return { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', path: '/', maxAge: sessionMillis };
 }
 
-function createApp(db, signingKey) {
+function createApp(db, signingKey, options = {}) {
   if (!signingKey || signingKey.length < 32) throw new Error('REPORT_SIGNING_KEY debe tener al menos 32 caracteres');
   const app = express();
-  app.set('trust proxy', 1);
+  // Por defecto no se confía en X-Forwarded-For: con un valor fijo, cualquier cliente podía rotar su IP y evadir el límite.
+  app.set('trust proxy', options.trustProxy ?? false);
+  const dummyHash = hashPassword('contraseña-ficticia-para-igualar-tiempos'); // evita distinguir correos inexistentes por tiempo
   app.disable('x-powered-by');
   app.use(helmet({ contentSecurityPolicy: {
     directives: {
@@ -103,7 +117,8 @@ function createApp(db, signingKey) {
     try {
       const result = await db.query(`SELECT g.university,g.subject,g.name,i.expires_at
         FROM invitations i JOIN groups g ON g.id=i.group_id
-        WHERE i.token_hash=$1 AND i.expires_at>now() AND i.uses<i.max_uses`, [hashToken(req.params.token)]);
+        WHERE i.token_hash=$1 AND i.expires_at>now() AND i.uses<i.max_uses
+          AND i.group_id IN (${approvedGroups})`, [hashToken(req.params.token)]);
       if (!result.rows.length) fail(404, 'Invitación inválida o vencida');
       res.json(result.rows[0]);
     } catch (error) { next(error); }
@@ -111,30 +126,34 @@ function createApp(db, signingKey) {
 
   app.post('/api/auth/signup-teacher', authLimit, async (req, res, next) => {
     try {
-      const email = cleanEmail(req.body.email);
-      const name = cleanText(req.body.name);
-      if (!validEmail(email) || !name || !validPassword(req.body.password)) fail(400, 'Nombre, correo y contraseña de 12 a 128 caracteres son obligatorios');
+      const body = req.body ?? {};
+      const email = cleanEmail(body.email);
+      const name = cleanText(body.name);
+      if (!validEmail(email) || !name || !validPassword(body.password)) fail(400, 'Nombre, correo y contraseña de 12 a 128 caracteres son obligatorios');
       const user = { id: randomUUID(), name, email, role: 'teacher', approved: false };
-      await db.query('INSERT INTO users (id,name,email,password_hash,role,approved) VALUES ($1,$2,$3,$4,$5,false)',
-        [user.id, name, email, await hashPassword(req.body.password), user.role]);
-      res.status(201).json({ user, message: 'Cuenta creada. Espera la aprobación del administrador.' });
+      // Si el correo ya existe no se crea nada y la respuesta es idéntica: así el registro no revela qué correos tienen cuenta.
+      await db.query(`INSERT INTO users (id,name,email,password_hash,role,approved) VALUES ($1,$2,$3,$4,$5,false)
+        ON CONFLICT (email) DO NOTHING`, [user.id, name, email, await hashPassword(body.password), user.role]);
+      res.status(201).json({ user, message: 'Solicitud recibida. Si el correo es válido, la cuenta queda pendiente de aprobación del administrador.' });
     } catch (error) { next(error); }
   });
 
   app.post('/api/auth/signup-student', authLimit, async (req, res, next) => {
     try {
-      const email = cleanEmail(req.body.email);
-      const name = cleanText(req.body.name);
-      const studentId = cleanText(req.body.studentId, 60);
-      const invite = String(req.body.invite || '');
-      if (!validEmail(email) || !name || !validPassword(req.body.password) || !invite) fail(400, 'Completa nombre, correo, contraseña e invitación');
+      const body = req.body ?? {};
+      const email = cleanEmail(body.email);
+      const name = cleanText(body.name);
+      const studentId = cleanText(body.studentId, 60);
+      const invite = String(body.invite || '');
+      if (!validEmail(email) || !name || !validPassword(body.password) || !invite) fail(400, 'Completa nombre, correo, contraseña e invitación');
       const user = { id: randomUUID(), name, email, role: 'student', approved: true, studentId };
       await transaction(db, async client => {
         const claimed = await client.query(`UPDATE invitations SET uses=uses+1
-          WHERE token_hash=$1 AND expires_at>now() AND uses<max_uses RETURNING group_id`, [hashToken(invite)]);
+          WHERE token_hash=$1 AND expires_at>now() AND uses<max_uses
+            AND group_id IN (${approvedGroups}) RETURNING group_id`, [hashToken(invite)]);
         if (!claimed.rows.length) fail(400, 'Invitación inválida o vencida');
         await client.query(`INSERT INTO users (id,name,email,password_hash,role,approved,student_id)
-          VALUES ($1,$2,$3,$4,'student',true,$5)`, [user.id, name, email, await hashPassword(req.body.password), studentId]);
+          VALUES ($1,$2,$3,$4,'student',true,$5)`, [user.id, name, email, await hashPassword(body.password), studentId]);
         await client.query('INSERT INTO memberships (group_id,student_id) VALUES ($1,$2)', [claimed.rows[0].group_id, user.id]);
       });
       await createSession(res, user);
@@ -144,10 +163,15 @@ function createApp(db, signingKey) {
 
   app.post('/api/auth/login', authLimit, async (req, res, next) => {
     try {
-      const email = cleanEmail(req.body.email);
+      const body = req.body ?? {};
+      const email = cleanEmail(body.email);
       const result = await db.query('SELECT * FROM users WHERE email=$1', [email]);
       const user = result.rows[0];
-      if (!user || !await verifyPassword(req.body.password, user.password_hash)) fail(401, 'Credenciales incorrectas');
+      // Siempre se verifica un hash (el real o uno ficticio) para que el tiempo no delate si el correo existe;
+      // una contraseña que no sea texto o exceda 128 caracteres no puede ser válida y se rechaza sin error 500.
+      const password = typeof body.password === 'string' && body.password.length <= 128 ? body.password : '';
+      const matches = await verifyPassword(password, user ? user.password_hash : await dummyHash);
+      if (!user || !password || !matches) fail(401, 'Credenciales incorrectas');
       if (user.role === 'teacher' && !user.approved) fail(403, 'Cuenta de maestro pendiente de aprobación');
       await createSession(res, user);
       res.json({ user: publicUser(user) });
@@ -259,12 +283,14 @@ function createApp(db, signingKey) {
       if (!invite) fail(400, 'La invitación es obligatoria');
       await transaction(db, async client => {
         const result = await client.query(`SELECT i.group_id FROM invitations i
-          WHERE i.token_hash=$1 AND i.expires_at>now() AND i.uses<i.max_uses`, [hashToken(invite)]);
+          WHERE i.token_hash=$1 AND i.expires_at>now() AND i.uses<i.max_uses
+            AND i.group_id IN (${approvedGroups})`, [hashToken(invite)]);
         if (!result.rows.length) fail(400, 'Invitación inválida o vencida');
         const existing = await client.query('SELECT 1 FROM memberships WHERE group_id=$1 AND student_id=$2', [result.rows[0].group_id, req.user.id]);
         if (existing.rows.length) fail(409, 'Ya perteneces a este grupo');
         const claimed = await client.query(`UPDATE invitations SET uses=uses+1
-          WHERE token_hash=$1 AND expires_at>now() AND uses<max_uses RETURNING group_id`, [hashToken(invite)]);
+          WHERE token_hash=$1 AND expires_at>now() AND uses<max_uses
+            AND group_id IN (${approvedGroups}) RETURNING group_id`, [hashToken(invite)]);
         if (!claimed.rows.length) fail(400, 'Invitación agotada');
         await client.query('INSERT INTO memberships (group_id,student_id) VALUES ($1,$2)', [claimed.rows[0].group_id, req.user.id]);
       });
@@ -341,18 +367,24 @@ function createApp(db, signingKey) {
   });
 
   app.get('/', (_req, res) => res.sendFile(path.join(root, 'index.html')));
-  for (const filename of ['app.js', 'portal.js', 'styles.css']) {
+  for (const filename of ['app.js', 'styles.css']) {
     app.get(`/${filename}`, (_req, res) => res.sendFile(path.join(root, filename)));
   }
   app.use('/data', express.static(path.join(root, 'data'), { dotfiles: 'deny', index: false }));
   app.use((req, _res, next) => next(fail(404, 'Ruta no encontrada')));
   app.use((error, _req, res, _next) => {
     if (error.code === '23505') return res.status(409).json({ error: 'El correo o registro ya existe' });
-    if (error.status) return res.status(error.status).json({ error: error.message });
+    // Sólo los mensajes escritos con fail() llegan al cliente; los errores de librerías (send, body-parser...)
+    // pueden traer rutas del servidor o fragmentos de la entrada, así que se reemplazan por un texto genérico.
+    if (error.isAppError) return res.status(error.status).json({ error: error.message });
+    if (error.status && error.status < 500) {
+      const generic = { 400: 'Solicitud inválida', 404: 'Ruta no encontrada', 413: 'Solicitud demasiado grande' };
+      return res.status(error.status).json({ error: generic[error.status] || 'Solicitud no válida' });
+    }
     console.error(error);
     res.status(500).json({ error: 'Error interno del servidor' });
   });
   return app;
 }
 
-module.exports = { createApp };
+module.exports = { createApp, parseTrustProxy };

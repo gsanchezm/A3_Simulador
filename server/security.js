@@ -21,7 +21,8 @@ const token = () => randomBytes(32).toString('base64url');
 const hashToken = value => createHash('sha256').update(value).digest('hex');
 const cleanEmail = value => String(value || '').trim().toLowerCase();
 const cleanText = (value, max = 120) => String(value || '').trim().slice(0, max);
-const validEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.length <= 254;
+// El tope de longitud va antes del regex: con entradas largas el regex retrocede de forma cuadrática.
+const validEmail = email => email.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 const validPassword = password => typeof password === 'string' && password.length >= 12 && password.length <= 128;
 
 module.exports = { hashPassword, verifyPassword, token, hashToken, cleanEmail, cleanText, validEmail, validPassword };
